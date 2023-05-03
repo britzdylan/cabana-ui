@@ -3,12 +3,12 @@
   "name": "cabana-ui",
   "description": "Cabana UI plugin for tailwindcss",
   "homepage": "https://cabana-ui.com",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "link": "cd dist && npm link"
   },
   "author": "Dylan Britz",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "package.json"
   ],
   "devDependencies": {
+    "@types/node": "^18.16.3",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.4"
   }
