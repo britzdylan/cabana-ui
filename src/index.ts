@@ -8,13 +8,13 @@
 //  *
 //  */
 
+import { PluginCreator } from 'tailwindcss/types/config';
+import plugin from 'tailwindcss/plugin';
 import { version, homepage } from '../package.json'; // Path: package.json
 import cabana from '../cabana.config'; // Path: config/cabana.ts
-import plugin from 'tailwindcss/plugin';
-import { PluginCreator } from 'tailwindcss/types/config';
+import elements from './elements'; // Path: src/elements.ts
 
-const main: PluginCreator = async ({ config }) => {
-  //   let components = require('./elements/index.js');
+const main: PluginCreator = async ({ addComponents, config, theme }) => {
   let logs = config('cabana.logs', true);
   if (logs === true) {
     console.log('=============================================');
@@ -26,7 +26,7 @@ const main: PluginCreator = async ({ config }) => {
     );
     console.log('=============================================');
   }
-  //   addComponents(components(theme));
+  addComponents(elements(theme));
 };
 
 module.exports = plugin(main, {
