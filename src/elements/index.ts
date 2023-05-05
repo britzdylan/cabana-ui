@@ -5,7 +5,7 @@ import Button from './button';
 
 const elements = (theme: () => string) => {
   return {
-    ...new Button(theme).build(),
+    ...Button(theme),
   };
 };
 
