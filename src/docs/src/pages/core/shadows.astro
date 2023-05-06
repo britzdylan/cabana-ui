@@ -1,0 +1,30 @@
+---
+import MainLayout from '../../layouts/Layout.astro';
+import { SHADOWS } from '../../../design.config';
+
+---
+
+<MainLayout title="Shadows">
+    <h1>Shadows</h1>
+    <div class="component-preview">
+        <div class="inline-grid grid-cols-2 gap-16">
+        {SHADOWS.types.map(({name, value}) => (
+           name.split('-')[0] != 'dark' ? <div  class="p-2 bg-white rounded-md text-slate-500 text-right pt-24 pl-16 font-mono" style={"box-shadow: " + value}>{'shadow-' + name}</div> : null
+        ))}
+        </div>
+    </div>
+    <div class="component-preview dark">
+        <div class="inline-grid grid-cols-2 gap-16">
+        {SHADOWS.types.map(({name, value}) => (
+            name.split('-')[0] == 'dark' ? <div class="p-2 bg-white rounded-md text-slate-500 text-right pt-24 pl-16 font-mono" style={"box-shadow: " + value}>{'shadow-' + name}</div> : null
+        ))}
+        </div>
+    </div>
+
+    <!-- <h2>Usage</h2>
+    <pre class="astro-code bg-slate-800 text-white">
+    {SHADOWS.types.map(({name, value}) => (
+            <div class="my-2">{`shadow-${name}: ${value}`}</div>
+        ))}
+    </pre> -->
+</MainLayout>

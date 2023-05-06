@@ -9,7 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "link": "cd dist && npm link",
-    "docs:start" : "cd src/docs && npm run start"
+    "cabana:local": "cd src/docs && npm link cabana-ui && npm run start",
+    "docs:start": "cd src/docs && npm run start",
+    "docs:build": "cd src/docs && npm run build"
   },
   "author": "Dylan Britz",
   "license": "ISC",

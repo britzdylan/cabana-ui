@@ -1,0 +1,24 @@
+---
+import MainLayout from '../../layouts/Layout.astro';
+import { BLUR } from '../../../design.config';
+---
+
+<MainLayout title="Blur">
+  <h1>Blur</h1>
+  <div class='component-preview'>
+    <div class='inline-grid grid-cols-2 gap-16'>
+      {
+        BLUR.map(({ name, value }) => (
+          <div class='relative w-72 h-72'>
+            <div class="bg-[url('/blur.jpg')] bg-center bg-no-repeat rounded-md absolute top-0 left-0 right-0 bottom-0 z-0" />
+            <div
+              style={`backdrop-filter: blur(${value})`}
+              class=' text-slate-50 text-right font-mono absolute rounded-md top-0 left-0 right-0 bottom-0 z-10 flex items-center justify-center'>
+              <p class="!text-white">{'blur-' + name}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</MainLayout>

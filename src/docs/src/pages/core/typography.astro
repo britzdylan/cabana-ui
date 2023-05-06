@@ -1,0 +1,28 @@
+---
+import MainLayout from '../../layouts/Layout.astro';
+import { TYPOGRAPHY } from '../../../design.config';
+
+const getStyle = (item: {
+    name: string;
+    size: string;
+}) => {
+    return `font-size: ${item.size};`
+}
+---
+
+<MainLayout title="Typography">
+    <h1 class="">Typography</h1>
+    <div class="w-full">
+    {
+        TYPOGRAPHY.scale.map((item) => (
+            <div class="mt-6 border-t py-4">
+                <p class="text-neutral-900 font-normal" style={getStyle(item)}>Hello world</p>
+                <div class="flex gap-6 font-mono">
+                    <span>text-{item.name}</span>
+                    <span>size: {item.size}</span>
+                </div>
+            </div>
+        ))
+    }
+    </div>
+</MainLayout>

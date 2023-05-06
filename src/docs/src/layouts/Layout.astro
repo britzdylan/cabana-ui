@@ -2,8 +2,13 @@
 export interface Props {
 	title: string;
 }
-
+import '../styles/base.css';
+import Header from '../components/Header.astro';
+import LeftSidebar from '../components/LeftSidebar.astro';
+import RightSidebar from '../components/RightSidebar.astro';
+import PageContent from '../components/PageContent.astro';
 const { title } = Astro.props;
+const currentPage = new URL(Astro.request.url).pathname;
 ---
 
 <!DOCTYPE html>
@@ -12,24 +17,50 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Preload Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap" rel="stylesheet" />
+
+		<!-- Scrollable a11y code helper -->
+		<script src="/make-scrollable-code-focusable.js" is:inline></script>
+
+		<!-- This is intentionally inlined to avoid FOUC -->
+		<script is:inline>
+		const root = document.documentElement;
+		const theme = localStorage.getItem('theme');
+		if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			root.classList.add('dark');
+		} else {
+			root.classList.remove('dark');
+		}
+		</script>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-slate-100">
+		<div class="sticky top-0 z-10 w-full">
+			<Header currentPage={currentPage} />
+		</div>
+		<div class="grid grid-cols-12">
+			<div class="col-span-3 sticky top-0 pt-12 h-screen flex">
+				<div class="ml-auto h-full overflow-y-scroll pb-12">
+					<LeftSidebar currentPage={currentPage} />
+				</div>
+			</div>
+			<main class="py-4 px-8 pb-32 col-span-6  overflow-auto">
+				<div>
+					<PageContent >
+						<slot />
+					</PageContent>
+				</div>
+			</main>
+			<div class="col-span-3 sticky top-0 h-screen flex">
+				<RightSidebar  />
+			</div>
+		</div>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
+

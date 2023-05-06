@@ -1,0 +1,254 @@
+---
+title: 'Buttons'
+layout: '../../layouts/Layout.astro'
+---
+
+import {
+  IconPlus,
+  IconBrandMeta,
+  IconBrandTwitterFilled,
+  IconBrandGoogle,
+  IconBrandApple,
+} from '@tabler/icons-vue';
+
+# All buttons
+
+This page is an example on how to document your button components, most of the copy was written by AI so don't take it very seriously.
+
+Find the code for this page in the `src/pages/components/buttons.md` file.
+
+<div class='component-preview'>
+  <button class='btn'>Primary</button>
+  <button class='btn btn-outline'>Outline</button>
+  <button class='btn btn-min'>Minimal</button>
+  <button class='btn btn-text'>Text</button>
+</div>
+
+```js
+  <button class='btn'>Primary</button>
+  <button class='btn btn-outline'>Outline</button>
+  <button class='btn btn-min'>Minimal</button>
+  <button class='btn btn-text'>Text</button>
+```
+
+## Sizes
+
+<div class='component-preview'>
+  <button class='btn btn-sm'>Small</button>
+  <button class='btn btn-md'>Medium</button>
+  <button class='btn'>Default</button>
+  <button class='btn btn-lg'>Large</button>
+</div>
+
+```js
+  <button class='btn btn-sm'>Small</button>
+  <button class='btn btn-md'>Medium</button>
+  <button class='btn'>Default</button>
+  <button class='btn btn-lg'>Large</button>
+```
+
+## With Icons
+
+<div class='component-preview'>
+  <button class='btn'>
+    <span class='icon'>
+      <IconPlus />
+    </span>
+    Left
+  </button>
+  <button class='btn'>
+    Right
+    <span class='icon'>
+      <IconPlus />
+    </span>
+  </button>
+  <button class='btn'>
+    <span class='icon'>
+      <IconPlus />
+    </span>
+    Both
+    <span class='icon'>
+      <IconPlus />
+    </span>
+  </button>
+  <button class='btn'>
+    <span class='icon'>
+      <IconPlus />
+    </span>
+  </button>
+</div>
+
+```js
+  <button class='btn'>
+    <span class='icon'>
+      <IconPlus />
+    </span>
+    Left
+  </button>
+
+  <button class='btn'>
+    Right
+    <span class='icon'>
+      <IconPlus />
+    </span>
+  </button>
+
+  <button class='btn'>
+    <span class='icon'>
+      <IconPlus />
+    </span>
+    Both
+    <span class='icon'>
+      <IconPlus />
+    </span>
+  </button>
+
+  <button class='btn'>
+    <span class='icon'>
+      <IconPlus />
+    </span>
+  </button>
+```
+
+## FAB
+
+<div class='component-preview'>
+  <button class='fab fab-sm'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-md'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-lg'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-xl'>
+    <IconPlus />
+  </button>
+</div>
+
+```js
+  <button class='fab fab-sm'>
+   <IconPlus />
+  </button>
+  <button class='fab fab-md'>
+     <IconPlus />
+  </button>
+  <button class='fab fab-lg'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-xl'>
+     <IconPlus />
+  </button>
+```
+
+## FAB Rounded
+
+<div class='component-preview'>
+  <button class='fab fab-sm fab-rounded'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-md fab-rounded'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-lg fab-rounded'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-xl fab-rounded'>
+    <IconPlus />
+  </button>
+</div>
+
+```js
+  <button class='fab fab-sm fab-rounded'>
+   <IconPlus />
+  </button>
+  <button class='fab fab-md fab-rounded'>
+     <IconPlus />
+  </button>
+  <button class='fab fab-lg fab-rounded'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-xl fab-rounded'>
+     <IconPlus />
+  </button>
+```
+
+## Button Group
+
+<div class='component-preview'>
+  <div class='btn-group'>
+    <button>One</button>
+    <button>Two</button>
+    <button>Three</button>
+  </div>
+
+<div class='btn-group btn-group-outline'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+</div>
+
+```js
+<div class='btn-group'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group btn-group-outline'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+```
+
+## Social Buttons
+
+<div class='component-preview flex-col'>
+  <button class='btn btn-facebook'>
+    <IconBrandMeta />
+    Continue with Facebook
+  </button>
+  <button class='btn btn-twitter'>
+    <IconBrandTwitterFilled />
+    Sign in with Twitter
+  </button>
+  <button class='btn btn-google'>
+    <IconBrandGoogle />
+    Sign in with Google
+  </button>
+  <button class='btn btn-apple'>
+    <IconBrandApple />
+    Sign in with Apple
+  </button>
+</div>
+
+```js
+  <button class='btn btn-facebook'><IconBrandMeta />Continue with Facebook</button>
+  <button class='btn btn-twitter'><IconBrandTwitterFilled />Sign in with Twitter</button>
+  <button class='btn btn-google'><IconBrandGoogle />Sign in with Google</button>
+  <button class='btn btn-apple'><IconBrandApple />Sign in with Apple</button>
+```
+
+### Alternate Social Buttons
+
+<div class='component-preview flex-col'>
+  <button class='btn btn-facebook btn-facebook-alt'>
+    <IconBrandMeta />
+    Continue with Facebook
+  </button>
+  <button class='btn btn-twitter btn-twitter-alt'>
+    <IconBrandTwitterFilled />
+    Sign in with Twitter
+  </button>
+  <button class='btn btn-google btn-google-alt'>
+    <IconBrandGoogle />
+    Sign in with Google
+  </button>
+  <button class='btn btn-apple btn-apple-alt'>
+    <IconBrandApple />
+    Sign in with Apple
+  </button>
+</div>

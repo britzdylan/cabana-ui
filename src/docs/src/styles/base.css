@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+h1 {
+  @apply text-headline-lg font-semibold;
+}
+
+h2 {
+  @apply text-headline font-semibold;
+}
+
+h3 {
+  @apply text-headline-sm font-semibold;
+}
+
+.main-section > h1 {
+  @apply text-headline-lg font-semibold;
+}
+
+.component-preview {
+  padding: 4rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/grid_dot.svg');
+  background-repeat: repeat;
+  background-size: 1.5rem;
+  border-radius: 0.33rem;
+  border: 1px solid theme('colors.slate.200');
+  margin: 0.5rem;
+  resize: both;
+}
+
+.component-preview.dark {
+  background-image: url('/grid_dot_dark.svg');
+}
+
+pre.astro-code {
+  @apply mx-2 my-4 p-2 rounded-md;
+}
+
+code {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.77rem;
+}

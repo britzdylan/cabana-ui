@@ -1,0 +1,44 @@
+---
+import { SIDEBAR } from '../../config';
+
+
+
+const getLinkClasses = () => {
+  const baseClasses =
+    'text-body-sm block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900';
+
+  if (false) {
+    return baseClasses + ' border-slate-500 text-slate-900';
+  } else {
+    return baseClasses;
+  }
+};
+---
+
+<aside title='Site Navigation'>
+  <!-- <Debug content={navigation} /> -->
+  <nav aria-labelledby='grid-left' class='w-64 p-4'>
+    <ul>
+      {
+        SIDEBAR.map((item) =>
+          item.header ? (
+            <h2 class='mt-4 font-normal text-slate-700 text-body'>{item.name}</h2>
+          ) : (
+            <li class={getLinkClasses()}>
+              <a href={item.link}>{item.name}</a>
+            </li>
+          )
+        )
+      }
+    </ul>
+  </nav>
+</aside>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    var target = document.querySelector('[aria-current="page"]');
+    if (target && target.offsetTop > window.innerHeight - 100) {
+      document.querySelector('.nav-groups').scrollTop = target.offsetTop;
+    }
+  });
+</script>
