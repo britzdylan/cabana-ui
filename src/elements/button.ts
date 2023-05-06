@@ -1,10 +1,10 @@
-const iconSize = (size: number, theme: (arg0: string) => string) => {
-  return {
-    height: theme(`spacing.${size}`),
+const base = (theme: (arg0: string) => string | number) => {
+  const iconSize = (size: number) => {
+    return {
+      height: theme(`spacing.${size}`),
+    };
   };
-};
 
-const base = (theme: (arg0: string) => string) => {
   return {
     display: 'flex',
     alignItems: 'center',
@@ -45,20 +45,25 @@ const base = (theme: (arg0: string) => string) => {
     },
     //   icons
     '& .icon': {
-      ...iconSize(6, theme),
+      ...iconSize(5),
     },
 
     '& svg': {
-      ...iconSize(6, theme),
+      ...iconSize(5),
     },
 
     '& img': {
-      ...iconSize(6, theme),
+      ...iconSize(5),
     },
   };
 };
 
-function button(theme: (arg0: string) => string) {
+function button(theme: (arg0: string) => string | number) {
+  const iconSize = (size: number) => {
+    return {
+      height: theme(`spacing.${size}`),
+    };
+  };
   return {
     '.btn': {
       ...base(theme),
@@ -131,15 +136,15 @@ function button(theme: (arg0: string) => string) {
         lineHeight: theme('spacing.5'),
         borderRadius: `${theme('spacing.1')}`,
         '& .icon': {
-          ...iconSize(3, theme),
+          ...iconSize(3),
         },
 
         '& svg': {
-          ...iconSize(3, theme),
+          ...iconSize(3),
         },
 
         '& img': {
-          ...iconSize(3, theme),
+          ...iconSize(3),
         },
       },
 
@@ -150,15 +155,15 @@ function button(theme: (arg0: string) => string) {
         lineHeight: theme('spacing.5'),
         borderRadius: `${theme('spacing.1')}`,
         '& .icon': {
-          ...iconSize(4, theme),
+          ...iconSize(4),
         },
 
         '& svg': {
-          ...iconSize(4, theme),
+          ...iconSize(4),
         },
 
         '& img': {
-          ...iconSize(4, theme),
+          ...iconSize(4),
         },
       },
 
@@ -167,23 +172,18 @@ function button(theme: (arg0: string) => string) {
         fontSize: theme('fontSize.label-xl'),
         lineHeight: theme('spacing.7'),
         '& .icon': {
-          ...iconSize(8, theme),
+          ...iconSize(7),
         },
 
         '& svg': {
-          ...iconSize(8, theme),
+          ...iconSize(7),
         },
 
         '& img': {
-          ...iconSize(8, theme),
+          ...iconSize(7),
         },
       },
     },
-  };
-}
-
-function fab(theme: (arg0: string) => string) {
-  return {
     '.fab': {
       ...base(theme),
 
@@ -191,11 +191,17 @@ function fab(theme: (arg0: string) => string) {
         width: theme('spacing.8'),
         height: theme('spacing.8'),
         borderRadius: theme('spacing.1'),
-        '& > svg': {
-          fontSize: theme('spacing.3'),
-          width: theme('spacing.5'),
-          height: theme('spacing.5'),
-          color: '#fff',
+        padding: 0,
+        '& .icon': {
+          ...iconSize(4),
+        },
+
+        '& svg': {
+          ...iconSize(4),
+        },
+
+        '& img': {
+          ...iconSize(4),
         },
       },
 
@@ -203,11 +209,17 @@ function fab(theme: (arg0: string) => string) {
         width: theme('spacing.10'),
         height: theme('spacing.10'),
         borderRadius: theme('spacing.1'),
-        '& > svg': {
-          fontSize: theme('spacing.4'),
-          width: theme('spacing.6'),
-          height: theme('spacing.6'),
-          color: '#fff',
+        padding: 0,
+        '& .icon': {
+          ...iconSize(6),
+        },
+
+        '& svg': {
+          ...iconSize(6),
+        },
+
+        '& img': {
+          ...iconSize(6),
         },
       },
 
@@ -215,11 +227,17 @@ function fab(theme: (arg0: string) => string) {
         width: theme('spacing.12'),
         height: theme('spacing.12'),
         borderRadius: theme('spacing.2'),
-        '& > svg': {
-          fontSize: theme('spacing.5'),
-          width: theme('spacing.7'),
-          height: theme('spacing.7'),
-          color: '#fff',
+        padding: 0,
+        '& .icon': {
+          ...iconSize(7),
+        },
+
+        '& svg': {
+          ...iconSize(7),
+        },
+
+        '& img': {
+          ...iconSize(7),
         },
       },
 
@@ -227,11 +245,17 @@ function fab(theme: (arg0: string) => string) {
         width: theme('spacing.14'),
         height: theme('spacing.14'),
         borderRadius: theme('spacing.2'),
-        '& > svg': {
-          fontSize: theme('spacing.6'),
-          width: theme('spacing.8'),
-          height: theme('spacing.8'),
-          color: '#fff',
+        padding: 0,
+        '& .icon': {
+          ...iconSize(8),
+        },
+
+        '& svg': {
+          ...iconSize(8),
+        },
+
+        '& img': {
+          ...iconSize(8),
         },
       },
 
@@ -239,11 +263,6 @@ function fab(theme: (arg0: string) => string) {
         borderRadius: '100%',
       },
     },
-  };
-}
-
-function buttonGroup(theme: (arg0: string) => string) {
-  return {
     '.btn-group': {
       display: 'flex',
       flexDirection: 'row',
@@ -253,7 +272,7 @@ function buttonGroup(theme: (arg0: string) => string) {
       width: 'fit-content',
       height: 'fit-content',
       '& > button': {
-        ...base,
+        ...base(theme),
         borderRadius: '0px',
         '&:focus': {
           outlineWidth: '0px',
@@ -266,7 +285,7 @@ function buttonGroup(theme: (arg0: string) => string) {
       },
       '&-small': {
         '& > button': {
-          ...base,
+          ...base(theme),
           borderRadius: '0px',
           '&:focus': {
             outlineWidth: '0px',
@@ -280,7 +299,7 @@ function buttonGroup(theme: (arg0: string) => string) {
       },
       '&-large': {
         '& > button': {
-          ...base,
+          ...base(theme),
           borderRadius: '0px',
           '&:focus': {
             outlineWidth: '0px',
@@ -296,22 +315,34 @@ function buttonGroup(theme: (arg0: string) => string) {
       '&-outline': {
         border: `solid ${theme('spacing[0.5]')} ${theme('colors.primary.500')}`,
         '& > button': {
-          ...base,
+          ...base(theme),
           borderLeftWidth: '0px',
           borderRightWidth: theme('spacing[0.5]'),
           borderTopWidth: '0px',
           borderBottomWidth: '0px',
           borderRadius: '0px',
+          backgroundColor: 'transparent',
+          color: theme('colors.primary.500'),
           '&:last-child': {
             borderRightWidth: '0px',
+          },
+          '&:hover': {
+            backgroundColor: theme('colors.primary.50'),
           },
           '&:focus': {
             outlineWidth: '0px',
             outlineColor: 'transparent',
+            backgroundColor: theme('colors.primary.50'),
           },
           '&:active': {
             outlineWidth: '0px',
             outlineColor: 'transparent',
+            backgroundColor: theme('colors.primary.50'),
+          },
+          '&:disabled': {
+            backgroundColor: 'transparent',
+            color: theme('colors.primary.100'),
+            BorderColor: theme('colors.primary.100'),
           },
         },
       },
@@ -319,4 +350,4 @@ function buttonGroup(theme: (arg0: string) => string) {
   };
 }
 
-export { base, button, fab, buttonGroup };
+export { button };

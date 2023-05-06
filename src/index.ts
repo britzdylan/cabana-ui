@@ -26,6 +26,7 @@ const main: PluginCreator = async ({ addComponents, config, theme }) => {
     );
     console.log('=============================================');
   }
+  // @ts-ignore
   addComponents(elements(theme));
 };
 
