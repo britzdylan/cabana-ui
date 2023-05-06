@@ -4,6 +4,7 @@
 
 body {
   font-family: Inter, sans-serif;
+  @apply text-neutral-700 bg-neutral-50;
 }
 
 h1 {

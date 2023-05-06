@@ -1,11 +1,13 @@
-import Button from './button';
+import { button, fab, buttonGroup } from './button';
 /**
  * The main function used to inject the UI elements into the Tailwind config.
  */
 
 const elements = (theme: () => string) => {
   return {
-    ...Button(theme),
+    ...button(theme),
+    ...fab(theme),
+    ...buttonGroup(theme),
   };
 };
 

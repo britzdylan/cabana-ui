@@ -1,5 +1,7 @@
 ---
 import { SITE } from '../../config';
+import '../styles/base.css';
+
 const navItems = [
   {
     title: 'Core',
@@ -21,16 +23,15 @@ const navItems = [
   },
 ];
 
-import '../styles/base.css';
 ---
 
-<div class='bg-slate-100 min-h-screen text-center'>
-  <header class='pt-12 pb-24 px-4 bg-gradient-to-br from-slate-700 to-black'>
+<div class='bg-neutral-100 min-h-screen text-center'>
+  <header class='pt-12 pb-24 px-4 bg-gradient-to-t from-secondary-800 to-secondary-900'>
     <div class='flex items-center justify-center p-4'>
       <img src='/logo.svg' alt='Astro Design System Logo' />
     </div>
     <h1 class='text-white text-4xl font-medium drop-shadow-sm'>{SITE.title}</h1>
-    <p class='text-lg mt-4 max-w-xl mx-auto text-slate-300'>
+    <p class='text-lg mt-4 max-w-xl mx-auto text-neutral-300'>
       {SITE.description}
     </p>
   </header>
@@ -43,7 +44,7 @@ import '../styles/base.css';
             class='flex flex-col bg-white rounded-md hover:-translate-y-1 hover:shadow-lg transition-all flex-1 items-center p-4'>
             <img src={img} alt={title} />
             <h2 class='text-lg font-medium'>{title}</h2>
-            <p class='text-slate-500'>{description}</p>
+            <p class='text-neutral-500'>{description}</p>
           </a>
         ))
       }
