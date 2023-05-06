@@ -1,0 +1,153 @@
+---
+title: 'Navigation'
+layout: '../../layouts/Layout.astro'
+---
+
+import {
+  IconCircleArrowRightFilled,
+  IconCircleArrowLeftFilled,
+  IconChevronRight,
+} from '@tabler/icons-vue';
+
+## Navigation
+
+### Simple Link
+
+<div class='component-preview'>
+  <a class='link'>Simple</a>
+  <a class='link link-fancy'>Fancy</a>
+  <a class='link link-fancy-hover'>Hover</a>
+</div>
+
+```js
+  <a  class='link'>Simple</a>
+  <a  class='link link-fancy'>Fancy</a>
+  <a  class='link link-fancy-hover'>Hover</a>
+```
+
+### Link Sizes
+
+<div class='component-preview'>
+  <a class='link link-xs'>xsmall</a>
+  <a class='link link-sm'>Small</a>
+  <a class='link'>Default</a>
+  <a class='link link-lg'>Large</a>
+  <a class='link link-xl'>Xlarge</a>
+</div>
+
+```js
+  <a  class='link link-xs'>xsmall</a>
+  <a  class='link link-sm'>Small</a>
+  <a  class='link'>Default</a>
+  <a  class='link link-lg'>Large</a>
+  <a  class='link link-xl'>Xlarge</a>
+```
+
+### Link With Icons
+
+<div class='component-preview '>
+  <a class='link'>
+    <IconCircleArrowLeftFilled />
+    Left
+  </a>
+  <a class='link'>
+    Right
+    <IconCircleArrowRightFilled />
+  </a>
+</div>
+
+```js
+  <a  class='link'>
+    <IconCircleArrowRightFilled />
+    Fancy
+  </a>
+  <a  class='link'>
+    Hover
+    <IconCircleArrowRightFilled />
+  </a>
+```
+
+### Menu Item
+
+<div class='component-preview flex-col'>
+    <ul class="menu">
+        <li class="active"><a>Home</a></li>
+        <li><a >About</a></li>
+        <li><a >Contact</a></li>
+    </ul>
+
+    <ul class="menu menu-contained">
+        <li class="active"><a>Home</a></li>
+        <li><a >About</a></li>
+        <li><a >Contact</a></li>
+    </ul>
+
+    <ul class="menu menu-contained-rounded">
+        <li class="active"><a>Home</a></li>
+        <li><a >About</a></li>
+        <li><a >Contact</a></li>
+    </ul>
+
+</div>
+
+```js
+    <ul class="menu">
+        <li class="active"><a>Home</a></li>
+        <li><a >About</a></li>
+        <li><a >Contact</a></li>
+    </ul>
+
+    <ul class="menu menu-contained">
+        <li class="active"><a>Home</a></li>
+        <li><a >About</a></li>
+        <li><a >Contact</a></li>
+    </ul>
+
+    <ul class="menu menu-contained-rounded">
+        <li class="active"><a>Home</a></li>
+        <li><a >About</a></li>
+        <li><a >Contact</a></li>
+    </ul>
+```
+
+### Pill
+
+<div class='component-preview'>
+  <span class='pill'>Default</span>
+  <span class='pill pill-active'>Active</span>
+</div>
+
+```js
+    <span class="pill">Default</span>
+    <span class="pill pill-active">Active</span>
+```
+
+### Breadcrumbs
+
+<div class='component-preview'>
+  <ol class='breadcrumb'>
+    <li>
+      <a href='#'>Home</a> <IconChevronRight />
+    </li>
+    <li>
+      <a href='#'>Library</a> <IconChevronRight />
+    </li>
+    <li class='active'>
+      <a href='#'>Data</a> <IconChevronRight />
+    </li>
+  </ol>
+</div>
+
+```js
+<ol class='breadcrumb'>
+  <li>
+    <a href='#'>Home</a> <IconChevronRight />
+  </li>
+  <li>
+    <a href='#'>Library</a> <IconChevronRight />
+  </li>
+  <li class='active'>
+    <a href='#'>Data</a> <IconChevronRight />
+  </li>
+</ol>
+```
