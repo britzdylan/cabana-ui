@@ -22,27 +22,53 @@ const toggle = (theme: (arg0: string) => string | number) => {
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
-        width: theme('spacing.8'),
+        width: theme('spacing.12'),
         borderRadius: '48px',
         background: theme('colors.gray.200'),
         transition: 'all 0.2s ease-in-out',
         padding: theme('spacing[0.5]'),
       },
+      '& .toggle-label-narrow': {
+        cursor: 'pointer',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        width: theme('spacing.12'),
+        height: theme('spacing.3'),
+        borderRadius: '48px',
+        background: theme('colors.gray.200'),
+        transition: 'all 0.2s ease-in-out',
+        padding: 0,
+      },
       '& .toggle-label:after': {
         content: '""',
         display: 'block',
-        width: theme('spacing.4'),
-        height: theme('spacing.4'),
+        width: theme('spacing.5'),
+        height: theme('spacing.5'),
         borderRadius: '100%',
         background: '#fff',
         transition: 'all 0.2s ease-in-out',
       },
-
-      '& input[type="checkbox"]:checked ~ .toggle-label': {
-        background: theme('colors.neutral.900'),
+      '& .toggle-label-narrow:after': {
+        content: '""',
+        display: 'block',
+        width: theme('spacing.6'),
+        height: theme('spacing.6'),
+        borderRadius: '100%',
+        background: '#fff',
+        transition: 'all 0.2s ease-in-out',
+        boxShadow: theme('boxShadow.light-200'),
       },
+
+      '& input[type="checkbox"]:checked ~ .toggle-label, input[type="checkbox"]:checked ~ .toggle-label-narrow':
+        {
+          background: theme('colors.neutral.900'),
+        },
       '& input[type="checkbox"]:checked ~ .toggle-label:after': {
-        transform: 'translateX(12px)',
+        transform: 'translateX(24px)',
+      },
+      '& input[type="checkbox"]:checked ~ .toggle-label-narrow:after': {
+        transform: 'translateX(24px)',
       },
     },
   };
