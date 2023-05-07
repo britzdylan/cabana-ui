@@ -5,6 +5,7 @@ import input from './input';
 import textarea from './textarea';
 import toggle from './toggle';
 import radio from './radio';
+import checkbox from './checkbox';
 
 const elements = (theme: () => string | number) => {
   return {
@@ -12,6 +13,7 @@ const elements = (theme: () => string | number) => {
     ...textarea(theme),
     ...toggle(theme),
     ...radio(theme),
+    ...checkbox(theme),
   };
 };
 

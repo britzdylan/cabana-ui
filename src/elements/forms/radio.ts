@@ -20,7 +20,7 @@ const radio = (theme: (arg0: string) => string | number) => {
         height: 0,
         width: 0,
       },
-      '& .checkmark': {
+      '& .radio-input': {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -42,7 +42,7 @@ const radio = (theme: (arg0: string) => string | number) => {
         },
       },
       '&-large': {
-        '& .checkmark': {
+        '& .radio-input': {
           height: theme('spacing.5'),
           width: theme('spacing.5'),
         },
@@ -53,10 +53,10 @@ const radio = (theme: (arg0: string) => string | number) => {
           marginBottom: 0,
         },
       },
-      '&:hover input ~ .checkmark': {
+      '&:hover input ~ .radio-input': {
         borderColor: `${theme('colors.neutral.900')}`,
       },
-      '& input:checked ~ .checkmark:after': {
+      '& input:checked ~ .radio-input:after': {
         // display: 'block',
         width: '100%',
         height: '100%',

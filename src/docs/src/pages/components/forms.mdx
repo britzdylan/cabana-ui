@@ -8,6 +8,7 @@ import {
   IconHelpCircle,
   IconCreditCard,
   IconChevronDown,
+  IconCheck,
 } from '@tabler/icons-vue';
 
 ## Forms
@@ -475,12 +476,12 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
 <div class='component-preview'>
   <label class='radio'>
     <input type='radio' />
-    <span class='checkmark'></span>
+    <span class='radio-input'></span>
     <span class='text-label'>Radio Option</span>
   </label>
   <label class='radio radio-large'>
     <input type='radio' />
-    <span class='checkmark'></span>
+    <span class='radio-input'></span>
     <span class='text-label'>Radio Option</span>
   </label>
 </div>
@@ -488,12 +489,46 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
 ```js
 <label class='radio'>
   <input type='radio' />
-  <span class='checkmark'></span>
+  <span class='radio-input'></span>
   <span class='text-label'>Radio Option</span>
 </label>
 ```
 
 ### Checkbox
+
+<div class='component-preview'>
+  <label class='checkbox'>
+    <input type='checkbox' />
+    <span class='checkmark'>
+      <IconCheck />
+    </span>
+    <label class='text-label'>Radio Option</label>
+  </label>
+  <label class='checkbox checkbox-large'>
+    <input type='checkbox' />
+    <span class='checkmark'>
+      <IconCheck />
+    </span>
+    <label class='text-label'>Radio Option</label>
+  </label>
+</div>
+
+```js
+<label class='checkbox'>
+  <input type='checkbox' />
+  <span class='checkmark'>
+    <IconCheck />
+  </span>
+  <label class='text-label'>Radio Option</label>
+</label>
+<label class='checkbox checkbox-large'>
+  <input type='checkbox' />
+  <span class='checkmark'>
+    <IconCheck />
+  </span>
+  <label class='text-label'>Radio Option</label>
+</label>
+```
 
 ### Range
 
