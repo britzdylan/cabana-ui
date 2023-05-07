@@ -3,7 +3,12 @@ title: 'Forms'
 layout: '../../layouts/Layout.astro'
 ---
 
-import { IconMail, IconHelpCircle, IconCreditCard } from '@tabler/icons-vue';
+import {
+  IconMail,
+  IconHelpCircle,
+  IconCreditCard,
+  IconChevronDown,
+} from '@tabler/icons-vue';
 
 ## Forms
 
@@ -281,48 +286,50 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
 ### Input with Prefix
 
 <div class='component-preview'>
-  <div class='input max-w-xs mx-auto'>
-    <label class='label'>Prefix</label>
-    <span>
-      <span class='input-prefix'>https://</span>
-      <input type='text' placeholder='example.com'></input>
-    </span>
-  </div>
+<div class='input max-w-xs mx-auto'>
+  <label class='label'>Prefix</label>
+  <span>
+    <span class='input-prefix'>https://</span>
+    <input type='text' placeholder='example.com'></input>
+  </span>
+</div>
 
-   <div class='input max-w-xs mx-auto'>
-    <label class='label'>Suffix</label>
-    <span>
-      <input type='text' placeholder='Your email'></input>
-      <span class='input-suffix'>@gmail.com</span>
-    </span>
-  </div>
+<div class='input max-w-xs mx-auto'>
+  <label class='label'>Suffix</label>
+  <span>
+    <input type='text' placeholder='Your email'></input>
+    <span class='input-suffix'>@gmail.com</span>
+  </span>
+</div>
 </div>
 
 ```js
-  <div class='input max-w-xs mx-auto'>
-    <label class='label'>Prefix</label>
-    <span>
-      <span class='input-prefix'>https://</span>
-      <input type='text' placeholder='example.com'></input>
-    </span>
-  </div>
+<div class='input max-w-xs mx-auto'>
+  <label class='label'>Prefix</label>
+  <span>
+    <span class='input-prefix'>https://</span>
+    <input type='text' placeholder='example.com'></input>
+  </span>
+</div>
 
-   <div class='input max-w-xs mx-auto'>
-    <label class='label'>Suffix</label>
-    <span>
-      <input type='text' placeholder='Your email'></input>
-      <span class='input-suffix'>@gmail.com</span>
-    </span>
-  </div>
+  <div class='input max-w-xs mx-auto'>
+  <label class='label'>Suffix</label>
+  <span>
+    <input type='text' placeholder='Your email'></input>
+    <span class='input-suffix'>@gmail.com</span>
+  </span>
+</div>
 ```
 
 ### TextArea
 
 <div class='component-preview'>
-  <div class='input max-w-xs mx-auto'>
-    <span>
-      <textarea placeholder='Your message'></textarea>
-    </span>
+  <div class='textarea max-w-xs mx-auto'>
+    <label class='label'>Enter a message</label>
+    <textarea placeholder='Your message'></textarea>
+     <label class='helper'>
+      <span>No more than 300 chracters</span>
+    </label>
   </div>
 </div>
 ```js
@@ -330,13 +337,121 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   <span>
     <textarea placeholder='Your message'></textarea>
   </span>
+
 </div>
 ```
 
-### select
+### Textarea states
 
-### Date
+<div class='component-preview'>
+  <div class='textarea max-w-xs mx-auto'>
+    <label class='label'>Enter a message</label>
+    <textarea class='error' placeholder='Your message'></textarea>
+    <label class='helper'>
+      <span>No more than 300 chracters</span>
+    </label>
+  </div>
 
-### select
+{' '}
 
-### select
+<div class='textarea max-w-xs mx-auto'>
+  <label class='label'>Enter a message</label>
+  <textarea class='success' placeholder='Your message'></textarea>
+  <label class='helper'>
+    <span>No more than 300 chracters</span>
+  </label>
+</div>
+
+  <div class='textarea max-w-xs mx-auto'>
+    <label class='label'>Enter a message</label>
+    <textarea disabled="true" placeholder='Your message'></textarea>
+    <label class='helper'>
+      <span>No more than 300 chracters</span>
+    </label>
+  </div>
+</div>
+
+```js
+<div class='textarea max-w-xs mx-auto'>
+  <label class='label'>Enter a message</label>
+  <textarea class='error' placeholder='Your message'></textarea>
+  <label class='helper'>
+    <span>No more than 300 chracters</span>
+  </label>
+</div>
+
+<div class='textarea max-w-xs mx-auto'>
+  <label class='label'>Enter a message</label>
+  <textarea class='success' placeholder='Your message'></textarea>
+  <label class='helper'>
+    <span>No more than 300 chracters</span>
+  </label>
+</div>
+```
+
+### Textarea sizes
+
+<div class='component-preview'>
+<div class='textarea max-w-xs mx-auto'>
+  <label class='label'>Enter a message</label>
+  <textarea placeholder='Your message'></textarea>
+  <label class='helper'>
+    <span>No more than 300 chracters</span>
+  </label>
+</div>
+
+<div class='textarea textarea-large max-w-xs mx-auto'>
+  <label class='label'>Enter a message</label>
+  <textarea placeholder='Your message'></textarea>
+  <label class='helper'>
+    <span>No more than 300 chracters</span>
+  </label>
+</div>
+</div>
+
+```js
+<div class='textarea max-w-xs mx-auto'>
+  <label class='label'>Enter a message</label>
+  <textarea placeholder='Your message'></textarea>
+  <label class='helper'>
+    <span>No more than 300 chracters</span>
+  </label>
+</div>
+
+<div class='textarea textarea-large max-w-xs mx-auto'>
+  <label class='label'>Enter a message</label>
+  <textarea placeholder='Your message'></textarea>
+  <label class='helper'>
+    <span>No more than 300 chracters</span>
+  </label>
+</div>
+```
+
+### Select
+
+<div class='component-preview'>
+  <div class='input max-w-xs mx-auto'>
+    <label class='label'>Select a country</label>
+    <span>
+      <select class='select'>
+        <option>United States</option>
+        <option>United Kingdom</option>
+        <option>Germany</option>
+      </select>
+    </span>
+  </div>
+</div>
+
+### Toggle
+
+### Radio
+
+### Checkbox
+
+### Range
+
+### File
+
+### Submit
+
+### Reset

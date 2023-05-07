@@ -1,9 +1,6 @@
+import styles from './styles';
+
 const input = (theme: (arg0: string) => string | number) => {
-  const label = {
-    width: '100%',
-    fontSize: theme('fontSize.label-sm'),
-    fontWeight: theme('fontWeight.bold'),
-  };
   const inputSpan = {
     backgroundColor: '#fff',
     overflow: 'hidden',
@@ -17,12 +14,20 @@ const input = (theme: (arg0: string) => string | number) => {
     justifyContent: 'space-between',
     borderRadius: theme('borderRadius.md'),
     border: `1px solid ${theme('colors.gray.300')}`,
+    transition: 'all 0.2s ease-in-out',
     '&:focus-within': {
       outlineStyle: 'solid',
       outlineColor: theme('colors.blue.200'),
       outlineWidth: '2px',
       outlineOffset: '0px',
       border: `1px solid ${theme('colors.blue.300')}`,
+    },
+    '&:disabled': {
+      PointerEvents: 'none',
+      outline: 'none',
+      border: `none`,
+      color: theme('colors.gray.400'),
+      backgroundColor: theme('colors.gray.100'),
     },
     '& .icon, svg ': {
       fontSize: theme('spacing.5'),
@@ -65,66 +70,21 @@ const input = (theme: (arg0: string) => string | number) => {
     height: '100%',
     padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
   };
-  const input = {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    overflow: 'hidden',
-    padding: 2,
-    gap: theme('spacing.1'),
-  };
-  const inputReset = {
-    width: '100%',
-    padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
-    fontSize: theme('fontSize.label-sm'),
-    fontWeight: theme('fontWeight.normal'),
-    '&:focus': {
-      outline: 'none',
-      border: `none`,
-    },
-    '&:disabled': {
-      PointerEvents: 'none',
-      outline: 'none',
-      border: `none`,
-    },
-    '&:active': {
-      outline: 'none',
-      border: `none`,
-    },
-    '&:hover': {
-      outline: 'none',
-      border: `none`,
-    },
-  };
-
-  const helper = {
-    width: '100%',
-    marginBottom: theme('spacing.1'),
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    '& span': {
-      fontSize: theme('fontSize.label-sm'),
-      fontWeight: theme('fontWeight.normal'),
-    },
-  };
 
   return {
     '.input': {
-      ...input,
+      ...styles.wrapper(theme),
       '& label.label': {
-        ...label,
+        ...styles.label(theme),
       },
       '& > span:not(.input-prefix, .input-suffix)': {
         ...inputSpan,
       },
       '& label.helper': {
-        ...helper,
+        ...styles.helper(theme),
       },
       '& input': {
-        ...inputReset,
+        ...styles.inputReset(theme),
       },
 
       '&-large': {
@@ -147,7 +107,7 @@ const input = (theme: (arg0: string) => string | number) => {
           borderLeft: `1px solid ${theme('colors.gray.300')}`,
         },
       },
-      '& > select.input-select': {
+      '& > select.input-select, &:select': {
         width: '100%',
         height: theme('spacing.6'),
         fontSize: theme('fontSize.label-sm'),
@@ -169,6 +129,10 @@ const input = (theme: (arg0: string) => string | number) => {
           outline: 'none',
           border: `none`,
         },
+      },
+      '& select.select': {
+        ...styles.inputReset(theme),
+        cursor: 'pointer',
       },
       '& span.input-prefix': {
         ...prefixSuffix,
