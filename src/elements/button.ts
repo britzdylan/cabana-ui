@@ -19,6 +19,7 @@ const base = (theme: (arg0: string) => string | number) => {
     letterSpacing: '0.002em',
     lineHeight: theme('spacing.6'),
     borderRadius: `${theme('spacing[1.5]')}`,
+    cursor: 'pointer',
     // Default states
     '&:hover': {
       backgroundColor: theme('colors.primary.600'),
