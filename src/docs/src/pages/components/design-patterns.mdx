@@ -1,0 +1,76 @@
+---
+title: 'Design Patterns'
+layout: '../../layouts/Layout.astro'
+---
+
+import { IconUser } from '@tabler/icons-vue';
+
+# Design Patterns
+
+## Avatar
+
+<div class='component-preview'>
+  <div class='avatar'>
+      <img src='/avatar.jpg' />
+  </div>
+
+    <div class='avatar avatar-rounded'>
+      <img src='/avatar.jpg' />
+
+  </div>
+</div>
+
+```js
+  <div class='avatar'>
+      <img src='/avatar.jpg' />
+  </div>
+
+    <div class='avatar avatar-rounded'>
+      <img src='/avatar.jpg' />
+  </div>
+```
+
+### Avatar with placeholder
+
+<div class='component-preview'>
+<div class='avatar avatar-placeholder avatar-rounded'>
+    <span>D</span>
+</div>
+
+<div class='avatar avatar-placeholder avatar-rounded'>
+    <IconUser/>
+</div>
+</div>
+
+```js
+<div class='avatar avatar-placeholder avatar-bordered'>
+    <img src='/avatar.jpg' />
+</div>
+
+<div class='avatar avatar-placeholder avatar-rounded'>
+    <IconUser/>
+</div>
+```
+
+### Avatar with border
+
+<div class='component-preview bg-gray-200'>
+  <div class='avatar avatar-placeholder avatar-bordered'>
+      <span>CUI</span>
+  </div>
+
+    <div class='avatar avatar-placeholder avatar-rounded avatar-bordered'>
+      <IconUser/>
+
+  </div>
+</div>
+
+```js
+  <div class='avatar avatar-placeholder avatar-rounded'>
+      <span>CUI</span>
+  </div>
+
+    <div class='avatar avatar-placeholder avatar-rounded'>
+      <IconUser/>
+  </div>
+```
