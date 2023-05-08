@@ -3,7 +3,7 @@ import menu from './menu';
 import pill from './pill';
 import breadcrumbs from './breadcrumbs';
 import pagination from './pagination';
-
+import tabs from './tabs';
 /**
  * The main function used to inject the UI elements into the Tailwind config.
  */
@@ -15,6 +15,7 @@ const elements = (theme: () => string | number) => {
     ...pill(theme),
     ...breadcrumbs(theme),
     ...pagination(theme),
+    ...tabs(theme),
   };
 };
 

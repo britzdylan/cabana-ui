@@ -7,6 +7,10 @@ import {
   IconCircleArrowRightFilled,
   IconCircleArrowLeftFilled,
   IconChevronRight,
+  IconChevronLeft,
+  IconHome2,
+  IconGridDots,
+  IconHelpCircle,
 } from '@tabler/icons-vue';
 
 ## Navigation
@@ -150,4 +154,256 @@ import {
     <a href='#'>Data</a> <IconChevronRight />
   </li>
 </ol>
+```
+
+### Pagination
+
+<div class='component-preview flex-col'>
+  <nav class='pagination'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+     <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+
+  <nav class='pagination pagination-large'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+     <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+</div>
+
+```js
+<nav class='pagination'>
+  <IconChevronLeft />
+  <ol class='pagination-list'>
+   <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+  </ol>
+  <IconChevronRight />
+</nav>
+
+<nav class='pagination pagination-large'>
+  <IconChevronLeft />
+  <ol class='pagination-list'>
+    <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+  </ol>
+  <IconChevronRight />
+</nav>
+```
+
+#### Pagination With Buttons
+
+<div class='component-preview'>
+  <nav class='pagination pagination-contained'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+</div>
+
+```js
+<nav class='pagination pagination-contained'>
+  <IconChevronLeft />
+  <ol class='pagination-list'>
+    <li class='active'>
+      <a href='#'>1</a>
+    </li>
+    <li>
+      <a href='#'>2</a>
+    </li>
+    <li>
+      <a href='#'>3</a>
+    </li>
+    <li>
+      <a href='#'>4</a>
+    </li>
+    <li>
+      <a href='#'>5</a>
+    </li>
+    <li>
+      <a href='#'>6</a>
+    </li>
+    <li>
+      <a href='#'>8</a>
+    </li>
+    <li>
+      <a href='#'>9</a>
+    </li>
+    <li>
+      <a href='#'>10</a>
+    </li>
+  </ol>
+  <IconChevronRight />
+</nav>
+```
+
+### Tabs
+
+<div class='component-preview'>
+  <nav class='tabs'>
+    <button class='active'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+</div>
+
+```js
+<nav class='tabs'>
+  <button class='active'>
+    <IconHome2 />
+    Home
+  </button>
+  <button>
+    <IconGridDots />
+    Start
+  </button>
+  <button>
+    <IconHelpCircle />
+    Help
+  </button>
+</nav>
 ```
