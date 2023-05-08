@@ -52,10 +52,6 @@ const base = (theme: (arg0: string) => string | number) => {
     '& svg': {
       ...iconSize(5),
     },
-
-    '& img': {
-      ...iconSize(5),
-    },
   };
 };
 
@@ -143,10 +139,6 @@ function button(theme: (arg0: string) => string | number) {
         '& svg': {
           ...iconSize(3),
         },
-
-        '& img': {
-          ...iconSize(3),
-        },
       },
 
       '&-md': {
@@ -162,10 +154,6 @@ function button(theme: (arg0: string) => string | number) {
         '& svg': {
           ...iconSize(4),
         },
-
-        '& img': {
-          ...iconSize(4),
-        },
       },
 
       '&-lg': {
@@ -177,10 +165,6 @@ function button(theme: (arg0: string) => string | number) {
         },
 
         '& svg': {
-          ...iconSize(7),
-        },
-
-        '& img': {
           ...iconSize(7),
         },
       },
@@ -200,10 +184,6 @@ function button(theme: (arg0: string) => string | number) {
         '& svg': {
           ...iconSize(4),
         },
-
-        '& img': {
-          ...iconSize(4),
-        },
       },
 
       '&-md': {
@@ -216,10 +196,6 @@ function button(theme: (arg0: string) => string | number) {
         },
 
         '& svg': {
-          ...iconSize(6),
-        },
-
-        '& img': {
           ...iconSize(6),
         },
       },
@@ -236,10 +212,6 @@ function button(theme: (arg0: string) => string | number) {
         '& svg': {
           ...iconSize(7),
         },
-
-        '& img': {
-          ...iconSize(7),
-        },
       },
 
       '&-xl': {
@@ -252,10 +224,6 @@ function button(theme: (arg0: string) => string | number) {
         },
 
         '& svg': {
-          ...iconSize(8),
-        },
-
-        '& img': {
           ...iconSize(8),
         },
       },

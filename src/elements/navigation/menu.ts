@@ -55,14 +55,20 @@ const menu = (theme: (arg0: string) => string | number) => {
           ...setColorShade(200),
           PointerEvents: 'none',
         },
-        '& .icon, svg': {
+        '& .icon': {
+          ...icon,
+        },
+        '& svg': {
           ...icon,
         },
         '& a': {
           ...listItem,
           padding: 0,
           textDecoration: 'none',
-          '& .icon, svg': {
+          '& .icon': {
+            ...icon,
+          },
+          '& svg': {
             ...icon,
           },
           '&:disabled': {

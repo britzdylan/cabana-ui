@@ -17,7 +17,11 @@ const list = (theme: (arg0: string) => string | number) => {
     margin: 0,
     '& li': {
       ...listItem,
-      '& .icon, svg': {
+      '& .icon': {
+        width: theme('spacing.4'),
+        height: theme('spacing.4'),
+      },
+      '& svg': {
         width: theme('spacing.4'),
         height: theme('spacing.4'),
       },
@@ -27,7 +31,11 @@ const list = (theme: (arg0: string) => string | number) => {
       '& li': {
         ...listItem,
         fontSize: theme('fontSize.label-xl'),
-        '& .icon, svg': {
+        '& .icon': {
+          width: theme('spacing.6'),
+          height: theme('spacing.6'),
+        },
+        '& svg': {
           width: theme('spacing.6'),
           height: theme('spacing.6'),
         },

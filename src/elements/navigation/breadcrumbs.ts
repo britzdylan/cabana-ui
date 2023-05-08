@@ -15,14 +15,21 @@ const breadcrumbs = (theme: (arg0: string) => string | number) => {
         '&.active': {
           color: theme('colors.gray.800'),
           fontWeight: theme('fontWeight.semibold'),
-          '.icon, svg': {
+          '.icon': {
+            display: 'none',
+          },
+          '& svg': {
             display: 'none',
           },
           '& a': {
             pointerEvents: 'none',
           },
         },
-        '.icon, svg': {
+        ' .icon': {
+          width: theme('spacing.3'),
+          height: theme('spacing.3'),
+        },
+        ' svg': {
           width: theme('spacing.3'),
           height: theme('spacing.3'),
         },

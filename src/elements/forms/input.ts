@@ -29,7 +29,11 @@ const input = (theme: (arg0: string) => string | number) => {
       color: theme('colors.gray.400'),
       backgroundColor: theme('colors.gray.100'),
     },
-    '& .icon, svg ': {
+    '& .icon': {
+      fontSize: theme('spacing.5'),
+      height: theme('spacing.5'),
+    },
+    '& svg ': {
       fontSize: theme('spacing.5'),
       height: theme('spacing.5'),
     },

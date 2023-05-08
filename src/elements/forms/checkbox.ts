@@ -1,6 +1,13 @@
 import styles from './styles';
 
 const checkbox = (theme: (arg0: string) => string | number) => {
+  const icon = {
+    width: theme('spacing.0'),
+    height: theme('spacing.0'),
+    color: theme('colors.neutral.900'),
+    opacity: 0,
+  };
+
   return {
     '.checkbox': {
       width: '100%',
@@ -32,11 +39,11 @@ const checkbox = (theme: (arg0: string) => string | number) => {
         padding: '1px',
         borderRadius: theme('borderRadius.sm'),
         transition: 'all 0.2s ease-in-out',
-        ' .icon, svg, img': {
-          width: theme('spacing.0'),
-          height: theme('spacing.0'),
-          color: theme('colors.neutral.900'),
-          opacity: 0,
+        ' .icon': {
+          ...icon,
+        },
+        ' svg': {
+          ...icon,
         },
       },
       '&:hover input ~ .checkmark': {
@@ -44,8 +51,8 @@ const checkbox = (theme: (arg0: string) => string | number) => {
       },
       '& input:checked ~ .checkmark img, & input:checked ~ .checkmark svg, & input:checked ~ .checkmark .icon':
         {
-          width: '100%',
-          height: '100%',
+          width: theme('spacing.4'),
+          height: theme('spacing.4'),
           opacity: 1,
         },
 

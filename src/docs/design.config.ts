@@ -32,7 +32,7 @@ export const COLORS = {
     { name: '500', value: '#2595e7' },
     { name: '600', value: '#1578c1' },
     { name: '700', value: '#105a91' },
-    { name: '800', value: '#b36c61' },
+    { name: '800', value: '#0B3C61' },
     { name: '900', value: '#051e30' },
   ],
   brand: [

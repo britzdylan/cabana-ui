@@ -39,10 +39,6 @@ const baseLink = (theme: (arg0: string) => string | number) => {
     '& svg': {
       ...iconSize(5),
     },
-
-    '& img': {
-      ...iconSize(5),
-    },
   };
 };
 

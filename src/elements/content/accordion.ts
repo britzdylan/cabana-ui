@@ -15,7 +15,12 @@ const accordion = (theme: (arg0: string) => string | number) => {
         borderRadius: `${theme('borderRadius.md')} ${theme(
           'borderRadius.md'
         )} 0 0`,
-        '& .icon, svg': {
+        '& .icon': {
+          width: theme('spacing.6'),
+          height: theme('spacing.6'),
+          marginLeft: 'auto',
+        },
+        '& svg': {
           width: theme('spacing.6'),
           height: theme('spacing.6'),
           marginLeft: 'auto',
