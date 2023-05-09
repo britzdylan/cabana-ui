@@ -3,7 +3,7 @@ title: 'Design Patterns'
 layout: '../../layouts/Layout.astro'
 ---
 
-import { IconUser } from '@tabler/icons-vue';
+import { IconUser, IconX } from '@tabler/icons-vue';
 
 # Design Patterns
 
@@ -117,5 +117,49 @@ import { IconUser } from '@tabler/icons-vue';
 <div class='avatar avatar-placeholder avatar-rounded'>
   <span class="status bg-neutral-500"></span>
   <IconUser/>
+</div>
+```
+
+## Chip
+
+<div class='component-preview !bg-white'>
+<div class='chip'>
+    <span>Chip</span>
+</div>
+
+<div class='chip chip-rounded'>
+  <img src='/avatar.jpg' />
+  <span>Chip</span>
+  <IconX />
+</div>
+
+<div class='chip chip-rounded chip-bordered'>
+  <span>Chip</span>
+</div>
+
+<div class='chip chip-bordered'>
+    <span>Chip</span>
+    <IconX />
+</div>
+</div>
+
+```js
+<div class='chip'>
+    <span>Chip</span>
+</div>
+
+<div class='chip chip-rounded'>
+  <img src='/avatar.jpg' />
+  <span>Chip</span>
+  <IconX />
+</div>
+
+<div class='chip chip-rounded chip-bordered'>
+  <span>Chip</span>
+</div>
+
+<div class='chip chip-bordered'>
+    <span>Chip</span>
+    <IconX />
 </div>
 ```
