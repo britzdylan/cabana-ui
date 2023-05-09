@@ -54,7 +54,7 @@ import { IconUser } from '@tabler/icons-vue';
 
 ### Avatar with border
 
-<div class='component-preview bg-gray-200'>
+<div class='component-preview'>
   <div class='avatar avatar-placeholder avatar-bordered'>
       <span>CUI</span>
   </div>
@@ -73,4 +73,49 @@ import { IconUser } from '@tabler/icons-vue';
     <div class='avatar avatar-placeholder avatar-rounded'>
       <IconUser/>
   </div>
+```
+
+### Avatar with status indicator
+
+<div class='component-preview'>
+<div class='avatar avatar-rounded'>
+    <span class="status-green"></span>
+    <img src='/avatar.jpg' />
+</div>
+
+<div class='avatar avatar-rounded'>
+  <span class='status-yellow'></span>
+  <img src='/avatar.jpg' />
+</div>
+<div class='avatar avatar-placeholder avatar-rounded'>
+  <span class='status-red'></span>
+  <IconUser />
+</div>
+
+<div class='avatar avatar-placeholder avatar-rounded'>
+  <span class="status bg-neutral-500"></span>
+  <IconUser/>
+</div>
+</div>
+
+```js
+<div class='avatar avatar-rounded'>
+    <span class="status-green"></span>
+    <img src='/avatar.jpg' />
+</div>
+
+<div class='avatar avatar-rounded'>
+  <span class='status-yellow'></span>
+  <img src='/avatar.jpg' />
+</div>
+
+<div class='avatar avatar-placeholder avatar-rounded'>
+  <span class='status-red'></span>
+  <IconUser />
+</div>
+
+<div class='avatar avatar-placeholder avatar-rounded'>
+  <span class="status bg-neutral-500"></span>
+  <IconUser/>
+</div>
 ```

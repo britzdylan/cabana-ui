@@ -36,6 +36,7 @@ h3 {
   border: 1px solid theme('colors.slate.200');
   margin: 0.5rem;
   resize: both;
+  @apply bg-gray-200;
 }
 
 .component-preview.dark {
