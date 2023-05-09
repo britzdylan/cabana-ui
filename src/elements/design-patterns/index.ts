@@ -4,12 +4,14 @@
 import avatar from './avatar';
 import chip from './chip';
 import tag from './tag';
+import dot from './dot';
 
 const elements = (theme: () => string | number) => {
   return {
     ...avatar(theme),
     ...chip(theme),
     ...tag(theme),
+    ...dot(theme),
   };
 };
 
