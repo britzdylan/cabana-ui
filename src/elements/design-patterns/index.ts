@@ -7,6 +7,7 @@ import tag from './tag';
 import dot from './dot';
 import tooltip from './tooltip';
 import toast from './toast';
+import progress from './progress';
 
 const elements = (theme: () => string | number) => {
   return {
@@ -16,6 +17,7 @@ const elements = (theme: () => string | number) => {
     ...dot(theme),
     ...tooltip(theme),
     ...toast(theme),
+    ...progress(theme),
   };
 };
 
