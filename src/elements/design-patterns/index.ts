@@ -5,6 +5,7 @@ import avatar from './avatar';
 import chip from './chip';
 import tag from './tag';
 import dot from './dot';
+import tooltip from './tooltip';
 
 const elements = (theme: () => string | number) => {
   return {
@@ -12,6 +13,7 @@ const elements = (theme: () => string | number) => {
     ...chip(theme),
     ...tag(theme),
     ...dot(theme),
+    ...tooltip(theme),
   };
 };
 
