@@ -34,6 +34,7 @@ const rating = (theme: (arg0: string) => string | number) => {
   const variants = new Map(
     colors.map((color) => [`&-${color}`, variant(color)])
   );
+
   return {
     '.rating': {
       display: 'flex',
@@ -52,7 +53,7 @@ const rating = (theme: (arg0: string) => string | number) => {
         '-webkit-mask-repeat': 'no-repeat',
         '-webkit-mask-image':
           'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTkyJyBoZWlnaHQ9JzE4MCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBmaWxsPSdibGFjaycgZD0nbTk2IDEzNy4yNjMtNTguNzc5IDQyLjAyNCAyMi4xNjMtNjguMzg5TC44OTQgNjguNDgxbDcyLjQ3Ni0uMjQzTDk2IDBsMjIuNjMgNjguMjM4IDcyLjQ3Ni4yNDMtNTguNDkgNDIuNDE3IDIyLjE2MyA2OC4zODl6JyBmaWxsLXJ1bGU9J2V2ZW5vZGQnLz48L3N2Zz4=)',
-        '&:checked ~ input[': {
+        '&:checked ~ input': {
           opacity: 0.2,
         },
       },
