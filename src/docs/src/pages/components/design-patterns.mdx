@@ -251,19 +251,23 @@ import { IconUser, IconX } from '@tabler/icons-vue';
 ## Tooltip
 
 <div class='component-preview'>
-  <button data-tooltip='hello' data-position="top" class='btn tooltip'>
+  <button data-tooltip='hello' data-position='top' class='btn tooltip'>
     Top
   </button>
-  <button data-tooltip='hello' data-position="right" class='btn tooltip'>
+  <button data-tooltip='hello' data-position='right' class='btn tooltip'>
     Right
   </button>
-  <button data-tooltip='hello' data-position="bottom" class='btn tooltip'>
+  <button data-tooltip='hello' data-position='bottom' class='btn tooltip'>
     Bottom
   </button>
-  <button data-tooltip='hello' data-position="left" class='btn tooltip'>
+  <button data-tooltip='hello' data-position='left' class='btn tooltip'>
     Left
   </button>
-   <button data-tooltip='hello' data-position="top" data-open="true" class='btn tooltip'>
+  <button
+    data-tooltip='hello'
+    data-position='top'
+    data-open='true'
+    class='btn tooltip'>
     open
   </button>
 </div>
@@ -284,4 +288,99 @@ import { IconUser, IconX } from '@tabler/icons-vue';
    <button data-tooltip='hello' data-position="top" data-open="true" class='btn tooltip'>
     open
   </button>
+```
+
+## Toast
+
+<div class='component-preview flex-col'>
+  <div class="toast z-0">
+  <span>Notification</span>
+  <IconX />
+  </div>
+
+{' '}
+
+<div class='toast toast-error z-0'>
+  <span>Notification</span>
+  <IconX />
+</div>
+<div class='toast toast-success z-0'>
+  <IconUser />
+  <span>Notification</span>
+  <IconX />
+</div>
+
+  <div class="toast toast-warning z-0">
+  <IconUser />
+  <span>Notification</span>
+  </div>
+</div>
+
+```js
+  <div class="toast">
+  <span>Notification</span>
+  <IconX />
+  </div>
+
+  <div class='toast toast-error'>
+  <span>Notification</span>
+  <IconX />
+  </div>
+
+  <div class='toast toast-success'>
+  <IconUser />
+  <span>Notification</span>
+  <IconX />
+  </div>
+
+  <div class="toast toast-warning">
+  <IconUser />
+  <span>Notification</span>
+  </div>
+```
+
+### Toast position with visibility toggle
+
+<div class='component-preview relative h-96'>
+<div data-show="true" class='toast toast-tl absolute top-4 z-0'>
+  <span>Top Left</span>
+  <IconX />
+</div>
+
+<div data-show='true' class='toast toast-tr absolute top-4 z-0'>
+  <span>Top Right</span>
+  <IconX />
+</div>
+
+<div data-show='true' class='toast toast-bl absolute bottom-4 z-0'>
+  <span>Bottom Left</span>
+  <IconX />
+</div>
+
+<div data-show="true" class='toast toast-br absolute bottom-4 z-0'>
+  <span>Bottom Right</span>
+  <IconX />
+</div>
+</div>
+
+```js
+<div data-show="true" class='toast toast-tl'>
+  <span>Top Left</span>
+  <IconX />
+</div>
+
+<div data-show="true" class='toast toast-tr'>
+  <span>Top Right</span>
+  <IconX />
+</div>
+
+<div data-show="true" class='toast toast-bl'>
+  <span>Bottom Left</span>
+  <IconX />
+</div>
+
+<div data-show="true" class='toast toast-br'>
+  <span>Bottom Right</span>
+  <IconX />
+</div>
 ```
