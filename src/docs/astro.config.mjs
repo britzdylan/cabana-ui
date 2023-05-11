@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [
     vue(),
     tailwind({
-      config: { applyBaseStyles: false },
+      config: {},
     }),
     mdx(),
   ],

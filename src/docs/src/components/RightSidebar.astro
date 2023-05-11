@@ -1,9 +1,12 @@
 ---
-// import TableOfContents from './TableOfContents.astro';
+import TableOfContents from './TableOfContents.astro';
+const { headers } = Astro.props;
+
+
 ---
 
 <nav aria-labelledby="grid-right">
 	<div class="px-8">
-		<!-- <TableOfContents headers={headers} /> -->
+		<TableOfContents headers={headers} />
 	</div>
 </nav>

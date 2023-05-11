@@ -16,7 +16,14 @@ export const OPEN_GRAPH = {
   twitter: '',
 };
 
-export const SIDEBAR = [
+export interface sidebar {
+  name: string;
+  link?: string;
+  header?: boolean;
+  pro?: boolean;
+}
+
+export const SIDEBAR: Array<sidebar> = [
   { name: 'Getting Started', header: true },
   { name: 'Introduction', link: '/introduction' },
   { name: 'Utilities', header: true },

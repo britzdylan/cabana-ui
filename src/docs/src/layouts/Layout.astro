@@ -1,13 +1,19 @@
 ---
 export interface Props {
 	title: string;
+	headings: {
+		depth: number;
+		text: string;
+		slug: string;
+	}[];
 }
 import '../styles/base.css';
 import Header from '../components/Header.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar.astro';
 import PageContent from '../components/PageContent.astro';
-const { title } = Astro.props;
+const { title, headings  } = Astro.props;
+// console.log(headings);
 const currentPage = new URL(Astro.request.url).pathname;
 ---
 
@@ -58,7 +64,7 @@ const currentPage = new URL(Astro.request.url).pathname;
 				</div>
 			</main>
 			<div class="col-span-3 sticky top-0 h-screen flex">
-				<RightSidebar  />
+				<RightSidebar headers={headings} content={{}} />
 			</div>
 		</div>
 	</body>

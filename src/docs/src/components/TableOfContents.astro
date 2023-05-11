@@ -1,0 +1,34 @@
+---
+const { headers }  = Astro.props;
+console.log(headers)
+
+import {
+	IconChevronRight
+} from '@tabler/icons-vue';
+
+const menuDepth = (d : number) => {
+
+	const style = ' text-slate-400 hover:text-slate-800 hover:text-slate-900';
+
+	switch (d) {
+		case 1:
+			return '!text-body-lg' + style;
+		case 2:
+			return '!text-label' + style;
+		case 3:
+			return '!text-label ml-2  !gap-1' + style;
+		default:
+			return '!text-label ml-4  !gap-1' + style;
+	}
+};
+---
+<ul class="list flex flex-col gap-2 !mt-24">
+	{ headers.map(({ slug, text, depth } )  => {
+		return depth > 1 ? (
+		<li class={menuDepth(depth)}>
+			{depth > 2 ? <IconChevronRight class="!w-4 !h-4 !opacity-70"  /> : null}
+			<a href={`#${slug}`}>{text}</a>
+		</li>
+		) : null
+	}) }
+</ul>
