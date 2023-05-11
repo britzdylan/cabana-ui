@@ -18,7 +18,7 @@ const menu = (theme: (arg0: string) => string | number) => {
     padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
     cursor: 'pointer',
     position: 'relative',
-    fontSize: theme('fontSize.label'),
+    fontSize: theme('fontSize.label-sm'),
     color: theme('colors.gray.600'),
     borderRadius: theme('spacing.1'),
   };

@@ -6,6 +6,22 @@ export const SITE = {
   twitter: '@britzdm',
   github: 'britzdylan/cabana-ui',
   // linkedin: 'linkedinUsername',
+  version: 0.1,
+  docsVersion: '0.0.3 Alpha',
+  nav: [
+    {
+      title: 'Docs',
+      link: '/',
+    },
+    {
+      title: 'Upgrade to Pro',
+      link: '/pro',
+    },
+    {
+      title: 'Blog',
+      link: '/blog',
+    },
+  ],
 };
 
 export const OPEN_GRAPH = {
