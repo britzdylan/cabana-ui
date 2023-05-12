@@ -1,0 +1,17 @@
+---
+import { SITE } from '../../../config';
+import {IconBrandGithubFilled, IconBrandTwitterFilled} from '@tabler/icons-vue';
+---
+
+
+{ SITE.twitter &&
+    (<a title="Twitter" class="opacity-90 hover:opacity-100 transition-colors" target="_blank" href={'https://twitter.com/'+SITE.twitter}>
+        <IconBrandGithubFilled class="h-4 text-neutral-600"/>
+    </a>)
+}
+{
+    SITE.github &&
+    (<a title="Github" class="opacity-80 hover:opacity-100 transition-colors" target="_blank" href={'https://github.com/'+SITE.github}>
+        <IconBrandTwitterFilled class="h-4 text-neutral-600"/>
+    </a>)
+}

@@ -44,7 +44,7 @@ h3 {
 }
 
 pre.astro-code {
-  @apply mx-2 my-4 p-2 rounded-md;
+  @apply mx-2 my-4 p-2 rounded-md font-mono text-sm;
 }
 
 code {

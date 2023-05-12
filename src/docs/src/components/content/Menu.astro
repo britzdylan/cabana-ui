@@ -1,0 +1,37 @@
+---
+export interface Props {
+	currentPage: string;
+}
+
+import { SITE } from '../../../config';
+
+
+const { currentPage } = Astro.props;
+
+const getActiveClass = (link) => {
+
+  if (/^\/docs/.test(link) && /^\/docs/.test(currentPage)) {
+    return 'active';
+  }
+
+  if (/^\/blog/.test(link) && /^\/blog/.test(currentPage)) {
+    return 'active';
+  }
+
+  if (link === currentPage) {
+	return 'active';
+  }
+
+  return '';
+}
+---
+
+<ul class="menu menu-contained-rounded">
+    { SITE.nav.map(({title, link}) => {
+        return (
+            <li class={getActiveClass(link)} >
+                <a  href={link}>{title}</a>
+            </li>
+        )
+    }) }
+</ul>

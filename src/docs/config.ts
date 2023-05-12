@@ -11,7 +11,7 @@ export const SITE = {
   nav: [
     {
       title: 'Docs',
-      link: '/',
+      link: '/docs/introduction',
     },
     {
       title: 'Upgrade to Pro',
@@ -39,23 +39,26 @@ export interface sidebar {
   pro?: boolean;
 }
 
+const base = '/docs';
+const corePath = `${base}/core`;
+const componentsPath = `${base}/components`;
+
 export const SIDEBAR: Array<sidebar> = [
   { name: 'Getting Started', header: true },
-  { name: 'Introduction', link: '/introduction' },
+  { name: 'Introduction', link: `${base}/introduction` },
   { name: 'Utilities', header: true },
-  { name: 'Colors', link: '/core/colors' },
-  { name: 'Typography', link: '/core/typography' },
-  { name: 'Shadows', link: '/core/shadows' },
-  { name: 'Blur', link: '/core/blur' },
+  { name: 'Colors', link: `${corePath}/colors` },
+  { name: 'Typography', link: `${corePath}/typography` },
+  { name: 'Shadows', link: `${corePath}/shadows` },
+  { name: 'Blur', link: `${corePath}/blur` },
 
   { name: 'Components', header: true },
-  { name: 'Buttons', link: '/components/buttons' },
-  { name: 'Navigation', link: '/components/navigation' },
-  { name: 'Content', link: '/components/content' },
-  { name: 'Forms', link: '/components/forms' },
-  { name: 'Design Patterns', link: '/components/design-patterns' },
-  { name: 'Overlays', link: '/components/design-patterns' },
+  { name: 'Buttons', link: `${componentsPath}/buttons` },
+  { name: 'Navigation', link: `${componentsPath}/navigation` },
+  { name: 'Content', link: `${componentsPath}/content` },
+  { name: 'Forms', link: `${componentsPath}/forms` },
+  { name: 'Design Patterns', link: `${componentsPath}/design-patterns` },
 
-  { name: 'Design Blocks', header: true, pro: true },
-  { name: 'Introduction', link: '/patterns/introduction' },
+  // { name: 'Design Blocks', header: true, pro: true },
+  // { name: 'Introduction', link: '/patterns/introduction' },
 ];
