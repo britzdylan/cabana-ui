@@ -25,13 +25,13 @@ const navItems = [
 
 ---
 
-<div class='bg-neutral-100 min-h-screen text-center'>
+<div class='bg-zinc-100 min-h-screen text-center'>
   <header class='pt-12 pb-24 px-4 bg-gradient-to-t from-secondary-800 to-secondary-900'>
     <div class='flex items-center justify-center p-4'>
       <img src='/logo.svg' alt='Astro Design System Logo' />
     </div>
     <h1 class='text-white text-4xl font-medium drop-shadow-sm'>{SITE.title}</h1>
-    <p class='text-lg mt-4 max-w-xl mx-auto text-neutral-300'>
+    <p class='text-lg mt-4 max-w-xl mx-auto text-zinc-300'>
       {SITE.description}
     </p>
   </header>
@@ -44,7 +44,7 @@ const navItems = [
             class='flex flex-col bg-white rounded-md hover:-translate-y-1 hover:shadow-lg transition-all flex-1 items-center p-4'>
             <img src={img} alt={title} />
             <h2 class='text-lg font-medium'>{title}</h2>
-            <p class='text-neutral-500'>{description}</p>
+            <p class='text-zinc-500'>{description}</p>
           </a>
         ))
       }

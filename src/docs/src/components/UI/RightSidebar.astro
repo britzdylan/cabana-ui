@@ -1,12 +1,15 @@
 ---
 import TableOfContents from './TableOfContents.astro';
+import type { Heading } from '../../interfaces';
+
+export interface Props {
+  headers: Array<Heading>;
+}
 const { headers } = Astro.props;
-
-
 ---
 
-<nav aria-labelledby="grid-right">
-	<div class="px-8">
-		<TableOfContents headers={headers} />
-	</div>
+<nav aria-labelledby='grid-right'>
+  <div class='px-8'>
+    <TableOfContents headers={headers} />
+  </div>
 </nav>

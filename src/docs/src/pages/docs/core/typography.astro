@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../../../layouts/Layout.astro';
+import MainLayout from '../../../layouts/Default.astro';
 import { TYPOGRAPHY } from '../../../../design.config';
 
 const getStyle = (item: {
@@ -16,7 +16,7 @@ const getStyle = (item: {
     {
         TYPOGRAPHY.scale.map((item) => (
             <div class="mt-6 border-t py-4">
-                <p class="text-neutral-800 font-normal" style={getStyle(item)}>Hello world</p>
+                <p class="text-zinc-800 font-normal" style={getStyle(item)}>Hello world</p>
                 <div class="flex gap-6 font-mono">
                     <span>text-{item.name}</span>
                     <span>size: {item.size}</span>

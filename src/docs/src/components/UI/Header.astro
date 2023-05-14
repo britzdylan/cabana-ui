@@ -3,23 +3,27 @@ import { SITE } from '../../../config';
 import Social from '../content/Social.astro';
 import Menu from '../content/Menu.astro';
 import Logo from '../content/Logo.astro';
-import {IconBrandGithubFilled, IconBrandTwitterFilled} from '@tabler/icons-vue';
 
 const { currentPage } = Astro.props;
-const version = SITE.docsVersion;
+const version = SITE.version;
 ---
 
-<header class="py-2 px-3 bg-neutral-100 bg-opacity-50 backdrop-blur-md border-b text-neutral-700">
-	<nav title="Top Navigation" class="max-w-7xl mx-auto flex justify-between items-center px-4">
-		<div class="flex items-center gap-4">
-			<Logo />
-			<div class='chip chip-rounded chip-bordered text-body-xs'>
-				<span>{version}</span>
-			</div>
-		</div>
-		<div class="flex gap-2 items-center">
-			<Menu currentPage={currentPage} />
-			<Social />
-		</div>
-	</nav>
+<header
+  class='py-2 px-3 bg-zinc-100 bg-opacity-50 backdrop-blur-md border-b text-zinc-700'
+>
+  <nav
+    title='Top Navigation'
+    class='max-w-7xl mx-auto flex justify-between items-center px-4'
+  >
+    <div class='flex items-center gap-4'>
+      <Logo />
+      <div class='chip chip-rounded chip-bordered text-body-xs'>
+        <span>{version}</span>
+      </div>
+    </div>
+    <div class='flex gap-2 items-center'>
+      <Menu currentPage={currentPage} />
+      <Social />
+    </div>
+  </nav>
 </header>

@@ -8,15 +8,15 @@ body {
 }
 
 h1 {
-  @apply text-headline-lg font-semibold;
+  @apply text-headline-lg font-semibold mb-5;
 }
 
 h2 {
-  @apply text-headline font-semibold;
+  @apply text-headline font-semibold mb-4;
 }
 
 h3 {
-  @apply text-headline-sm font-semibold;
+  @apply text-headline-sm font-semibold mb-3;
 }
 
 .main-section > h1 {
@@ -58,5 +58,5 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.77rem;
+  @apply mt-12;
 }

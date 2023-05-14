@@ -1,13 +1,14 @@
 export const SITE = {
-  title: 'Cabana Design System',
+  title: 'Cabana - Design System for Tailwind CSS',
   description:
-    "Build beautiful, consistent UIs right away. Plenty of essential Components you need, none of the 'fluff' that you don't.",
+    "Creating amazing designs is hard when you’ve got deadlines to meet. So we built Cabana, a Design System for Tailwind that enables you to start projects faster.",
   defaultLanguage: 'en_US',
   twitter: '@britzdm',
   github: 'britzdylan/cabana-ui',
   // linkedin: 'linkedinUsername',
-  version: 0.1,
-  docsVersion: '0.0.3 Alpha',
+  version: '0.0.3 Alpha',
+  docsVersion: '0.0.1',
+  author: 'Dylan Britz',
   nav: [
     {
       title: 'Docs',
@@ -26,10 +27,18 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
   image: {
-    src: '',
-    alt: '',
+    src: '/og_image.jpg',
+    alt: 'Cabana UI',
   },
-  twitter: '',
+  twitter: {
+    card: 'summary_large_image',
+    site: SITE.twitter,
+    creator: SITE.twitter,
+    image: {
+      src: '/og_image.jpg',
+      alt: 'Cabana UI',
+    },
+  },
 };
 
 export interface sidebar {

@@ -7,8 +7,6 @@ import { SIDEBAR, sidebar } from '../../../config';
 const { currentPage } = Astro.props;
 const currentPageMatch = currentPage.slice(1);
 
-
-
 const isCurrentPage = (item: sidebar) => {
   if (item.link) {
     return item.link.includes(currentPageMatch);
@@ -18,7 +16,7 @@ const isCurrentPage = (item: sidebar) => {
 
 const getLinkClasses = (link: sidebar) => {
   const baseClasses =
-    'text-body-sm block py-1.5 px-4 transition-colors border-l hover:border-neutral-400 text-neutral-500 hover:text-neutral-900';
+    'text-body-sm block py-1.5 px-4 transition-colors border-l hover:border-zinc-400 text-zinc-500 hover:text-zinc-900';
 
   if (isCurrentPage(link)) {
     return baseClasses + ' border-primary-500 text-primary-500';
@@ -35,7 +33,9 @@ const getLinkClasses = (link: sidebar) => {
       {
         SIDEBAR.map((item) =>
           item.header ? (
-            <p class='mt-4 font-semibold text-neutral-900 text-body-sm'>{item.name}</p>
+            <p class='mt-4 font-semibold text-zinc-900 text-body-sm'>
+              {item.name}
+            </p>
           ) : (
             <li class={getLinkClasses(item)}>
               <a href={item.link}>{item.name}</a>

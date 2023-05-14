@@ -1,7 +1,29 @@
 ---
-import MainLayout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import dayjs from 'dayjs';
+import PostLayout from '../../layouts/Post.astro';
+const blogEntries = await getCollection('blog');
+
+import { IconChevronRight } from '@tabler/icons-vue'
 ---
 
-<MainLayout title="Search">
-    <h1>Blog</h1>
-</MainLayout> 
+<PostLayout title="Blog">
+    <h1 class="text-title-lg font-bold text-black text-center mb-12">Updates</h1>
+    <ol class="max-w-screen-lg mx-auto flex flex-col gap-20">
+        {blogEntries.map((entry) => (
+        <li>
+            <article  class="flex w-full items-start gap-10">
+                <div class="flex items-start min-w-fit p-4">
+                    <div class="absolute top-1 -right-1 w-2 h-2 bg-primary-500 rounded-full"></div>
+                    <p class="text-label-sm text-zinc-500">{dayjs(entry.data.publishDate).format('DD MMM YYYY')}</p>
+                </div>
+                <a href={`/blog/${entry.slug}`} class="flex flex-col gap-2 w-full p-4 hover:bg-zinc-100 cursor-pointer rounded-lg ">
+                    <h2 class="text-body m-0 font-semibold text-black leading-4">{entry.data.title}</h2>
+                    <p class="text-zinc-500 font-normal">{entry.data.summary}</p>
+                    <button class="link w-max">Read more <IconChevronRight/></button>
+                </a>
+            </article>
+        </li>
+        ))}
+    </ol>
+</PostLayout> 

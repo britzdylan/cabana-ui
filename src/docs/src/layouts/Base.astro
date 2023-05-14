@@ -1,0 +1,65 @@
+---
+export interface Props {
+  title: string;
+}
+
+import '../styles/base.css';
+import { SITE, OPEN_GRAPH } from '../../config';
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='alternate icon' type='image/x-icon' href='/favicon.ico' />
+	<link rel="sitemap" href="/sitemap-index.xml">
+    <title>{title}</title>
+
+    <!-- Preload Fonts -->
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap'
+      rel='stylesheet'
+    />
+
+    <!-- all SEO tags -->
+    <meta name='description' content={SITE.description} />
+    <meta name='author' content={SITE.author} />
+    <meta property='og:title' content={SITE.title} />
+    <meta property='og:description' content={SITE.description} />
+    <meta property='og:image' content={OPEN_GRAPH.image.src} />
+    <meta property='og:url' content={Astro.url} />
+    <meta name='twitter:card' content={OPEN_GRAPH.twitter.card} />
+    <meta name='twitter:site' content={OPEN_GRAPH.twitter.site} />
+    <meta name='twitter:title' content={SITE.title} />
+    <meta name='twitter:description' content={SITE.description} />
+    <meta name='twitter:image' content={OPEN_GRAPH.twitter.image.src} />
+    <meta name='twitter:creator' content={OPEN_GRAPH.twitter.creator} />
+    <meta name='theme-color' content='#3b28cc' />
+
+    <!-- This is intentionally inlined to avoid FOUC -->
+    <script is:inline>
+      const root = document.documentElement;
+      const theme = localStorage.getItem('theme');
+      if (
+        theme === 'dark' ||
+        (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body class='bg-zinc-50'>
+    <slot />
+  </body>
+</html>

@@ -55,7 +55,7 @@ const link = (theme: (arg0: string) => string | number) => {
   };
 
   return {
-    'a.link': {
+    '.link': {
       ...baseLink(theme),
       //create me an underline for the link using after
       '&-fancy::after': {
