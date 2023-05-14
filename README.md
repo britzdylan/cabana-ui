@@ -1,6 +1,6 @@
 # CabanaUI for Tailwind CSS
 
-**Creating amazing designs is hard when you’ve got deadlines to meet. So we built Cabana, a Design System for Tailwind that enables you to start projects faster.**
+**Introducing Cabana, the TailwindCSS plugin that makes designing beautiful UIs fast and effortless. Cabana comes packed with extended color palettes, shadows, and background blurs, along with a custom Typography Scale System. It also includes pre-designed design elements such as buttons, lists, links, pills, forms, and more, so you can start building stunning designs in just minutes. Cabana is framework agnostic and fully customizable, making it perfect for designers and developers alike.**
 
 [![][banner-url]][docs-url] 
 
