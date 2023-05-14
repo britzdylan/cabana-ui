@@ -1,11 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import SinglePost from '../../layouts/Post.astro'
+import SinglePost from '../../layouts/Post.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
   }));
 }
 
@@ -13,23 +14,24 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 const { title, publishDate, author, summary } = entry.data;
 ---
+
 <SinglePost title={title}>
-  <article class="mx-auto max-w-2xl blog flex flex-col divide-y-2">
-    <header class="flex flex-col gap-4 pb-12">
+  <article class='mx-auto max-w-2xl blog flex flex-col divide-y-2 prose'>
+    <header class='flex flex-col gap-4 pb-12'>
       <time datetime={publishDate}>{publishDate.toDateString()}</time>
-      <h1 class="m-0 font-semibold leading-10">{title}</h1>
-      <div class="flex gap-2">
+      <h1 class='m-0 font-semibold leading-10'>{title}</h1>
+      <div class='flex gap-2'>
         <div class='avatar avatar-rounded'>
-            <img src='/avatar.jpg' />
+          <img src='/avatar.jpg' />
         </div>
-        <div class="flex flex-col gap-0">
-          <p class="label">{author}</p>
-          <a class="link" href="https://twitter.com/britzdm">@britzdm</a>
+        <div class='flex flex-col gap-0'>
+          <p class='label'>{author}</p>
+          <a class='link' href='https://twitter.com/britzdm'>@britzdm</a>
         </div>
       </div>
-      <p class="mt-6">{summary}</p>
+      <p class='mt-6'>{summary}</p>
     </header>
-    <div class="pt-12">
+    <div class='pt-12'>
       <Content />
     </div>
   </article>

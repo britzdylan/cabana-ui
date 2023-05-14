@@ -1,7 +1,7 @@
 export const SITE = {
   title: 'Cabana - Design System for Tailwind CSS',
   description:
-    "Creating amazing designs is hard when you’ve got deadlines to meet. So we built Cabana, a Design System for Tailwind that enables you to start projects faster.",
+    'Creating amazing designs is hard when you’ve got deadlines to meet. So we built Cabana, a Design System for Tailwind that enables you to start projects faster.',
   defaultLanguage: 'en_US',
   twitter: '@britzdm',
   github: 'britzdylan/cabana-ui',
@@ -12,7 +12,7 @@ export const SITE = {
   nav: [
     {
       title: 'Docs',
-      link: '/docs/introduction',
+      link: '/docs/install',
     },
     {
       title: 'Upgrade to Pro',
@@ -54,7 +54,10 @@ const componentsPath = `${base}/components`;
 
 export const SIDEBAR: Array<sidebar> = [
   { name: 'Getting Started', header: true },
-  { name: 'Introduction', link: `${base}/introduction` },
+  { name: 'Install', link: `${base}/install` },
+  { name: 'How to use', link: `${base}/use` },
+  { name: 'Config', link: `${base}/config` },
+
   { name: 'Utilities', header: true },
   { name: 'Colors', link: `${corePath}/colors` },
   { name: 'Typography', link: `${corePath}/typography` },
@@ -70,4 +73,43 @@ export const SIDEBAR: Array<sidebar> = [
 
   // { name: 'Design Blocks', header: true, pro: true },
   // { name: 'Introduction', link: '/patterns/introduction' },
+];
+
+export const PROJECTS = [
+  {
+    Title: 'AdonisJs',
+    link: '#',
+  },
+  {
+    Title: 'Astro',
+    link: '#',
+  },
+  {
+    Title: 'Next.js',
+    link: '#',
+  },
+  {
+    Title: 'Nuxt.js',
+    link: '#',
+  },
+  {
+    Title: 'SvelteKit',
+    link: '#',
+  },
+  {
+    Title: 'Vue (Vite)',
+    link: '#',
+  },
+  {
+    Title: 'React (Vite)',
+    link: '#',
+  },
+  {
+    Title: 'Svelte (Vite)',
+    link: '#',
+  },
+  {
+    Title: 'Vite',
+    link: '#',
+  },
 ];

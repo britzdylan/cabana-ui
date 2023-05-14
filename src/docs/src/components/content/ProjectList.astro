@@ -1,0 +1,18 @@
+---
+import { IconChevronRight } from '@tabler/icons-vue';
+
+import { PROJECTS } from '../../../config';
+---
+
+<ul class='list !mt-6'>
+  {
+    PROJECTS.map((entry) => (
+      <li>
+        <IconChevronRight />
+        <a target='_blank' href={entry.link}>
+          {entry.Title}
+        </a>
+      </li>
+    ))
+  }
+</ul>

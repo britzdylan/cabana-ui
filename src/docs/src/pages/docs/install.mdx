@@ -1,0 +1,45 @@
+---
+title: 'Install Cabana UI for Tailwind CSS'
+layout: '../../layouts/Default.astro'
+---
+
+import { IconChevronRight } from '@tabler/icons-vue';
+import ProjectList from '../../components/content/ProjectList.astro';
+
+# Install Cabana UI for Tailwind CSS
+
+## Prerequisites
+
+<ul class='list'>
+  <li>
+    <IconChevronRight />
+    <a href='https://tailwindcss.com' target='_blank' rel="norefer">
+      Tailwind CSS
+    </a>
+  </li>
+  <li>
+    <IconChevronRight />
+    Your framework of choice
+  </li>
+</ul>
+
+## Install the package
+
+```bash
+npm install cabana-ui
+```
+
+## Add the plugin to your Tailwind config
+
+```js
+// tailwind.config.js
+module.exports = {
+  plugins: [require('cabana-ui')],
+};
+```
+
+## Example Starter Projects
+
+Check out these examples of how to set up Cabana-UI and Tailwind CSS on various frameworks and build tools.
+
+<ProjectList />
