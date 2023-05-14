@@ -2,13 +2,9 @@
 
 **Creating amazing designs is hard when you’ve got deadlines to meet. So we built Cabana, a Design System for Tailwind that enables you to start projects faster.**
 
-[![][banner-url]][docs-url]
+[![][banner-url]][docs-url] 
 
-[![][install-size]][install-size-url]
-
-[![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url]
-
-[![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
+[![][install-size]][install-size-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url] [![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
 
 ## Features
 
