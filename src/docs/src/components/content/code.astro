@@ -2,88 +2,48 @@
 const { id = '0' } = Astro.props;
 ---
 
-<astro-state data-id={id}>
-  <div class='bg-zinc-100 border-zinc-200 border rounded-md overflow-hidden'>
-    <!-- <nav class='tabs bg-inherit'>
+<div class='bg-zinc-100 border-zinc-200 border rounded-md overflow-hidden not-prose'>
+  <!-- <nav class='tabs bg-inherit'>
       <button data-tab={id + '-1'} class='!w-24 !h-12 active'> HTML</button>
       <button data-tab={id + '-2'} class='!w-24 !h-12'> JSX</button>
       <button data-tab={id + '-3'} class='!w-24 !h-12'> Vue</button>
     </nav> -->
-    <div class='relative'>
-      <slot />
-    </div>
-    <!-- <div class='relative' style='display:none;' data-tabItem={id + '-2'}>
+  <div class='relative'>
+    <slot />
+  </div>
+  <!-- <div class='relative' style='display:none;' data-tabItem={id + '-2'}>
       <slot name='jsx' />
     </div>
     <div class='relative' style='display:none;' data-tabItem={id + '-3'}>
       <slot name='vue' />
     </div> -->
-  </div>
-</astro-state>
+</div>
 
 <script>
-  class StateM extends HTMLElement {
-    constructor() {
-      super();
+  let blocks = document.querySelectorAll('pre');
 
-      // Read the message from the data attribute.
-      const id = this.dataset.id;
-      // console.log(id);
-      // const tabButtons = document.querySelectorAll(`[data-tab]`);
+  blocks.forEach((block) => {
+    // only add button if browser supports Clipboard API
+    if (navigator.clipboard) {
+      let button = document.createElement('button');
+      let icon = document.createElement('img');
+      button.classList.add('copy-code-button');
+      block.appendChild(button);
+      button.appendChild(icon);
+      icon.src = '/copy.svg';
+      icon.classList.add('icon');
+      icon.classList.add('!m-0');
 
-      // const tabItem = document.querySelectorAll(`[data-tabItem]`);
-      // tabButtons.forEach((button) => {
-      //   button.addEventListener('click', () => {
-      //     if (button.classList.contains('active')) return;
-      //     tabButtons.forEach((button) => {
-      //       button.classList.remove('active');
-      //     });
-      //     button.classList.add('active');
-
-      //     tabItem.forEach((item) => {
-      //       console.log(item.dataset.tabItem);
-      //       if (item.dataset.tabItem !== id) return;
-      //       item.style.display = 'none';
-      //     });
-
-      //     const tabItemShow = document.querySelector(
-      //       `[data-tabItem="${button.dataset.tab}"]`
-      //     );
-      //     tabItemShow.style.display = 'block';
-      //   });
-      // });
-
-      // use a class selector if available
-      let blocks = document.querySelectorAll('pre');
-
-      blocks.forEach((block) => {
-        // only add button if browser supports Clipboard API
-        if (navigator.clipboard) {
-          let button = document.createElement('button');
-          let icon = document.createElement('img');
-          button.classList.add('copy-code-button');
-          block.appendChild(button);
-          button.appendChild(icon);
-          icon.src = '/copy.svg';
-          icon.classList.add('icon');
-
-          button.addEventListener('click', async () => {
-            await copyCode(block, button);
-          });
-        }
+      button.addEventListener('click', async () => {
+        await copyCode(block, button);
       });
-
-      async function copyCode(
-        block: HTMLPreElement,
-        button: HTMLButtonElement
-      ) {
-        let code = block.querySelector('code');
-        let text = code?.innerText;
-
-        await navigator.clipboard.writeText(text ?? '');
-      }
     }
-  }
+  });
 
-  customElements.define('astro-state', StateM);
+  async function copyCode(block: HTMLPreElement, button: HTMLButtonElement) {
+    let code = block.querySelector('code');
+    let text = code?.innerText;
+
+    await navigator.clipboard.writeText(text ?? '');
+  }
 </script>

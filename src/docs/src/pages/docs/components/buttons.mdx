@@ -11,45 +11,50 @@ import {
   IconBrandApple,
 } from '@tabler/icons-vue';
 
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/Code.astro';
+
 # All buttons
 
 This page is an example on how to document your button components, most of the copy was written by AI so don't take it very seriously.
 
 Find the code for this page in the `src/pages/components/buttons.md` file.
 
-<div class='component-preview'>
+<Preview>
   <button class='btn'>Primary</button>
   <button class='btn btn-outline'>Outline</button>
   <button class='btn btn-min'>Minimal</button>
   <button class='btn btn-text'>Text</button>
-</div>
-
-```js
+</Preview>
+<Code client:load>
+  ```js
   <button class='btn'>Primary</button>
   <button class='btn btn-outline'>Outline</button>
   <button class='btn btn-min'>Minimal</button>
   <button class='btn btn-text'>Text</button>
-```
+  ```
+</Code>
 
 ## Sizes
 
-<div class='component-preview'>
+<Preview>
   <button class='btn btn-sm'>Small</button>
   <button class='btn btn-md'>Medium</button>
   <button class='btn'>Default</button>
   <button class='btn btn-lg'>Large</button>
-</div>
-
-```js
+</Preview>
+<Code client:load>
+  ```js
   <button class='btn btn-sm'>Small</button>
   <button class='btn btn-md'>Medium</button>
   <button class='btn'>Default</button>
   <button class='btn btn-lg'>Large</button>
-```
+  ```
+</Code>
 
 ## With Icons
 
-<div class='component-preview'>
+<Preview>
   <button class='btn'>
     <span class='icon'>
       <IconPlus />
@@ -62,27 +67,30 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
       <IconPlus />
     </span>
   </button>
-</div>
-
+</Preview>
+<Code client:load>
 ```js
-  <button class='btn'>
-    <span class='icon'>
-      <IconPlus />
-    </span>
-    Left
-  </button>
+<button class='btn'>
+  <span class='icon'>
+    <IconPlus />
+  </span>
+  Left
+</button>
 
-  <button class='btn'>
-    Right
-    <span class='icon'>
-      <IconPlus />
-    </span>
-  </button>
+{' '}
+
+<button class='btn'>
+  Right
+  <span class='icon'>
+    <IconPlus />
+  </span>
+</button>
 ```
+</Code>
 
 ## FAB
 
-<div class='component-preview'>
+<Preview>
   <button class='fab fab-sm'>
     <IconPlus />
   </button>
@@ -95,26 +103,27 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   <button class='fab fab-xl'>
     <IconPlus />
   </button>
-</div>
-
-```js
+</Preview>
+<Code client:load>
+  ```js
   <button class='fab fab-sm'>
-   <IconPlus />
+    <IconPlus />
   </button>
   <button class='fab fab-md'>
-     <IconPlus />
+    <IconPlus />
   </button>
   <button class='fab fab-lg'>
     <IconPlus />
   </button>
   <button class='fab fab-xl'>
-     <IconPlus />
+    <IconPlus />
   </button>
-```
+  ```
+</Code>
 
 ## FAB Rounded
 
-<div class='component-preview'>
+<Preview>
   <button class='fab fab-sm fab-rounded'>
     <IconPlus />
   </button>
@@ -127,26 +136,27 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   <button class='fab fab-xl fab-rounded'>
     <IconPlus />
   </button>
-</div>
-
-```js
+</Preview>
+<Code client:load>
+  ```js
   <button class='fab fab-sm fab-rounded'>
-   <IconPlus />
+    <IconPlus />
   </button>
   <button class='fab fab-md fab-rounded'>
-     <IconPlus />
+    <IconPlus />
   </button>
   <button class='fab fab-lg fab-rounded'>
     <IconPlus />
   </button>
   <button class='fab fab-xl fab-rounded'>
-     <IconPlus />
+    <IconPlus />
   </button>
-```
+  ```
+</Code>
 
 ## Button Group
 
-<div class='component-preview'>
+<Preview>
   <div class='btn-group'>
     <button>One</button>
     <button>Two</button>
@@ -158,8 +168,8 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   <button>Two</button>
   <button>Three</button>
 </div>
-</div>
-
+</Preview>
+<Code client:load>
 ```js
 <div class='btn-group'>
   <button>One</button>
@@ -173,10 +183,11 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   <button>Three</button>
 </div>
 ```
+</Code>
 
 ## Social Buttons
 
-<div class='component-preview flex-col'>
+<Preview>
   <button class='btn btn-facebook'>
     <IconBrandMeta />
     Continue with Facebook
@@ -193,18 +204,31 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
     <IconBrandApple />
     Sign in with Apple
   </button>
-</div>
-
-```js
-  <button class='btn btn-facebook'><IconBrandMeta />Continue with Facebook</button>
-  <button class='btn btn-twitter'><IconBrandTwitterFilled />Sign in with Twitter</button>
-  <button class='btn btn-google'><IconBrandGoogle />Sign in with Google</button>
-  <button class='btn btn-apple'><IconBrandApple />Sign in with Apple</button>
-```
+</Preview>
+<Code client:load>
+  ```js
+  <button class='btn btn-facebook'>
+    <IconBrandMeta />
+    Continue with Facebook
+  </button>
+  <button class='btn btn-twitter'>
+    <IconBrandTwitterFilled />
+    Sign in with Twitter
+  </button>
+  <button class='btn btn-google'>
+    <IconBrandGoogle />
+    Sign in with Google
+  </button>
+  <button class='btn btn-apple'>
+    <IconBrandApple />
+    Sign in with Apple
+  </button>
+  ```
+</Code>
 
 ### Alternate Social Buttons
 
-<div class='component-preview flex-col'>
+<Preview>
   <button class='btn btn-facebook btn-facebook-alt'>
     <IconBrandMeta />
     Continue with Facebook
@@ -221,4 +245,5 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
     <IconBrandApple />
     Sign in with Apple
   </button>
-</div>
+</Preview>
+<Code client:load></Code>

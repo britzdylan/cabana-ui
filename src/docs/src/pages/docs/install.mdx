@@ -9,36 +9,30 @@ import Code from '../../components/content/code.astro';
 
 # Install Cabana UI for Tailwind CSS
 
+How to get started with using cabana-ui with Tailwind CSS.
+
 ## Prerequisites
 
-<ul class='list'>
-  <li>
-    <IconChevronRight />
-    <a href='https://tailwindcss.com' target='_blank' rel='norefer'>
-      Tailwind CSS
-    </a>
-  </li>
-  <li>
-    <IconChevronRight />
-    Your framework of choice
-  </li>
-</ul>
+- [Tailwind CSS](https://tailwindcss.com) installed and configured in your project.
+- [PostCSS](https://postcss.org) installed and configured in your project.
 
-## Install the package
+## 1. Install the package
 
-<Code id='install' client:load>
+Add the package to your project using your preferred package manager.
+
+<Code client:load>
 ```bash
 npm i cabana-ui
-
 # or
-
 yarn add cabana-ui
 ```
 </Code>
 
-## Add the plugin to your Tailwind config
+## 2. Update Tailwind config
 
-<Code id='config' client:load>
+Add the plugin to your `tailwind.config.js` file.
+
+<Code client:load>
 ```js
 // tailwind.config.js
 module.exports = {

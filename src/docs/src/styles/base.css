@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   font-family: Inter, sans-serif;
   @apply text-neutral-700 bg-neutral-50;
 }
@@ -16,15 +16,15 @@ h2 {
 }
 
 h3 {
-  @apply text-headline-sm font-semibold mb-3;
-}
-
+  @apply text-headline-sm font-semibold mb-3; */
+/* } */
+/* 
 .main-section > h1 {
   @apply text-headline-lg font-semibold;
-}
+} */
 
 .component-preview {
-  padding: 4rem;
+  padding: 4rem 2rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -34,9 +34,8 @@ h3 {
   background-size: 1.5rem;
   border-radius: 0.33rem;
   border: 1px solid theme('colors.slate.200');
-  margin: 0.5rem;
   resize: both;
-  @apply bg-gray-200;
+  @apply bg-gray-200 w-full mb-4;
 }
 
 .component-preview.dark {
@@ -52,19 +51,10 @@ code {
     Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply mt-12;
-}
-
 .copy-code-button {
   @apply btn btn-outline border p-2 border-zinc-300 hover:bg-zinc-200 hover:bg-opacity-20  font-sans top-4 right-4 absolute;
 }
 
 pre.astro-code {
-  @apply relative !m-0 !rounded-none min-h-[80px]
+  @apply relative !m-0 !rounded-none min-h-[80px];
 }
