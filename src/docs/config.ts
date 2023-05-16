@@ -76,40 +76,42 @@ export const SIDEBAR: Array<sidebar> = [
 ];
 
 export const PROJECTS = [
-  {
-    Title: 'AdonisJs',
-    link: '#',
-  },
-  {
-    Title: 'Astro',
-    link: '#',
-  },
-  {
-    Title: 'Next.js',
-    link: '#',
-  },
-  {
-    Title: 'Nuxt.js',
-    link: '#',
-  },
-  {
-    Title: 'SvelteKit',
-    link: '#',
-  },
-  {
-    Title: 'Vue (Vite)',
-    link: '#',
-  },
-  {
-    Title: 'React (Vite)',
-    link: '#',
-  },
-  {
-    Title: 'Svelte (Vite)',
-    link: '#',
-  },
+  // {
+  //   Title: 'AdonisJs',
+  //   link: '#',
+  // },
+  // {
+  //   Title: 'Astro',
+  //   link: '#',
+  // },
+  // {
+  //   Title: 'Next.js',
+  //   link: '#',
+  // },
+  // {
+  //   Title: 'Nuxt.js',
+  //   link: '#',
+  // },
+  // {
+  //   Title: 'SvelteKit',
+  //   link: '#',
+  // },
+  // {
+  //   Title: 'Vue (Vite)',
+  //   link: '#',
+  // },
+  // {
+  //   Title: 'React (Vite)',
+  //   link: '#',
+  // },
+  // {
+  //   Title: 'Svelte',
+  //   link: 'https://stackblitz.com/edit/cabanaui-vite-example?file=package.json',
+  //   image: '/brands/vite.svg',
+  // },
   {
     Title: 'Vite',
-    link: '#',
+    link: 'https://stackblitz.com/edit/cabanaui-vite-example?file=package.json',
+    image: '/brands/vite.svg',
   },
 ];
