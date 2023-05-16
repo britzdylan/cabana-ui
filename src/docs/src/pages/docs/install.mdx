@@ -5,6 +5,7 @@ layout: '../../layouts/Default.astro'
 
 import { IconChevronRight } from '@tabler/icons-vue';
 import ProjectList from '../../components/content/ProjectList.astro';
+import Code from '../../components/content/code.astro';
 
 # Install Cabana UI for Tailwind CSS
 
@@ -13,7 +14,7 @@ import ProjectList from '../../components/content/ProjectList.astro';
 <ul class='list'>
   <li>
     <IconChevronRight />
-    <a href='https://tailwindcss.com' target='_blank' rel="norefer">
+    <a href='https://tailwindcss.com' target='_blank' rel='norefer'>
       Tailwind CSS
     </a>
   </li>
@@ -25,18 +26,26 @@ import ProjectList from '../../components/content/ProjectList.astro';
 
 ## Install the package
 
+<Code id='install' client:load>
 ```bash
-npm install cabana-ui
+npm i cabana-ui
+
+# or
+
+yarn add cabana-ui
 ```
+</Code>
 
 ## Add the plugin to your Tailwind config
 
+<Code id='config' client:load>
 ```js
 // tailwind.config.js
 module.exports = {
   plugins: [require('cabana-ui')],
 };
 ```
+</Code>
 
 ## Example Starter Projects
 

@@ -60,3 +60,11 @@ h5,
 h6 {
   @apply mt-12;
 }
+
+.copy-code-button {
+  @apply btn btn-outline border p-2 border-zinc-300 hover:bg-zinc-200 hover:bg-opacity-20  font-sans top-4 right-4 absolute;
+}
+
+pre.astro-code {
+  @apply relative !m-0 !rounded-none min-h-[80px]
+}
