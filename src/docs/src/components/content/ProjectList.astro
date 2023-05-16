@@ -3,7 +3,7 @@ import { PROJECTS } from '../../../config';
 import ProjectCard from './ProjectCard.astro';
 ---
 
-<ul class='list flex gap-16 w-full !mt-6'>
+<ul class='list flex gap-16 w-full !mt-6 not-prose'>
   {
     PROJECTS.map((entry) => (
       <ProjectCard title={entry.Title} link={entry.link} image={entry.image} />
