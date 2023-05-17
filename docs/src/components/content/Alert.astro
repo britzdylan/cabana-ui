@@ -1,0 +1,11 @@
+---
+const { type = 'yellow' } = Astro.props;
+
+const getClass = () => {
+  return `bg-${type}-100 border-l-4 border-${type}-500 text-${type}-700 p-4 mt-8`;
+};
+---
+
+<div class={getClass()}>
+  <slot />
+</div>

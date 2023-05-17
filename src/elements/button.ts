@@ -1,3 +1,5 @@
+import createVariants from '../lib/colorVariants';
+
 const base = (theme: (arg0: string) => string | number) => {
   const iconSize = (size: number) => {
     return {
@@ -10,7 +12,7 @@ const base = (theme: (arg0: string) => string | number) => {
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff',
-    backgroundColor: 'inherit',
+    backgroundColor: theme('colors.neutral.700'),
     transition: 'all .2s ease-in-out',
     gap: theme('spacing.2'),
     padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
@@ -21,28 +23,25 @@ const base = (theme: (arg0: string) => string | number) => {
     borderRadius: `${theme('spacing[1.5]')}`,
     cursor: 'pointer',
     // Default states
-    '&:hover': {
-      backgroundColor: theme('colors.primary.600'),
-    },
     '&:focus': {
       outline: 'solid',
       outlineWidth: theme('spacing.1'),
-      outlineColor: theme('colors.primary.300'),
+      outlineColor: theme('colors.neutral.300'),
     },
     '&:focus-visible': {
       outline: 'solid',
       outlineWidth: theme('spacing.1'),
-      outlineColor: theme('colors.primary.300'),
+      outlineColor: theme('colors.neutral.300'),
     },
     '&:disabled': {
       color: 'rgba(255, 255, 255, 0.4)',
-      backgroundColor: theme('colors.primary.100'),
+      backgroundColor: theme('colors.neutral.100'),
     },
     '&:active': {
       outline: 'solid',
       outlineWidth: theme('spacing.1'),
-      outlineColor: theme('colors.primary.700'),
-      backgroundColor: theme('colors.primary.600'),
+      outlineColor: theme('colors.neutral.700'),
+      backgroundColor: theme('colors.neutral.600'),
     },
     //   icons
     '& .icon': {
@@ -61,66 +60,90 @@ function button(theme: (arg0: string) => string | number) {
       height: theme(`spacing.${size}`),
     };
   };
+
+  const colors = (color: string) => {
+    return {
+      backgroundColor: theme(`colors.${color}.600`),
+      '&:hover': {
+        backgroundColor: theme(`colors.${color}.700`),
+      },
+      '&:focus': {
+        outlineColor: theme(`colors.${color}.300`),
+      },
+      '&:focus-visible': {
+        outlineColor: theme(`colors.${color}.300`),
+      },
+      '&:disabled': {
+        color: 'rgba(255, 255, 255, 0.4)',
+        backgroundColor: theme(`colors.${color}.100`),
+      },
+      '&:active': {
+        outlineColor: theme(`colors.${color}.800`),
+        backgroundColor: theme(`colors.${color}.700`),
+      },
+    };
+  };
+
   return {
     '.btn': {
       ...base(theme),
-
+      ...Object.fromEntries(createVariants(colors)),
       // btn variants
       '&-outline': {
         padding: '0.4rem ' + `${theme('spacing.4')}`,
         backgroundColor: 'transparent',
-        border: `solid ${theme('spacing[0.5]')} ${theme('colors.primary.500')}`,
-        color: theme('colors.primary.500'),
+        border: `solid ${theme('spacing[0.5]')} ${theme('colors.neutral.500')}`,
+        color: theme('colors.neutral.500'),
         '&:hover': {
-          backgroundColor: theme('colors.primary.50'),
+          backgroundColor: theme('colors.neutral.50'),
         },
         '&:disabled': {
           backgroundColor: 'transparent',
-          color: theme('colors.primary.100'),
+          color: theme('colors.neutral.100'),
           border: `solid ${theme('spacing[0.5]')} ${theme(
-            'colors.primary.100'
+            'colors.neutral.100'
           )}`,
         },
         '&:active': {
-          backgroundColor: theme('colors.primary.50'),
+          backgroundColor: theme('colors.neutral.50'),
         },
       },
 
       '&-min': {
         backgroundColor: 'transparent',
-        color: theme('colors.primary.500'),
+        color: theme('colors.neutral.500'),
         '&:hover': {
-          backgroundColor: theme('colors.primary.50'),
+          backgroundColor: theme('colors.neutral.50'),
         },
         '&:active': {
-          backgroundColor: theme('colors.primary.50'),
+          backgroundColor: theme('colors.neutral.50'),
         },
         '&:disabled': {
           backgroundColor: 'transparent',
-          color: theme('colors.primary.200'),
+          color: theme('colors.neutral.200'),
           border: 'none',
         },
       },
 
       '&-text': {
         backgroundColor: 'transparent',
-        color: theme('colors.primary.500'),
+        color: theme('colors.neutral.600'),
         border: 'none',
         '&:hover': {
           backgroundColor: 'transparent',
-          color: theme('colors.primary.600'),
+          color: theme('colors.neutral.700'),
         },
         '&:active': {
           backgroundColor: 'transparent',
           outlineWidth: '0px',
-          color: theme('colors.primary.700'),
+          color: theme('colors.neutral.800'),
         },
         '&:focus': {
           outlineWidth: '0px',
         },
         '&:disabled': {
           backgroundColor: 'transparent',
-          color: theme('colors.primary.100'),
+          color: theme('colors.neutral.100'),
           border: 'none',
         },
       },
@@ -282,7 +305,7 @@ function button(theme: (arg0: string) => string | number) {
       },
 
       '&-outline': {
-        border: `solid ${theme('spacing[0.5]')} ${theme('colors.primary.500')}`,
+        border: `solid ${theme('spacing[0.5]')} ${theme('colors.neutral.500')}`,
         '& > button': {
           ...base(theme),
           borderLeftWidth: '0px',
@@ -291,27 +314,27 @@ function button(theme: (arg0: string) => string | number) {
           borderBottomWidth: '0px',
           borderRadius: '0px',
           backgroundColor: 'transparent',
-          color: theme('colors.primary.500'),
+          color: theme('colors.neutral.500'),
           '&:last-child': {
             borderRightWidth: '0px',
           },
           '&:hover': {
-            backgroundColor: theme('colors.primary.50'),
+            backgroundColor: theme('colors.neutral.50'),
           },
           '&:focus': {
             outlineWidth: '0px',
             outlineColor: 'transparent',
-            backgroundColor: theme('colors.primary.50'),
+            backgroundColor: theme('colors.neutral.50'),
           },
           '&:active': {
             outlineWidth: '0px',
             outlineColor: 'transparent',
-            backgroundColor: theme('colors.primary.50'),
+            backgroundColor: theme('colors.neutral.50'),
           },
           '&:disabled': {
             backgroundColor: 'transparent',
-            color: theme('colors.primary.100'),
-            BorderColor: theme('colors.primary.100'),
+            color: theme('colors.neutral.100'),
+            BorderColor: theme('colors.neutral.100'),
           },
         },
       },

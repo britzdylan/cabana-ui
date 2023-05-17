@@ -1,28 +1,6 @@
+import createVariants from '../../lib/colorVariants';
+
 const rating = (theme: (arg0: string) => string | number) => {
-  const colors = [
-    'slate',
-    'zinc',
-    'neutral',
-    'stone',
-    'gray',
-    'red',
-    'orange',
-    'amber',
-    'yellow',
-    'lime',
-    'green',
-    'emerald',
-    'teal',
-    'cyan',
-    'sky',
-    'blue',
-    'indigo',
-    'violet',
-    'purple',
-    'fuchsia',
-    'pink',
-    'rose',
-  ];
   const variant = (color: string) => {
     return {
       '& input[type=radio]': {
@@ -30,10 +8,6 @@ const rating = (theme: (arg0: string) => string | number) => {
       },
     };
   };
-
-  const variants = new Map(
-    colors.map((color) => [`&-${color}`, variant(color)])
-  );
 
   return {
     '.rating': {
@@ -57,7 +31,7 @@ const rating = (theme: (arg0: string) => string | number) => {
           opacity: 0.2,
         },
       },
-      ...Object.fromEntries(variants),
+      ...Object.fromEntries(createVariants(variant)),
     },
   };
 };
