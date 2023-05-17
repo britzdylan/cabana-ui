@@ -1,0 +1,36 @@
+---
+layout: '../../../layouts/Default.astro'
+title: Colors
+---
+
+import MainColors from '../../../components/MainColors.vue';
+import Alert from '../../../components/content/Alert.astro';
+
+# Colors
+
+In UI design, color can be used for a variety of purposes, from adding visual interest to creating a specific mood or tone. Color can also be used to create visual hierarchy, and contrast, and to convey information, indicate relationships, and provide feedback. When choosing colors for your UI, consider your audience, your brand, and the message you want to communicate.
+
+## Customizing Colors
+
+Cabana uses Tailwind's default color palette with a few additions. We include 3 new semantic colors, `primary`, `secondary`, and `tertiary`. These colors are used to create a consistent color scheme across the application. If you wish to update these colors, you can do so in the `tailwind.config.js` file.
+
+<Alert  type="success">
+  When customizing the `primary`, `secondary`, and `tertiary` colors, make sure to follow the default Tailwind color palette object structure. You can generate the appropriate shades from a base color using: <a href="https://uicolors.app/create" target="_blank">https://uicolors.app/create</a>
+  ```js	
+  module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#fdf8f6',
+          // ...
+          900: '#43302b',
+        },
+      }
+    },
+  },
+}
+  ```
+</Alert>
+
+<MainColors client:load/>

@@ -11,13 +11,14 @@ const tooltip = (theme: (arg0: string) => string | number) => {
         opacity: 0,
         width: 'max-content',
         maxWidth: '200px',
-        padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
+        padding: `${theme('spacing.2')} ${theme('spacing.2')}`,
         backgroundColor: '#000',
         color: '#fff',
         textAlign: 'center',
         borderRadius: theme('borderRadius.sm'),
         transition: 'opacity 0.3s ease',
         fontSize: theme('fontSize.body-xs'),
+        lineHeight: '1rem',
       },
       '&:hover::before, &:focus::before': {
         visibility: 'visible',
@@ -28,26 +29,26 @@ const tooltip = (theme: (arg0: string) => string | number) => {
         opacity: 1,
       },
       "&[data-position='top']::before": {
-        bottom: '113%',
+        bottom: 'calc(100% + 10px)',
         left: '50%',
         transform: 'translateX(-50%)',
       },
 
       "&[data-position='bottom']::before": {
-        top: '113%',
+        top: 'calc(100% + 10px)',
         left: '50%',
         transform: 'translateX(-50%)',
       },
 
       "&[data-position='left']::before": {
         top: '50%',
-        right: '110%',
+        right: 'calc(100% + 10px)',
         transform: 'translateY(-50%)',
       },
 
       "&[data-position='right']::before": {
         top: '50%',
-        left: '110%',
+        left: 'calc(100% + 10px)',
         transform: 'translateY(-50%)',
       },
       "&[data-open='true']::before": {
@@ -71,26 +72,26 @@ const tooltip = (theme: (arg0: string) => string | number) => {
         borderColor: 'transparent',
       },
       "&[data-position='top']::after": {
-        bottom: '90%',
+        bottom: 'calc(100% + 0px)',
         left: '50%',
         transform: 'translateX(-50%)',
         borderTopColor: '#000',
       },
       "&[data-position='bottom']::after": {
-        top: '90%',
+        top: 'calc(100% + 0px)',
         left: '50%',
         transform: 'translateX(-50%)',
         borderBottomColor: '#000',
       },
       "&[data-position='left']::after": {
         top: '50%',
-        right: '95%',
+        right: 'calc(100% + 0px)',
         transform: 'translateY(-50%)',
         borderLeftColor: '#000',
       },
       "&[data-position='right']::after": {
         top: '50%',
-        left: '97%',
+        left: 'calc(100% + 0px)',
         transform: 'translateY(-50%)',
         borderRightColor: '#000',
       },

@@ -1,0 +1,42 @@
+---
+import { TYPOGRAPHY } from '../../../design.config';
+
+const getStyle = (item: { name: string; size: string }) => {
+  return `font-size: ${item.size};`;
+};
+---
+
+<div class='w-full not-prose'>
+  {
+    TYPOGRAPHY.scale.map((item) => (
+      <div data-ctc={item.name} class='ctc mt-6 border-t py-4'>
+        <p
+          class='text-zinc-800 font-normal tooltip cursor-pointer'
+          data-tooltip='Copy class'
+          data-position='top'
+          style={getStyle(item)}>
+          Hello world
+        </p>
+        <div class='flex gap-6 font-mono'>
+          <span>text-{item.name}</span>
+          <span>size: {item.size}</span>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  let textStyles = document.querySelectorAll('.ctc');
+
+  textStyles.forEach((textStyle) => {
+    textStyle.addEventListener('click', () => {
+      console.log(`text-${textStyle.dataset.ctc}`);
+      copyCode(`text-${textStyle.dataset.ctc}`);
+    });
+  });
+
+  async function copyCode(text: string) {
+    await navigator.clipboard.writeText(text ?? '');
+  }
+</script>

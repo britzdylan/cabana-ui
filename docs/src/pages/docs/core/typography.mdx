@@ -1,0 +1,82 @@
+---
+layout: '../../../layouts/Default.astro'
+title: Typography
+---
+
+import Typography from '../../../components/content/Typography.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/Alert.astro';
+
+
+# Typography
+
+Typography is an integral part of your UI, and helps to create a visual hierarchy, improve legibility and support branding. There are different types of typography, including body copy, headings, subheadings, and labels. Body copy is the main text on a page, and it should be easy to read. Headings and subheadings help to break up the text and add visual interest. Labels should be used primarily for Inputs and Buttons.
+
+## Usage
+
+Cabana does not apply a type scale to your project by default. Instead, it provides a set of text styles that you can use to create your own type scale. This allows you to customize the type scale to your project's needs. For your convenience we have created 3 default type scales that you can use out of the box.
+
+<Typography client:load />
+
+## Starter Type Scale
+
+The starter type scale is a simple type scale that you can use to get started. It includes text styles: `h1` through `h6`, `p`, `small` and `a`.
+
+<Alert>
+    <p>
+        <strong>NOTE:</strong> Copy and paste this into your project's CSS file, make sure Tailwind and Cabana are installed and configured.
+    </p>
+</Alert>
+
+<Code>
+```css
+/* Starter Type Scale */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+a {
+    @apply leading-[150%];
+}
+h1 {
+    @apply text-display-lg;
+}
+
+h2 {
+    @apply text-display;
+}
+
+h3 {
+    @apply text-headline-lg;
+}
+
+h4 {
+    @apply text-headline;
+}
+
+h5 {
+    @apply text-body-xl;
+}
+
+h6 {
+    @apply text-body-lg;
+}
+
+p {
+    @apply text-body;
+}
+
+small {
+    @apply text-label-sm;
+}
+
+a {
+    @apply text-base;
+}
+
+```
+</Code>

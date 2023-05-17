@@ -23,19 +23,29 @@ h3 {
   @apply text-headline-lg font-semibold;
 } */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @apply leading-[150%];
+}
+
 .component-preview {
   padding: 4rem 2rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  /* background-image: url('/grid_dot.svg'); */
+  background-image: url('/grid_dot.svg');
   background-repeat: repeat;
   background-size: 1.5rem;
   border-radius: 0.33rem;
   border: 1px solid theme('colors.slate.200');
   resize: both;
-  @apply bg-gray-200 w-full mb-4;
+  @apply bg-white w-full mb-4;
 }
 
 .component-preview.dark {

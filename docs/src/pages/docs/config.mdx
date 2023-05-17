@@ -11,10 +11,9 @@ import Alert from '../../components/content/Alert.astro';
 
 Cabana UI provides complete control over the design system. By default you don't need to configure anything, but if you want to customize the design system, you can do so by following the steps below.
 
-<Alert>
-Please note customizations are not supported in the Alpha Build.
+<Alert type='danger'>
+  Please note customizations are not supported in the current Alpha version.
 </Alert>
-
 
 <Code>
 ```js
@@ -22,31 +21,32 @@ Please note customizations are not supported in the Alpha Build.
 module.exports = {
   //...
 
-  // add Cabana plugin
-  plugins: [require("cabana-ui")],
+// add Cabana plugin
+plugins: [require("cabana-ui")],
 
-  // CabanaUI default config
-  cabana: {
-    design : { // customize the design system
-        borderRadius: "md", // 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full'
-        defaultColor: "neutral", // Any preset tailwind colors. Generate appropriate color palette with `https://uicolors.app/create`
-    },
-    utilities: { // enable/disable utilities
-        colors: true,
-        typography: true,
-        shadows: true,
-        blur: true,
-    },
-    components: { // enable/disable components
-        button: true, 
-        navigation: true, 
-        content: true,
-        forms: true,
-        patterns: true,
-    },
-    logs: true, // show logs in the console
-    prefix: "", // prefix all classes with a string
+// CabanaUI default config
+cabana: {
+  design : { // customize the design system
+    borderRadius: "md", // 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full'
+    defaultColor: "neutral", // Any preset tailwind colors. Generate appropriate color palette with `https://uicolors.app/create`
   },
+  utilities: { // enable/disable utilities
+    colors: true,
+    typography: true,
+    shadows: true,
+    blur: true,
+  },
+  components: { // enable/disable components
+    button: true,
+    navigation: true,
+    content: true,
+    forms: true,
+    patterns: true,
+  },
+  logs: true, // show logs in the console
+  prefix: "", // prefix all classes with a string
+},
 }
-```	
+```
 </Code>
+
