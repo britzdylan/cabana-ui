@@ -1,5 +1,5 @@
 {
-  "version": "0.0.38",
+  "version": "0.0.39",
   "name": "cabana-ui",
   "description": "Cabana UI plugin for tailwindcss",
   "homepage": "https://cabana-ui.com",
@@ -24,10 +24,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "link": "cd dist && npm link",
-    "build:local": "tsc && cd dist && npm link && cd .. && cd src/docs && npm link cabana-ui",
+    "build:local": "tsc && cd dist && npm link && cd .. && cd docs && npm link cabana-ui",
     "build:publish": "tsc && cd dist && npm publish",
     "docs:start": "cd docs && npm run start",
-    "docs:build": "cd docs && npm run build"
+    "docs:build": "cd docs && npm run build",
+    "run:test": "node src/test.js"
   },
   "author": "Dylan Britz",
   "license": "Apache License",
