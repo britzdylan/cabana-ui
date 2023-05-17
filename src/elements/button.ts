@@ -10,7 +10,7 @@ const base = (theme: (arg0: string) => string | number) => {
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff',
-    backgroundColor: theme('colors.primary.500'),
+    backgroundColor: 'inherit',
     transition: 'all .2s ease-in-out',
     gap: theme('spacing.2'),
     padding: `${theme('spacing.2')} ${theme('spacing.4')}`,

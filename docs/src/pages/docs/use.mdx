@@ -1,0 +1,59 @@
+---
+title: 'Use Cabana UI for Tailwind CSS'
+layout: '../../layouts/Default.astro'
+---
+
+import Code from '../../components/content/code.astro';
+import Preview from '../../components/content/Preview.astro';
+
+# Using Cabana for the first time
+
+Cabana uses a class based approach to styling. This means that you can use the classes provided by Cabana to style your HTML elements.
+We provide pre styled components that you can use out of the box, such as buttons, inputs, avatar, textareas, tooltips, etc.
+Some of these components are interactive, such as the buttons, inputs, checkboxes, etc. Some classes and provided html markup in the code preveiws are both required to make these interactive components work.
+
+## 1. Creating your first component
+
+let's create a button, simply add the `btn` class to the html button element.
+
+<Preview>
+
+  <button class='btn'>Button</button>
+  
+</Preview>
+
+<Code>
+  ```html
+  <button class='btn'>button</button>
+  ```
+</Code>
+
+## 2. Customizing your component
+
+You can customize your component by adding more classes to it. For example, you can change the color of the button by adding the `btn-primary` class to it.
+
+<Preview>
+  <button class='btn btn-primary'>Button</button>
+</Preview>
+
+<Code>
+  ```html
+  <button class='btn btn-primary'>button</button>
+  ```
+</Code>
+
+these customizations are available for all components. You can find the list of available classes for each component in the [components](/components) section.
+
+### Styling your own components with Tailwind CSS
+
+You can use the classes provided by Tailwind to add specifc styles or overides to components. For example, you can use the `bg-green-500` class to style your own button.
+
+<Preview>
+  <button class='btn bg-green-500'>Button</button>
+</Preview>
+
+<Code>
+  ```html
+  <button class='btn bg-green-500'>button</button>
+  ```
+</Code>

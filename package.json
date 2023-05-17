@@ -26,8 +26,8 @@
     "link": "cd dist && npm link",
     "build:local": "tsc && cd dist && npm link && cd .. && cd src/docs && npm link cabana-ui",
     "build:publish": "tsc && cd dist && npm publish",
-    "docs:start": "cd src/docs && npm run start",
-    "docs:build": "cd src/docs && npm run build"
+    "docs:start": "cd docs && npm run start",
+    "docs:build": "cd docs && npm run build"
   },
   "author": "Dylan Britz",
   "license": "Apache License",
