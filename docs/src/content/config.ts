@@ -4,14 +4,14 @@ import { z, defineCollection } from 'astro:content';
 const blogCollection = defineCollection({
   /* ... */
   schema: z.object({
-    draft: z.boolean().default(true),
-    title: z.string(),
-    summary: z.string(),
+    draft: z.boolean().default(true).optional(),
+    title: z.string().optional(),
+    summary: z.string().optional(),
     image: z.object({
-      src: z.string(),
-      alt: z.string(),
-    }),
-    publishDate: z.date(),
+        src: z.string(),
+        alt: z.string(),
+      }),
+    publishDate: z.date().optional(),
     author: z.string().optional(),
   }),
 });

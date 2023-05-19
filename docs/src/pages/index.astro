@@ -4,16 +4,16 @@ import '../styles/base.css';
 
 const navItems = [
   {
-    title: 'Core',
-    description: 'Base colors, typography, shadows, and more.',
-    url: '/docs/core/colors',
+    title: 'Getting Started',
+    description: 'Get up and running with Cabana.',
+    url: '/getting-started/install',
     img: '/Core.jpg',
   },
   {
-    title: 'Components',
-    description: 'The building blocks for our UI.',
-    url: '/docs/components/buttons',
-    img: '/Components.jpg',
+    title: 'Utilities',
+    description: 'The expanded Tailwindcss utilities.',
+    url: '/core/colors',
+    img: '/Core.jpg',
   },
   // {
   //   title: 'Patterns',
@@ -22,11 +22,12 @@ const navItems = [
   //   img: '/Patterns.jpg',
   // },
 ];
-
 ---
 
 <div class='bg-zinc-100 min-h-screen text-center'>
-  <header class='pt-12 pb-24 px-4 bg-gradient-to-t from-secondary-800 to-secondary-900'>
+  <header
+    class='pt-12 pb-24 px-4 bg-gradient-to-t from-secondary-800 to-secondary-900'
+  >
     <div class='flex items-center justify-center p-4'>
       <img src='/logo.svg' alt='Astro Design System Logo' />
     </div>

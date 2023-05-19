@@ -1,7 +1,7 @@
 export const SITE = {
   title: 'Cabana - Design System for Tailwind CSS',
   description:
-    'Creating amazing designs is hard when you’ve got deadlines to meet. So we built Cabana, a Design System for Tailwind that enables you to start projects faster.',
+    "Crafting exceptional designs while adhering to strict deadlines can be a challenging task. At times, it feels like an uphill battle to strike a balance between creativity and efficiency. That's why we're thrilled to introduce Cabana, an innovative Design System specifically designed for Tailwind. With Cabana, you can seamlessly accelerate your project's workflow, empowering you to deliver outstanding designs without compromising on timeliness.",
   defaultLanguage: 'en_US',
   twitter: '@britzdm',
   github: 'britzdylan/cabana-ui',
@@ -12,7 +12,7 @@ export const SITE = {
   nav: [
     {
       title: 'Docs',
-      link: '/docs/install',
+      link: '/getting-started/install',
     },
     {
       title: 'Upgrade to Pro',
@@ -48,14 +48,15 @@ export interface sidebar {
   pro?: boolean;
 }
 
-const base = '/docs';
-const corePath = `${base}/core`;
-const componentsPath = `${base}/components`;
+const base = '/';
+const gs = `${base}getting-started`;
+const corePath = `${base}core`;
+const componentsPath = `${base}components`;
 
 export const SIDEBAR: Array<sidebar> = [
   { name: 'Getting Started', header: true },
-  { name: 'Install', link: `${base}/install` },
-  { name: 'How to use', link: `${base}/use` },
+  { name: 'Install', link: `${gs}/install` },
+  { name: 'How to use', link: `${gs}/use` },
   // { name: 'Config', link: `${base}/config` },
 
   { name: 'Utilities', header: true },
@@ -65,11 +66,11 @@ export const SIDEBAR: Array<sidebar> = [
   { name: 'Blur', link: `${corePath}/blur` },
 
   { name: 'Components', header: true },
-  { name: 'Buttons', link: `${componentsPath}/buttons` },
-  { name: 'Navigation', link: `${componentsPath}/navigation` },
-  { name: 'Content', link: `${componentsPath}/content` },
-  { name: 'Forms', link: `${componentsPath}/forms` },
-  { name: 'Design Patterns', link: `${componentsPath}/design-patterns` },
+  // { name: 'Buttons', link: `${componentsPath}/buttons` },
+  // { name: 'Navigation', link: `${componentsPath}/navigation` },
+  // { name: 'Content', link: `${componentsPath}/content` },
+  // { name: 'Forms', link: `${componentsPath}/forms` },
+  // { name: 'Design Patterns', link: `${componentsPath}/design-patterns` },
 
   // { name: 'Design Blocks', header: true, pro: true },
   // { name: 'Introduction', link: '/patterns/introduction' },
