@@ -18,13 +18,29 @@
 
 ## Install now!
 
+How to get started with using cabana-ui with Tailwind CSS.
+
+### Prerequisites
+
+- [Tailwind CSS](https://tailwindcss.com) installed and configured in your project.
+- [PostCSS](https://postcss.org) installed and configured in your project.
+
+1. Install the package
+
+Add the package to your project using your preferred package manager.
+
 ```bash
 npm i cabana-ui
+# or
+yarn add cabana-ui
 ```
 
-Then add Cabana-ui to your `tailwind.config.js`:
+2. Update Tailwind config
+
+Add the plugin to your `tailwind.config.js` file.
 
 ```js
+// tailwind.config.js
 module.exports = {
   plugins: [require('cabana-ui')],
 };
@@ -32,11 +48,11 @@ module.exports = {
 
 ## 🚀 Use
 
-Coming Soon...
+[How to use CabanaUI](http://docs.cabanafortailwind.com/getting-started/use)
 
-## 📘 Documents + Examples
+## 📘Examples
 
-Coming Soon...
+[Vite](https://stackblitz.com/edit/cabanaui-vite-example?file=package.json)
 
 ## List of components
 
@@ -107,16 +123,11 @@ Please share
 [install-size-url]: https://bundlephobia.com/result?p=cabana-ui
 [license-url]: https://github.com/britzdylan/cabana-ui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/cabana-ui
-[cdnjs-url]: https://cdnjs.com/libraries/cabana-ui
-[gh-url]: https://github.com/britzdylan/cabana-ui
-[tw-play-url]: https://cabana-ui.com/tailwindplay
-[codepen-url]: https://codepen.io/britzdylan/pen/gOwWKvv
 [unpkg-url]: https://unpkg.com/browse/cabana-ui/
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/cabana-ui
-[build-url]: https://github.com/britzdylan/cabana-ui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/britzdylan/cabana-ui
-[number-of-components]: https://badgen.net/badge/total%20components/49/green
-[docs-url-install]: https://cabana-ui.com/docs/install
-[docs-url]: https://docs.cabana-ui.com/
+[number-of-components]: https://badgen.net/badge/total%20components/27/green
+[docs-url-install]: https://docs.cabanafortailwind.com/getting-started/install
+[docs-url]: https://docs.cabanafortailwind.com/
 [logo-url]: https://raw.githubusercontent.com/britzdylan/cabana-ui/main/src/docs/public/logo.svg
 [banner-url]: https://raw.githubusercontent.com/britzdylan/cabana-ui/main/src/docs/public/og_image.jpg
