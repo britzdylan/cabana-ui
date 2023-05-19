@@ -56,7 +56,7 @@ export const SIDEBAR: Array<sidebar> = [
   { name: 'Getting Started', header: true },
   { name: 'Install', link: `${base}/install` },
   { name: 'How to use', link: `${base}/use` },
-  { name: 'Config', link: `${base}/config` },
+  // { name: 'Config', link: `${base}/config` },
 
   { name: 'Utilities', header: true },
   { name: 'Colors', link: `${corePath}/colors` },

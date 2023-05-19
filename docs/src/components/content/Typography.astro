@@ -9,13 +9,15 @@ const getStyle = (item: { name: string; size: string }) => {
 <div class='w-full not-prose'>
   {
     TYPOGRAPHY.scale.map((item) => (
-      <div data-ctc={item.name} class='ctc mt-6 border-t py-4'>
+      <div
+        data-tooltip='Copy class'
+        data-position='top'
+        data-ctc={item.name}
+        class='ctc mt-6 tooltip block border-t py-4'>
         <p
-          class='text-zinc-800 font-normal tooltip cursor-pointer'
-          data-tooltip='Copy class'
-          data-position='top'
+          class='text-zinc-800 font-normal cursor-pointer'
           style={getStyle(item)}>
-          Hello world
+          CabanaUI
         </p>
         <div class='flex gap-6 font-mono'>
           <span>text-{item.name}</span>
@@ -28,11 +30,17 @@ const getStyle = (item: { name: string; size: string }) => {
 
 <script>
   let textStyles = document.querySelectorAll('.ctc');
-
   textStyles.forEach((textStyle) => {
     textStyle.addEventListener('click', () => {
-      console.log(`text-${textStyle.dataset.ctc}`);
+      // console.log(`text-${textStyle.dataset.ctc}`);
+      // @ts-ignore
       copyCode(`text-${textStyle.dataset.ctc}`);
+      // @ts-ignore
+      textStyle.dataset.tooltip = 'Copied!';
+      setTimeout(() => {
+        // @ts-ignore
+        textStyle.dataset.tooltip = 'Copy class';
+      }, 1000);
     });
   });
 

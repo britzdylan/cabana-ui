@@ -1,0 +1,32 @@
+---
+layout: '../../../layouts/Default.astro'
+title: Blur
+---
+
+import Blur from '../../../components/content/Blur.astro';
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/Code.astro';
+import Alert from '../../../components/content/Alert.astro';
+
+# Blur
+
+Blurs can be used to create a sense of depth and focus within your design. By blurring the background or foreground, they can direct the viewer's attention to the most important elements on the screen. When used correctly, blurs can add a beautiful and subtle touch to your design. However, too much blurring can make a design appear unprofessional. As with any design element, it's important to use blurs sparingly and thoughtfully when working on a project.
+
+<Preview>
+  <Blur />
+</Preview>
+
+## Deault Config
+
+<Code>
+```js
+// tailwind.config.js
+  blur: {
+    8: '4px',
+    16: '8px',
+    24: '12px',
+    32: '16px',
+    40: '20px',
+  },
+```
+</Code>
