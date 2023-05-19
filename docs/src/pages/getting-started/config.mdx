@@ -3,7 +3,7 @@ title: 'Config Cabana UI for Tailwind CSS'
 layout: '../../layouts/Default.astro'
 ---
 
-import Code from '../../components/content/Code.astro';
+import Code from '../../components/content/code.astro';
 import Preview from '../../components/content/Preview.astro';
 import Alert from '../../components/content/Alert.astro';
 
@@ -26,27 +26,29 @@ plugins: [require("cabana-ui")],
 
 // CabanaUI default config
 cabana: {
-  design : { // customize the design system
-    borderRadius: "md", // 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full'
-    defaultColor: "neutral", // Any preset tailwind colors. Generate appropriate color palette with `https://uicolors.app/create`
-  },
-  utilities: { // enable/disable utilities
-    colors: true,
-    typography: true,
-    shadows: true,
-    blur: true,
-  },
-  components: { // enable/disable components
-    button: true,
-    navigation: true,
-    content: true,
-    forms: true,
-    patterns: true,
-  },
-  logs: true, // show logs in the console
-  prefix: "", // prefix all classes with a string
+design : { // customize the design system
+borderRadius: "md", // 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full'
+defaultColor: "neutral", // Any preset tailwind colors. Generate appropriate color palette with `https://uicolors.app/create`
+},
+utilities: { // enable/disable utilities
+colors: true,
+typography: true,
+shadows: true,
+blur: true,
+},
+components: { // enable/disable components
+button: true,
+navigation: true,
+content: true,
+forms: true,
+patterns: true,
+},
+logs: true, // show logs in the console
+prefix: "", // prefix all classes with a string
 },
 }
+
 ```
 </Code>
 
+```
