@@ -2,7 +2,7 @@
 
 **Introducing Cabana, the TailwindCSS plugin that makes designing beautiful UIs fast and effortless. Cabana comes packed with extended color palettes, shadows, and background blurs, along with a custom Typography Scale System. It also includes pre-designed design elements such as buttons, lists, links, pills, forms, and more, so you can start building stunning designs in just minutes. Cabana is framework agnostic and fully customizable, making it perfect for designers and developers alike.**
 
-[![][banner-url]][docs-url] 
+[![][banner-url]][docs-url]
 
 [![][install-size]][install-size-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url] [![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
 
@@ -58,49 +58,49 @@ module.exports = {
 
 ### Actions
 
-- [x] Button
-- [x] Floating Action Button
-- [x] Button Group
+- [ ] Button
+- [ ] Floating Action Button
+- [ ] Button Group
 - [ ] Social Button
 - [ ] App Store Button
 
 ### Navigation
 
-- [x] Links
-- [x] Menu Items
-- [x] Pill
-- [x] Breadcrumbs
-- [x] Pagination
-- [x] Tabs
+- [ ] Links
+- [ ] Menu Items
+- [ ] Pill
+- [ ] Breadcrumbs
+- [ ] Pagination
+- [ ] Tabs
 
 ### Content
 
-- [x] Lists
-- [x] Accordion
+- [ ] Lists
+- [ ] Accordion
 
 ### Forms
 
-- [x] Input
-- [x] Dropdown
-- [x] Text Area
-- [x] Select
-- [x] Toggle
-- [x] Radio
-- [x] Checkbox
-- [x] Range
-- [x] Submit
+- [ ] Input
+- [ ] Dropdown
+- [ ] Text Area
+- [ ] Select
+- [ ] Toggle
+- [ ] Radio
+- [ ] Checkbox
+- [ ] Range
+- [ ] Submit
 
 ### Design Patterns
 
-- [x] Avatar
-- [x] Avatar Placeholder
-- [x] Chip
-- [x] Tag
-- [x] Tooltip
-- [x] Toast
-- [x] Indicators
-- [x] Progress bar
-- [x] Rating
+- [ ] Avatar
+- [ ] Avatar Placeholder
+- [ ] Chip
+- [ ] Tag
+- [ ] Tooltip
+- [ ] Toast
+- [ ] Indicators
+- [ ] Progress bar
+- [ ] Rating
 
 ### Data
 
@@ -111,7 +111,7 @@ module.exports = {
 Please share
 
 [![][tweet]][tweet-url]
-
+[gh-url]: https://github.com/britzdylan/cabana-ui
 [install-size]: https://badgen.net/bundlephobia/minzip/cabana-ui?label=bundle%20size&color=green
 [build]: https://badgen.net/github/checks/britzdylan/cabana-ui?label=build
 [npm]: https://badgen.net/github/tag/britzdylan/cabana-ui?label=version&color=green
