@@ -13,12 +13,83 @@ import {
 
 import Preview from '../../components/content/Preview.astro';
 import Code from '../../components/content/code.astro';
+import Alert from '../../components/content/Alert.astro';
 
-# All buttons
+# Button Component
 
-This page is an example on how to document your button components, most of the copy was written by AI so don't take it very seriously.
+The Button component provides pre-styled buttons with various customization options, including sizing, variants, icon support, color customization, and default style configuration. The Button component is a versatile and customizable button element that can be easily integrated into your web projects. It offers a range of features to suit different design requirements, allowing you to create buttons with different styles, sizes, and behaviors.
 
-Find the code for this page in the `src/pages/components/buttons.md` file.
+## Features
+
+The Button component includes the following:
+
+- Pre-styled using the `.btn` class for quick and consistent styling.
+- Sizable variations with classes `.btn-sm`, `.btn-md`, and `.btn-lg` to adjust the button size.
+- Variants include Contained, Outline, Minimal, and Text styles, achieved with classes `.btn`, `.btn-outline`, `.btn-min`, and `.btn-text`, respectively.
+- Compatible with icons. Add any SVG or any other element using the `.icon` class, positioning them either as the first or last element in the button.
+- Ability to change the default color of the button by using `.btn-[color]` with any valid Tailwind CSS color name.
+- Customizable default styles such as color, font weight, text transform, and radius in the tailwind.config.js file.(coming soon)
+- Disabled state with the `disabled` attribute.
+- Icon button styles with the `.fab` class.
+- Icon button sizes with the `.fab-sm`, `.fab-md`, `.fab-lg`, and `.fab-xl` classes.
+- Icon button rounded styles with the `.fab-rounded` class.
+- Icon button outline styles with the `.fab-outline` class.
+- Ability to change the default color of the icon button by using `.fab-[color]` with any valid Tailwind CSS color name.
+- Button group styles with the `.btn-group` class.
+- Button group sizes with the `.btn-group-small` and `.btn-group-large` classes.
+- Button group outline styles with the `.btn-group-outline` class.
+- Ability to change the default color of the button group by using `.btn-group-[color]` with any valid Tailwind CSS color name.
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class                      | Type      | Description                                                                                           |
+| -------------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
+| .btn                       | Component | Applies pre-styled button styles.                                                                     |
+| .btn-sm                    | Modifier  | Makes the button small-sized.                                                                         |
+| .btn-md                    | Modifier  | Makes the button medium-sized.                                                                        |
+| .btn-lg                    | Modifier  | Makes the button large-sized.                                                                         |
+| .btn-outline               | Modifier  | Applies an outline style to the button.                                                               |
+| .btn-min                   | Modifier  | Applies a minimal style to the button.                                                                |
+| .btn-text                  | Modifier  | Applies a text-only style to the button.                                                              |
+| .icon                      | Component | Allows you to include any element within the button to act as an icon.                                |
+| .btn-[color]               | Modifier  | Changes the default color of the button. Replace [color] with any valid Tailwind CSS color name.      |
+| .btn-outline-[color]       | Modifier  | Changes the default color of the outline button.                                                      |
+| .btn-min-[color]           | Modifier  | Changes the default color of the minimal button.                                                      |
+| .btn-text-[color]          | Modifier  | Changes the default color of the text button.                                                         |
+| .fab                       | Component | Applies pre-styled button styles for icon buttons. Requires additional classes.                       |
+| .fab-sm                    | Modifier  | Makes the icon button small-sized.                                                                    |
+| .fab-md                    | Modifier  | Makes the icon button medium-sized.                                                                   |
+| .fab-lg                    | Modifier  | Makes the icon button large-sized.                                                                    |
+| .fab-xl                    | Modifier  | Makes the icon button extra-large-sized.                                                              |
+| .fab-rounded               | Modifier  | Applies a rounded style to the icon button.                                                           |
+| .fab-outline               | Modifier  | Applies an outline style to the icon button.                                                          |
+| .fab-[color]               | Modifier  | Changes the default color of the icon button. Replace [color] with any valid Tailwind CSS color name. |
+| .fab-outline-[color]       | Modifier  | Changes the default color of the outline icon button.                                                 |
+| .btn-group                 | Component | Applies pre-styled button group styles.                                                               |
+| .btn-group-small           | Modifier  | Makes the button group small-sized.                                                                   |
+| .btn-group-large           | Modifier  | Makes the button group large-sized.                                                                   |
+| .btn-group-outline         | Modifier  | Applies an outline style to the button group.                                                         |
+| .btn-group-[color]         | Modifier  | Changes the default color of the group.                                                               |
+| .btn-group-outline-[color] | Modifier  | Changes the default color of the outline group.                                                       |
+
+Please refer to the class names and their types listed above to apply the desired styles to your buttons.
+
+## Examples
+
+### Default
+
+<Preview>
+  <button class='btn'>Button</button>
+</Preview>
+<Code>
+  ```html
+  <button class='btn'>Button</button>
+  ```
+</Code>
+
+### Variants
 
 <Preview>
   <button class='btn'>Primary</button>
@@ -27,7 +98,7 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   <button class='btn btn-text'>Text</button>
 </Preview>
 <Code>
-  ```js
+  ```html
   <button class='btn'>Primary</button>
   <button class='btn btn-outline'>Outline</button>
   <button class='btn btn-min'>Minimal</button>
@@ -35,7 +106,7 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   ```
 </Code>
 
-## Sizes
+### Sizes
 
 <Preview>
   <button class='btn btn-sm'>Small</button>
@@ -44,7 +115,7 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   <button class='btn btn-lg'>Large</button>
 </Preview>
 <Code>
-  ```js
+  ```html
   <button class='btn btn-sm'>Small</button>
   <button class='btn btn-md'>Medium</button>
   <button class='btn'>Default</button>
@@ -52,82 +123,168 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
   ```
 </Code>
 
-## With Icons
+### With Icons
+
+<Alert type='warning'>
+  Please do not nest any svg icons inside of a wrapper element that has a class
+  of `.icon`, this will cause spacing issues. Only add the `.icon` class to
+  elements other than a svg.
+</Alert>
 
 <Preview>
   <button class='btn'>
-    <span class='icon'>
-      <IconPlus />
-    </span>
+    <IconPlus />
     Left
   </button>
   <button class='btn'>
     Right
-    <span class='icon'>
-      <IconPlus />
-    </span>
-  </button>
-</Preview>
-<Code >
-```js
-<button class='btn'>
-  <span class='icon'>
-    <IconPlus />
-  </span>
-  Left
-</button>
-
-{' '}
-
-<button class='btn'>
-  Right
-  <span class='icon'>
-    <IconPlus />
-  </span>
-</button>
-```
-</Code>
-
-## FAB
-
-<Preview>
-  <button class='fab fab-sm'>
     <IconPlus />
   </button>
-  <button class='fab fab-md'>
+  <button class='btn btn-md btn-outline'>
+    <IconPlus />
+    Left
+  </button>
+  <button class='btn btn-md btn-outline'>
+    Right
     <IconPlus />
   </button>
-  <button class='fab fab-lg'>
+  <button class='btn btn-sm btn-min'>
     <IconPlus />
+    Left
   </button>
-  <button class='fab fab-xl'>
+  <button class='btn btn-sm btn-min'>
+    Right
     <IconPlus />
   </button>
 </Preview>
 <Code>
   ```js
-  <button class='fab fab-sm'>
+  <button class='btn'>
+    <IconPlus />
+    Left
+  </button>
+  <button class='btn'>
+    Right
     <IconPlus />
   </button>
-  <button class='fab fab-md'>
+  <button class='btn btn-md btn-outline'>
+    <IconPlus />
+    Left
+  </button>
+  <button class='btn btn-md btn-outline'>
+    Right
     <IconPlus />
   </button>
-  <button class='fab fab-lg'>
+  <button class='btn btn-sm btn-min'>
     <IconPlus />
+    Left
   </button>
-  <button class='fab fab-xl'>
+  <button class='btn btn-sm btn-min'>
+    Right
     <IconPlus />
   </button>
   ```
 </Code>
 
-## FAB Rounded
+### Disabled
+
+<Preview>
+  <button disabled class='btn'>
+    Primary
+  </button>
+  <button disabled class='btn btn-outline'>
+    Outline
+  </button>
+  <button disabled class='btn btn-min'>
+    Minimal
+  </button>
+  <button disabled class='btn btn-text'>
+    Text
+  </button>
+</Preview>
+<Code>
+  ```html
+  <button disabled class='btn'>
+    Primary
+  </button>
+  <button disabled class='btn btn-outline'>
+    Outline
+  </button>
+  <button disabled class='btn btn-min'>
+    Minimal
+  </button>
+  <button disabled class='btn btn-text'>
+    Text
+  </button>
+  ```
+</Code>
+
+### Button colors
+
+<Preview>
+  <button class='btn btn-secondary'>Primary</button>
+  <button class='btn btn-outline-red btn-outline'>Outline</button>
+  <button class='btn btn-min-emerald btn-min'>Minimal</button>
+  <button class='btn btn-text-fuchsia btn-text'>Text</button>
+</Preview>
+<Code>
+  ```html
+  <button class='btn btn-secondary'>Primary</button>
+  <button class='btn btn-outline-red btn-outline'>Outline</button>
+  <button class='btn btn-min-emerald btn-min'>Minimal</button>
+  <button class='btn btn-text-fuchsia btn-text'>Text</button>
+  ```
+</Code>
+
+### Icon button
+
+<Preview>
+  <button class='fab fab-md fab-outline'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-md'>
+    <IconPlus />
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button class='fab fab-md fab-outline'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-md'>
+    <IconPlus />
+  </button>
+  ```
+</Code>
+
+### Rounded icon button
+
+<Preview>
+  <button class='fab fab-outline-green fab-rounded fab-md fab-outline'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-rounded fab-md'>
+    <IconPlus />
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button class='fab fab-outline-green fab-rounded fab-md fab-outline'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-rounded fab-md'>
+    <IconPlus />
+  </button>
+  ```
+</Code>
+
+### Icon button sizes
 
 <Preview>
   <button class='fab fab-sm fab-rounded'>
     <IconPlus />
   </button>
-  <button class='fab fab-md fab-rounded'>
+  <button class='fab  fab-md fab-rounded'>
     <IconPlus />
   </button>
   <button class='fab fab-lg fab-rounded'>
@@ -157,11 +314,11 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
 ## Button Group
 
 <Preview>
-  <div class='btn-group'>
-    <button>One</button>
-    <button>Two</button>
-    <button>Three</button>
-  </div>
+<div class='btn-group'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
 
 <div class='btn-group btn-group-outline'>
   <button>One</button>
@@ -185,64 +342,119 @@ Find the code for this page in the `src/pages/components/buttons.md` file.
 ```
 </Code>
 
-## Social Buttons
+### Button Group Sizes
 
 <Preview>
-  <button class='btn btn-facebook'>
-    <IconBrandMeta />
-    Continue with Facebook
-  </button>
-  <button class='btn btn-twitter'>
-    <IconBrandTwitterFilled />
-    Sign in with Twitter
-  </button>
-  <button class='btn btn-google'>
-    <IconBrandGoogle />
-    Sign in with Google
-  </button>
-  <button class='btn btn-apple'>
-    <IconBrandApple />
-    Sign in with Apple
-  </button>
+<div class='btn-group btn-group-small'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group btn-group-large'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
 </Preview>
-<Code>
-  ```js
-  <button class='btn btn-facebook'>
-    <IconBrandMeta />
-    Continue with Facebook
-  </button>
-  <button class='btn btn-twitter'>
-    <IconBrandTwitterFilled />
-    Sign in with Twitter
-  </button>
-  <button class='btn btn-google'>
-    <IconBrandGoogle />
-    Sign in with Google
-  </button>
-  <button class='btn btn-apple'>
-    <IconBrandApple />
-    Sign in with Apple
-  </button>
-  ```
+<Code >
+```js
+<div class='btn-group btn-group-small'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group btn-group-large'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+```
 </Code>
 
-### Alternate Social Buttons
+### Button Group colors
 
 <Preview>
-  <button class='btn btn-facebook btn-facebook-alt'>
-    <IconBrandMeta />
-    Continue with Facebook
-  </button>
-  <button class='btn btn-twitter btn-twitter-alt'>
-    <IconBrandTwitterFilled />
-    Sign in with Twitter
-  </button>
-  <button class='btn btn-google btn-google-alt'>
-    <IconBrandGoogle />
-    Sign in with Google
-  </button>
-  <button class='btn btn-apple btn-apple-alt'>
-    <IconBrandApple />
-    Sign in with Apple
-  </button>
+<div class='btn-group btn-group-tertiary'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group btn-group-neutral'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group btn-group-outline btn-group-outline-emerald'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
 </Preview>
+<Code >
+```js
+<div class='btn-group btn-group-tertiary'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group btn-group-neutral'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+
+<div class='btn-group btn-group-outline btn-group-outline-emerald'>
+  <button>One</button>
+  <button>Two</button>
+  <button>Three</button>
+</div>
+```
+</Code>
+
+### Button Group with Icons
+
+<Preview>
+  <div class='btn-group'>
+    <button><IconPlus /></button>
+    <button><IconPlus /></button>
+    <button><IconPlus /></button>
+  </div>
+
+<div class='btn-group btn-group-outline'>
+    <button><IconPlus /></button>
+    <button><IconPlus /></button>
+    <button><IconPlus /></button>
+</div>
+</Preview>
+<Code >
+```js
+<div class='btn-group'>
+  <button><IconPlus /></button>
+  <button><IconPlus /></button>
+  <button><IconPlus /></button>
+</div>
+
+<div class='btn-group btn-group-outline'>
+    <button><IconPlus /></button>
+    <button><IconPlus /></button>
+    <button><IconPlus /></button>
+</div>
+```
+</Code>

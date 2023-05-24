@@ -66,7 +66,7 @@ export const SIDEBAR: Array<sidebar> = [
   { name: 'Blur', link: `${corePath}/blur` },
 
   { name: 'Components', header: true },
-  // { name: 'Buttons', link: `${componentsPath}/buttons` },
+  { name: 'Buttons', link: `${componentsPath}/buttons` },
   // { name: 'Navigation', link: `${componentsPath}/navigation` },
   // { name: 'Content', link: `${componentsPath}/content` },
   // { name: 'Forms', link: `${componentsPath}/forms` },

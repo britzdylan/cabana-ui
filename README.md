@@ -58,7 +58,7 @@ module.exports = {
 
 ### Actions
 
-- [ ] Button
+- [x] Button
 - [ ] Floating Action Button
 - [ ] Button Group
 - [ ] Social Button
