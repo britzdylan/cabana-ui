@@ -1,8 +1,8 @@
 {
-  "version": "0.0.43",
+  "version": "0.0.44",
   "name": "cabana-ui",
   "description": "Cabana UI plugin for tailwindcss",
-  "homepage": "https://cabana-ui.com",
+  "homepage": "https://cabana-ui.vercel.app/",
   "repository": "https://github.com/britzdylan/cabana-ui.git",
   "bugs": "https://github.com/britzdylan/cabana-ui/issues",
   "main": "dist/src/index.js",
