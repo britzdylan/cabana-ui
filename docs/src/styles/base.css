@@ -49,7 +49,7 @@ p {
 }
 
 .component-preview.dark {
-  /* background-image: url('/grid_dot_dark.svg'); */
+  background-image: url('/grid_dot_dark.svg');
 }
 
 pre.astro-code {
