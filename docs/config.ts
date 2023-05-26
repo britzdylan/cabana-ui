@@ -45,6 +45,7 @@ export interface sidebar {
   name: string;
   link?: string;
   header?: boolean;
+  children?: Array<sidebar>;
   pro?: boolean;
 }
 
@@ -66,8 +67,17 @@ export const SIDEBAR: Array<sidebar> = [
   { name: 'Blur', link: `${corePath}/blur` },
 
   { name: 'Components', header: true },
-  { name: 'Buttons', link: `${componentsPath}/buttons` },
-  // { name: 'Navigation', link: `${componentsPath}/navigation` },
+  {
+    name: 'Actions',
+    children: [{ name: 'Buttons', link: `${componentsPath}/actions/buttons` }],
+  },
+  {
+    name: 'Navigation',
+    children: [
+      { name: 'Link', link: `${componentsPath}/navigation/link` },
+      { name: 'Menu', link: `${componentsPath}/navigation/menu` },
+    ],
+  },
   // { name: 'Content', link: `${componentsPath}/content` },
   // { name: 'Forms', link: `${componentsPath}/forms` },
   // { name: 'Design Patterns', link: `${componentsPath}/design-patterns` },
