@@ -13,43 +13,97 @@ import {
   IconHelpCircle,
 } from '@tabler/icons-vue';
 
-## Navigation
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/Alert.astro';
 
-### Simple Link
+# Link Component
 
-<div class='component-preview'>
+The Link component provides pre-styled links with various customization options, including sizing, variants, icon support, color customization, and default style configuration.
+
+## Description
+
+The Link component is a versatile and customizable link element that can be easily integrated into your web projects. It offers a range of features to create links with different styles, sizes, and behaviors, enhancing the user experience and visual appeal of your website or application.
+
+## Features
+
+The Link component includes the following features:
+
+- Pre-styled using the .link class for quick and consistent styling.
+- Sizable variations with classes .link-xs, .link-sm, .link-lg, and .link-xl to adjust the link size.
+- Variants include Simple, Underline, and Hover styles, achieved with classes .link, .link-underline, and .link-hover, respectively.
+- Compatible with icons. Add any SVG or other elements using the .icon class, positioning them either as the first or last element in the link.
+- Ability to change the default color of the link by using .link-[color] with any valid Tailwind CSS color name.
+- Customizable default styles such as color, font weight, text transform, and radius in the tailwind.config.js file.
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class Name      | Type      | Description                                                                                    |
+| --------------- | --------- | ---------------------------------------------------------------------------------------------- |
+| .link           | Component | Applies pre-styled link styles.                                                                |
+| .link-xs        | Modifier  | Makes the link extra small-sized.                                                              |
+| .link-sm        | Modifier  | Makes the link small-sized.                                                                    |
+| .link-lg        | Modifier  | Makes the link large-sized.                                                                    |
+| .link-xl        | Modifier  | Makes the link extra large-sized.                                                              |
+| .link-underline | Modifier  | Adds an underline style to the link.                                                           |
+| .link-hover     | Modifier  | Applies a hover effect to the link.                                                            |
+| .icon           | Component | Allows you to include an icon element within the link.                                         |
+| .link-[color]   | Modifier  | Changes the default color of the link. Replace [color] with any valid Tailwind CSS color name. |
+
+Please refer to the class names and their types listed above to apply the desired styles to your links.
+
+## Examples
+
+### Default
+
+<Preview>
+  <a class='link'>Link</a>
+</Preview>
+<Code>
+  ```html
+  <a class='link'>Link</a>
+  ```
+</Code>
+
+### Variants
+
+<Preview>
   <a class='link'>Simple</a>
-  <a class='link link-fancy'>Fancy</a>
-  <a class='link link-fancy-hover'>Hover</a>
-</div>
-
-```js
-  <a  class='link'>Simple</a>
-  <a  class='link link-fancy'>Fancy</a>
-  <a  class='link link-fancy-hover'>Hover</a>
-```
+  <a class='link link-underline'>Underline</a>
+  <a class='link link-hover'>Hover</a>
+</Preview>
+<Code>
+  ```html
+  <a class='link'>Simple</a>
+  <a class='link link-underline'>Underline</a>
+  <a class='link link-hover'>Hover</a>
+  ```
+</Code>
 
 ### Link Sizes
 
-<div class='component-preview'>
+<Preview>
   <a class='link link-xs'>xsmall</a>
   <a class='link link-sm'>Small</a>
   <a class='link'>Default</a>
   <a class='link link-lg'>Large</a>
   <a class='link link-xl'>Xlarge</a>
-</div>
-
-```js
-  <a  class='link link-xs'>xsmall</a>
-  <a  class='link link-sm'>Small</a>
-  <a  class='link'>Default</a>
-  <a  class='link link-lg'>Large</a>
-  <a  class='link link-xl'>Xlarge</a>
-```
+</Preview>
+<Code>
+  ```js
+  <a class='link link-xs'>xsmall</a>
+  <a class='link link-sm'>Small</a>
+  <a class='link'>Default</a>
+  <a class='link link-lg'>Large</a>
+  <a class='link link-xl'>Xlarge</a>
+  ```
+</Code>
 
 ### Link With Icons
 
-<div class='component-preview '>
+<Preview>
   <a class='link'>
     <IconCircleArrowLeftFilled />
     Left
@@ -58,15 +112,41 @@ import {
     Right
     <IconCircleArrowRightFilled />
   </a>
-</div>
+</Preview>
+<Code>
+  ```js
+  <a class='link'>
+    <IconCircleArrowLeftFilled />
+    Left
+  </a>
+  <a class='link'>
+    Right
+    <IconCircleArrowRightFilled />
+  </a>
+  ```
+</Code>
 
-```js
-  <a  class='link'>
-    <IconCircleArrowRightFilled />
-    Fancy
+### Link With Custom Color
+
+<Preview>
+  <a class='link link-cyan'>
+    <IconCircleArrowLeftFilled />
+    Left
   </a>
-  <a  class='link'>
-    Hover
+  <a class='link link-red'>
+    Right
     <IconCircleArrowRightFilled />
   </a>
-```
+</Preview>
+<Code>
+  ```js
+  <a class='link link-cyan'>
+    <IconCircleArrowLeftFilled />
+    Left
+  </a>
+  <a class='link link-red'>
+    Right
+    <IconCircleArrowRightFilled />
+  </a>
+  ```
+</Code>

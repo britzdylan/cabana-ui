@@ -1,28 +1,10 @@
 import createVariants from '../lib/colorVariants';
+import directives from '../lib/directives';
+const { getRadius, iconSize } = directives;
 const defaultColor = 'primary';
 const defaultRadius = '1';
-const getRadius = (
-  theme: (arg0: string) => string | number,
-  radius: string | number
-) => {
-  if (typeof radius === 'number') {
-    return {
-      borderRadius: `${radius}px`,
-    };
-  }
-
-  return {
-    borderRadius: `${theme(`spacing[${radius}]`)}`,
-  };
-};
 
 const base = (theme: (arg0: string) => string | number) => {
-  const iconSize = (size: number) => {
-    return {
-      height: theme(`spacing.${size}`),
-    };
-  };
-
   return {
     display: 'flex',
     alignItems: 'center',
@@ -62,22 +44,16 @@ const base = (theme: (arg0: string) => string | number) => {
     },
     //   icons
     '& .icon': {
-      ...iconSize(5),
+      ...iconSize(theme, 5),
     },
 
     '& svg': {
-      ...iconSize(5),
+      ...iconSize(theme, 5),
     },
   };
 };
 
 function button(theme: (arg0: string) => string | number) {
-  const iconSize = (size: number) => {
-    return {
-      height: theme(`spacing.${size}`),
-    };
-  };
-
   const adjustPaddingWithIcon = (size: number) => {
     return {
       '&:has(.icon:last-child)': {
@@ -322,11 +298,11 @@ function button(theme: (arg0: string) => string | number) {
         gap: theme('spacing.1'),
         ...getRadius(theme, defaultRadius),
         '& .icon': {
-          ...iconSize(3),
+          ...iconSize(theme, 3),
         },
 
         '& svg': {
-          ...iconSize(3),
+          ...iconSize(theme, 3),
         },
 
         ...adjustPaddingWithIcon(0),
@@ -341,11 +317,11 @@ function button(theme: (arg0: string) => string | number) {
         gap: theme('spacing.1'),
         ...getRadius(theme, defaultRadius),
         '& .icon': {
-          ...iconSize(4),
+          ...iconSize(theme, 4),
         },
 
         '& svg': {
-          ...iconSize(4),
+          ...iconSize(theme, 4),
         },
         ...adjustPaddingWithIcon(2),
       },
@@ -356,11 +332,11 @@ function button(theme: (arg0: string) => string | number) {
         lineHeight: theme('spacing.7'),
         fontWeight: theme('fontWeight.semibold'),
         '& .icon': {
-          ...iconSize(7),
+          ...iconSize(theme, 7),
         },
 
         '& svg': {
-          ...iconSize(7),
+          ...iconSize(theme, 7),
         },
         ...adjustPaddingWithIcon(5),
       },
@@ -374,11 +350,11 @@ function button(theme: (arg0: string) => string | number) {
         ...getRadius(theme, defaultRadius),
         padding: 0,
         '& .icon': {
-          ...iconSize(5),
+          ...iconSize(theme, 5),
         },
 
         '& svg': {
-          ...iconSize(5),
+          ...iconSize(theme, 5),
         },
       },
 
@@ -388,11 +364,11 @@ function button(theme: (arg0: string) => string | number) {
         ...getRadius(theme, defaultRadius),
         padding: 0,
         '& .icon': {
-          ...iconSize(6),
+          ...iconSize(theme, 6),
         },
 
         '& svg': {
-          ...iconSize(6),
+          ...iconSize(theme, 6),
         },
       },
 
@@ -402,11 +378,11 @@ function button(theme: (arg0: string) => string | number) {
         ...getRadius(theme, defaultRadius),
         padding: 0,
         '& .icon': {
-          ...iconSize(7),
+          ...iconSize(theme, 7),
         },
 
         '& svg': {
-          ...iconSize(7),
+          ...iconSize(theme, 7),
         },
       },
 
@@ -416,11 +392,11 @@ function button(theme: (arg0: string) => string | number) {
         ...getRadius(theme, defaultRadius),
         padding: 0,
         '& .icon': {
-          ...iconSize(8),
+          ...iconSize(theme, 8),
         },
 
         '& svg': {
-          ...iconSize(8),
+          ...iconSize(theme, 8),
         },
       },
 

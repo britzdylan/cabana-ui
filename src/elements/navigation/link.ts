@@ -1,12 +1,11 @@
-const baseLink = (theme: (arg0: string) => string | number) => {
-  const iconSize = (size: number) => {
-    return {
-      height: theme(`spacing.${size}`),
-    };
-  };
+const defaultColor = 'primary';
+import createVariants from '../../lib/colorVariants';
+import directives from '../../lib/directives';
+const { iconSize } = directives;
 
+const baseLink = (theme: (arg0: string) => string | number) => {
   return {
-    color: theme('colors.primary.500'),
+    color: theme(`colors.${defaultColor}.500`),
     textDecoration: 'none',
     display: 'flex',
     alignItems: 'center',
@@ -17,27 +16,27 @@ const baseLink = (theme: (arg0: string) => string | number) => {
     fontSize: theme(`fontSize.body`),
     fontWeight: theme(`fontWeight.medium`),
     '&:hover': {
-      color: theme('colors.primary.600'),
+      color: theme(`colors.${defaultColor}.600`),
     },
     '&:focus': {
-      color: theme('colors.primary.600'),
+      color: theme(`colors.${defaultColor}.600`),
     },
     '&focus-visible': {
-      color: theme('colors.primary.600'),
+      color: theme(`colors.${defaultColor}.600`),
     },
     '&:disabled': {
-      color: theme('colors.primary.200'),
+      color: theme(`colors.${defaultColor}.200`),
       PointerEvents: 'none',
     },
     '&:active': {
-      color: theme('colors.primary.800'),
+      color: theme(`colors.${defaultColor}.800`),
     },
     '& .icon': {
-      ...iconSize(5),
+      ...iconSize(theme, 5),
     },
 
     '& svg': {
-      ...iconSize(5),
+      ...iconSize(theme, 5),
     },
   };
 };
@@ -48,28 +47,63 @@ const link = (theme: (arg0: string) => string | number) => {
     display: 'block',
     width: '100%',
     height: '2px',
-    background: theme('colors.primary.500'),
+    background: theme(`colors.${defaultColor}.500`),
     transition: 'transform 250ms ease-in-out',
     position: 'absolute',
     bottom: '0',
   };
 
+  const linkColors = (color: string) => {
+    return {
+      color: theme(`colors.${color}.500`),
+      '&:hover': {
+        color: theme(`colors.${color}.600`),
+      },
+      '&:focus': {
+        color: theme(`colors.${color}.600`),
+      },
+      '&focus-visible': {
+        color: theme(`colors.${color}.600`),
+      },
+      '&:disabled': {
+        color: theme(`colors.${color}.200`),
+        PointerEvents: 'none',
+      },
+      '&:active': {
+        color: theme(`colors.${color}.800`),
+      },
+    };
+  };
+
   return {
     '.link': {
       ...baseLink(theme),
+      '&-active': {
+        color: theme(`colors.${defaultColor}.800`),
+      },
       //create me an underline for the link using after
-      '&-fancy::after': {
+      '&-underline': {
+        '&-active': {
+          color: theme(`colors.${defaultColor}.800`),
+        },
+      },
+      '&-underline::after': {
         ...fancyLink,
       },
-      '&-fancy-hover::after': {
+      '&-hover::after': {
         ...fancyLink,
         transform: 'scaleX(0)',
       },
-      '&-fancy-hover:hover::after': {
+      '&-hover:hover::after': {
         transform: 'scaleX(1)',
       },
-      '&-fancy-hover:active::after': {
+      '&-hover:active::after': {
         transform: 'scaleX(1)',
+      },
+      '&-hover': {
+        '&-active::after': {
+          transform: 'scaleX(1)',
+        },
       },
       '&-sm': {
         fontSize: theme(`fontSize.body-sm`),
@@ -87,6 +121,7 @@ const link = (theme: (arg0: string) => string | number) => {
         fontSize: theme(`fontSize.body-xl`),
         fontWeight: theme(`fontWeight.medium`),
       },
+      ...Object.fromEntries(createVariants(linkColors)),
     },
   };
 };
