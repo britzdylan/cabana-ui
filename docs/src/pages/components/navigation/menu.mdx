@@ -1,0 +1,336 @@
+---
+title: 'Link'
+layout: '../../../layouts/Default.astro'
+---
+
+import {
+  IconCircleArrowRightFilled,
+  IconCircleArrowLeftFilled,
+  IconChevronRight,
+  IconChevronLeft,
+  IconHome2,
+  IconGridDots,
+  IconHelpCircle,
+} from '@tabler/icons-vue';
+
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/Alert.astro';
+
+# Menu Component Documentation
+
+The Menu component provides pre-styled menu lists with various customization options, including directional support, variants, icon compatibility, color customization, and default style configuration.
+
+## Description
+
+The Menu component is a versatile and customizable menu list element that can be used to create navigation menus, dropdown menus, or any other list-based menu structure. It offers a range of features to style menus according to your design requirements and enhance the user experience of your website or application.
+
+## Features
+
+The Menu component includes the following features:
+
+- Pre-styled using the `.menu` class for quick and consistent styling.
+- Works with `<ul>` and `<ol>` elements, providing a structured and accessible menu layout.
+- Directional support with the `.menu-vertical` class, allowing you to create vertical menus.
+- Variants include Simple, Contained, and Contained Rounded styles, achieved with classes `.menu`, `.menu-contained`, and `.menu-contained-rounded`, respectively.
+- Compatible with icons. Add any SVG or other elements using the `.icon` class, positioning them either as the first or last element within the `<li>` element.
+- Ability to change the default color of the menu links by using `.menu-[color]` with any valid Tailwind CSS color name.
+- Customizable default styles such as color, font weight, text transform, and radius in the tailwind.config.js file.
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class Name              | Type      | Description                                                                                          |
+| ----------------------- | --------- | ---------------------------------------------------------------------------------------------------- |
+| .menu                   | Component | Applies pre-styled menu styles.                                                                      |
+| .menu-vertical          | Modifier  | Positions the menu items vertically and adds full width.                                             |
+| .menu-contained         | Modifier  | Applies a contained style to the menu items.                                                         |
+| .menu-contained-rounded | Modifier  | Applies a contained rounded style to the menu items.                                                 |
+| .icon                   | Component | Allows you to include an icon element within the menu list items.                                    |
+| li.active               | Modifier  | Adds styling to the list element to indicate and active status                                       |
+| li.disabled             | Modifier  | Adds styling to the list element to indicate and disabled status                                     |
+| .menu-[color]           | Modifier  | Changes the default color of the menu links. Replace [color] with any valid Tailwind CSS color name. |
+
+Please refer to the class names and their types listed above to apply the desired styles to your menu component.
+
+## Examples
+
+### Default
+
+<Preview>
+  <ul class='menu'>
+    <li>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```html
+  <ul class='menu'>
+    <li>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Active Link
+
+<Preview>
+  <ul class='menu'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```html
+  <ul class='menu'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Contained
+
+<Preview>
+  <ul class='menu menu-contained'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```html
+  <ul class='menu menu-contained'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Rounded
+
+<Preview>
+  <ul class='menu menu-contained-rounded'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='menu menu-contained-rounded'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Vertical Menu
+
+<Preview>
+  <ul class='menu menu-contained-rounded menu-vertical max-w-screen-sm'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='menu menu-contained-rounded menu-vertical'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Menu with disabled items
+
+<Preview>
+  <ul class='menu menu-contained-rounded'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li class='disabled'>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='menu menu-contained-rounded'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li class='disabled'>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Simple menu with custom color
+
+<Preview class='flex-col'>
+  <ul class='menu menu-blue'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='menu menu-blue'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Contained menu with custom color
+
+<Preview>
+  <ul class='menu menu-contained menu-contained-emerald'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='menu menu-contained menu-contained-emerald'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Contained rounded menu with custom color
+
+<Preview>
+  <ul class='menu menu-contained-rounded menu-contained-emerald'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='menu menu-contained-rounded menu-contained-emerald'>
+    <li class='active'>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>About</a>
+    </li>
+    <li>
+      <a>Contact</a>
+    </li>
+  </ul>
+  ```
+</Code>
