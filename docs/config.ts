@@ -76,6 +76,7 @@ export const SIDEBAR: Array<sidebar> = [
     children: [
       { name: 'Link', link: `${componentsPath}/navigation/link` },
       { name: 'Menu', link: `${componentsPath}/navigation/menu` },
+      { name: 'Pill', link: `${componentsPath}/navigation/pill` },
     ],
   },
   // { name: 'Content', link: `${componentsPath}/content` },
