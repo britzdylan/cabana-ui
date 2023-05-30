@@ -37,7 +37,10 @@ const pill = (theme: (arg0: string) => string | number) => {
       '& .icon': {
         ...iconSize(theme, 3),
       },
-
+      '&-disabled': {
+        opacity: 0.5,
+        pointerEvents: 'none',
+      },
       '& svg': {
         ...iconSize(theme, 3),
       },

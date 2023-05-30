@@ -1,0 +1,145 @@
+---
+title: 'Breadcrumbs'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconCheck, IconChevronRight } from '@tabler/icons-vue';
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/Alert.astro';
+
+# Breadcrumb Component
+
+The Breadcrumb component provides pre-styled breadcrumb navigation elements with various customization options, including active indicators, icon compatibility, color customization, and default style configuration.
+
+## Description
+
+The Breadcrumb component is a navigational element commonly used to indicate the user's current location within a website or application's hierarchical structure. It offers a range of features to style the breadcrumb navigation according to your design requirements and improve the user experience.
+
+## Features
+
+The Breadcrumb component includes the following features:
+
+- Pre-styled using the `.breadcrumb` class for quick and consistent styling.
+- Designed to work with `<ol>` elements, providing a structured and accessible breadcrumb navigation.
+- Active indicator using the `.active` class, allowing you to highlight the current active item within the breadcrumb.
+- Compatible with icons. Add any `SVG` or other elements using the `.icon` class, positioning them either as the first or last element within each breadcrumb item.
+- Ability to change the default color of the breadcrumb links by using `.breadcrumb-[color]` with any valid Tailwind CSS color name.
+- Customizable default styles such as color, font weight, text transform, and radius in the tailwind.config.js file.
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class Name          | Type      | Description                                                                                                |
+| ------------------- | --------- | ---------------------------------------------------------------------------------------------------------- |
+| .breadcrumb         | Component | Applies pre-styled breadcrumb styles.                                                                      |
+| .active             | Modifier  | Applies an active style to the breadcrumb item, indicating the current location in the navigation.         |
+| .icon               | Component | Allows you to include an icon element within each breadcrumb item.                                         |
+| .breadcrumb-[color] | Modifier  | Changes the default color of the breadcrumb links. Replace [color] with any valid Tailwind CSS color name. |
+
+Please refer to the class names and their types listed above to apply the desired styles to your breadcrumb component.
+
+## Examples
+
+### Default
+
+<Preview>
+  <ol class='breadcrumb'>
+    <li>
+      <a href='#'>Home</a> <IconChevronRight />
+    </li>
+    <li>
+      <a href='#'>Library</a> <IconChevronRight />
+    </li>
+    <li class='active'>
+      <a href='#'>Data</a> <IconChevronRight />
+    </li>
+  </ol>
+</Preview>
+<Code>
+  ```js
+  <ol class='breadcrumb'>
+    <li>
+      <a href='#'>Home</a> <IconChevronRight />
+    </li>
+    <li>
+      <a href='#'>Library</a> <IconChevronRight />
+    </li>
+    <li class='active'>
+      <a href='#'>Data</a> <IconChevronRight />
+    </li>
+  </ol>
+  ```
+</Code>
+<Alert>
+  <p>
+    The <code>.breadcrumb</code> class is used to apply the default breadcrumb
+    styles. The <code>.active</code> class is used to indicate the current
+    location in the navigation. The dividers can be anything.Notice the last
+    divider is hidden by default. This is created to help with programmatically
+    creating breadcrumbs.
+  </p>
+</Alert>
+
+### Disabled
+
+<Preview>
+  <ol class='breadcrumb'>
+    <li>
+      <a href='#'>Home</a> <IconChevronRight />
+    </li>
+    <li class='disabled'>
+      <a href='#'>Library</a> <IconChevronRight />
+    </li>
+    <li class='active'>
+      <a href='#'>Data</a> <IconChevronRight />
+    </li>
+  </ol>
+</Preview>
+<Code>
+  ```js
+  <ol class='breadcrumb'>
+    <li>
+      <a href='#'>Home</a> <IconChevronRight />
+    </li>
+    <li class='disabled'>
+      <a href='#'>Library</a> <IconChevronRight />
+    </li>
+    <li class='active'>
+      <a href='#'>Data</a> <IconChevronRight />
+    </li>
+  </ol>
+  ```
+</Code>
+
+### Breadcrumbs with custom color
+
+<Preview>
+  <ol class='breadcrumb breadcrumb-emerald'>
+    <li>
+      <a href='#'>Home</a> <IconChevronRight />
+    </li>
+    <li class='disabled'>
+      <a href='#'>Library</a> <IconChevronRight />
+    </li>
+    <li class='active'>
+      <a href='#'>Data</a> <IconChevronRight />
+    </li>
+  </ol>
+</Preview>
+<Code>
+  ```js
+  <ol class='breadcrumb breadcrumb-emerald'>
+    <li>
+      <a href='#'>Home</a> <IconChevronRight />
+    </li>
+    <li class='disabled'>
+      <a href='#'>Library</a> <IconChevronRight />
+    </li>
+    <li class='active'>
+      <a href='#'>Data</a> <IconChevronRight />
+    </li>
+  </ol>
+  ```
+</Code>
