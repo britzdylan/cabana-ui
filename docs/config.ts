@@ -78,6 +78,7 @@ export const SIDEBAR: Array<sidebar> = [
       { name: 'Menu', link: `${componentsPath}/navigation/menu` },
       { name: 'Pill', link: `${componentsPath}/navigation/pill` },
       { name: 'Breadcrumb', link: `${componentsPath}/navigation/breadcrumbs` },
+      { name: 'Pagination', link: `${componentsPath}/navigation/pagination` },
     ],
   },
   // { name: 'Content', link: `${componentsPath}/content` },

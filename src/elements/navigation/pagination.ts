@@ -1,19 +1,65 @@
+import createVariants from '../../lib/colorVariants';
+import directives from '../../lib/directives';
+const { getRadius, iconSize } = directives;
+const defaultColor = 'gray';
+const defaultRadius = '1';
+
 const pagination = (theme: (arg0: string) => string | number) => {
+  const paginationColors = (color: string) => {
+    return {
+      color: theme(`colors.gray.600`),
+      '& .pagination-list': {
+        '& li': {
+          '&.active': {
+            color: theme(`colors.${color}.800`),
+          },
+          '&:hover': {
+            color: theme(`colors.${color}.800`),
+          },
+        },
+      },
+    };
+  };
+
+  const paginationContainedColors = (color: string) => {
+    return {
+      '& .pagination-list': {
+        '& li': {
+          border: `1px solid ${theme(`colors.gray.200`)}`,
+          '&.active': {
+            color: '#fff',
+            background: theme(`colors.${color}.600`),
+            border: `1px solid ${theme(`colors.${color}.600`)}`,
+            '&:hover': {
+              border: `1px solid ${theme(`colors.${color}.600`)}`,
+              background: theme(`colors.${color}.600`),
+            },
+          },
+          '&:hover': {
+            border: `1px solid ${theme(`colors.${color}.200`)}`,
+            background: theme(`colors.${color}.100`),
+          },
+        },
+      },
+    };
+  };
   return {
     '.pagination': {
       display: 'flex',
       alignItems: 'center',
       gap: theme('spacing.2'),
       '& .icon': {
-        width: theme('spacing.6'),
-        height: theme('spacing.6'),
-        color: theme('colors.gray.600'),
+        ...iconSize(theme, 5),
+        color: 'inherit',
+        cursor: 'pointer',
       },
       '& svg': {
-        width: theme('spacing.6'),
-        height: theme('spacing.6'),
-        color: theme('colors.gray.600'),
+        ...iconSize(theme, 5),
+        color: 'inherit',
+        cursor: 'pointer',
       },
+      ...paginationColors(defaultColor),
+      ...Object.fromEntries(createVariants(paginationColors)),
       '& .pagination-list': {
         display: 'flex',
         alignItems: 'center',
@@ -27,19 +73,34 @@ const pagination = (theme: (arg0: string) => string | number) => {
           gap: theme('spacing.1'),
           padding: theme('spacing.2'),
           fontSize: theme('fontSize.label-sm'),
-          color: theme('colors.gray.500'),
-          borderRadius: theme('borderRadius.sm'),
+          ...getRadius(theme, defaultRadius),
           cursor: 'pointer',
-          '&.active': {
-            color: theme('colors.primary.500'),
-            fontWeight: theme('fontWeight.semibold'),
+          color: 'inherit',
+          '& .icon': {
+            ...iconSize(theme, 5),
+            color: 'inherit',
+            cursor: 'pointer',
           },
-          '&:hover': {
-            color: theme('colors.primary.500'),
+          '& svg': {
+            ...iconSize(theme, 5),
+            color: 'inherit',
+            cursor: 'pointer',
+          },
+          '&.active': {
+            fontWeight: theme('fontWeight.semibold'),
           },
           '& a': {
             color: 'inherit',
             textDecoration: 'none',
+          },
+          '&.disabled': {
+            cursor: 'default',
+            pointerEvents: 'none',
+            opacity: 0.5,
+            '& a': {
+              cursor: 'default',
+              pointerEvents: 'none',
+            },
           },
         },
       },
@@ -53,16 +114,8 @@ const pagination = (theme: (arg0: string) => string | number) => {
         },
       },
       '&-contained': {
-        '& .pagination-list': {
-          '& li': {
-            border: `2px solid ${theme('colors.gray.200')}`,
-            '&.active': {
-              color: '#fff',
-              background: theme('colors.primary.500'),
-              border: `2px solid ${theme('colors.primary.500')}`,
-            },
-          },
-        },
+        ...paginationContainedColors(defaultColor),
+        ...Object.fromEntries(createVariants(paginationContainedColors)),
       },
       // '&-dots': {
       //   '& .pagination-list': {

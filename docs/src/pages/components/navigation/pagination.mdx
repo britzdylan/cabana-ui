@@ -1,0 +1,506 @@
+---
+title: 'Pagination'
+layout: '../../../layouts/Default.astro'
+---
+
+import {
+  IconCheck,
+  IconChevronRight,
+  IconChevronLeft,
+  IconPointFilled,
+} from '@tabler/icons-vue';
+
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/Alert.astro';
+
+# Pagination Component
+
+The Pagination component provides pre-styled pagination elements with various customization options, including active indicators, icon compatibility, color customization, and different size and variant options.
+
+## Description
+
+The Pagination component is used to display and navigate through a list of pages or items, typically used in scenarios where content is divided into multiple pages. It offers a range of features to style the pagination according to your design requirements and enhance the user experience.
+
+## Features
+
+The Pagination component includes the following features:
+
+- Pre-styled using the `.pagination` class for quick and consistent styling.
+- Create pagination links using the `<ol>` element and adding the `.pagination-list` class.
+- Compatible with icons. Add any SVG or other elements as the first or last element within each pagination item.
+- Ability to manually add the `.active` class to any list item to indicate the current page.
+- Can change the default color of the pagination links by using `.pagination-[color]` with any valid Tailwind CSS color name.
+- Variants available to customize the size and style of the pagination:
+- Default variant: No additional class required.
+- Large variant: Use the `.pagination-large` class for a larger pagination size.
+- Contained variant: Use the `.pagination-contained` class for a contained style pagination.
+- Customizable default styles such as color, font weight, text transform, and radius in the tailwind.config.js file.
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class Name            | Type      | Description                                                                                                |
+| --------------------- | --------- | ---------------------------------------------------------------------------------------------------------- |
+| .pagination           | Modifier  | Applies pre-styled pagination styles.                                                                      |
+| .active               | Modifier  | Applies an active style to the pagination item, indicating the current page.                               |
+| .pagination-list      | Component | Wraps the pagination links and creates the list structure.                                                 |
+| .icon                 | Component | Allows you to include an icon element within each pagination item.                                         |
+| .pagination-[color]   | Modifier  | Changes the default color of the pagination links. Replace [color] with any valid Tailwind CSS color name. |
+| .pagination-large     | Modifier  | Applies a larger size to the pagination links.                                                             |
+| .pagination-contained | Modifier  | Applies a contained style to the pagination.                                                               |
+
+Please refer to the class names and their types listed above to apply the desired styles to your pagination component.
+
+## Examples
+
+### Default
+
+<Preview>
+  <nav class='pagination'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='pagination'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+  ```
+</Code>
+
+### Large
+
+<Preview>
+  <nav class='pagination pagination-large'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='pagination pagination-large'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+  ```
+</Code>
+
+### Contained
+
+<Preview>
+  <nav class='pagination pagination-contained'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='pagination pagination-contained'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+  ```
+</Code>
+
+### With custom color
+
+<Preview>
+  <nav class='pagination pagination-red'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='pagination pagination-contained'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+  ```
+</Code>
+
+### Contained with custom color
+
+<Preview>
+  <nav class='pagination pagination-red pagination-contained pagination-contained-red'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='pagination pagination-red pagination-contained pagination-contained-red'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+  ```
+</Code>
+
+### With disabled items
+
+<Preview>
+  <nav class='pagination'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li class='disabled'>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='pagination'>
+    <IconChevronLeft />
+    <ol class='pagination-list'>
+      <li class='active'>
+        <a href='#'>1</a>
+      </li>
+      <li class='disabled'>
+        <a href='#'>2</a>
+      </li>
+      <li>
+        <a href='#'>3</a>
+      </li>
+      <li>
+        <a href='#'>4</a>
+      </li>
+      <li>
+        <a href='#'>5</a>
+      </li>
+      <li>
+        <a href='#'>6</a>
+      </li>
+      <li>
+        <a href='#'>8</a>
+      </li>
+      <li>
+        <a href='#'>9</a>
+      </li>
+      <li>
+        <a href='#'>10</a>
+      </li>
+    </ol>
+    <IconChevronRight />
+  </nav>
+  ```
+</Code>
