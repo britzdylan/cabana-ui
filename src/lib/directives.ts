@@ -16,6 +16,7 @@ const getRadius = (
 const iconSize = (theme: (arg0: string) => string | number, size: number) => {
   return {
     height: theme(`spacing.${size}`),
+    width: theme(`spacing.${size}`),
   };
 };
 

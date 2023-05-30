@@ -1,0 +1,106 @@
+---
+title: 'Link'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconCheck } from '@tabler/icons-vue';
+
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/Alert.astro';
+
+# Pill Component
+
+The Pill component provides pre-styled pill-shaped elements with various customization options, including variants, icon compatibility, color customization, and default style configuration.
+
+## Description
+
+The Pill component is a versatile and customizable element that can be used to create pills, tags, badges, or any other rounded shape in your web projects. It offers a range of features to style the pills according to your design requirements and enhance the visual appeal of your website or application.
+
+## Features
+
+The Pill component includes the following features:
+
+- Pre-styled using the .pill class for quick and consistent styling.
+- Variants include Simple and Active styles, achieved with the .pill and .pill-active classes, respectively.
+- Compatible with icons. Add any SVG or other elements using the .icon class, positioning them either as the first or last element within the pill.
+- Ability to change the default color of the pill by using .pill-[color] with any valid Tailwind CSS color name.
+- Customizable default styles such as color, font weight, text transform, and radius in the tailwind.config.js file.
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class Name    | Type      | Description                                                                                    |
+| ------------- | --------- | ---------------------------------------------------------------------------------------------- |
+| .pill         | Component | Applies pre-styled pill styles.                                                                |
+| .pill-active  | Modifier  | Applies an active style to the pill.                                                           |
+| .icon         | Component | Allows you to include an icon element within the pill.                                         |
+| .pill-[color] | Modifier  | Changes the default color of the pill. Replace [color] with any valid Tailwind CSS color name. |
+
+Please refer to the class names and their types listed above to apply the desired styles to your pill component.
+
+## Examples
+
+### Default
+
+<Preview>
+  <span class='pill'>Default</span>
+</Preview>
+<Code>
+  ```js
+  <span class='pill'>Default</span>
+  ```
+</Code>
+
+### Active
+
+<Preview>
+  <span class='pill pill-active'>Active</span>
+</Preview>
+<Code>
+  ```js
+  <span class='pill pill-active'>Active</span>
+  ```
+</Code>
+
+### Disabled
+
+<Preview>
+  <span class='pill disabled'>Default</span>
+</Preview>
+<Code>
+  ```js
+  <span class='pill disabled'>Default</span>
+  ```
+</Code>
+
+### Pill with custom color
+
+<Preview>
+  <span class='pill pill-purple'>Default</span>
+  <span class='pill pill-active pill-active-purple'>Active</span>
+</Preview>
+<Code>
+  ```js
+  <span class='pill pill-purple'>Default</span>
+  <span class='pill pill-active pill-active-purple'>Active</span>
+  ```
+</Code>
+
+### Pill with icon
+
+<Preview>
+  <span class='pill'>
+    <IconCheck />
+    Default
+  </span>
+</Preview>
+<Code>
+  ```js
+  <span class='pill'>
+    <IconCheck />
+    Default
+  </span>
+  ```
+</Code>
