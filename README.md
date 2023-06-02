@@ -59,19 +59,19 @@ module.exports = {
 ### Actions
 
 - [x] Button
-- [ ] Floating Action Button
-- [ ] Button Group
+- [x] Floating Action Button
+- [x] Button Group
 - [ ] Social Button
 - [ ] App Store Button
 
 ### Navigation
 
-- [ ] Links
-- [ ] Menu Items
-- [ ] Pill
-- [ ] Breadcrumbs
-- [ ] Pagination
-- [ ] Tabs
+- [x] Links
+- [x] Menu Items
+- [x] Pill
+- [x] Breadcrumbs
+- [x] Pagination
+- [x] Tabs
 
 ### Content
 

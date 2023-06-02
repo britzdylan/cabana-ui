@@ -1,5 +1,5 @@
 {
-  "version": "0.0.44",
+  "version": "0.0.45",
   "name": "cabana-ui",
   "description": "Cabana UI plugin for tailwindcss",
   "homepage": "https://cabana-ui.vercel.app/",
@@ -20,8 +20,12 @@
     "css",
     "ui"
   ],
+  "_moduleAliases": {
+    "@": "."
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node -r tsconfig-paths/register src/index.ts",
     "build": "tsc",
     "link": "cd dist && npm link",
     "build:local": "tsc && cd dist && npm link && cd .. && cd docs && npm link cabana-ui",
@@ -41,6 +45,10 @@
   "devDependencies": {
     "@types/node": "^18.16.3",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4"
-  }
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.4",
+    "module-alias": "^2.2.2"
+  },
+  "dependencies": {}
 }
