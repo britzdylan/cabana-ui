@@ -1,0 +1,375 @@
+---
+title: 'Link'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconHome2, IconGridDots, IconHelpCircle } from '@tabler/icons-vue';
+
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/Alert.astro';
+
+# Tab Component
+
+The Tab component provides pre-styled tabs with various customization options, including active indicators, icon compatibility, color customization, variants, sizes, and active states.
+
+## Description
+
+The Tab component is used to organize and display content in a tabbed layout, allowing users to switch between different sections of content efficiently. It offers a range of features to style the tabs according to your design requirements and enhance the user experience.
+
+## Features
+
+The Tab component includes the following features:
+
+- Pre-styled using the `.tabs` class for quick and consistent styling.
+- Active indicator using the `.active` class, highlighting the currently active tab button.
+- Compatible with icons. Add any SVG or other elements as the first or last element within each tab button.
+- Ability to change the default color of the tabs by using `.tabs-[color]` with any valid Tailwind CSS color name.
+- Variants available to customize the style and behavior of the tabs:
+- Navigation variant: Use the `.tabs-navigation` class for a traditional navigation-style tab layout.
+- Mobile variant: Use the `.tabs-mobile` class to display the tabs in a mobile-friendly stacked layout.
+- Sizes available to adjust the size of the tabs:
+- Default size: No additional class required.
+- Large size: Use the `.tabs-large` class for larger tabs.
+- Active states to further customize the appearance of the active tab:
+- Bordered state: Use the `.tabs-bordered` class to add a border to the active tab button.
+- Background state: Use the `.tabs-background` class to highlight the background of the active tab button.
+- Customizable default styles such as color, font weight, text transform, and radius in the tailwind.config.js file.
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class Name       | Type      | Description                                                                                    |
+| ---------------- | --------- | ---------------------------------------------------------------------------------------------- |
+| .tabs            | Component | Applies pre-styled tab styles.                                                                 |
+| .active          | Modifier  | Applies an active style to the tab button, indicating the currently active tab.                |
+| .icon            | Component | Allows you to include an icon element within each tab button.                                  |
+| .tabs-[color]    | Modifier  | Changes the default color of the tabs. Replace [color] with any valid Tailwind CSS color name. |
+| .tabs-navigation | Modifier  | Applies a traditional navigation-style layout to the tabs.                                     |
+| .tabs-mobile     | Modifier  | Displays the tabs in a stacked layout for mobile devices.                                      |
+| .tabs-large      | Modifier  | Applies a larger size to the tabs.                                                             |
+| .tabs-bordered   | Modifier  | Adds a border to the active tab button.                                                        |
+| .tabs-background | Modifier  | Highlights the background of the active tab button.                                            |
+
+Please refer to the class names and their types listed above to apply the desired styles to your tab component.
+
+## Examples
+
+### Default
+
+<Preview>
+  <nav class='tabs tabs-navigation'>
+    <button class='active'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-navigation'>
+    <button class='active'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+  ```
+</Code>
+
+### With border color
+
+<Preview>
+  <nav class='tabs tabs-navigation tabs-bordered'>
+    <button class='active active-bordered'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-navigation tabs-bordered'>
+    <button class='active active-bordered'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+  ```
+</Code>
+
+### With background color
+
+<Preview>
+  <nav class='tabs tabs-navigation tabs-background'>
+    <button class='active active-background'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-navigation tabs-background'>
+    <button class='active active-bordered'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+  ```
+</Code>
+
+### Combined with border and background color
+
+<Preview>
+  <nav class='tabs tabs-navigation tabs-background tabs-bordered'>
+    <button class='active active-background active-bordered'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-navigation'>
+    <button class='active active-bordered'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+  ```
+</Code>
+
+### Larger size
+
+<Preview>
+  <nav class='tabs tabs-navigation tabs-navigation-large tabs-background tabs-bordered'>
+    <button class='active'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-navigation tabs-navigation-large tabs-background tabs-bordered'>
+    <button class='active active-bordered'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+  ```
+</Code>
+
+### Alternate border color
+
+<Preview>
+  <nav class='tabs tabs-navigation tabs-emerald-bordered  tabs-background tabs-bordered'>
+    <button class='active active-bordered active-background'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-navigation'>
+    <button class='active active-bordered'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+  ```
+</Code>
+
+### Alternate background color
+
+<Preview>
+  <nav class='tabs tabs-navigation tabs-emerald-background tabs-background tabs-bordered'>
+    <button class='active active-bordered active-background'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-navigation'>
+    <button class='active active-bordered'>Home</button>
+    <button>Start</button>
+    <button>Help</button>
+  </nav>
+  ```
+</Code>
+
+### Tabbed navigation with icons
+
+<Preview>
+  <nav class='tabs tabs-navigation tabs-navigation-large'>
+    <button class='active'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-navigation'>
+    <button class='active active-bordered'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+  ```
+</Code>
+
+### Mobile tabbed navigation
+
+<Preview>
+  <nav class='tabs tabs-mobile'>
+    <button class='active'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-mobile'>
+    <button class='active'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+  ```
+</Code>
+
+### Mobile tabbed navigation with border
+
+<Preview>
+  <nav class='tabs tabs-mobile tabs-bordered'>
+    <button class='active active-bordered'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-mobile tabs-bordered'>
+    <button class='active'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+  ```
+</Code>
+
+### Mobile tabbed navigation with background
+
+<Preview>
+  <nav class='tabs tabs-mobile tabs-background'>
+    <button class='active'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-mobile tabs-background'>
+    <button class='active'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+  ```
+</Code>
+
+### Mobile tabbed navigation active background with border
+
+<Preview>
+  <nav class='tabs tabs-mobile tabs-bordered tabs-background'>
+    <button class='active active-background active-bordered'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+</Preview>
+<Code>
+  ```js
+  <nav class='tabs tabs-mobile tabs-bordered tabs-background'>
+    <button class='active active-bordered'>
+      <IconHome2 />
+      Home
+    </button>
+    <button>
+      <IconGridDots />
+      Start
+    </button>
+    <button>
+      <IconHelpCircle />
+      Help
+    </button>
+  </nav>
+  ```
+</Code>
