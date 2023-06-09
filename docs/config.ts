@@ -82,7 +82,13 @@ export const SIDEBAR: Array<sidebar> = [
       { name: 'Tabs', link: `${componentsPath}/navigation/tabs` },
     ],
   },
-  // { name: 'Content', link: `${componentsPath}/content` },
+  {
+    name: 'Content',
+    children: [
+      { name: 'Accordion', link: `${componentsPath}/content/accordion` },
+      { name: 'Lists', link: `${componentsPath}/content/lists` },
+    ],
+  },
   // { name: 'Forms', link: `${componentsPath}/forms` },
   // { name: 'Design Patterns', link: `${componentsPath}/design-patterns` },
 

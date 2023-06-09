@@ -1,0 +1,151 @@
+---
+title: 'Link'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconChevronDown, IconCheck } from '@tabler/icons-vue';
+
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/Alert.astro';
+
+# Accordion
+
+The Accordion component is a pre-styled and highly customizable UI element for your web projects. It's built using Tailwind CSS and offers a set of modifier classes for different styles and behaviors.
+
+## Features
+
+The Pill component includes the following features:
+
+Pre-styled : The Accordion component comes pre-styled with a `.accordion` class.
+Open State : Use the `.accordion-open` class to control the open state of the accordion.
+Nested Content : Use the `.accordion-body` class for any nested content within the accordion.
+Color Customization : The color of the accordion can be modified using `.accordion-[color]` where `[color]` can be any Tailwind CSS color name.
+Additional Customizations : The default color, font weight, text transform, and radius can be customized in the tailwind.config.js file.
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class Name         | Description                                                                               | Type      |
+| ------------------ | ----------------------------------------------------------------------------------------- | --------- |
+| .accordion         | The base class for the accordion component                                                | Component |
+| .accordion-open    | Controls the open state of the accordion                                                  | Modifier  |
+| .accordion-body    | Used for nested content within the accordion                                              | Component |
+| .accordion-[color] | Changes the color of the accordion. Replace [color] with any Tailwind CSS color name      | Modifier  |
+| tailwind.config.js | Configuration file for customizing default color, font weight, text transform, and radius | Config    |
+
+Please refer to the class names and their types listed above to apply the desired styles to your accordion component.
+
+## Examples
+
+### Default
+
+<Preview>
+  <div class='accordion'>
+    <header>
+      <p>Accordion</p>
+      <IconChevronDown />
+    </header>
+    <div class='accordion-body'>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae ultricies
+        nisl nunc vel mauris. Sed euismod, nisl vel tincidunt lacinia, nunc nisl
+        aliquam mauris, vitae ultricies nisl nunc vel mauris.
+      </p>
+    </div>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='accordion'>
+    <header>
+      <p>Accordion</p>
+      <IconChevronDown />
+    </header>
+    <div class='accordion-body'>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae ultricies
+        nisl nunc vel mauris. Sed euismod, nisl vel tincidunt lacinia, nunc nisl
+        aliquam mauris, vitae ultricies nisl nunc vel mauris.
+      </p>
+    </div>
+  </div>
+  ```
+</Code>
+
+### Open
+
+<Preview>
+  <div class='accordion accordion-open'>
+    <header>
+      <p>Accordion</p>
+      <IconChevronDown />
+    </header>
+    <div class='accordion-body'>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae ultricies
+        nisl nunc vel mauris. Sed euismod, nisl vel tincidunt lacinia, nunc nisl
+        aliquam mauris, vitae ultricies nisl nunc vel mauris.
+      </p>
+    </div>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='accordion accordion-open'>
+    <header>
+      <p>Accordion</p>
+      <IconChevronDown />
+    </header>
+    <div class='accordion-body'>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae ultricies
+        nisl nunc vel mauris. Sed euismod, nisl vel tincidunt lacinia, nunc nisl
+        aliquam mauris, vitae ultricies nisl nunc vel mauris.
+      </p>
+    </div>
+  </div>
+  ```
+</Code>
+
+### Custom Color
+
+<Preview>
+  <div class='accordion accordion-red accordion-open'>
+    <header>
+      <p>Accordion</p>
+      <IconChevronDown />
+    </header>
+    <div class='accordion-body'>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae ultricies
+        nisl nunc vel mauris. Sed euismod, nisl vel tincidunt lacinia, nunc nisl
+        aliquam mauris, vitae ultricies nisl nunc vel mauris.
+      </p>
+    </div>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='accordion accordion-red accordion-open'>
+    <header>
+      <p>Accordion</p>
+      <IconChevronDown />
+    </header>
+    <div class='accordion-body'>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae ultricies
+        nisl nunc vel mauris. Sed euismod, nisl vel tincidunt lacinia, nunc nisl
+        aliquam mauris, vitae ultricies nisl nunc vel mauris.
+      </p>
+    </div>
+  </div>
+  ```
+</Code>
