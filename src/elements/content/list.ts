@@ -1,6 +1,15 @@
+import createVariants from '../../lib/colorVariants';
+import directives from '../../lib/directives';
+const { iconSize } = directives;
+const defaultColor = 'gray';
+
 const list = (theme: (arg0: string) => string | number) => {
+  const colors = (color: string) => {
+    return { color: theme(`colors.${color}.600`) };
+  };
+
   const listItem = {
-    fontSize: theme('fontSize.label-sm'),
+    fontSize: theme('fontSize.label'),
     color: 'inherit',
     display: 'flex',
     flexDirection: 'row',
@@ -15,15 +24,14 @@ const list = (theme: (arg0: string) => string | number) => {
     listStyle: 'none',
     padding: 0,
     margin: 0,
+    color: theme(`colors.${defaultColor}.600`),
     '& li': {
       ...listItem,
       '& .icon': {
-        width: theme('spacing.4'),
-        height: theme('spacing.4'),
+        ...iconSize(theme, 4),
       },
       '& svg': {
-        width: theme('spacing.4'),
-        height: theme('spacing.4'),
+        ...iconSize(theme, 4),
       },
     },
 
@@ -32,22 +40,18 @@ const list = (theme: (arg0: string) => string | number) => {
         ...listItem,
         fontSize: theme('fontSize.label-xl'),
         '& .icon': {
-          width: theme('spacing.6'),
-          height: theme('spacing.6'),
+          ...iconSize(theme, 6),
         },
         '& svg': {
-          width: theme('spacing.6'),
-          height: theme('spacing.6'),
+          ...iconSize(theme, 6),
         },
       },
     },
   };
   return {
-    'ul.list': {
+    '.list': {
       ...listStyle,
-    },
-    'ol.list': {
-      ...listStyle,
+      ...Object.fromEntries(createVariants(colors)),
     },
   };
 };

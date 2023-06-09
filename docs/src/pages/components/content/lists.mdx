@@ -1,0 +1,183 @@
+---
+title: 'Lists Component'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconCircleCheck } from '@tabler/icons-vue';
+
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+
+# Lists
+
+The List Component is a versatile and customizable list UI element designed using Tailwind CSS. This component allows you to create and style list items with ease, offering a set of modifier classes for additional styles and behaviors.
+
+## Features
+
+- Pre-styled: The List Component comes pre-styled with a `.list` class.
+- Featured Item: Use the `.featured` class to highlight a particular list item.
+- Color Customization: The color of the list can be modified using `.list-[color]` where `[color]` can be any Tailwind CSS color name.
+- Additional Customizations: The default color, font weight, text transform, and radius can be customized in the tailwind.config.js file..
+
+## Class Reference
+
+Below is a table of the available classes, their purposes, and their types:
+
+| Class Name         | Description                                                                               | Type      |
+| ------------------ | ----------------------------------------------------------------------------------------- | --------- |
+| .list              | The base class for the list component                                                     | Component |
+| .featured          | Marks a list item as featured                                                             | Modifier  |
+| .list-[color]      | Changes the color of the list. Replace [color] with any Tailwind CSS color name           | Modifier  |
+| tailwind.config.js | Configuration file for customizing default color, font weight, text transform, and radius | Config    |
+
+Please refer to the class names and their types listed above to apply the desired styles to your list component.
+
+## Examples
+
+### Default
+
+<Preview>
+  <ul class='list'>
+    <li>
+      <IconCircleCheck />
+      Item 1
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 2
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 3
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='list'>
+    <li>
+      <IconCircleCheck />
+      Item 1
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 2
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 3
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Large List
+
+<Preview>
+  <ol class='list list-large'>
+    <li>
+      <IconCircleCheck />
+      Item 1
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 2
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 3
+    </li>
+  </ol>
+</Preview>
+<Code>
+  ```js
+  <ol class='list list-large'>
+    <li>
+      <IconCircleCheck />
+      Item 1
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 2
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 3
+    </li>
+  </ol>
+  ```
+</Code>
+
+### Featured list item
+
+<Preview>
+  <ul class='list'>
+    <li class='featured'>
+      <IconCircleCheck />
+      Item 1
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 2
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 3
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='list'>
+    <li>
+      <IconCircleCheck />
+      Item 1
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 2
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 3
+    </li>
+  </ul>
+  ```
+</Code>
+
+### Custom color
+
+<Preview>
+  <ul class='list list-red'>
+    <li>
+      <IconCircleCheck />
+      Item 1
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 2
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 3
+    </li>
+  </ul>
+</Preview>
+<Code>
+  ```js
+  <ul class='list list-red'>
+    <li>
+      <IconCircleCheck />
+      Item 1
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 2
+    </li>
+    <li>
+      <IconCircleCheck />
+      Item 3
+    </li>
+  </ul>
+  ```
+</Code>

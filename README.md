@@ -75,8 +75,8 @@ module.exports = {
 
 ### Content
 
-- [ ] Lists
-- [ ] Accordion
+- [x] Lists
+- [x] Accordion
 
 ### Forms
 
