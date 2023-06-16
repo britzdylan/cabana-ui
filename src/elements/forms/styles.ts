@@ -22,7 +22,12 @@ const styles = {
     padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
     fontSize: theme('fontSize.label-sm'),
     fontWeight: theme('fontWeight.normal'),
+    outline: 'none',
     '&:focus': {
+      outline: 'none',
+      border: `none`,
+    },
+    '&:focus-visible': {
       outline: 'none',
       border: `none`,
     },

@@ -111,11 +111,13 @@ const input = (theme: (arg0: string) => string | number) => {
           borderLeft: `1px solid ${theme('colors.gray.300')}`,
         },
       },
-      '& > select.input-select, &:select': {
-        width: '100%',
-        height: theme('spacing.6'),
+      '& span > select.input-select': {
+        ...styles.inputReset(theme),
+        width: 'fit-content',
         fontSize: theme('fontSize.label-sm'),
         fontWeight: theme('fontWeight.normal'),
+        outline: 'none',
+        cursor: 'pointer',
         '&:focus': {
           outline: 'none',
           border: `none`,
@@ -134,10 +136,7 @@ const input = (theme: (arg0: string) => string | number) => {
           border: `none`,
         },
       },
-      '& select.select': {
-        ...styles.inputReset(theme),
-        cursor: 'pointer',
-      },
+      
       '& span.input-prefix': {
         ...prefixSuffix,
         borderRight: `1px solid ${theme('colors.gray.300')}`,
