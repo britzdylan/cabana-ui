@@ -118,7 +118,7 @@ const input = (theme: (arg0: string) => string | number) => {
       },
       '& label.helper': {
         ...styles.helper(theme),
-        color: theme(`colors.${defaultColor}.700`),
+        color: theme(`colors.${defaultColor}.500`),
       },
       '& input': {
         ...styles.inputReset(theme),

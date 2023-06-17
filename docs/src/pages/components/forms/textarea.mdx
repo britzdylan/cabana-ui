@@ -1,0 +1,157 @@
+---
+title: 'Textarea Component'
+layout: '../../../layouts/Default.astro'
+---
+
+import {
+  IconChevronDown,
+  IconHelpCircle,
+  IconMail,
+  IconCreditCard,
+} from '@tabler/icons-vue';
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/alert.astro';
+
+### Default Textarea
+
+<Preview>
+  <div class='textarea max-w-xs mx-auto'>
+    <label class='label'>Enter a message</label>
+    <textarea placeholder='Your message'></textarea>
+     <label class='helper'>
+      <span>No more than 300 chracters</span>
+    </label>
+  </div>
+</Preview>
+<Code>
+```js
+<div class='input max-w-xs mx-auto'>
+  <span>
+    <textarea placeholder='Your message'></textarea>
+  </span>
+
+</div>
+```
+</Code>
+
+### Disabled state
+
+<Preview>
+  <div class='textarea max-w-xs mx-auto'>
+    <textarea disabled='true' placeholder='Your message'></textarea>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='textarea'>
+    <textarea disabled='true' placeholder='Your message'></textarea>
+  </div>
+  ```
+</Code>
+
+### Success state
+
+<Preview>
+  <div class='textarea max-w-xs mx-auto'>
+    <textarea class='success' placeholder='Your message'></textarea>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='textarea'>
+    <textarea class='success' placeholder='Your message'></textarea>
+  </div>
+  ```
+</Code>
+
+### Error state
+
+<Preview>
+  <div class='textarea max-w-xs mx-auto'>
+    <textarea class='error' placeholder='Your message'></textarea>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='textarea'>
+    <textarea class='error' placeholder='Your message'></textarea>
+  </div>
+  ```
+</Code>
+
+### Large Textarea
+
+<Preview>
+  <div class='textarea textarea-large max-w-xs mx-auto'>
+    <textarea placeholder='Your message'></textarea>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='textarea textarea-large'>
+    <textarea placeholder='Your message'></textarea>
+  </div>
+  ```
+</Code>
+
+### Textarea with label
+
+<Preview>
+  <div class='textarea max-w-xs mx-auto'>
+    <label class='label'>Enter a message</label>
+    <textarea placeholder='Your message'></textarea>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='textarea'>
+    <label class='label'>Enter a message</label>
+    <textarea placeholder='Your message'></textarea>
+  </div>
+  ```
+</Code>
+
+### Textarea with helper text
+
+<Preview>
+  <div class='textarea max-w-xs mx-auto'>
+    <textarea placeholder='Your message'></textarea>
+    <label class='helper'>
+      <span>No more than 300 chracters</span>
+    </label>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='textarea'>
+    <label class='label'>Enter a message</label>
+    <textarea placeholder='Your message'></textarea>
+    <label class='helper'>
+      <span>No more than 300 chracters</span>
+    </label>
+  </div>
+  ```
+</Code>
+
+### With accent color
+
+<Preview>
+  <div class='textarea textarea-orange max-w-xs mx-auto'>
+    <textarea placeholder='Your message'></textarea>
+    <label class='helper'>
+      <span>No more than 300 chracters</span>
+    </label>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='textarea'>
+    <label class='label'>Enter a message</label>
+    <textarea placeholder='Your message'></textarea>
+    <label class='helper'>
+      <span>No more than 300 chracters</span>
+    </label>
+  </div>
+  ```
+</Code>

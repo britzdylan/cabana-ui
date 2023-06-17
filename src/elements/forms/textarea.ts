@@ -1,19 +1,32 @@
 import styles from './styles';
+import createVariants from '../../lib/colorVariants';
 const defaultColor = 'gray';
-const accentColor = 'blue';
+const accentColor = 'secondary';
 const errorColor = 'red';
 const successColor = 'green';
 const textarea = (theme: (arg0: string) => string | number) => {
+  const colors = (color: string) => {
+    return {
+      '& textarea': {
+        accentColor: theme(`colors.${color}.400`),
+        caretColor: theme(`colors.${color}.800`),
+        ...styles.states(theme, defaultColor, color, errorColor, successColor),
+      },
+    };
+  };
+
   return {
     '.textarea': {
       ...styles.wrapper(theme),
 
       '& label': {
         ...styles.label(theme),
+        color: theme(`colors.${defaultColor}.700`),
       },
 
       '& label.helper': {
         ...styles.helper(theme),
+        color: theme(`colors.${defaultColor}.500`),
       },
 
       '& textarea': {
@@ -22,13 +35,19 @@ const textarea = (theme: (arg0: string) => string | number) => {
         padding: theme('spacing.2'),
         fontSize: theme('fontSize.label-sm'),
         fontWeight: theme('fontWeight.normal'),
-        color: theme('colors.gray.800'),
         backgroundColor: '#fff',
-        border: `1px solid ${theme('colors.gray.300')}`,
         borderRadius: theme('borderRadius.md'),
         transition: 'all 0.2s ease-in-out',
         minHeight: '100px',
-        ...styles.states(theme, defaultColor, accentColor, errorColor, successColor),
+        color: theme(`colors.${defaultColor}.800`),
+        border: `1px solid ${theme(`colors.${defaultColor}.300`)}`,
+        ...styles.states(
+          theme,
+          defaultColor,
+          accentColor,
+          errorColor,
+          successColor
+        ),
       },
 
       '&-large': {
@@ -39,6 +58,8 @@ const textarea = (theme: (arg0: string) => string | number) => {
           fontSize: theme('fontSize.label'),
         },
       },
+
+      ...Object.fromEntries(createVariants(colors)),
     },
   };
 };
