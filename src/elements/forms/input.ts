@@ -1,7 +1,52 @@
 import styles from './styles';
+import createVariants from '../../lib/colorVariants';
+import directives from '../../lib/directives';
+const { iconSize } = directives;
+const defaultColor = 'gray';
+const accentColor = 'secondary';
+const errorColor = 'red';
+const successColor = 'green';
 
 const input = (theme: (arg0: string) => string | number) => {
+  const colors = (color: string) => {
+    return {
+      border: `1px solid ${theme(`colors.${color}.200`)}`,
+      color: theme(`colors.${color}.500`),
+    };
+  };
+
+  const accentColors = (
+    defaultColor: string,
+    accentColor: string,
+    errorColor: string,
+    successColor: string
+  ) => {
+    return {
+      ...styles.states(
+        theme,
+        defaultColor,
+        accentColor,
+        errorColor,
+        successColor
+      ),
+    };
+  };
+
+  const colorVariants = (color: string) => {
+    return {
+      '& input': {
+        accentColor: theme(`colors.${color}.400`),
+        caretColor: theme(`colors.${color}.800`),
+      },
+      '& > span:not(.input-prefix, .input-suffix)': {
+        ...accentColors(defaultColor, color, errorColor, successColor),
+      },
+    };
+  };
+
   const inputSpan = {
+    ...colors(defaultColor),
+    ...accentColors(defaultColor, accentColor, errorColor, successColor),
     backgroundColor: '#fff',
     overflow: 'hidden',
     padding: 0,
@@ -13,29 +58,12 @@ const input = (theme: (arg0: string) => string | number) => {
     gap: theme('spacing.2'),
     justifyContent: 'space-between',
     borderRadius: theme('borderRadius.md'),
-    border: `1px solid ${theme('colors.gray.300')}`,
     transition: 'all 0.2s ease-in-out',
-    '&:focus-within': {
-      outlineStyle: 'solid',
-      outlineColor: theme('colors.blue.200'),
-      outlineWidth: '2px',
-      outlineOffset: '0px',
-      border: `1px solid ${theme('colors.blue.300')}`,
-    },
-    '&:disabled': {
-      PointerEvents: 'none',
-      outline: 'none',
-      border: `none`,
-      color: theme('colors.gray.400'),
-      backgroundColor: theme('colors.gray.100'),
-    },
     '& .icon': {
-      fontSize: theme('spacing.5'),
-      height: theme('spacing.5'),
+      ...iconSize(theme, 5),
     },
     '& svg ': {
-      fontSize: theme('spacing.5'),
-      height: theme('spacing.5'),
+      ...iconSize(theme, 5),
     },
     '& .icon:first-child': {
       marginLeft: theme('spacing.2'),
@@ -49,22 +77,9 @@ const input = (theme: (arg0: string) => string | number) => {
     '& svg:last-child': {
       marginRight: theme('spacing.2'),
     },
-    '&.error': {
-      border: `1px solid ${theme('colors.red.500')}`,
-      outlineStyle: 'solid',
-      outlineColor: theme('colors.red.300'),
-      outlineWidth: '2px',
-    },
-    '&.success': {
-      border: `1px solid ${theme('colors.green.500')}`,
-      outlineStyle: 'solid',
-      outlineColor: theme('colors.green.300'),
-      outlineWidth: '2px',
-    },
   };
+
   const prefixSuffix = {
-    color: theme('colors.gray.500'),
-    backgroundColor: theme('colors.gray.50'),
     fontSize: theme('fontSize.label-sm'),
     fontWeight: theme('fontWeight.normal'),
     display: 'flex',
@@ -75,20 +90,41 @@ const input = (theme: (arg0: string) => string | number) => {
     padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
   };
 
+  const prefixColor = (color: string) => {
+    return {
+      color: theme(`colors.${color}.500`),
+      backgroundColor: theme(`colors.${color}.50`),
+      borderRight: `1px solid ${theme(`colors.${color}.200`)}`,
+    };
+  };
+
+  const suffixColor = (color: string) => {
+    return {
+      color: theme(`colors.${color}.500`),
+      backgroundColor: theme(`colors.${color}.50`),
+      borderLeft: `1px solid ${theme(`colors.${color}.200`)}`,
+    };
+  };
+
   return {
     '.input': {
       ...styles.wrapper(theme),
       '& label.label': {
         ...styles.label(theme),
+        color: theme(`colors.${defaultColor}.700`),
       },
       '& > span:not(.input-prefix, .input-suffix)': {
         ...inputSpan,
       },
       '& label.helper': {
         ...styles.helper(theme),
+        color: theme(`colors.${defaultColor}.700`),
       },
       '& input': {
         ...styles.inputReset(theme),
+        color: theme(`colors.${defaultColor}.700`),
+        accentColor: theme(`colors.${accentColor}.400`),
+        caretColor: theme(`colors.${accentColor}.800`),
       },
 
       '&-large': {
@@ -112,6 +148,7 @@ const input = (theme: (arg0: string) => string | number) => {
         },
       },
       '& span > select.input-select': {
+        color: theme(`colors.${defaultColor}.700`),
         ...styles.inputReset(theme),
         width: 'fit-content',
         fontSize: theme('fontSize.label-sm'),
@@ -136,15 +173,17 @@ const input = (theme: (arg0: string) => string | number) => {
           border: `none`,
         },
       },
-      
+
       '& span.input-prefix': {
         ...prefixSuffix,
-        borderRight: `1px solid ${theme('colors.gray.300')}`,
+        ...prefixColor(defaultColor),
       },
       '& span.input-suffix': {
         ...prefixSuffix,
-        borderLeft: `1px solid ${theme('colors.gray.300')}`,
+        ...suffixColor(defaultColor),
       },
+
+      ...Object.fromEntries(createVariants(colorVariants)),
     },
   };
 };

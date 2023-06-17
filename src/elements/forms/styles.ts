@@ -14,7 +14,7 @@ const styles = {
   label: (theme: (arg0: string) => string | number) => ({
     width: '100%',
     fontSize: theme('fontSize.label-sm'),
-    fontWeight: theme('fontWeight.bold'),
+    fontWeight: theme('fontWeight.medium'),
   }),
 
   inputReset: (theme: (arg0: string) => string | number) => ({
@@ -58,31 +58,38 @@ const styles = {
     },
   }),
 
-  states: (theme: (arg0: string) => string | number) => ({
-    '&:focus, &:active': {
+  states: (
+    theme: (arg0: string) => string | number,
+    defaultColor: string,
+    accentColor: string,
+    errorColor: string,
+    successColor: string
+  ) => ({
+    '&:focus, &:active, &:focus-within': {
       outlineStyle: 'solid',
-      outlineColor: theme('colors.blue.200'),
+      outlineColor: theme(`colors.${accentColor}.200`),
       outlineWidth: '2px',
       outlineOffset: '0px',
-      border: `1px solid ${theme('colors.blue.300')}`,
+      border: `1px solid ${theme(`colors.${accentColor}.300`)}`,
     },
 
     '&:disabled': {
       PointerEvents: 'none',
       outline: 'none',
-      color: theme('colors.gray.400'),
-      backgroundColor: theme('colors.gray.100'),
+      border: `none`,
+      color: theme(`colors.${defaultColor}.400`),
+      backgroundColor: theme(`colors.${defaultColor}.100`),
     },
     '&.error': {
-      border: `1px solid ${theme('colors.red.500')}`,
+      border: `1px solid ${theme(`colors.${errorColor}.500`)}`,
       outlineStyle: 'solid',
-      outlineColor: theme('colors.red.300'),
+      outlineColor: theme(`colors.${errorColor}.300`),
       outlineWidth: '2px',
     },
     '&.success': {
-      border: `1px solid ${theme('colors.green.500')}`,
+      border: `1px solid ${theme(`colors.${successColor}.500`)}`,
       outlineStyle: 'solid',
-      outlineColor: theme('colors.green.300'),
+      outlineColor: theme(`colors.${successColor}.300`),
       outlineWidth: '2px',
     },
   }),

@@ -1,5 +1,8 @@
 import styles from './styles';
-
+const defaultColor = 'gray';
+const accentColor = 'blue';
+const errorColor = 'red';
+const successColor = 'green';
 const textarea = (theme: (arg0: string) => string | number) => {
   return {
     '.textarea': {
@@ -25,7 +28,7 @@ const textarea = (theme: (arg0: string) => string | number) => {
         borderRadius: theme('borderRadius.md'),
         transition: 'all 0.2s ease-in-out',
         minHeight: '100px',
-        ...styles.states(theme),
+        ...styles.states(theme, defaultColor, accentColor, errorColor, successColor),
       },
 
       '&-large': {
