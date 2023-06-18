@@ -1,0 +1,154 @@
+---
+title: 'Toggle Component'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconCheck } from '@tabler/icons-vue';
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/alert.astro';
+
+# Toggle Component
+
+The Toggle Component is a flexible, customizable component that has been pre-styled for your convenience. It supports disabled state, and changing the accent color theme. Additionally, you can customize the default color, font weight, text transform, and radius in the tailwind.config.js file.
+
+## Features
+
+- Pre-styled using `.toggle` class
+- Larger size using `.toggle-large`
+- Supports disabled state using the `disabled` property on the toggle
+- Can use `.toggle-[any tailwind color name here]` to change the accent color theme
+- Can customize the default color, font weight, text transform, and radius in the tailwind.config.js file
+
+## Class Names, Description, and Type
+
+| Class Name                               | Description                                    | Type       |
+| ---------------------------------------- | ---------------------------------------------- | ---------- |
+| `.toggle`                                | Provides basic styles for the toggle component | Component  |
+| `.toggle-large`                          | Applies larger size to the toggle component    | Modifier   |
+| `.disabled`                              | Applies the disabled state to the toggle       | State      |
+| `.toggle-[any tailwind color name here]` | Changes the accent color theme of the toggle   | Responsive |
+
+### Default Toggle
+
+<Preview>
+  <label class='toggle'>
+    <input type='checkbox' />
+    <div class='toggle-label'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+
+   <label class='toggle'>
+    <input type='checkbox' />
+    <div class='toggle-label-narrow'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+</Preview>
+<Code>
+  ```js
+  <label class='toggle'>
+    <input type='checkbox' />
+    <div class='toggle-label'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+
+   <label class='toggle'>
+    <input type='checkbox' />
+    <div class='toggle-label-narrow'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+  ```
+</Code>
+
+### Disabled state
+
+<Preview>
+  <label class='toggle disabled'>
+    <input disabled type='checkbox' />
+    <div class='toggle-label'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+
+   <label class='toggle disabled'>
+    <input disabled type='checkbox' />
+    <div class='toggle-label-narrow'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+</Preview>
+<Code>
+  ```js
+  <label class='toggle disabled'>
+    <input disabled type='checkbox' />
+    <div class='toggle-label'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+
+   <label class='toggle disabled'>
+    <input disabled type='checkbox' />
+    <div class='toggle-label-narrow'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+  ```
+</Code>
+
+### Large Toggle
+
+<Preview>
+  <label class='toggle toggle-large'>
+    <input type='checkbox' />
+    <div class='toggle-label'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+
+   <label class='toggle toggle-large'>
+    <input type='checkbox' />
+    <div class='toggle-label-narrow'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+</Preview>
+<Code>
+  ```js
+  <label class='toggle toggle-large'>
+    <input type='checkbox' />
+    <div class='toggle-label'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+
+   <label class='toggle toggle-large'>
+    <input type='checkbox' />
+    <div class='toggle-label-narrow'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+  ```
+</Code>
+
+### With accent color
+
+<Preview>
+  <label class='toggle toggle-green'>
+    <input type='checkbox' />
+    <div class='toggle-label'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+
+   <label class='toggle toggle-green'>
+    <input type='checkbox' />
+    <div class='toggle-label-narrow'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+</Preview>
+<Code>
+  ```js
+  <label class='toggle toggle-green'>
+    <input type='checkbox' />
+    <div class='toggle-label'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+
+   <label class='toggle toggle-green'>
+    <input type='checkbox' />
+    <div class='toggle-label-narrow'></div>
+    <span class='text-label'>Toggle Me</span>
+  </label>
+  ```
+</Code>

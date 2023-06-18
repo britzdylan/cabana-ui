@@ -1,4 +1,15 @@
+const defaultColor = 'gray';
+import createVariants from '../../lib/colorVariants';
+
 const toggle = (theme: (arg0: string) => string | number) => {
+  const colors = (color: string) => {
+    return {
+      '& input[type="checkbox"]:checked ~ .toggle-label, input[type="checkbox"]:checked ~ .toggle-label-narrow':
+        {
+          background: `${theme(`colors.${color}.900`)}`,
+        },
+    };
+  };
   return {
     '.toggle': {
       display: 'inline-flex',
@@ -18,13 +29,13 @@ const toggle = (theme: (arg0: string) => string | number) => {
         borderWidth: 0,
       },
       '& .toggle-label': {
+        background: `${theme(`colors.${defaultColor}.200`)}`,
         cursor: 'pointer',
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
-        width: theme('spacing.12'),
+        width: theme('spacing.10'),
         borderRadius: '48px',
-        background: theme('colors.gray.200'),
         transition: 'all 0.2s ease-in-out',
         padding: theme('spacing[0.5]'),
       },
@@ -33,10 +44,10 @@ const toggle = (theme: (arg0: string) => string | number) => {
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
-        width: theme('spacing.12'),
-        height: theme('spacing.3'),
+        width: theme('spacing.10'),
+        height: theme('spacing.2'),
         borderRadius: '48px',
-        background: theme('colors.gray.200'),
+        background: `${theme(`colors.${defaultColor}.200`)}`,
         transition: 'all 0.2s ease-in-out',
         padding: 0,
       },
@@ -52,8 +63,8 @@ const toggle = (theme: (arg0: string) => string | number) => {
       '& .toggle-label-narrow:after': {
         content: '""',
         display: 'block',
-        width: theme('spacing.6'),
-        height: theme('spacing.6'),
+        width: theme('spacing.5'),
+        height: theme('spacing.5'),
         borderRadius: '100%',
         background: '#fff',
         transition: 'all 0.2s ease-in-out',
@@ -62,14 +73,42 @@ const toggle = (theme: (arg0: string) => string | number) => {
 
       '& input[type="checkbox"]:checked ~ .toggle-label, input[type="checkbox"]:checked ~ .toggle-label-narrow':
         {
-          background: theme('colors.neutral.900'),
+          background: `${theme(`colors.${defaultColor}.900`)}`,
         },
       '& input[type="checkbox"]:checked ~ .toggle-label:after': {
-        transform: 'translateX(24px)',
+        transform: 'translateX(16px)',
       },
       '& input[type="checkbox"]:checked ~ .toggle-label-narrow:after': {
-        transform: 'translateX(24px)',
+        transform: 'translateX(20px)',
       },
+      '&.disabled': {
+        opacity: 0.5,
+        pointerEvent: 'none',
+      },
+      '&-large': {
+        '& .toggle-label': {
+          width: theme('spacing.12'),
+        },
+        '& .toggle-label-narrow': {
+          width: theme('spacing.12'),
+          height: theme('spacing.3'),
+        },
+        '& .toggle-label:after': {
+          width: theme('spacing.6'),
+          height: theme('spacing.6'),
+        },
+        '& .toggle-label-narrow:after': {
+          height: theme('spacing.6'),
+          width: theme('spacing.6'),
+        },
+        '& input[type="checkbox"]:checked ~ .toggle-label:after': {
+          transform: 'translateX(20px)',
+        },
+        '& input[type="checkbox"]:checked ~ .toggle-label-narrow:after': {
+          transform: 'translateX(24px)',
+        },
+      },
+      ...Object.fromEntries(createVariants(colors)),
     },
   };
 };
