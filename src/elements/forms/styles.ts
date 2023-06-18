@@ -58,13 +58,7 @@ const styles = {
     },
   }),
 
-  states: (
-    theme: (arg0: string) => string | number,
-    defaultColor: string,
-    accentColor: string,
-    errorColor: string,
-    successColor: string
-  ) => ({
+  states: (theme: (arg0: string) => string | number, defaultColor : string, accentColor: string, errorColor: string, successColor: string) => ({
     '&:focus, &:active, &:focus-within': {
       outlineStyle: 'solid',
       outlineColor: theme(`colors.${accentColor}.200`),

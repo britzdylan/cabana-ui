@@ -89,14 +89,18 @@ export const SIDEBAR: Array<sidebar> = [
       { name: 'Lists', link: `${componentsPath}/content/lists` },
     ],
   },
-  { name: 'Forms', children: [
-    { name: 'Input', link: `${componentsPath}/forms/input` },
-    { name: 'Text Area', link: `${componentsPath}/forms/textarea` },
-    { name: 'Checkbox', link: `${componentsPath}/forms/checkbox` },
-    { name: 'Radio', link: `${componentsPath}/forms/radio` },
-    { name: 'Toggle', link: `${componentsPath}/forms/toggle` },
-    { name: 'Range', link: `${componentsPath}/forms/range` },
-  ]},
+  {
+    name: 'Forms',
+    children: [
+      { name: 'Input', link: `${componentsPath}/forms/input` },
+      { name: 'Select', link: `${componentsPath}/forms/select` },
+      { name: 'Text Area', link: `${componentsPath}/forms/textarea` },
+      { name: 'Checkbox', link: `${componentsPath}/forms/checkbox` },
+      { name: 'Radio', link: `${componentsPath}/forms/radio` },
+      { name: 'Toggle', link: `${componentsPath}/forms/toggle` },
+      { name: 'Range', link: `${componentsPath}/forms/range` },
+    ],
+  },
   // { name: 'Design Patterns', link: `${componentsPath}/design-patterns` },
 
   // { name: 'Design Blocks', header: true, pro: true },

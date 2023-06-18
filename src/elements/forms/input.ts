@@ -38,6 +38,10 @@ const input = (theme: (arg0: string) => string | number) => {
         accentColor: theme(`colors.${color}.400`),
         caretColor: theme(`colors.${color}.800`),
       },
+      '& select.select': {
+        accentColor: theme(`colors.${color}.400`),
+        caretColor: theme(`colors.${color}.800`),
+      },
       '& > span:not(.input-prefix, .input-suffix)': {
         ...accentColors(defaultColor, color, errorColor, successColor),
       },
@@ -126,7 +130,12 @@ const input = (theme: (arg0: string) => string | number) => {
         accentColor: theme(`colors.${accentColor}.400`),
         caretColor: theme(`colors.${accentColor}.800`),
       },
-
+      '& select.select': {
+        ...styles.inputReset(theme),
+        color: theme(`colors.${defaultColor}.700`),
+        accentColor: theme(`colors.${accentColor}.400`),
+        caretColor: theme(`colors.${accentColor}.800`),
+      },
       '&-large': {
         '& label.label': {
           fontSize: theme('fontSize.label'),
@@ -135,6 +144,10 @@ const input = (theme: (arg0: string) => string | number) => {
           fontSize: theme('fontSize.label'),
         },
         '& input': {
+          fontSize: theme('fontSize.label'),
+          padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
+        },
+        '& select.select': {
           fontSize: theme('fontSize.label'),
           padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
         },
