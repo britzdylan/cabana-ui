@@ -80,15 +80,13 @@ module.exports = {
 
 ### Forms
 
-- [ ] Input
-- [ ] Dropdown
-- [ ] Text Area
-- [ ] Select
-- [ ] Toggle
-- [ ] Radio
-- [ ] Checkbox
-- [ ] Range
-- [ ] Submit
+- [x] Input
+- [x] Text Area
+- [x] Select
+- [x] Toggle
+- [x] Radio
+- [x] Checkbox
+- [x] Range
 
 ### Design Patterns
 
