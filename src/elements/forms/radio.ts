@@ -1,6 +1,22 @@
 import styles from './styles';
+const defaultColor = 'gray';
+import createVariants from '../../lib/colorVariants';
 
 const radio = (theme: (arg0: string) => string | number) => {
+  const colors = (color: string) => {
+    return {
+      '& .radio-input': {
+        border: `2px solid ${theme(`colors.${color}.400`)}`,
+        '&:after': {
+          backgroundColor: `${theme(`colors.${color}.900`)}`,
+        },
+        '&:hover input ~ .radio-input': {
+          borderColor: `${theme(`colors.${color}.900`)}`,
+        },
+      },
+    };
+  };
+
   return {
     '.radio': {
       width: '100%',
@@ -21,30 +37,33 @@ const radio = (theme: (arg0: string) => string | number) => {
         width: 0,
       },
       '& .radio-input': {
+        border: `2px solid ${theme(`colors.${defaultColor}.400`)}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: theme('spacing.4'),
-        width: theme('spacing.4'),
+        height: '16px',
+        width: '22px',
         backgroundColor: 'transparent',
-        borderRadius: '50%',
-        border: `2px solid ${theme('colors.neutral.400')}`,
+        borderRadius: '100%',
         padding: '2px',
         '&:after': {
+          backgroundColor: `${theme(`colors.${defaultColor}.900`)}`,
           content: '""',
           // transform: 'translate(-50%, -50%)',
           width: 0,
           height: 0,
-          borderRadius: '50%',
-          backgroundColor: '#000',
+          borderRadius: '100%',
           opacity: 0,
           transition: 'all 0.2s ease-in-out',
         },
       },
+      '&:hover input ~ .radio-input': {
+        borderColor: `${theme(`colors.${defaultColor}.900`)}`,
+      },
       '&-large': {
         '& .radio-input': {
-          height: theme('spacing.5'),
-          width: theme('spacing.5'),
+          height: '22px',
+          width: '30px',
         },
 
         '& .text-label': {
@@ -53,8 +72,13 @@ const radio = (theme: (arg0: string) => string | number) => {
           marginBottom: 0,
         },
       },
-      '&:hover input ~ .radio-input': {
-        borderColor: `${theme('colors.neutral.900')}`,
+      '&.disabled': {
+        opacity: 0.5,
+        cursor: 'default',
+        PointerEvent: 'none',
+        '&:hover input ~ .radio-input': {
+          border: `2px solid ${theme(`colors.${defaultColor}.400`)}`,
+        },
       },
       '& input:checked ~ .radio-input:after': {
         // display: 'block',
@@ -62,6 +86,7 @@ const radio = (theme: (arg0: string) => string | number) => {
         height: '100%',
         opacity: 1,
       },
+      ...Object.fromEntries(createVariants(colors)),
     },
   };
 };
