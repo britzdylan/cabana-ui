@@ -1,0 +1,92 @@
+---
+title: 'Range Component'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconCheck } from '@tabler/icons-vue';
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+import Alert from '../../../components/content/alert.astro';
+
+# Range Component
+
+The Range Component is a flexible, customizable component that has been pre-styled for your convenience. It supports disabled state, and changing the accent color theme. Additionally, you can customize the default color, font weight, text transform, and radius in the tailwind.config.js file.
+
+## Features
+
+- Pre-styled using `.range` class
+- Supports disabled state using the `disabled` property on the range
+- Can use `.range-[any tailwind color name here]` to change the accent color theme
+- Can customize the default color, font weight, text transform, and radius in the tailwind.config.js file
+
+## Class Names, Description, and Type
+
+| Class Name                              | Description                                   | Type       |
+| --------------------------------------- | --------------------------------------------- | ---------- |
+| `.range`                                | Provides basic styles for the range component | Component  |
+| `.range-large`                          | Applies larger size to the range component    | Modifier   |
+| `.disabled`                             | Applies the disabled state to the range       | State      |
+| `.range-[any tailwind color name here]` | Changes the accent color theme of the range   | Responsive |
+
+### Default Range
+
+<Preview>
+  <input class='range' min='0' max='100' value='90' step='10' type='range' />
+</Preview>
+<Code>
+  ```js
+  <input class='range' min='0' max='100' value='90' step='10' type='range' />
+  ```
+</Code>
+
+### Disabled state
+
+<Preview>
+  <input
+    class='range'
+    disabled
+    min='0'
+    max='100'
+    value='90'
+    step='10'
+    type='range'
+  />
+</Preview>
+<Code>
+  ```js
+  <input
+    class='range'
+    disabled
+    min='0'
+    max='100'
+    value='90'
+    step='10'
+    type='range'
+  />
+  ```
+</Code>
+
+### With accent color
+
+<Preview>
+  <input
+    class='range range-green'
+    min='0'
+    max='100'
+    value='90'
+    step='10'
+    type='range'
+  />
+</Preview>
+<Code>
+  ```js
+  <input
+    class='range range-green'
+    min='0'
+    max='100'
+    value='90'
+    step='10'
+    type='range'
+  />
+  ```
+</Code>

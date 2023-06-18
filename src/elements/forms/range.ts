@@ -1,4 +1,13 @@
+const defaultColor = 'gray';
+const accentColor = 'primary';
+import createVariants from '../../lib/colorVariants';
+
 const range = (theme: (arg0: string) => string | number) => {
+  const colors = (color: string) => {
+    return {
+      accentColor: theme(`colors.${color}.500`),
+    };
+  };
   const knob = {
     width: theme('spacing.6'),
     height: theme('spacing.6'),
@@ -12,38 +21,44 @@ const range = (theme: (arg0: string) => string | number) => {
       '-webkit-appearance': 'none',
       width: '100%',
       height: theme('spacing.1'),
-      background: theme('colors.gray.200'),
+      background: theme(`colors.${defaultColor}.100`),
       borderRadius: '9999px',
       outline: 'none',
       opacity: 1,
       transition: 'all 0.2s ease-in-out',
-      accentColor: theme('colors.primary.500'),
+      accentColor: theme(`colors.${accentColor}.500`),
       cursor: 'pointer',
+      '&-large': {
+        height: theme('spacing.2'),
+      },
+      ...Object.fromEntries(createVariants(colors)),
     },
     'input[type="range"]::-webkit-slider-thumb': {
       /* Webkit browsers (Chrome, Safari, Edge) */
       ...knob,
+      '&.range-large': {
+        width: theme('spacing.8'),
+        height: theme('spacing.8'),
+      },
     },
 
     'input[type="range"]::-moz-range-thumb': {
       /* Firefox */
       ...knob,
+      '&.range-large': {
+        width: theme('spacing.8'),
+        height: theme('spacing.8'),
+      },
     },
 
     'input[type="range"]::-ms-thumb': {
       /* Internet Explorer */
       ...knob,
+      '&.range-large': {
+        width: theme('spacing.8'),
+        height: theme('spacing.8'),
+      },
     },
-
-    /* Webkit browsers (Chrome, Safari, Edge) */
-    // 'input[type="range"]::-webkit-slider-runnable-track': {
-    //   backgroundColor: theme('colors.primary.500') /* Set the desired color */,
-    // },
-
-    // /* Firefox */
-    // 'input[type="range"]::-moz-range-track': {
-    //   backgroundColor: theme('colors.primary.500') /* Set the desired color */,
-    // },
   };
 };
 
