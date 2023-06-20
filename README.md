@@ -1,4 +1,4 @@
-# CabanaUI for Tailwind CSS - Still under development do not use this package in production!
+# CabanaUI for Tailwind CSS - Beta
 
 **Introducing Cabana, the TailwindCSS plugin that makes designing beautiful UIs fast and effortless. Cabana comes packed with extended color palettes, shadows, and background blurs, along with a custom Typography Scale System. It also includes pre-designed design elements such as buttons, lists, links, pills, forms, and more, so you can start building stunning designs in just minutes. Cabana is framework agnostic and fully customizable, making it perfect for designers and developers alike.**
 
@@ -90,15 +90,14 @@ module.exports = {
 
 ### Design Patterns
 
-- [ ] Avatar
-- [ ] Avatar Placeholder
-- [ ] Chip
-- [ ] Tag
-- [ ] Tooltip
-- [ ] Toast
-- [ ] Indicators
-- [ ] Progress bar
-- [ ] Rating
+- [x] Avatar
+- [x] Chip
+- [x] Tag
+- [x] Tooltip
+- [x] Toast
+- [x] Indicators
+- [x] Progress bar
+- [x] Rating
 
 ### Data
 
@@ -125,7 +124,7 @@ Please share
 [unpkg-url]: https://unpkg.com/browse/cabana-ui/
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/cabana-ui
 [tweet-url]: https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/britzdylan/cabana-ui
-[number-of-components]: https://badgen.net/badge/total%20components/27/green
+[number-of-components]: https://badgen.net/badge/total%20components/24/green
 [docs-url-install]: https://docs.cabanafortailwind.com/getting-started/install
 [docs-url]: https://docs.cabanafortailwind.com/
 [logo-url]: https://raw.githubusercontent.com/britzdylan/cabana-ui/main/src/docs/public/logo.svg

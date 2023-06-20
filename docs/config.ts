@@ -6,7 +6,7 @@ export const SITE = {
   twitter: '@britzdm',
   github: 'britzdylan/cabana-ui',
   // linkedin: 'linkedinUsername',
-  version: '0.0.58 Alpha',
+  version: '0.1.0 Beta',
   docsVersion: '0.0.1',
   author: 'Dylan Britz',
   nav: [
