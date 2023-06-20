@@ -1,0 +1,119 @@
+---
+title: 'Avatar Component'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconUser } from '@tabler/icons-vue';
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+
+# Avatar Component
+
+The Avatar Component is a customizable component pre-styled for your convenience. It supports rounded avatars, placeholder avatars, bordered avatars, and status indicators. Additionally, you can change the accent color theme.
+
+## Features
+
+- Pre-styled using `.avatar` class
+- Rounded using the `.avatar-rounded` class
+- Supports placeholder using the `.avatar-placeholder` class
+- Supports bordered version using the `.avatar-bordered`
+- Supports status indicators
+- Can use `.avatar-[any tailwind color name here]` to change the accent color theme
+
+## Class Names, Description, and Type
+
+| Class Name                                           | Description                                     | Type      |
+| ---------------------------------------------------- | ----------------------------------------------- | --------- |
+| `.avatar`                                            | Provides basic styles for the avatar component  | Component |
+| `.avatar-rounded`                                    | Applies rounded corners to the avatar component | Modifier  |
+| `.avatar-placeholder`                                | Styles for a placeholder avatar                 | Modifier  |
+| `.avatar-placeholder-[any tailwind color name here]` | Changes the placeholder background color        | Modifier  |
+| `.avatar-bordered`                                   | Applies border to the avatar component          | Modifier  |
+| `.avatar-[any tailwind color name here]`             | Changes the accent color theme of the avatar    | Modifier  |
+| `.status`                                            | Adds a status indicator                         | Component |
+| `.status-[any tailwind color name here]`             | Adds a status indicator in your desired color   | Modifier  |
+
+### Default Avatar
+
+<Preview>
+  <div class='avatar'>
+    <img src='/avatar.jpg' />
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='avatar'>
+    <img src='/avatar.jpg' />
+  </div>
+  ```
+</Code>
+
+### Rounded avatar
+
+<Preview>
+  <div class='avatar avatar-rounded'>
+    <img src='/avatar.jpg' />
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='avatar avatar-rounded'>
+    <img src='/avatar.jpg' />
+  </div>
+  ```
+</Code>
+
+### With placeholder
+
+<Preview>
+<div class='avatar avatar-placeholder'>
+    <span>D</span>
+</div>
+
+<div class='avatar avatar-placeholder avatar-placeholder-red'>
+    <IconUser/>
+</div>
+</Preview>
+<Code>
+  ```js
+<div class='avatar avatar-placeholder'>
+    <span>D</span>
+</div>
+
+<div class='avatar avatar-placeholder avatar-placeholder-red'>
+    <IconUser/>
+</div>
+  ```
+</Code>
+
+### With border
+
+<Preview>
+  <div class='avatar avatar-bordered'>
+    <img src='/avatar.jpg' />
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='avatar avatar-bordered'>
+    <img src='/avatar.jpg' />
+  </div>
+  ```
+</Code>
+
+### With status indicator
+
+<Preview>
+  <div class='avatar'>
+    <span class='status status-green'></span>
+    <img src='/avatar.jpg' />
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='avatar'>
+    <span class='status status-green'></span>
+    <img src='/avatar.jpg' />
+  </div>
+  ```
+</Code>

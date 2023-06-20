@@ -101,7 +101,43 @@ export const SIDEBAR: Array<sidebar> = [
       { name: 'Range', link: `${componentsPath}/forms/range` },
     ],
   },
-  // { name: 'Design Patterns', link: `${componentsPath}/design-patterns` },
+  {
+    name: 'Design Patterns',
+    children: [
+      {
+        name: 'Avatar',
+        link: `${componentsPath}/patterns/avatar`,
+      },
+      {
+        name: 'Chip',
+        link: `${componentsPath}/patterns/chip`,
+      },
+      {
+        name: 'Dot',
+        link: `${componentsPath}/patterns/dot`,
+      },
+      {
+        name: 'Progress',
+        link: `${componentsPath}/patterns/progress`,
+      },
+      {
+        name: 'Rating',
+        link: `${componentsPath}/patterns/rating`,
+      },
+      {
+        name: 'Tag',
+        link: `${componentsPath}/patterns/tag`,
+      },
+      {
+        name: 'Toast',
+        link: `${componentsPath}/patterns/toast`,
+      },
+      {
+        name: 'Tooltip',
+        link: `${componentsPath}/patterns/tooltip`,
+      },
+    ],
+  },
 
   // { name: 'Design Blocks', header: true, pro: true },
   // { name: 'Introduction', link: '/patterns/introduction' },

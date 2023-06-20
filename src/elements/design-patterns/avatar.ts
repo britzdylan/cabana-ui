@@ -1,4 +1,14 @@
+const defaultColor = 'gray';
+const accentColor = 'primary';
+import createVariants from '../../lib/colorVariants';
+
 const avatar = (theme: (arg0: string) => string | number) => {
+  const color = (color: string) => {
+    return {
+      backgroundColor: theme(`colors.${color}.500`),
+    };
+  };
+
   const status = {
     position: 'absolute',
     top: -5,
@@ -8,6 +18,7 @@ const avatar = (theme: (arg0: string) => string | number) => {
     borderRadius: '9999px',
     border: `1px solid ${theme('colors.gray.50')}`,
   };
+
   return {
     '.avatar': {
       display: 'inline-flex',
@@ -30,10 +41,11 @@ const avatar = (theme: (arg0: string) => string | number) => {
         },
       },
       '&-placeholder': {
-        backgroundColor: theme('colors.primary.500'),
-        color: theme('colors.gray.50'),
+        backgroundColor: theme(`colors.${accentColor}.500`),
+        color: theme(`colors.${defaultColor}.50`),
         fontWeight: theme('fontWeight.semibold'),
         fontSize: theme('fontSize.label'),
+        ...Object.fromEntries(createVariants(color)),
       },
       '&-bordered': {
         border: '2px solid #fff',
@@ -50,20 +62,7 @@ const avatar = (theme: (arg0: string) => string | number) => {
       },
       '& .status': {
         ...status,
-      },
-      '& .status-green': {
-        ...status,
-        backgroundColor: theme('colors.green.500'),
-      },
-
-      '& .status-yellow': {
-        ...status,
-        backgroundColor: theme('colors.yellow.500'),
-      },
-
-      '& .status-red': {
-        ...status,
-        backgroundColor: theme('colors.red.500'),
+        ...Object.fromEntries(createVariants(color)),
       },
     },
   };
