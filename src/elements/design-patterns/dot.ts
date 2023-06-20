@@ -1,26 +1,22 @@
+const defaultColor = 'gray';
+import createVariants from '../../lib/colorVariants';
 const dot = (theme: (arg0: string) => string | number) => {
   const dotBase = {
     width: theme('spacing.2'),
     height: theme('spacing.2'),
     borderRadius: '50%',
     display: 'inline-block',
-    backgroundColor: theme('colors.gray.500'),
+    backgroundColor: theme(`colors.${defaultColor}.500`),
+  };
+  const color = (color: string) => {
+    return {
+      backgroundColor: theme(`colors.${color}.500`),
+    };
   };
   return {
     '.dot': {
       ...dotBase,
-      '&-green': {
-        ...dotBase,
-        backgroundColor: theme('colors.green.500'),
-      },
-      '&-yellow': {
-        ...dotBase,
-        backgroundColor: theme('colors.yellow.500'),
-      },
-      '&-red': {
-        ...dotBase,
-        backgroundColor: theme('colors.red.500'),
-      },
+      ...Object.fromEntries(createVariants(color)),
     },
   };
 };
