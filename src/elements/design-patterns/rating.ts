@@ -1,10 +1,10 @@
 import createVariants from '../../lib/colorVariants';
-
+const defaultColor = 'gray';
 const rating = (theme: (arg0: string) => string | number) => {
   const variant = (color: string) => {
     return {
       '& input[type=radio]': {
-        backgroundColor: theme(`colors.${color}.500`),
+        backgroundColor: theme(`colors.${color}.600`),
       },
     };
   };
@@ -19,7 +19,7 @@ const rating = (theme: (arg0: string) => string | number) => {
         cursor: 'pointer',
         width: theme('spacing.6'),
         height: theme('spacing.6'),
-        backgroundColor: theme('colors.gray.800'),
+        backgroundColor: theme(`colors.${defaultColor}.600`),
         '-webkit-appearance': 'none',
         '-moz-appearance': 'none',
         '-webkit-mask-size': 'cover',
