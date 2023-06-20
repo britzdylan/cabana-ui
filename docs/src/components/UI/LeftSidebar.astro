@@ -18,7 +18,7 @@ const isCurrentPage = (item: sidebar) => {
 
 const getLinkClasses = (link: sidebar) => {
   const baseClasses =
-    'text-body block py-1.5 text-neutral-500 hover:text-neutral-900 ml-2';
+    'text-label-sm block py-1.5 text-neutral-500 hover:text-neutral-900 ml-2';
 
   if (isCurrentPage(link)) {
     return baseClasses + ' !text-primary-400';
@@ -28,8 +28,7 @@ const getLinkClasses = (link: sidebar) => {
 };
 
 const getchildLinkClasses = (link: sidebar) => {
-  const baseClasses =
-    'text-body block py-0.5 text-neutral-500';
+  const baseClasses = 'text-label-sm block py-0.5 text-neutral-500';
 
   if (isCurrentPage(link)) {
     return baseClasses + ' !text-primary-400';
@@ -47,16 +46,14 @@ const getchildLinkClasses = (link: sidebar) => {
         SIDEBAR.map((item) => {
           if (item.header) {
             return (
-              <p class='mt-4 text-neutral-900 text-body'>
-                {item.name}
-              </p>
+              <p class='mt-4 text-neutral-900 text-label-sm'>{item.name}</p>
             );
           }
 
           if (item.children) {
             return (
               <li class='mt-2 ml-2'>
-                <p class='text-body  py-1.5 text-neutral-700'>
+                <p class='text-label-sm  py-1.5 text-neutral-700'>
                   {item.name}
                 </p>
                 <ul class=''>
@@ -85,10 +82,10 @@ const getchildLinkClasses = (link: sidebar) => {
 </aside>
 
 <script is:inline>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    var target = document.querySelector('[aria-current="page"]');
-    if (target && target.offsetTop > window.innerHeight - 100) {
-      document.querySelector('.nav-groups').scrollTop = target.offsetTop;
-    }
-  });
+window.addEventListener('DOMContentLoaded', (event) => {
+  var target = document.querySelector('[aria-current="page"]');
+  if (target && target.offsetTop > window.innerHeight - 100) {
+    document.querySelector('.nav-groups').scrollTop = target.offsetTop;
+  }
+});
 </script>

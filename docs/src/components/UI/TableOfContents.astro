@@ -12,13 +12,13 @@ const menuDepth = (d: number) => {
 
   switch (d) {
     case 1:
-      return '!text-body-lg' + style;
+      return '!text-label-sm' + style;
     case 2:
-      return '!text-label' + style;
+      return '!text-label-sm' + style;
     case 3:
-      return '!text-label ml-2  !gap-1' + style;
+      return '!text-label-sm ml-2  !gap-1' + style;
     default:
-      return '!text-label ml-4  !gap-1' + style;
+      return '!text-label-sm ml-4  !gap-1' + style;
   }
 };
 ---
