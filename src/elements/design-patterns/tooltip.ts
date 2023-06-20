@@ -1,4 +1,27 @@
+const defaultColor = 'gray';
+import createVariants from '../../lib/colorVariants';
+
 const tooltip = (theme: (arg0: string) => string | number) => {
+  const colors = (color: string) => {
+    return {
+      '&::before': {
+        backgroundColor: theme(`colors.${color}.800`),
+      },
+      "&[data-position='top']::after": {
+        borderTopColor: theme(`colors.${color}.800`),
+      },
+      "&[data-position='bottom']::after": {
+        borderBottomColor: theme(`colors.${color}.800`),
+      },
+      "&[data-position='left']::after": {
+        borderLeftColor: theme(`colors.${color}.800`),
+      },
+      "&[data-position='right']::after": {
+        borderRightColor: theme(`colors.${color}.800`),
+      },
+    };
+  };
+
   return {
     '.tooltip': {
       position: 'relative',
@@ -12,7 +35,7 @@ const tooltip = (theme: (arg0: string) => string | number) => {
         width: 'max-content',
         maxWidth: '200px',
         padding: `${theme('spacing.2')} ${theme('spacing.2')}`,
-        backgroundColor: '#000',
+        backgroundColor: theme(`colors.${defaultColor}.800`),
         color: '#fff',
         textAlign: 'center',
         borderRadius: theme('borderRadius.sm'),
@@ -70,6 +93,7 @@ const tooltip = (theme: (arg0: string) => string | number) => {
         borderStyle: 'solid',
         borderWidth: '5px',
         borderColor: 'transparent',
+        transition: 'opacity 0.3s ease',
       },
       "&[data-position='top']::after": {
         bottom: 'calc(100% + 0px)',
@@ -95,6 +119,7 @@ const tooltip = (theme: (arg0: string) => string | number) => {
         transform: 'translateY(-50%)',
         borderRightColor: '#000',
       },
+      ...Object.fromEntries(createVariants(colors)),
     },
   };
 };

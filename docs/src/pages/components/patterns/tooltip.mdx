@@ -1,0 +1,149 @@
+---
+title: 'Tooltip Component'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconX } from '@tabler/icons-vue';
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+
+# Tooltip Component
+
+The Tooltip Component is a flexible and customizable component pre-styled for your convenience. It can be used to display a tooltip on hover.
+
+## Features
+
+- Pre-styled using `.tooltip` class
+- Can be added to any element
+- The display of the tooltip can be controlled using `data-open` attribute
+- The position of the tooltip can be controlled using `data-position` attribute
+- The content of the tooltip can be controlled using `data-tooltip` attribute
+- Can use `.tooltip-[any tailwind color name here]` to change the accent color theme
+
+## Class Names, Description, and Type
+
+| Class Name                                | Description                                 | Type      |
+| ----------------------------------------- | ------------------------------------------- | --------- |
+| `.tooltip`                                | Provides basic styles for the tag component | Component |
+| `.tooltip-[any tailwind color name here]` | Changes the accent color theme of the tag   | Modifier  |
+
+### Tooltip
+
+<Preview>
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='top'
+    data-open='true'
+    class='btn tooltip'>
+    open
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='top'
+    data-open='true'
+    class='btn tooltip'>
+    open
+  </button>
+  ```
+</Code>
+
+### Tooltip on hover
+
+<Preview>
+  <button data-tooltip='I am a tooltip' data-position='top' class='btn tooltip'>
+    Hover me
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button data-tooltip='I am a tooltip' data-position='top' class='btn tooltip'>
+    Hover Me
+  </button>
+  ```
+</Code>
+
+### Tooltip left
+
+<Preview>
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='left'
+    class='btn tooltip'>
+    Hover me
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='left'
+    class='btn tooltip'>
+    Hover me
+  </button>
+  ```
+</Code>
+
+### Tooltip Right
+
+<Preview>
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='right'
+    class='btn tooltip'>
+    Hover me
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='right'
+    class='btn tooltip'>
+    Hover me
+  </button>
+  ```
+</Code>
+### Tooltip Bottom
+
+<Preview>
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='bottom'
+    class='btn tooltip'>
+    Hover me
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='bottom'
+    class='btn tooltip'>
+    Hover me
+  </button>
+  ```
+</Code>
+
+### With custom color
+
+<Preview>
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='bottom'
+    class='btn tooltip tooltip-orange'>
+    Hover me
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button
+    data-tooltip='I am a tooltip'
+    data-position='bottom'
+    class='btn tooltip tooltip-orange'>
+    Hover me
+  </button>
+  ```
+</Code>
