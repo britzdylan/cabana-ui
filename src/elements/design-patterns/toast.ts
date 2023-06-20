@@ -1,4 +1,12 @@
+const defaultColor = 'gray';
+import createVariants from '../../lib/colorVariants';
+
 const toast = (theme: (arg0: string) => string | number) => {
+  const colors = (color: string) => {
+    return {
+      background: theme(`colors.${color}.500`),
+    };
+  };
   const showTopRight = () => {
     return {
       opacity: 0,
@@ -52,7 +60,7 @@ const toast = (theme: (arg0: string) => string | number) => {
       borderRadius: theme('borderRadius.md'),
       fontSize: theme('fontSize.label'),
       color: '#fff',
-      background: theme('colors.primary.500'),
+      background: theme(`colors.${defaultColor}.500`),
       cursor: 'pointer',
       animation: 'toast 0.5s ease-in-out forwards',
       width: '100%',
@@ -60,15 +68,6 @@ const toast = (theme: (arg0: string) => string | number) => {
       zIndex: 10,
       '& span': {
         marginRight: 'auto',
-      },
-      '&-success': {
-        background: theme('colors.green.600'),
-      },
-      '&-error': {
-        background: theme('colors.red.600'),
-      },
-      '&-warning': {
-        background: theme('colors.yellow.600'),
       },
       '& .icon': {
         width: theme('spacing.6'),
@@ -98,6 +97,12 @@ const toast = (theme: (arg0: string) => string | number) => {
         opacity: 1,
         visibility: 'visible',
       },
+      "&[data-show='false']": {
+        opacity: 0,
+        visibility: 'hidden',
+        pointerEvent: 'none',
+      },
+      ...Object.fromEntries(createVariants(colors)),
     },
   };
 };
