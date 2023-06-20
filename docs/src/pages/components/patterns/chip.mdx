@@ -1,0 +1,110 @@
+---
+title: 'Chip Component'
+layout: '../../../layouts/Default.astro'
+---
+
+import { IconX } from '@tabler/icons-vue';
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+
+# Chip Component
+
+The Chip Component is a flexible and customizable component pre-styled for your convenience. It supports rounded chips, bordered chips, and icon integration. You can also change the accent color theme.
+
+## Features
+
+- Pre-styled using `.chip` class
+- Rounded using the `.chip-rounded` class
+- Supports bordered version using the `.chip-bordered`
+- Supports icons
+- Can use `.chip-[any tailwind color name here]` to change the accent color theme
+
+## Class Names, Description, and Type
+
+| Class Name                             | Description                                   | Type      |
+| -------------------------------------- | --------------------------------------------- | --------- |
+| `.chip`                                | Provides basic styles for the chip component  | Component |
+| `.chip-rounded`                        | Applies rounded corners to the chip component | Modifier  |
+| `.chip-bordered`                       | Applies border to the chip component          | Modifier  |
+| `.chip-[any tailwind color name here]` | Changes the accent color theme of the chip    | Modifier  |
+
+### Default Chip
+
+<Preview>
+  <div class='chip'>
+    <span>Chip</span>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='chip'>
+    <span>Chip</span>
+  </div>
+  ```
+</Code>
+
+### Rounded chip
+
+<Preview>
+  <div class='chip chip-rounded'>
+    <span>Chip</span>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='chip chip-rounded'>
+    <span>Chip</span>
+  </div>
+  ```
+</Code>
+
+### Chip with icons
+
+<Preview>
+  <div class='chip'>
+    <img src='/avatar.jpg' />
+    <span>Chip</span>
+    <IconX />
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='chip'>
+    <img src='/avatar.jpg' />
+    <span>Chip</span>
+    <IconX />
+  </div>
+  ```
+</Code>
+
+### With border
+
+<Preview>
+  <div class='chip  chip-bordered'>
+    <span>Chip</span>
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='chip  chip-bordered'>
+    <span>Chip</span>
+  </div>
+  ```
+</Code>
+
+### With custom color
+
+<Preview>
+  <div class='chip chip-primary'>
+    <span>Chip</span>
+    <IconX />
+  </div>
+</Preview>
+<Code>
+  ```js
+  <div class='chip chip-primary'>
+    <span>Chip</span>
+    <IconX />
+  </div>
+  ```
+</Code>

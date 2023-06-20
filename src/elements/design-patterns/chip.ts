@@ -1,4 +1,16 @@
+const defaultColor = 'gray';
+import createVariants from '../../lib/colorVariants';
+
 const chip = (theme: (arg0: string) => string | number) => {
+  const color = (color: string) => {
+    return {
+      backgroundColor: theme(`colors.${color}.100`),
+      color: theme(`colors.${color}.600`),
+      '&-bordered': {
+        border: `1px solid ${theme(`colors.${color}.200`)}`,
+      },
+    };
+  };
   return {
     '.chip': {
       display: 'flex',
@@ -8,13 +20,16 @@ const chip = (theme: (arg0: string) => string | number) => {
       padding: theme('spacing.1'),
       borderRadius: theme('borderRadius.md'),
       fontSize: theme('fontSize.label-sm'),
-      background: theme('colors.gray.200'),
+      background: theme(`colors.${defaultColor}.100`),
       cursor: 'pointer',
+      color: theme(`colors.${defaultColor}.600`),
       '& .icon': {
+        color: 'inherit',
         width: theme('spacing.4'),
         height: theme('spacing.4'),
       },
       '& svg': {
+        color: 'inherit',
         width: theme('spacing.4'),
         height: theme('spacing.4'),
       },
@@ -38,9 +53,10 @@ const chip = (theme: (arg0: string) => string | number) => {
       },
 
       '&-bordered': {
-        border: `1px solid ${theme('colors.gray.200')}`,
+        border: `1px solid ${theme(`colors.${defaultColor}.200`)}`,
         background: 'transparent',
       },
+      ...Object.fromEntries(createVariants(color)),
     },
   };
 };
