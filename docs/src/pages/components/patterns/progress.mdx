@@ -1,0 +1,45 @@
+---
+title: 'Progress Component'
+layout: '../../../layouts/Default.astro'
+---
+
+import Preview from '../../../components/content/Preview.astro';
+import Code from '../../../components/content/code.astro';
+
+# Progress Component
+
+The Progress Component is a flexible and customizable component pre-styled for your convenience. It supports rounded chips, bordered chips, and icon integration. You can also change the accent color theme.
+
+## Features
+
+- Pre-styled using `.progress` class
+- Can use `.progress-[any tailwind color name here]` to change the accent color theme
+
+## Class Names, Description, and Type
+
+| Class Name                                 | Description                                      | Type      |
+| ------------------------------------------ | ------------------------------------------------ | --------- |
+| `.progress`                                | Provides basic styles for the progress component | Component |
+| `.progress-[any tailwind color name here]` | Changes the accent color theme of the progress   | Modifier  |
+
+### Default Progress
+
+<Preview>
+  <progress class='progress' value='25' max='100'></progress>
+</Preview>
+<Code>
+  ```js
+  <progress class='progress' value='25' max='100'></progress>
+  ```
+</Code>
+
+### With custom color
+
+<Preview>
+  <progress class='progress progress-orange' value='25' max='100'></progress>
+</Preview>
+<Code>
+  ```js
+  <progress class='progress progress-orange' value='25' max='100'></progress>
+  ```
+</Code>
