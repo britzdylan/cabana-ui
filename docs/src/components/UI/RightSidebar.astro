@@ -1,7 +1,7 @@
 ---
 import TableOfContents from './TableOfContents.astro';
 import type { Heading } from '../../interfaces';
-
+import { IconExternalLink } from '@tabler/icons-vue';
 export interface Props {
   headers: Array<Heading>;
 }
@@ -11,5 +11,12 @@ const { headers } = Astro.props;
 <nav aria-labelledby='grid-right'>
   <div class='px-8'>
     <TableOfContents headers={headers} />
+    <div
+      class='w-full p-4 bg-white rounded-md shadow-light-200 mt-12 flex flex-col gap-4'>
+      <h3 class='text-body'>
+        Sign up to receive our latest news and updates
+      </h3>
+      <button class='btn w-full'>Subscribe<IconExternalLink /></button>
+    </div>
   </div>
 </nav>
