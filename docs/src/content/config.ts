@@ -7,10 +7,10 @@ const blogCollection = defineCollection({
     draft: z.boolean().default(true).optional(),
     title: z.string().optional(),
     summary: z.string().optional(),
-    image: z.object({
-        src: z.string(),
-        alt: z.string(),
-      }),
+    // image: z.object({
+    //     src: z.string(),
+    //     alt: z.string(),
+    //   }),
     publishDate: z.date().optional(),
     author: z.string().optional(),
   }),
