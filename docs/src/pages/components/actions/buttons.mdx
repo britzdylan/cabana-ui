@@ -48,7 +48,6 @@ Below is a table of the available classes, their purposes, and their types:
 | -------------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
 | .btn                       | Component | Applies pre-styled button styles.                                                                     |
 | .btn-sm                    | Modifier  | Makes the button small-sized.                                                                         |
-| .btn-md                    | Modifier  | Makes the button medium-sized.                                                                        |
 | .btn-lg                    | Modifier  | Makes the button large-sized.                                                                         |
 | .btn-outline               | Modifier  | Applies an outline style to the button.                                                               |
 | .btn-min                   | Modifier  | Applies a minimal style to the button.                                                                |
@@ -60,7 +59,6 @@ Below is a table of the available classes, their purposes, and their types:
 | .btn-text-[color]          | Modifier  | Changes the default color of the text button.                                                         |
 | .fab                       | Component | Applies pre-styled button styles for icon buttons. Requires additional classes.                       |
 | .fab-sm                    | Modifier  | Makes the icon button small-sized.                                                                    |
-| .fab-md                    | Modifier  | Makes the icon button medium-sized.                                                                   |
 | .fab-lg                    | Modifier  | Makes the icon button large-sized.                                                                    |
 | .fab-xl                    | Modifier  | Makes the icon button extra-large-sized.                                                              |
 | .fab-rounded               | Modifier  | Applies a rounded style to the icon button.                                                           |
@@ -81,25 +79,25 @@ Please refer to the class names and their types listed above to apply the desire
 ### Default
 
 <Preview>
-  <button class='btn'>Button</button>
+  <button class='btn'>Default</button>
 </Preview>
 <Code>
   ```html
-  <button class='btn'>Button</button>
+  <button class='btn'>Default</button>
   ```
 </Code>
 
 ### Variants
 
 <Preview>
-  <button class='btn'>Primary</button>
+  <button class='btn'>Default</button>
   <button class='btn btn-outline'>Outline</button>
   <button class='btn btn-min'>Minimal</button>
   <button class='btn btn-text'>Text</button>
 </Preview>
 <Code>
   ```html
-  <button class='btn'>Primary</button>
+  <button class='btn'>Default</button>
   <button class='btn btn-outline'>Outline</button>
   <button class='btn btn-min'>Minimal</button>
   <button class='btn btn-text'>Text</button>
@@ -110,14 +108,12 @@ Please refer to the class names and their types listed above to apply the desire
 
 <Preview>
   <button class='btn btn-sm'>Small</button>
-  <button class='btn btn-md'>Medium</button>
   <button class='btn'>Default</button>
   <button class='btn btn-lg'>Large</button>
 </Preview>
 <Code>
   ```html
   <button class='btn btn-sm'>Small</button>
-  <button class='btn btn-md'>Medium</button>
   <button class='btn'>Default</button>
   <button class='btn btn-lg'>Large</button>
   ```
@@ -140,22 +136,6 @@ Please refer to the class names and their types listed above to apply the desire
     Right
     <IconPlus />
   </button>
-  <button class='btn btn-md btn-outline'>
-    <IconPlus />
-    Left
-  </button>
-  <button class='btn btn-md btn-outline'>
-    Right
-    <IconPlus />
-  </button>
-  <button class='btn btn-sm btn-min'>
-    <IconPlus />
-    Left
-  </button>
-  <button class='btn btn-sm btn-min'>
-    Right
-    <IconPlus />
-  </button>
 </Preview>
 <Code>
   ```js
@@ -164,22 +144,6 @@ Please refer to the class names and their types listed above to apply the desire
     Left
   </button>
   <button class='btn'>
-    Right
-    <IconPlus />
-  </button>
-  <button class='btn btn-md btn-outline'>
-    <IconPlus />
-    Left
-  </button>
-  <button class='btn btn-md btn-outline'>
-    Right
-    <IconPlus />
-  </button>
-  <button class='btn btn-sm btn-min'>
-    <IconPlus />
-    Left
-  </button>
-  <button class='btn btn-sm btn-min'>
     Right
     <IconPlus />
   </button>
@@ -190,31 +154,13 @@ Please refer to the class names and their types listed above to apply the desire
 
 <Preview>
   <button disabled class='btn'>
-    Primary
-  </button>
-  <button disabled class='btn btn-outline'>
-    Outline
-  </button>
-  <button disabled class='btn btn-min'>
-    Minimal
-  </button>
-  <button disabled class='btn btn-text'>
-    Text
+    Default
   </button>
 </Preview>
 <Code>
   ```html
   <button disabled class='btn'>
-    Primary
-  </button>
-  <button disabled class='btn btn-outline'>
-    Outline
-  </button>
-  <button disabled class='btn btn-min'>
-    Minimal
-  </button>
-  <button disabled class='btn btn-text'>
-    Text
+    Default
   </button>
   ```
 </Code>
@@ -222,14 +168,14 @@ Please refer to the class names and their types listed above to apply the desire
 ### Button colors
 
 <Preview>
-  <button class='btn btn-secondary'>Primary</button>
+  <button class='btn btn-secondary'>Default</button>
   <button class='btn btn-outline-red btn-outline'>Outline</button>
   <button class='btn btn-min-emerald btn-min'>Minimal</button>
   <button class='btn btn-text-fuchsia btn-text'>Text</button>
 </Preview>
 <Code>
   ```html
-  <button class='btn btn-secondary'>Primary</button>
+  <button class='btn btn-secondary'>Default</button>
   <button class='btn btn-outline-red btn-outline'>Outline</button>
   <button class='btn btn-min-emerald btn-min'>Minimal</button>
   <button class='btn btn-text-fuchsia btn-text'>Text</button>
@@ -239,19 +185,28 @@ Please refer to the class names and their types listed above to apply the desire
 ### Icon button
 
 <Preview>
-  <button class='fab fab-md fab-outline'>
-    <IconPlus />
-  </button>
-  <button class='fab fab-md'>
+  <button class='fab'>
     <IconPlus />
   </button>
 </Preview>
 <Code>
   ```js
-  <button class='fab fab-md fab-outline'>
+  <button class='fab'>
     <IconPlus />
   </button>
-  <button class='fab fab-md'>
+  ```
+</Code>
+
+### Icon button outline
+
+<Preview>
+  <button class='fab fab-outline'>
+    <IconPlus />
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button class='fab fab-outline'>
     <IconPlus />
   </button>
   ```
@@ -260,19 +215,13 @@ Please refer to the class names and their types listed above to apply the desire
 ### Rounded icon button
 
 <Preview>
-  <button class='fab fab-outline-green fab-rounded fab-md fab-outline'>
-    <IconPlus />
-  </button>
-  <button class='fab fab-rounded fab-md'>
+  <button class='fab fab-rounded'>
     <IconPlus />
   </button>
 </Preview>
 <Code>
   ```js
-  <button class='fab fab-outline-green fab-rounded fab-md fab-outline'>
-    <IconPlus />
-  </button>
-  <button class='fab fab-rounded fab-md'>
+  <button class='fab fab-rounded'>
     <IconPlus />
   </button>
   ```
@@ -284,7 +233,7 @@ Please refer to the class names and their types listed above to apply the desire
   <button class='fab fab-sm fab-rounded'>
     <IconPlus />
   </button>
-  <button class='fab  fab-md fab-rounded'>
+  <button class='fab fab-rounded'>
     <IconPlus />
   </button>
   <button class='fab fab-lg fab-rounded'>
@@ -299,13 +248,34 @@ Please refer to the class names and their types listed above to apply the desire
   <button class='fab fab-sm fab-rounded'>
     <IconPlus />
   </button>
-  <button class='fab fab-md fab-rounded'>
+  <button class='fab fab-rounded'>
     <IconPlus />
   </button>
   <button class='fab fab-lg fab-rounded'>
     <IconPlus />
   </button>
   <button class='fab fab-xl fab-rounded'>
+    <IconPlus />
+  </button>
+  ```
+</Code>
+
+### Icon button colors
+
+<Preview>
+  <button class='fab fab-secondary'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-outline-red fab-outline'>
+    <IconPlus />
+  </button>
+</Preview>
+<Code>
+  ```js
+  <button class='fab fab-secondary'>
+    <IconPlus />
+  </button>
+  <button class='fab fab-outline-red fab-outline'>
     <IconPlus />
   </button>
   ```
@@ -345,7 +315,7 @@ Please refer to the class names and their types listed above to apply the desire
 ### Button Group Sizes
 
 <Preview>
-<div class='btn-group btn-group-small'>
+<div class='btn-group btn-group-sm'>
   <button>One</button>
   <button>Two</button>
   <button>Three</button>
@@ -357,7 +327,7 @@ Please refer to the class names and their types listed above to apply the desire
   <button>Three</button>
 </div>
 
-<div class='btn-group btn-group-large'>
+<div class='btn-group btn-group-lg'>
   <button>One</button>
   <button>Two</button>
   <button>Three</button>
@@ -365,7 +335,7 @@ Please refer to the class names and their types listed above to apply the desire
 </Preview>
 <Code >
 ```js
-<div class='btn-group btn-group-small'>
+<div class='btn-group btn-group-sm'>
   <button>One</button>
   <button>Two</button>
   <button>Three</button>
@@ -377,7 +347,7 @@ Please refer to the class names and their types listed above to apply the desire
   <button>Three</button>
 </div>
 
-<div class='btn-group btn-group-large'>
+<div class='btn-group btn-group-lg'>
   <button>One</button>
   <button>Two</button>
   <button>Three</button>
