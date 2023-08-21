@@ -25,10 +25,11 @@ const pill = (theme: (arg0: string) => string | number) => {
       alignItems: 'center',
       justifyContent: 'center',
       gap: theme('spacing.1'),
-      padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
+      padding: `${theme('spacing[1]')} ${theme('spacing.2')}`,
       ...getRadius(theme, defaultRadius),
       fontSize: theme('fontSize.body-xs'),
       fontWeight: theme('fontWeight.semibold'),
+      lineHeight: theme('spacing.4'),
       ...pillColors(defaultColor),
       '&-active': {
         ...pillActiveColors(defaultColor),
