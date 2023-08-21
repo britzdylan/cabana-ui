@@ -11,18 +11,6 @@ const menu = (theme: (arg0: string) => string | number) => {
     gap: theme('spacing.2'),
     alignItems: 'center',
     justifyContent: 'flex-start',
-    '&-vertical': {
-      width: '100%',
-      flexDirection: 'column',
-      gap: theme('spacing.3'),
-      alignItems: 'flex-start',
-      '& li': {
-        width: '100%',
-        '& a': {
-          width: '100%',
-        },
-      },
-    },
   };
 
   const listItemColors = (color: string) => {
@@ -69,9 +57,10 @@ const menu = (theme: (arg0: string) => string | number) => {
     alignItems: 'center',
     justifyContent: 'center',
     gap: theme('spacing.2'),
-    padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
+    padding: `${theme('spacing[2]')} ${theme('spacing.4')}`,
     cursor: 'pointer',
     position: 'relative',
+    lineHeight: theme('spacing.4'),
     fontSize: theme('fontSize.label-sm'),
     ...getRadius(theme, defaultRadius),
     ...listItemColors(defaultColor),
@@ -162,10 +151,20 @@ const menu = (theme: (arg0: string) => string | number) => {
         '& li': {
           ...containedItem,
           borderRadius: '9999px',
-          padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
+          padding: `${theme('spacing[2]')} ${theme('spacing.4')}`,
         },
       },
       ...Object.fromEntries(createVariants(containedItemColors)),
+    },
+    '&-vertical': {
+      width: '100%',
+      flexDirection: 'column',
+      gap: theme('spacing.3'),
+      alignItems: 'flex-start',
+      '& li': {
+        width: '100%',
+        justifyContent: 'flex-start',
+      },
     },
   };
 
