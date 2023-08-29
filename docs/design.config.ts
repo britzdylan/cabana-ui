@@ -196,29 +196,34 @@ export const SHADOWS = {
     },
     {
       name: 'dark-100',
-      value: '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px #000000',
+      value: '0px 1px 1px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-200',
-      value: '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 2px 4px #000000',
+      value: '0px 2px 4px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-300',
-      value: '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 4px 8px #000000',
+      value: '0px 4px 8px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-400',
-      value: '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 8px 16px #000000',
+      value: '0px 8px 16px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-500',
       value:
-        '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 16px 24px rgba(0, 0, 0, 0.99)',
+        '0px 16px 24px 0px rgba(0, 0, 0, 0.99), 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-600',
       value:
-        '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 24px 40px rgba(0, 0, 0, 0.98)',
+        '0px 24px 40px 0px rgba(0, 0, 0, 0.98), 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
+    },
+    {
+      name: 'dark-600',
+      value:
+        '0px 32px 50px 0px rgba(0, 0, 0, 0.98), 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
   ],
 };
