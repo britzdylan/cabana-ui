@@ -164,6 +164,7 @@ export default {
           '0px 32px 50px 0px rgba(0, 0, 0, 0.98), 0px 0px 1px 0px rgba(0, 0, 0, 0.90)',
       },
       blur: {
+        4: '2px',
         8: '4px',
         16: '8px',
         24: '12px',

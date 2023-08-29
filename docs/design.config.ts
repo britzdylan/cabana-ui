@@ -244,6 +244,7 @@ export const SHADOWS = {
 };
 
 export const BLUR = [
+  { name: 4, value: '2px' },
   { name: 8, value: '4px' },
   { name: 16, value: '8px' },
   { name: 24, value: '12px' },
