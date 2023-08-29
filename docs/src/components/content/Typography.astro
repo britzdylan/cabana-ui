@@ -9,13 +9,12 @@ const getStyle = (item: { name: string; size: string }) => {
 <div class='w-full not-prose'>
   {
     TYPOGRAPHY.scale.map((item) => (
-      <div
-        data-tooltip='Copy class'
-        data-position='top'
-        data-ctc={item.name}
-        class='ctc mt-6 tooltip block border-t py-4'>
+      <div class=' mt-6  block border-t py-4'>
         <p
-          class='text-zinc-800 font-normal cursor-pointer'
+          data-tooltip={item.name}
+          data-position='top'
+          data-ctc={item.name}
+          class='text-zinc-800 ctc font-normal tooltip cursor-pointer block leading-[105%] w-max'
           style={getStyle(item)}>
           CabanaUI
         </p>

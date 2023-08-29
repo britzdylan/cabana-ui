@@ -5,8 +5,8 @@
   "homepage": "https://cabana-ui.vercel.app/",
   "repository": "https://github.com/britzdylan/cabana-ui.git",
   "bugs": "https://github.com/britzdylan/cabana-ui/issues",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "keywords": [
     "design-system",
     "tailwindcss",
@@ -28,8 +28,8 @@
     "dev": "ts-node -r tsconfig-paths/register src/index.ts",
     "build": "tsc",
     "link": "cd dist && npm link",
-    "build:local": "tsc && cd dist && npm link && cd .. && cd docs && npm link cabana-ui",
-    "build:publish": "tsc && cd dist && npm publish",
+    "dev:local": "tsc && cd dist && npm link && cd .. && cd docs && npm link cabana-ui && npm run start",
+    "publish": "tsc && cd dist && npm publish",
     "docs:start": "cd docs && npm run start",
     "docs:build": "cd docs && npm run build",
     "run:test": "node src/test.js"
