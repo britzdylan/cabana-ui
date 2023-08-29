@@ -11,12 +11,12 @@ const getStyle = (item: { name: string; size: string }) => {
     TYPOGRAPHY.scale.map((item) => (
       <div class=' mt-6  block border-t py-4'>
         <p
-          data-tooltip={item.name}
+          data-tooltip='Copy class'
           data-position='top'
           data-ctc={item.name}
-          class='text-zinc-800 ctc font-normal tooltip cursor-pointer block leading-[105%] w-max'
+          class='text-zinc-800 ctc font-normal tooltip cursor-pointer block leading-[105%] w-max capitalize'
           style={getStyle(item)}>
-          CabanaUI
+          {item.name}
         </p>
         <div class='flex gap-6'>
           <span>text-{item.name}</span>
