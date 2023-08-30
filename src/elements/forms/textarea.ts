@@ -37,7 +37,7 @@ const textarea = (theme: (arg0: string) => string | number) => {
         fontWeight: theme('fontWeight.normal'),
         backgroundColor: '#fff',
         borderRadius: theme('borderRadius.md'),
-        transition: 'all 0.2s ease-in-out',
+        transition: 'all .1s ease-out',
         minHeight: '100px',
         color: theme(`colors.${defaultColor}.800`),
         border: `1px solid ${theme(`colors.${defaultColor}.300`)}`,
