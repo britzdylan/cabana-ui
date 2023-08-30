@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content';
 import dayjs from 'dayjs';
 import PostLayout from '../../layouts/Post.astro';
 const blogEntries = await getCollection('blog');
-
+blogEntries.sort((a, b) => {
+  return dayjs(b.data.publishDate).unix() - dayjs(a.data.publishDate).unix();
+});
 import { IconChevronRight } from '@tabler/icons-vue';
 ---
 
