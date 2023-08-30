@@ -1,4 +1,4 @@
-# CabanaUI for Tailwind CSS - Beta
+# CabanaUI for Tailwind CSS
 
 **Introducing Cabana, the TailwindCSS plugin that makes designing beautiful UIs fast and effortless. Cabana comes packed with extended color palettes, shadows, and background blurs, along with a custom Typography Scale System. It also includes pre-designed design elements such as buttons, lists, links, pills, forms, and more, so you can start building stunning designs in just minutes. Cabana is framework agnostic and fully customizable, making it perfect for designers and developers alike.**
 
@@ -61,8 +61,6 @@ module.exports = {
 - [x] Button
 - [x] Floating Action Button
 - [x] Button Group
-- [ ] Social Button
-- [ ] App Store Button
 
 ### Navigation
 
@@ -71,12 +69,20 @@ module.exports = {
 - [x] Pill
 - [x] Breadcrumbs
 - [x] Pagination
-- [x] Tabs
+- [ ] Tabs
 
 ### Content
 
 - [x] Lists
 - [x] Accordion
+- [ ] Cards
+- [ ] Comments
+- [ ] Chats
+- [ ] Testimonials
+- [ ] Carousels
+- [ ] Pricing Tables
+- [ ] User Profiles
+- [ ] Content Blocks
 
 ### Forms
 
@@ -88,13 +94,16 @@ module.exports = {
 - [x] Checkbox
 - [x] Range
 
+### Overlays
+
+- [x] Toast
+- [ ] Modal
+
 ### Design Patterns
 
 - [x] Avatar
 - [x] Chip
-- [x] Tag
 - [x] Tooltip
-- [x] Toast
 - [x] Indicators
 - [x] Progress bar
 - [x] Rating
