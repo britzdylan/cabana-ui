@@ -20,6 +20,7 @@ const chip = (theme: (arg0: string) => string | number) => {
       padding: theme('spacing.1'),
       borderRadius: theme('borderRadius.md'),
       fontSize: theme('fontSize.label-sm'),
+      lineHeight: theme('lineHeight.4'),
       background: theme(`colors.${defaultColor}.100`),
       cursor: 'pointer',
       color: theme(`colors.${defaultColor}.600`),
