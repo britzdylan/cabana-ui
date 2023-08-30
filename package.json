@@ -1,12 +1,12 @@
 {
-  "version": "0.1.26",
+  "version": "0.1.30",
   "name": "cabana-ui",
   "description": "Cabana UI plugin for tailwindcss",
   "homepage": "https://cabana-ui.vercel.app/",
   "repository": "https://github.com/britzdylan/cabana-ui.git",
   "bugs": "https://github.com/britzdylan/cabana-ui/issues",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "keywords": [
     "design-system",
     "tailwindcss",
@@ -29,7 +29,7 @@
     "build": "tsc",
     "link": "cd dist && npm link",
     "dev:local": "tsc && cd dist && npm link && cd .. && cd docs && npm link cabana-ui && npm run start",
-    "publish": "tsc && cd dist && npm publish",
+    "pub": "tsc && cd dist && npm publish",
     "docs:start": "cd docs && npm run start",
     "docs:build": "cd docs && npm run build",
     "run:test": "node src/test.js"
