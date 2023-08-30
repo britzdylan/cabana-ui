@@ -9,7 +9,6 @@ const { currentPage } = Astro.props;
 const currentPageMatch = currentPage.slice(1);
 
 const isCurrentPage = (item: sidebar) => {
-  console.log(item.link, currentPageMatch);
   if (item.link) {
     return item.link.includes(currentPageMatch);
   }

@@ -35,7 +35,6 @@ export default {
 
     methods: {
         async copyToClipboard(value) {
-            console.log(value)
             await navigator.clipboard.writeText(value);
             this.tooltip = 'Copied!'
             setTimeout(() => {
