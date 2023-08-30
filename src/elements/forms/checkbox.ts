@@ -51,12 +51,12 @@ const checkbox = (theme: (arg0: string) => string | number) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: theme('spacing.5'),
-        width: theme('spacing.5'),
+        height: theme('spacing.6'),
+        width: theme('spacing.6'),
         backgroundColor: 'transparent',
-        padding: '1px',
+        padding: '0.5px',
         borderRadius: theme('borderRadius.sm'),
-        transition: 'all 0.2s ease-in-out',
+        transition: 'all .1s ease-out',
         cursor: 'pointer',
 
         ' .icon': {
@@ -71,22 +71,10 @@ const checkbox = (theme: (arg0: string) => string | number) => {
       },
       '& input:checked ~ .checkmark img, & input:checked ~ .checkmark svg, & input:checked ~ .checkmark .icon':
         {
-          width: theme('spacing.4'),
-          height: theme('spacing.4'),
+          width: theme('spacing.5'),
+          height: theme('spacing.5'),
           opacity: 1,
         },
-
-      '&-large': {
-        '& .text-label': {
-          ...styles.helper(theme),
-          marginBottom: 0,
-          fontSize: theme('fontSize.label-xl'),
-        },
-        '& .checkmark': {
-          height: theme('spacing.6'),
-          width: theme('spacing.6'),
-        },
-      },
 
       '&.disabled': {
         '& .checkmark': {
