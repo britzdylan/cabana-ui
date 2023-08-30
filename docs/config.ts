@@ -124,10 +124,7 @@ export const SIDEBAR: Array<sidebar> = [
         name: 'Rating',
         link: `${componentsPath}/patterns/rating`,
       },
-      {
-        name: 'Tag',
-        link: `${componentsPath}/patterns/tag`,
-      },
+
       {
         name: 'Toast',
         link: `${componentsPath}/patterns/toast`,
