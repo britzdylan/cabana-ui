@@ -62,7 +62,7 @@ const input = (theme: (arg0: string) => string | number) => {
     gap: theme('spacing.2'),
     justifyContent: 'space-between',
     borderRadius: theme('borderRadius.md'),
-    transition: 'all 0s ease-in',
+    transition: 'all .1s ease-out',
     '& .icon': {
       ...iconSize(theme, 5),
     },
