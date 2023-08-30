@@ -4,7 +4,7 @@
 
 [![][banner-url]][docs-url]
 
-[![][install-size]][install-size-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url] [![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
+[![][install-size]][install-size-url] [![][number-of-components]][docs-url] [![][license]][license-url] [![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
 
 ## Features
 
