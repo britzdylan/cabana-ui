@@ -27,7 +27,7 @@ const checkbox = (theme: (arg0: string) => string | number) => {
 
   return {
     '.checkbox': {
-      width: '100%',
+      width: 'max-content',
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
@@ -51,8 +51,8 @@ const checkbox = (theme: (arg0: string) => string | number) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: theme('spacing.6'),
-        width: theme('spacing.6'),
+        height: theme('spacing.5'),
+        width: theme('spacing.5'),
         backgroundColor: 'transparent',
         padding: '0.5px',
         borderRadius: theme('borderRadius.sm'),
