@@ -62,7 +62,7 @@ const input = (theme: (arg0: string) => string | number) => {
     gap: theme('spacing.2'),
     justifyContent: 'space-between',
     borderRadius: theme('borderRadius.md'),
-    transition: 'all 0s ease-in',
+    transition: 'all .1s ease-out',
     '& .icon': {
       ...iconSize(theme, 5),
     },
@@ -135,30 +135,6 @@ const input = (theme: (arg0: string) => string | number) => {
         color: theme(`colors.${defaultColor}.700`),
         accentColor: theme(`colors.${accentColor}.400`),
         caretColor: theme(`colors.${accentColor}.800`),
-      },
-      '&-large': {
-        '& label.label': {
-          fontSize: theme('fontSize.label'),
-        },
-        '& > span:not(.input-prefix, .input-suffix)': {
-          fontSize: theme('fontSize.label'),
-        },
-        '& input': {
-          fontSize: theme('fontSize.label'),
-          padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
-        },
-        '& select.select': {
-          fontSize: theme('fontSize.label'),
-          padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
-        },
-        '& span.input-prefix': {
-          padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
-          borderRight: `1px solid ${theme('colors.gray.300')}`,
-        },
-        '& span.input-suffix': {
-          padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
-          borderLeft: `1px solid ${theme('colors.gray.300')}`,
-        },
       },
       '& span > select.input-select': {
         color: theme(`colors.${defaultColor}.700`),

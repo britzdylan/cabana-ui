@@ -79,7 +79,7 @@ export const SIDEBAR: Array<sidebar> = [
       { name: 'Pill', link: `${componentsPath}/navigation/pill` },
       { name: 'Breadcrumb', link: `${componentsPath}/navigation/breadcrumbs` },
       { name: 'Pagination', link: `${componentsPath}/navigation/pagination` },
-      { name: 'Tabs', link: `${componentsPath}/navigation/tabs` },
+      // { name: 'Tabs', link: `${componentsPath}/navigation/tabs` },
     ],
   },
   {
@@ -124,10 +124,7 @@ export const SIDEBAR: Array<sidebar> = [
         name: 'Rating',
         link: `${componentsPath}/patterns/rating`,
       },
-      {
-        name: 'Tag',
-        link: `${componentsPath}/patterns/tag`,
-      },
+
       {
         name: 'Toast',
         link: `${componentsPath}/patterns/toast`,

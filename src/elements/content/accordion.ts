@@ -28,7 +28,7 @@ const accordion = (theme: (arg0: string) => string | number) => {
   const header = {
     '& header': {
       cursor: 'pointer',
-      fontSize: theme('fontSize.body-lg'),
+      fontSize: theme('fontSize.body'),
       width: '100%',
       display: 'flex',
       flexDirection: 'row',

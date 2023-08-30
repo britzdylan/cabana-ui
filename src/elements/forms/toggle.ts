@@ -85,29 +85,6 @@ const toggle = (theme: (arg0: string) => string | number) => {
         opacity: 0.5,
         pointerEvent: 'none',
       },
-      '&-large': {
-        '& .toggle-label': {
-          width: theme('spacing.12'),
-        },
-        '& .toggle-label-narrow': {
-          width: theme('spacing.12'),
-          height: theme('spacing.3'),
-        },
-        '& .toggle-label:after': {
-          width: theme('spacing.6'),
-          height: theme('spacing.6'),
-        },
-        '& .toggle-label-narrow:after': {
-          height: theme('spacing.6'),
-          width: theme('spacing.6'),
-        },
-        '& input[type="checkbox"]:checked ~ .toggle-label:after': {
-          transform: 'translateX(20px)',
-        },
-        '& input[type="checkbox"]:checked ~ .toggle-label-narrow:after': {
-          transform: 'translateX(24px)',
-        },
-      },
       ...Object.fromEntries(createVariants(colors)),
     },
   };

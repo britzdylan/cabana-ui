@@ -2,7 +2,14 @@ import createVariants from '../lib/colorVariants';
 import directives from '../lib/directives';
 const { getRadius, iconSize } = directives;
 const defaultColor = 'primary';
-const defaultRadius = '1';
+const defaultRadius = '1.5';
+
+const buttonPaddingScale = {
+  sm: ['2', '4'],
+  base: ['3', '6'],
+  baseOutline: ['2.5', '5'],
+  lg: ['3.5', '7'],
+};
 
 const base = (theme: (arg0: string) => string | number) => {
   return {
@@ -11,24 +18,26 @@ const base = (theme: (arg0: string) => string | number) => {
     justifyContent: 'center',
     color: '#fff',
     backgroundColor: theme(`colors.${defaultColor}.500`),
-    transition: 'all .2s ease-in-out',
-    gap: theme('spacing.2'),
-    padding: `${theme('spacing[2.5]')} ${theme('spacing.5')}`,
-    fontSize: theme('fontSize.label'),
+    transition: 'all .1s ease-out',
+    gap: theme('spacing[1.5]'),
+    padding: `${theme(`spacing[${buttonPaddingScale.base[0]}]`)} ${theme(
+      `spacing[${buttonPaddingScale.base[1]}]`
+    )}`,
+    fontSize: theme('fontSize.label-sm'),
     fontWeight: theme('fontWeight.medium'),
-    letterSpacing: '0.002em',
-    lineHeight: theme('spacing.6'),
+    // letterSpacing: '0.002em',
+    lineHeight: theme('spacing.4'),
     ...getRadius(theme, defaultRadius),
     cursor: 'pointer',
     // Default states
     '&:focus': {
       outline: 'solid',
-      outlineWidth: theme('spacing.1'),
+      outlineWidth: theme('spacing[1]'),
       outlineColor: theme(`colors.${defaultColor}.300`),
     },
     '&:focus-visible': {
       outline: 'solid',
-      outlineWidth: theme('spacing.1'),
+      outlineWidth: theme('spacing[1]'),
       outlineColor: theme(`colors.${defaultColor}.300`),
     },
     '&:disabled': {
@@ -37,8 +46,8 @@ const base = (theme: (arg0: string) => string | number) => {
       pointerEvents: 'none',
     },
     '&:active': {
-      outline: 'solid',
-      outlineWidth: theme('spacing.1'),
+      outline: '`solid`',
+      outlineWidth: theme('spacing[1]'),
       outlineColor: theme(`colors.${defaultColor}.700`),
       backgroundColor: theme(`colors.${defaultColor}.600`),
     },
@@ -142,9 +151,9 @@ function button(theme: (arg0: string) => string | number) {
 
   const colors = (color: string) => {
     return {
-      backgroundColor: theme(`colors.${color}.600`),
+      backgroundColor: theme(`colors.${color}.500`),
       '&:hover': {
-        backgroundColor: theme(`colors.${color}.700`),
+        backgroundColor: theme(`colors.${color}.600`),
       },
       '&:focus': {
         outlineColor: theme(`colors.${color}.300`),
@@ -186,7 +195,16 @@ function button(theme: (arg0: string) => string | number) {
   const btnGroupColors = (color: string) => {
     return {
       '& > button': {
-        backgroundColor: theme(`colors.${color}.600`),
+        backgroundColor: theme(`colors.${color}.500`),
+        '&:hover': {
+          backgroundColor: theme(`colors.${color}.600`),
+        },
+        '&:focus': {
+          backgroundColor: theme(`colors.${color}.600`),
+        },
+        '&:active': {
+          backgroundColor: theme(`colors.${color}.700`),
+        },
       },
     };
   };
@@ -222,7 +240,9 @@ function button(theme: (arg0: string) => string | number) {
 
       // btn variants
       '&-outline': {
-        padding: `${theme('spacing.2')} ${theme('spacing.5')}`,
+        padding: `${theme(
+          `spacing[${buttonPaddingScale.baseOutline[0]}]`
+        )} ${theme(`spacing[${buttonPaddingScale.baseOutline[1]}]`)}`,
         backgroundColor: 'transparent',
         border: `solid ${theme('spacing[0.5]')} ${theme(
           `colors.${defaultColor}.500`
@@ -290,46 +310,52 @@ function button(theme: (arg0: string) => string | number) {
 
       // btn sizes
       '&-sm': {
-        padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
-        fontSize: theme('fontSize.label-sm'),
+        padding: `${theme(`spacing[${buttonPaddingScale.sm[0]}]`)} ${theme(
+          `spacing[${buttonPaddingScale.sm[1]}]`
+        )}`,
+        fontSize: theme('fontSize.label-xs'),
         letterSpacing: '0.005em',
-        lineHeight: theme('spacing.5'),
+        // lineHeight: theme('spacing.5'),
         fontWeight: theme('fontWeight.normal'),
         gap: theme('spacing.1'),
         ...getRadius(theme, defaultRadius),
         '& .icon': {
-          ...iconSize(theme, 3),
+          ...iconSize(theme, 4),
         },
 
         '& svg': {
-          ...iconSize(theme, 3),
+          ...iconSize(theme, 4),
         },
 
         ...adjustPaddingWithIcon(0),
       },
 
-      '&-md': {
-        padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
-        fontSize: theme('fontSize.label-sm'),
-        letterSpacing: '0.005em',
-        lineHeight: theme('spacing.5'),
-        fontWeight: theme('fontWeight.normal'),
-        gap: theme('spacing.1'),
-        ...getRadius(theme, defaultRadius),
-        '& .icon': {
-          ...iconSize(theme, 4),
-        },
+      // '&-md': {
+      //   padding: `${theme(`spacing[${buttonPaddingScale.md[0]}]`)} ${theme(
+      //     `spacing[${buttonPaddingScale.md[1]}]`
+      //   )}`,
+      //   fontSize: theme('fontSize.label-sm'),
+      //   letterSpacing: '0.005em',
+      //   // lineHeight: theme('spacing.5'),
+      //   fontWeight: theme('fontWeight.normal'),
+      //   gap: theme('spacing.1'),
+      //   ...getRadius(theme, defaultRadius),
+      //   '& .icon': {
+      //     ...iconSize(theme, 4),
+      //   },
 
-        '& svg': {
-          ...iconSize(theme, 4),
-        },
-        ...adjustPaddingWithIcon(2),
-      },
+      //   '& svg': {
+      //     ...iconSize(theme, 4),
+      //   },
+      //   ...adjustPaddingWithIcon(2),
+      // },
 
       '&-lg': {
-        padding: `${theme('spacing.3')} ${theme('spacing.6')}`,
-        fontSize: theme('fontSize.label-xl'),
-        lineHeight: theme('spacing.7'),
+        padding: `${theme(`spacing[${buttonPaddingScale.lg[0]}]`)} ${theme(
+          `spacing[${buttonPaddingScale.lg[1]}]`
+        )}`,
+        fontSize: theme('fontSize.label'),
+        // lineHeight: theme('spacing.'),
         fontWeight: theme('fontWeight.semibold'),
         '& .icon': {
           ...iconSize(theme, 7),
@@ -343,7 +369,18 @@ function button(theme: (arg0: string) => string | number) {
     },
     '.fab': {
       ...base(theme),
+      padding: 0,
+      width: theme('spacing.10'),
+      height: theme('spacing.10'),
       ...Object.fromEntries(createVariants(colors)),
+      '& .icon': {
+        ...iconSize(theme, 6),
+      },
+
+      '& svg': {
+        ...iconSize(theme, 6),
+      },
+
       '&-sm': {
         width: theme('spacing.8'),
         height: theme('spacing.8'),
@@ -358,19 +395,19 @@ function button(theme: (arg0: string) => string | number) {
         },
       },
 
-      '&-md': {
-        width: theme('spacing.10'),
-        height: theme('spacing.10'),
-        ...getRadius(theme, defaultRadius),
-        padding: 0,
-        '& .icon': {
-          ...iconSize(theme, 6),
-        },
+      // '&-md': {
+      //   width: theme('spacing.10'),
+      //   height: theme('spacing.10'),
+      //   ...getRadius(theme, defaultRadius),
+      //   padding: 0,
+      //   '& .icon': {
+      //     ...iconSize(theme, 6),
+      //   },
 
-        '& svg': {
-          ...iconSize(theme, 6),
-        },
-      },
+      //   '& svg': {
+      //     ...iconSize(theme, 6),
+      //   },
+      // },
 
       '&-lg': {
         width: theme('spacing.12'),
@@ -430,18 +467,30 @@ function button(theme: (arg0: string) => string | number) {
         '&:focus': {
           outlineWidth: '0px',
           outlineColor: 'transparent',
+          backgroundColor: theme(`colors.${defaultColor}.600`),
         },
         '&:active': {
           outlineWidth: '0px',
           outlineColor: 'transparent',
+          backgroundColor: theme(`colors.${defaultColor}.700`),
+        },
+        '&:hover': {
+          backgroundColor: theme(`colors.${defaultColor}.600`),
+        },
+        '&:disabled': {
+          backgroundColor: theme(`colors.${defaultColor}.100`),
+          color: theme(`colors.${defaultColor}.200`),
+          pointerEvents: 'none',
         },
       },
       ...Object.fromEntries(createVariants(btnGroupColors)),
 
-      '&-small': {
+      '&-sm': {
         '& > button': {
           ...base(theme),
-          padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
+          padding: `${theme(`spacing[${buttonPaddingScale.sm[0]}]`)} ${theme(
+            `spacing[${buttonPaddingScale.sm[1]}]`
+          )}`,
           fontSize: theme('fontSize.label-sm'),
           letterSpacing: '0.005em',
           lineHeight: theme('spacing.5'),
@@ -458,10 +507,12 @@ function button(theme: (arg0: string) => string | number) {
           },
         },
       },
-      '&-large': {
+      '&-lg': {
         '& > button': {
           ...base(theme),
-          padding: `${theme('spacing.3')} ${theme('spacing.6')}`,
+          padding: `${theme(`spacing[${buttonPaddingScale.lg[0]}]`)} ${theme(
+            `spacing[${buttonPaddingScale.lg[1]}]`
+          )}`,
           fontSize: theme('fontSize.label-xl'),
           lineHeight: theme('spacing.7'),
           fontWeight: theme('fontWeight.semibold'),
@@ -483,7 +534,9 @@ function button(theme: (arg0: string) => string | number) {
         )}`,
         '& > button': {
           ...base(theme),
-          padding: `${theme('spacing.2')} ${theme('spacing.5')}`,
+          padding: `${theme(
+            `spacing[${buttonPaddingScale.baseOutline[0]}]`
+          )} ${theme(`spacing[${buttonPaddingScale.baseOutline[1]}]`)}`,
           borderLeftWidth: '0px',
           borderRightWidth: theme('spacing[0.5]'),
           borderTopWidth: '0px',

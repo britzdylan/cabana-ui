@@ -135,6 +135,11 @@ export const SHADOWS = {
         '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 24px 40px rgba(48, 49, 51, 0.08)',
     },
     {
+      name: 'light-700',
+      value:
+        '0px 32px 50px 0px rgba(48, 49, 51, 0.08), 0px 0px 1px 0px rgba(48, 49, 51, 0.05);',
+    },
+    {
       name: 'primary-100',
       value:
         '0px 0px 1px rgba(59, 40, 204, 0.05), 0px 1px 1px rgba(59, 40, 204, 0.1)',
@@ -163,6 +168,11 @@ export const SHADOWS = {
       name: 'primary-600',
       value:
         '0px 0px 1px rgba(59, 40, 204, 0.05), 0px 24px 40px rgba(59, 40, 204, 0.08)',
+    },
+    {
+      name: 'primary-700',
+      value:
+        '0px 32px 50px 0px rgba(139, 92, 246, 0.08), 0px 0px 1px 0px rgba(139, 92, 246, 0.05);',
     },
     {
       name: 'secondary-100',
@@ -195,35 +205,46 @@ export const SHADOWS = {
         '0px 0px 1px rgba(38, 103, 255, 0.05), 0px 24px 40px rgba(38, 103, 255, 0.08)',
     },
     {
+      name: 'secondary-700',
+      value:
+        '0px 32px 50px 0px rgba(99, 102, 241, 0.08), 0px 0px 1px 0px rgba(99, 102, 241, 0.05);',
+    },
+    {
       name: 'dark-100',
-      value: '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px #000000',
+      value: '0px 1px 1px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-200',
-      value: '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 2px 4px #000000',
+      value: '0px 2px 4px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-300',
-      value: '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 4px 8px #000000',
+      value: '0px 4px 8px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-400',
-      value: '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 8px 16px #000000',
+      value: '0px 8px 16px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-500',
       value:
-        '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 16px 24px rgba(0, 0, 0, 0.99)',
+        '0px 16px 24px 0px rgba(0, 0, 0, 0.99), 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
     {
       name: 'dark-600',
       value:
-        '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 24px 40px rgba(0, 0, 0, 0.98)',
+        '0px 24px 40px 0px rgba(0, 0, 0, 0.98), 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
+    },
+    {
+      name: 'dark-700',
+      value:
+        '0px 32px 50px 0px rgba(0, 0, 0, 0.98), 0px 0px 1px 0px rgba(0, 0, 0, 0.90);',
     },
   ],
 };
 
 export const BLUR = [
+  { name: 4, value: '2px' },
   { name: 8, value: '4px' },
   { name: 16, value: '8px' },
   { name: 24, value: '12px' },

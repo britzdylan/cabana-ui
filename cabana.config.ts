@@ -121,6 +121,8 @@ export default {
           '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 16px 24px rgba(48, 49, 51, 0.09)',
         'light-600':
           '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 24px 40px rgba(48, 49, 51, 0.08)',
+        'light-700':
+          '0px 32px 50px 0px rgba(48, 49, 51, 0.08), 0px 0px 1px 0px rgba(48, 49, 51, 0.05)',
         'primary-100':
           '0px 0px 1px rgba(59, 40, 204, 0.05), 0px 1px 1px rgba(59, 40, 204, 0.1)',
         'primary-200':
@@ -133,6 +135,8 @@ export default {
           '0px 0px 1px rgba(59, 40, 204, 0.05), 0px 16px 24px rgba(59, 40, 204, 0.09)',
         'primary-600':
           '0px 0px 1px rgba(59, 40, 204, 0.05), 0px 24px 40px rgba(59, 40, 204, 0.08)',
+        'primary-700':
+          '0px 32px 50px 0px rgba(139, 92, 246, 0.08), 0px 0px 1px 0px rgba(139, 92, 246, 0.05)',
         'secondary-100':
           '0px 0px 1px rgba(38, 103, 255, 0.05), 0px 1px 1px rgba(38, 103, 255, 0.1)',
         'secondary-200':
@@ -145,16 +149,22 @@ export default {
           '0px 0px 1px rgba(38, 103, 255, 0.05), 0px 16px 24px rgba(38, 103, 255, 0.09)',
         'secondary-600':
           '0px 0px 1px rgba(38, 103, 255, 0.05), 0px 24px 40px rgba(38, 103, 255, 0.08)',
-        'dark-100': '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px #000000',
-        'dark-200': '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 2px 4px #000000',
-        'dark-300': '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 4px 8px #000000',
-        'dark-400': '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 8px 16px #000000',
+        'secondary-700':
+          '0px 32px 50px 0px rgba(99, 102, 241, 0.08), 0px 0px 1px 0px rgba(99, 102, 241, 0.05)',
+        'dark-100': '0px 1px 1px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90)',
+        'dark-200': '0px 2px 4px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90)',
+        'dark-300': '0px 4px 8px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90)',
+        'dark-400':
+          '0px 8px 16px 0px #000, 0px 0px 1px 0px rgba(0, 0, 0, 0.90)',
         'dark-500':
-          '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 16px 24px rgba(0, 0, 0, 0.99)',
+          '0px 16px 24px 0px rgba(0, 0, 0, 0.99), 0px 0px 1px 0px rgba(0, 0, 0, 0.90)',
         'dark-600':
-          '0px 0px 1px rgba(0, 0, 0, 0.9), 0px 24px 40px rgba(0, 0, 0, 0.98)',
+          '0px 24px 40px 0px rgba(0, 0, 0, 0.98), 0px 0px 1px 0px rgba(0, 0, 0, 0.90)',
+        'dark-700':
+          '0px 32px 50px 0px rgba(0, 0, 0, 0.98), 0px 0px 1px 0px rgba(0, 0, 0, 0.90)',
       },
       blur: {
+        4: '2px',
         8: '4px',
         16: '8px',
         24: '12px',

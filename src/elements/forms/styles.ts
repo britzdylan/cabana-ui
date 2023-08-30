@@ -8,7 +8,7 @@ const styles = {
     overflow: 'hidden',
     padding: 2,
     gap: theme('spacing.1'),
-    transition: 'all 0.2s ease-in-out',
+    transition: 'all .1s ease-out',
   }),
 
   label: (theme: (arg0: string) => string | number) => ({
@@ -23,6 +23,7 @@ const styles = {
     fontSize: theme('fontSize.label-sm'),
     fontWeight: theme('fontWeight.normal'),
     outline: 'none',
+    transition: 'all .1s ease-out',
     '&:focus': {
       outline: 'none',
       border: `none`,
@@ -47,7 +48,7 @@ const styles = {
   }),
 
   helper: (theme: (arg0: string) => string | number) => ({
-    width: '100%',
+    width: 'max-content',
     marginBottom: theme('spacing.1'),
     display: 'flex',
     alignItems: 'center',
@@ -58,7 +59,13 @@ const styles = {
     },
   }),
 
-  states: (theme: (arg0: string) => string | number, defaultColor : string, accentColor: string, errorColor: string, successColor: string) => ({
+  states: (
+    theme: (arg0: string) => string | number,
+    defaultColor: string,
+    accentColor: string,
+    errorColor: string,
+    successColor: string
+  ) => ({
     '&:focus, &:active, &:focus-within': {
       outlineStyle: 'solid',
       outlineColor: theme(`colors.${accentColor}.200`),

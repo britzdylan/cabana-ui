@@ -7,7 +7,7 @@ const baseLink = (theme: (arg0: string) => string | number) => {
   return {
     color: theme(`colors.${defaultColor}.500`),
     textDecoration: 'none',
-    display: 'flex',
+    display: 'inline flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: theme('spacing.1'),

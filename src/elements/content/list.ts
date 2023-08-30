@@ -34,19 +34,6 @@ const list = (theme: (arg0: string) => string | number) => {
         ...iconSize(theme, 4),
       },
     },
-
-    '&-large': {
-      '& li': {
-        ...listItem,
-        fontSize: theme('fontSize.label-xl'),
-        '& .icon': {
-          ...iconSize(theme, 6),
-        },
-        '& svg': {
-          ...iconSize(theme, 6),
-        },
-      },
-    },
   };
   return {
     '.list': {
