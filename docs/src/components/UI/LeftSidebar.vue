@@ -75,7 +75,7 @@
     const baseClasses =
       'hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full';
     return isCurrentPage(link)
-      ? baseClasses + ' !text-primary-400 bg-slate-800/40 dark:bg-slate-800/40'
+      ? baseClasses + ' !text-slate-400 bg-slate-800/40 dark:bg-slate-800/40'
       : baseClasses;
   };
 
@@ -83,7 +83,7 @@
     const baseClasses =
       'text-label-sm block hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer text-slate-500 px-2 py-1 rounded';
     return isCurrentPage(link)
-      ? baseClasses + ' !text-primary-400 bg-slate-800/40 dark:bg-slate-800/40'
+      ? baseClasses + ' !text-slate-400 bg-slate-800/40 dark:bg-slate-800/40'
       : baseClasses;
   };
 
