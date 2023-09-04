@@ -6,7 +6,7 @@ export const SITE = {
   twitter: '@britzdm',
   github: 'britzdylan/cabana-ui',
   // linkedin: 'linkedinUsername',
-  version: '0.1.0 Beta',
+  version: '0.1.35 Beta',
   docsVersion: '0.0.1',
   author: 'Dylan Britz',
   nav: [
@@ -87,6 +87,14 @@ export const SIDEBAR: Array<sidebar> = [
     children: [
       { name: 'Accordion', link: `${componentsPath}/content/accordion` },
       { name: 'Lists', link: `${componentsPath}/content/lists` },
+      { name: 'Content Blocks', link: `${componentsPath}/content/blocks` },
+      // { name: 'Lists', link: `${componentsPath}/content/lists` },
+      // { name: 'Lists', link: `${componentsPath}/content/lists` },
+      // { name: 'Lists', link: `${componentsPath}/content/lists` },
+      // { name: 'Lists', link: `${componentsPath}/content/lists` },
+      // { name: 'Lists', link: `${componentsPath}/content/lists` },
+      // { name: 'Lists', link: `${componentsPath}/content/lists` },
+      // { name: 'Lists', link: `${componentsPath}/content/lists` },
     ],
   },
   {
@@ -99,6 +107,15 @@ export const SIDEBAR: Array<sidebar> = [
       { name: 'Radio', link: `${componentsPath}/forms/radio` },
       { name: 'Toggle', link: `${componentsPath}/forms/toggle` },
       { name: 'Range', link: `${componentsPath}/forms/range` },
+    ],
+  },
+  {
+    name: 'Overlays',
+    children: [
+      {
+        name: 'Toast',
+        link: `${componentsPath}/overlays/toast`,
+      },
     ],
   },
   {
@@ -117,7 +134,7 @@ export const SIDEBAR: Array<sidebar> = [
         link: `${componentsPath}/patterns/dot`,
       },
       {
-        name: 'Progress',
+        name: 'Progress Bar',
         link: `${componentsPath}/patterns/progress`,
       },
       {
@@ -125,10 +142,6 @@ export const SIDEBAR: Array<sidebar> = [
         link: `${componentsPath}/patterns/rating`,
       },
 
-      {
-        name: 'Toast',
-        link: `${componentsPath}/patterns/toast`,
-      },
       {
         name: 'Tooltip',
         link: `${componentsPath}/patterns/tooltip`,
