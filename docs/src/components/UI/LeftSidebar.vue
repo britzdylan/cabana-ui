@@ -23,7 +23,14 @@
             @click="showChildren(item)"
             class="hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full">
             <p>{{ item.name }}</p>
-            <ChevronRightIcon class="w-4 h-4" />
+            <ChevronRightIcon
+              :class="[
+                item.name + '-icon',
+                {
+                  'rotate-90': findActiveChild(item),
+                },
+              ]"
+              class="w-4 h-4 transform transition-all ease-out duration-150" />
           </a>
 
           <ul
@@ -83,17 +90,20 @@
   const showChildren = (item: sidebar) => {
     if (item.children) {
       const el = document.getElementById(item.name);
+      const icon = document.getElementsByClassName(item.name + '-icon')[0];
       if (el) {
         if (el.style.height === '0px') {
           el.style.height = 'auto';
           el.style.opacity = '1';
           el.style.marginTop = '0.5rem';
           el.style.marginBottom = '0.5rem';
+          icon.classList.add('rotate-90');
         } else {
           el.style.height = '0px';
           el.style.opacity = '0';
           el.style.marginTop = '0';
           el.style.marginBottom = '0';
+          icon.classList.remove('rotate-90');
         }
       }
     }
