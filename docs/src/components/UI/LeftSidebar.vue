@@ -11,18 +11,27 @@
       <ul
         class="flex flex-col justify-start gap-1 text-slate-500 dark:text-slate-400 text-body-sm w-full">
         <li v-for="item in SIDEBAR" :key="item.name" class="flex flex-col">
-          <div
-            class="hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full">
-            <a :href="item.link">{{ item.name }}</a>
-            <ChevronRightIcon class="w-4 h-4" />
-          </div>
-          <ul
+          <a
+            v-if="!item.children"
+            :href="item.link"
+            :class="getLinkClasses(item)"
+            class="">
+            <p>{{ item.name }}</p>
+            <ChevronRightIcon class="w-4 h-4" /> </a
+          ><a
             v-if="item.children"
-            class="flex flex-col gap-1 ml-2 my-2 overflow-hidden">
-            <li
-              v-for="child in item.children"
-              :key="child.name"
-              class="w-full ml-2">
+            @click="showChildren(item)"
+            class="hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full">
+            <p>{{ item.name }}</p>
+            <ChevronRightIcon class="w-4 h-4" />
+          </a>
+
+          <ul
+            :id="item.name"
+            :style="getChildrenClasses(findActiveChild(item))"
+            v-if="item.children"
+            class="flex flex-col gap-1 mx-2 overflow-hidden transition-all ease-out duration-150 w-full">
+            <li v-for="child in item.children" :key="child.name" class="w-full">
               <a :class="getchildLinkClasses(child)" :href="child.link">{{
                 child.name
               }}</a>
@@ -35,13 +44,18 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue';
-  import { SIDEBAR, sidebar } from '../../../config';
-  import Logo from '../content/Logo.astro';
+  import { SIDEBAR } from '../../../config';
   import { ChevronRightIcon } from '@heroicons/vue/24/solid';
+  import type { sidebar } from '../../../config';
 
-  const currentPage = ref<string>(''); // You can set the default value or fetch it from the route
-  const currentPageMatch = currentPage.value.slice(1);
+  const props = defineProps({
+    currentPage: {
+      type: String,
+      default: '',
+    },
+  });
+
+  const currentPageMatch = props.currentPage.slice(1);
 
   const isCurrentPage = (item: sidebar) => {
     if (item.link) {
@@ -52,21 +66,61 @@
 
   const getLinkClasses = (link: sidebar) => {
     const baseClasses =
-      'text-label-sm block py-1.5 text-neutral-500 hover:text-neutral-900 ml-2';
+      'hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full';
     return isCurrentPage(link)
-      ? baseClasses + ' !text-primary-400'
+      ? baseClasses + ' !text-primary-400 bg-slate-800/40 dark:bg-slate-800/40'
       : baseClasses;
   };
 
   const getchildLinkClasses = (link: sidebar) => {
     const baseClasses =
-      'text-label-sm block hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer !hover:text-slate-300 px-2 py-1 rounded';
+      'text-label-sm block hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer text-slate-500 px-2 py-1 rounded';
     return isCurrentPage(link)
-      ? baseClasses + ' bg-slate-200 dark:bg-slate-800/40'
+      ? baseClasses + ' !text-primary-400 bg-slate-800/40 dark:bg-slate-800/40'
       : baseClasses;
   };
-</script>
 
-<style scoped>
-  /* Add any component-specific styles here */
-</style>
+  const showChildren = (item: sidebar) => {
+    if (item.children) {
+      const el = document.getElementById(item.name);
+      if (el) {
+        if (el.style.height === '0px') {
+          el.style.height = 'auto';
+          el.style.opacity = '1';
+          el.style.marginTop = '0.5rem';
+          el.style.marginBottom = '0.5rem';
+        } else {
+          el.style.height = '0px';
+          el.style.opacity = '0';
+          el.style.marginTop = '0';
+          el.style.marginBottom = '0';
+        }
+      }
+    }
+  };
+
+  const getChildrenClasses = (show: boolean) => {
+    if (!show) {
+      return {
+        height: 0,
+        opacity: 0,
+        marginTop: 0,
+        marginBottom: 0,
+      };
+    }
+
+    return {
+      height: 'auto',
+      opacity: 1,
+      marginTop: '0.5rem',
+      marginBottom: '0.5rem',
+    };
+  };
+
+  const findActiveChild = (item: sidebar) => {
+    if (item.children) {
+      return Boolean(item.children.find((child) => isCurrentPage(child)));
+    }
+    return false;
+  };
+</script>

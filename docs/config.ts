@@ -55,18 +55,14 @@ const corePath = `${base}core`;
 const componentsPath = `${base}components`;
 
 export const SIDEBAR: Array<sidebar> = [
-  { name: 'Getting Started', header: true },
   { name: 'Install', link: `${gs}/install` },
   { name: 'How to use', link: `${gs}/use` },
-  // { name: 'Config', link: `${base}/config` },
 
-  { name: 'Utilities', header: true },
   { name: 'Colors', link: `${corePath}/colors` },
   { name: 'Typography', link: `${corePath}/typography` },
   { name: 'Shadows', link: `${corePath}/shadows` },
   { name: 'Blur', link: `${corePath}/blur` },
 
-  // { name: 'Components', header: true },
   {
     name: 'Actions',
     header: true,

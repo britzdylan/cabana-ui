@@ -17,7 +17,7 @@ const currentPage = new URL(Astro.request.url).pathname;
   <div class='flex h-screen w-full overflow-hidden'>
     <div
       class='w-full max-w-[280px] border-r dark:border-slate-700 sticky top-0 h-screen overflow-y-scroll hide-scrollbar'>
-      <LeftSidebar currentPage={currentPage} />
+      <LeftSidebar client:load currentPage={currentPage} />
     </div>
     <main class='flex-grow h-screen overflow-y-scroll py-12'>
       <article
