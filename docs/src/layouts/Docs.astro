@@ -26,7 +26,8 @@ const currentPage = new URL(Astro.request.url).pathname;
     </div>
     <main class='py-4 px-8 pb-32 col-span-6 overflow-auto'>
       <article class='content'>
-        <section class='main-section prose prose-zinc prose-headings:font-sans prose-headings:font-semibold max-w-none prose-h1:text-headline-lg prose-h2:text-headline prose-h3:text-body-xl prose-h4:text-body prose-h4:font-semibold prose-a:text-label prose-a:no-underline prose-a:text-primary-400'>
+        <section
+          class='main-section prose prose-zinc prose-headings:font-sans prose-headings:font-semibold max-w-none prose-h1:text-headline-lg prose-h2:text-headline prose-h3:text-body-xl prose-h4:text-body prose-h4:font-semibold prose-a:text-label prose-a:no-underline prose-a:text-primary-400'>
           <slot />
         </section>
       </article>
