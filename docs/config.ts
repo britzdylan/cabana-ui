@@ -66,13 +66,15 @@ export const SIDEBAR: Array<sidebar> = [
   { name: 'Shadows', link: `${corePath}/shadows` },
   { name: 'Blur', link: `${corePath}/blur` },
 
-  { name: 'Components', header: true },
+  // { name: 'Components', header: true },
   {
     name: 'Actions',
+    header: true,
     children: [{ name: 'Buttons', link: `${componentsPath}/actions/buttons` }],
   },
   {
     name: 'Navigation',
+    header: true,
     children: [
       { name: 'Link', link: `${componentsPath}/navigation/link` },
       { name: 'Menu', link: `${componentsPath}/navigation/menu` },
@@ -84,6 +86,7 @@ export const SIDEBAR: Array<sidebar> = [
   },
   {
     name: 'Content',
+    header: true,
     children: [
       { name: 'Accordion', link: `${componentsPath}/content/accordion` },
       { name: 'Lists', link: `${componentsPath}/content/lists` },
@@ -99,6 +102,7 @@ export const SIDEBAR: Array<sidebar> = [
   },
   {
     name: 'Forms',
+    header: true,
     children: [
       { name: 'Input', link: `${componentsPath}/forms/input` },
       { name: 'Select', link: `${componentsPath}/forms/select` },
@@ -111,6 +115,7 @@ export const SIDEBAR: Array<sidebar> = [
   },
   {
     name: 'Overlays',
+    header: true,
     children: [
       {
         name: 'Toast',
@@ -120,6 +125,7 @@ export const SIDEBAR: Array<sidebar> = [
   },
   {
     name: 'Design Patterns',
+    header: true,
     children: [
       {
         name: 'Avatar',
