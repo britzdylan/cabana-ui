@@ -6,8 +6,7 @@ export interface Props {
 }
 
 import Base from './Base.astro';
-import Header from '../components/UI/Header.astro';
-import LeftSidebar from '../components/UI/LeftSidebar.astro';
+import LeftSidebar from '../components/UI/LeftSidebar.vue';
 import RightSidebar from '../components/UI/RightSidebar.astro';
 
 const { title, headings = [] } = Astro.props;
@@ -15,25 +14,20 @@ const currentPage = new URL(Astro.request.url).pathname;
 ---
 
 <Base title={title}>
-  <div class='sticky top-0 z-10 w-full'>
-    <Header currentPage={currentPage} />
-  </div>
-  <div class='grid grid-cols-12'>
-    <div class='col-span-3 sticky top-0 pt-12 h-screen flex'>
-      <div class='ml-auto h-full overflow-y-scroll pb-12'>
-        <LeftSidebar currentPage={currentPage} />
-      </div>
+  <div class='flex h-screen w-full overflow-hidden'>
+    <div
+      class='w-full max-w-[280px] border-r dark:border-slate-700 sticky top-0 h-screen overflow-y-scroll hide-scrollbar'>
+      <LeftSidebar currentPage={currentPage} />
     </div>
-    <main class='py-4 px-8 pb-32 col-span-6 overflow-auto'>
-      <article class='content'>
-        <section
-          class='main-section prose prose-zinc prose-headings:font-sans prose-headings:font-semibold max-w-none prose-h1:text-headline-lg prose-h2:text-headline prose-h3:text-body-xl prose-h4:text-body prose-h4:font-semibold prose-a:text-label prose-a:no-underline prose-a:text-primary-400'>
-          <slot />
-        </section>
+    <main class='flex-grow h-screen overflow-y-scroll py-12'>
+      <article
+        class='prose prose-sm prose-slate dark:prose-invert prose-p:font-normal prose-headings:font-sans prose-headings:font-normal prose-a:no-underline prose-a:text-primary-600 dark:prose-a:text-primary-300 max-w-screen-sm mx-auto'>
+        <slot />
       </article>
     </main>
-    <div class='col-span-3 sticky top-0 h-screen flex'>
+    <aside
+      class='w-full max-w-[250px] py-12 h-screen overflow-y-scroll hide-scrollbar'>
       <RightSidebar headers={headings} />
-    </div>
+    </aside>
   </div>
 </Base>
