@@ -68,3 +68,48 @@ code {
 pre.astro-code {
   @apply relative !m-0 !rounded-none min-h-[80px];
 }
+
+/* For Webkit browsers like Chrome, Safari */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #020617; /* Color of the track (background) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f172a; /* Color of the draggable scrolling handle */
+  border-radius: 4px; /* Rounded corners for the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e293b; /* Color of the handle on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  /* For Webkit browsers like Chrome, Safari */
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important; /* Optional */
+}
+
+/* For Firefox */
+.hide-scrollbar {
+  scrollbar-width: none !important;
+}
+
+/* For Internet Explorer and Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none !important;
+}
+
+@layer utilities {
+}
