@@ -1,15 +1,19 @@
 <template>
   <aside class="sticky top-0" title="Site Navigation">
     <div
-      class="flex items-center gap-4 p-4 justify-between text-slate-500 sticky top-0 dark:bg-slate-950 bg-slate-50">
+      class="flex items-center gap-4 p-4 justify-start text-neutral-500 sticky top-0 dark:bg-neutral-950 bg-neutral-50">
       <a class="font-medium flex items-center gap-4 text-white" href="/">
         <img src="/logo.svg" class="w-24" alt="Cabana Design System Logo" />
       </a>
-      <p class="text-body-lg pl-2 border-l leading-4 border-slate-500">Docs</p>
+      <p
+        class="text-body-lg pl-2 border-l leading-4 border-neutral-500 mr-auto">
+        Docs
+      </p>
+      <!-- <ThemeSwitch /> -->
     </div>
     <nav aria-labelledby="grid-left" class="p-4">
       <ul
-        class="flex flex-col justify-start gap-1 text-slate-500 dark:text-slate-400 text-body-sm w-full">
+        class="flex flex-col justify-start gap-1 text-neutral-500 dark:text-neutral-400 text-body-sm w-full">
         <li v-for="item in SIDEBAR" :key="item.name" class="flex flex-col">
           <a
             v-if="!item.children"
@@ -21,7 +25,7 @@
           ><a
             v-if="item.children"
             @click="showChildren(item)"
-            class="hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full">
+            class="hover:bg-neutral-800/40 dark:hover:bg-neutral-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full">
             <p>{{ item.name }}</p>
             <ChevronRightIcon
               :class="[
@@ -73,17 +77,19 @@
 
   const getLinkClasses = (link: sidebar) => {
     const baseClasses =
-      'hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full';
+      'hover:bg-neutral-800/40 dark:hover:bg-neutral-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full';
     return isCurrentPage(link)
-      ? baseClasses + ' !text-slate-400 bg-slate-800/40 dark:bg-slate-800/40'
+      ? baseClasses +
+          ' !text-neutral-400 bg-neutral-800/40 dark:bg-neutral-800/40'
       : baseClasses;
   };
 
   const getchildLinkClasses = (link: sidebar) => {
     const baseClasses =
-      'text-label-sm block hover:bg-slate-800/40 dark:hover:bg-slate-800/40 cursor-pointer text-slate-500 px-2 py-1 rounded';
+      'text-label-sm block hover:bg-neutral-800/40 dark:hover:bg-neutral-800/40 cursor-pointer text-neutral-500 px-2 py-1 rounded';
     return isCurrentPage(link)
-      ? baseClasses + ' !text-slate-400 bg-slate-800/40 dark:bg-slate-800/40'
+      ? baseClasses +
+          ' !text-neutral-400 bg-neutral-800/40 dark:bg-neutral-800/40'
       : baseClasses;
   };
 
