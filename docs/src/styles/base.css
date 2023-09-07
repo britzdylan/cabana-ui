@@ -76,16 +76,16 @@ pre.astro-code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617; /* Color of the track (background) */
+  @apply bg-neutral-50 dark:bg-neutral-900; /* Color of the tracking area */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0f172a; /* Color of the draggable scrolling handle */
-  border-radius: 4px; /* Rounded corners for the handle */
+  @apply bg-neutral-100 dark:bg-neutral-800; /* Color of the scroll thumb */
+  border-radius: 8px; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1e293b; /* Color of the handle on hover */
+  @apply bg-neutral-200 dark:bg-neutral-700 /* Color of the handle on hover */;
 }
 
 /* For Firefox */
