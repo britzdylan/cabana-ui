@@ -4,7 +4,7 @@ layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Radio Component
@@ -30,7 +30,7 @@ The Radio Component is a flexible, customizable component that has been pre-styl
 
 ### Default Radio
 
-<Preview>
+<Preview client:load>
   <fieldset>
     <label for='1' class='radio'>
       <input id='1' name='name' type='radio' />
@@ -63,7 +63,7 @@ The Radio Component is a flexible, customizable component that has been pre-styl
 
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <fieldset>
     <label for='3' class='radio disabled'>
       <input id='3' name='name' type='radio' disabled />
@@ -96,7 +96,7 @@ The Radio Component is a flexible, customizable component that has been pre-styl
 
 ### With accent color
 
-<Preview>
+<Preview client:load>
   <fieldset>
     <label for='7' class='radio radio-blue'>
       <input id='7' name='name' type='radio' />

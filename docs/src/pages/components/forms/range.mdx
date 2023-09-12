@@ -4,7 +4,7 @@ layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Range Component
@@ -29,7 +29,7 @@ The Range Component is a flexible, customizable component that has been pre-styl
 
 ### Default Range
 
-<Preview>
+<Preview client:load>
   <input class='range' min='0' max='100' value='90' step='10' type='range' />
 </Preview>
 <Code>
@@ -40,7 +40,7 @@ The Range Component is a flexible, customizable component that has been pre-styl
 
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <input
     class='range'
     disabled
@@ -67,7 +67,7 @@ The Range Component is a flexible, customizable component that has been pre-styl
 
 ### With accent color
 
-<Preview>
+<Preview client:load>
   <input
     class='range range-green'
     min='0'

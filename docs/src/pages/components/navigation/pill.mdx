@@ -5,7 +5,7 @@ layout: '../../../layouts/Docs.astro'
 
 import { IconCheck } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 import Alert from '../../../components/content/Alert.astro';
 
@@ -44,7 +44,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <span class='pill'>Default</span>
 </Preview>
 <Code>
@@ -55,7 +55,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Active
 
-<Preview>
+<Preview client:load>
   <span class='pill pill-active'>Active</span>
 </Preview>
 <Code>
@@ -66,7 +66,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Disabled
 
-<Preview>
+<Preview client:load>
   <span class='pill pill-disabled'>Default</span>
 </Preview>
 <Code>
@@ -77,7 +77,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Pill with custom color
 
-<Preview>
+<Preview client:load>
   <span class='pill pill-purple'>Default</span>
   <span class='pill pill-active pill-active-purple'>Active</span>
 </Preview>
@@ -90,7 +90,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Pill with icon
 
-<Preview>
+<Preview client:load>
   <span class='pill'>
     <IconCheck />
     Default

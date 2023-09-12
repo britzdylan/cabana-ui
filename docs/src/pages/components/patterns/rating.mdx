@@ -3,7 +3,7 @@ title: 'Rating Component'
 layout: '../../../layouts/Docs.astro'
 ---
 
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Rating Component
@@ -27,7 +27,7 @@ The Rating Component is a flexible and customizable component pre-styled for you
 
 ### Default Rating
 
-<Preview>
+<Preview client:load>
   <div class='rating'>
     <input type='radio' name='rating' value='1' />
     <input type='radio' name='rating' value='2' />
@@ -50,7 +50,7 @@ The Rating Component is a flexible and customizable component pre-styled for you
 
 ### With custom color
 
-<Preview>
+<Preview client:load>
 <div class='rating rating-fuchsia'>
 <input type='radio' name='rating-3' value='1'/>
 <input type='radio' name='rating-3' value='2' />

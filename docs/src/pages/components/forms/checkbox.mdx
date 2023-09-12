@@ -4,7 +4,7 @@ layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Checkbox Component
@@ -31,7 +31,7 @@ The Checkbox Component is a flexible, customizable component that has been pre-s
 
 ### Default Checkbox
 
-<Preview>
+<Preview client:load>
   <label class='checkbox'>
     <input id='check' type='checkbox' />
     <span class='checkmark'>
@@ -52,7 +52,7 @@ The Checkbox Component is a flexible, customizable component that has been pre-s
 
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <label class='checkbox disabled'>
     <input disabled type='checkbox' />
     <span class='checkmark'>
@@ -73,7 +73,7 @@ The Checkbox Component is a flexible, customizable component that has been pre-s
 
 ### Error state
 
-<Preview>
+<Preview client:load>
   <label class='checkbox error'>
     <input type='checkbox' />
     <span class='checkmark'>
@@ -94,7 +94,7 @@ The Checkbox Component is a flexible, customizable component that has been pre-s
 
 ### Checkbox with label
 
-<Preview>
+<Preview client:load>
   <label class='checkbox'>
     <input type='checkbox' />
     <span class='checkmark'>
@@ -117,7 +117,7 @@ The Checkbox Component is a flexible, customizable component that has been pre-s
 
 ### With accent color
 
-<Preview>
+<Preview client:load>
   <label class='checkbox checkbox-orange'>
     <input type='checkbox' />
     <span class='checkmark'>

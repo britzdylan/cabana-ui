@@ -3,7 +3,7 @@ title: 'Menu Component'
 layout: '../../../layouts/Docs.astro'
 ---
 
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Menu Component
@@ -47,7 +47,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <ul class='menu'>
     <li>
       <a>Home</a>
@@ -78,7 +78,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Active Link
 
-<Preview>
+<Preview client:load>
   <ul class='menu'>
     <li class='active'>
       <a>Home</a>
@@ -109,7 +109,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Contained
 
-<Preview>
+<Preview client:load>
   <ul class='menu menu-contained'>
     <li class='active'>
       <a>Home</a>
@@ -140,7 +140,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Rounded
 
-<Preview>
+<Preview client:load>
   <ul class='menu menu-contained-rounded'>
     <li class='active'>
       <a>Home</a>
@@ -171,7 +171,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Vertical Menu
 
-<Preview>
+<Preview client:load>
   <ul class='menu menu-contained-rounded menu-vertical max-w-xs'>
     <li class='active'>
       <a>Home</a>
@@ -202,7 +202,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Menu with disabled items
 
-<Preview>
+<Preview client:load>
   <ul class='menu menu-contained-rounded'>
     <li class='active'>
       <a>Home</a>
@@ -264,7 +264,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Contained menu with custom color
 
-<Preview>
+<Preview client:load>
   <ul class='menu menu-contained menu-contained-emerald'>
     <li class='active'>
       <a>Home</a>
@@ -295,7 +295,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Contained rounded menu with custom color
 
-<Preview>
+<Preview client:load>
   <ul class='menu menu-contained-rounded menu-contained-emerald'>
     <li class='active'>
       <a>Home</a>

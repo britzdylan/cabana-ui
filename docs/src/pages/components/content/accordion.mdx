@@ -5,7 +5,7 @@ layout: '../../../layouts/Docs.astro'
 
 import { IconChevronDown } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Accordion
@@ -40,7 +40,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <div class='accordion'>
     <header>
       <p>Accordion</p>
@@ -77,7 +77,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Open
 
-<Preview>
+<Preview client:load>
   <div class='accordion accordion-open'>
     <header>
       <p>Accordion</p>
@@ -114,7 +114,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Custom Color
 
-<Preview>
+<Preview client:load>
   <div class='accordion accordion-red accordion-open'>
     <header>
       <p>Accordion</p>

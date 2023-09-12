@@ -9,7 +9,7 @@ import {
   IconMail,
   IconCreditCard,
 } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 import Alert from '../../../components/content/Alert.astro';
 
@@ -33,7 +33,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default select
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <select class='select'>
@@ -64,7 +64,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Select with Label
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <label class='label'>Select a country</label>
     <span>
@@ -92,7 +92,7 @@ Please refer to the class names and their types listed above to apply the desire
 </Code>
 ### Select with Help text
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <label class='label'>Select a country</label>
     <span>
@@ -128,7 +128,7 @@ Please refer to the class names and their types listed above to apply the desire
 </Code>
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <select disabled class='select'>
@@ -155,7 +155,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Success state
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span class='success'>
       <select class='select'>
@@ -182,7 +182,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Error state
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span class='error'>
       <select class='select'>
@@ -209,7 +209,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon Left
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <IconMail />
@@ -238,7 +238,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon Right
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <select class='select'>
@@ -305,7 +305,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon both sides
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <svg
@@ -408,7 +408,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Select with Prefix
 
-<Preview>
+<Preview client:load>
 <div class='input max-w-xs mx-auto'>
   <label class='label'>Prefix</label>
   <span>
@@ -441,7 +441,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Select with Suffix
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <label class='label'>Suffix</label>
     <span>
@@ -472,7 +472,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Select with custom accent color
 
-<Preview>
+<Preview client:load>
   <div class='input input-orange max-w-xs mx-auto'>
     <label class='label'>Suffix</label>
     <span>

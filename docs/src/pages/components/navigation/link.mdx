@@ -8,7 +8,7 @@ import {
   IconCircleArrowLeftFilled,
 } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Link Component
@@ -52,7 +52,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <a class='link'>Link</a>
 </Preview>
 <Code>
@@ -63,7 +63,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Variants
 
-<Preview>
+<Preview client:load>
   <a class='link'>Simple</a>
   <a class='link link-underline'>Underline</a>
   <a class='link link-hover'>Hover</a>
@@ -78,7 +78,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Link Sizes
 
-<Preview>
+<Preview client:load>
   <a class='link link-xs'>xsmall</a>
   <a class='link link-sm'>Small</a>
   <a class='link'>Default</a>
@@ -97,7 +97,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Link With Icons
 
-<Preview>
+<Preview client:load>
   <a class='link'>
     <IconCircleArrowLeftFilled />
     Left
@@ -122,7 +122,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Link With Custom Color
 
-<Preview>
+<Preview client:load>
   <a class='link link-cyan'>
     <IconCircleArrowLeftFilled />
     Left

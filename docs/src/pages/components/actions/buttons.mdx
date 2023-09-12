@@ -11,7 +11,7 @@ import {
   IconBrandApple,
 } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 import Alert from '../../../components/content/Alert.astro';
 
@@ -78,7 +78,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <button class='btn'>Default</button>
 </Preview>
 <Code>
@@ -89,7 +89,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Variants
 
-<Preview>
+<Preview client:load>
   <button class='btn'>Default</button>
   <button class='btn btn-outline'>Outline</button>
   <button class='btn btn-min'>Minimal</button>
@@ -106,7 +106,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Sizes
 
-<Preview>
+<Preview client:load>
   <button class='btn btn-sm'>Small</button>
   <button class='btn'>Default</button>
   <button class='btn btn-lg'>Large</button>
@@ -127,7 +127,7 @@ Please refer to the class names and their types listed above to apply the desire
   elements other than a svg.
 </Alert>
 
-<Preview>
+<Preview client:load>
   <button class='btn'>
     <IconPlus />
     Left
@@ -152,7 +152,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Disabled
 
-<Preview>
+<Preview client:load>
   <button disabled class='btn'>
     Default
   </button>
@@ -167,7 +167,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Button colors
 
-<Preview>
+<Preview client:load>
   <button class='btn btn-secondary'>Default</button>
   <button class='btn btn-outline-red btn-outline'>Outline</button>
   <button class='btn btn-min-emerald btn-min'>Minimal</button>
@@ -184,7 +184,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon button
 
-<Preview>
+<Preview client:load>
   <button class='fab'>
     <IconPlus />
   </button>
@@ -199,7 +199,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon button outline
 
-<Preview>
+<Preview client:load>
   <button class='fab fab-outline'>
     <IconPlus />
   </button>
@@ -214,7 +214,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Rounded icon button
 
-<Preview>
+<Preview client:load>
   <button class='fab fab-rounded'>
     <IconPlus />
   </button>
@@ -229,7 +229,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon button sizes
 
-<Preview>
+<Preview client:load>
   <button class='fab fab-sm fab-rounded'>
     <IconPlus />
   </button>
@@ -262,7 +262,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon button colors
 
-<Preview>
+<Preview client:load>
   <button class='fab fab-secondary'>
     <IconPlus />
   </button>
@@ -283,7 +283,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ## Button Group
 
-<Preview>
+<Preview client:load>
 <div class='btn-group'>
   <button>One</button>
   <button>Two</button>
@@ -314,7 +314,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Button Group Sizes
 
-<Preview>
+<Preview client:load>
 <div class='btn-group btn-group-sm'>
   <button>One</button>
   <button>Two</button>
@@ -357,7 +357,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Button Group colors
 
-<Preview>
+<Preview client:load>
 <div class='btn-group btn-group-tertiary'>
   <button>One</button>
   <button>Two</button>
@@ -400,7 +400,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Button Group with Icons
 
-<Preview>
+<Preview client:load>
   <div class='btn-group'>
     <button><IconPlus /></button>
     <button><IconPlus /></button>

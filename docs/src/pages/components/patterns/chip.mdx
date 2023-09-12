@@ -4,7 +4,7 @@ layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconX } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Chip Component
@@ -30,7 +30,7 @@ The Chip Component is a flexible and customizable component pre-styled for your 
 
 ### Default Chip
 
-<Preview>
+<Preview client:load>
   <div class='chip'>
     <span>Chip</span>
   </div>
@@ -45,7 +45,7 @@ The Chip Component is a flexible and customizable component pre-styled for your 
 
 ### Rounded chip
 
-<Preview>
+<Preview client:load>
   <div class='chip chip-rounded'>
     <span>Chip</span>
   </div>
@@ -60,7 +60,7 @@ The Chip Component is a flexible and customizable component pre-styled for your 
 
 ### Chip with icons
 
-<Preview>
+<Preview client:load>
   <div class='chip'>
     <img src='/avatar.jpg' />
     <span>Chip</span>
@@ -79,7 +79,7 @@ The Chip Component is a flexible and customizable component pre-styled for your 
 
 ### With border
 
-<Preview>
+<Preview client:load>
   <div class='chip  chip-bordered'>
     <span>Chip</span>
   </div>
@@ -94,7 +94,7 @@ The Chip Component is a flexible and customizable component pre-styled for your 
 
 ### With custom color
 
-<Preview>
+<Preview client:load>
   <div class='chip chip-primary'>
     <span>Chip</span>
     <IconX />

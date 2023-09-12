@@ -4,7 +4,7 @@ layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Toggle Component
@@ -30,7 +30,7 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
 
 ### Default Toggle
 
-<Preview>
+<Preview client:load>
   <label class='toggle'>
     <input type='checkbox' />
     <div class='toggle-label'></div>
@@ -61,7 +61,7 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
 
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <label class='toggle disabled'>
     <input disabled type='checkbox' />
     <div class='toggle-label'></div>
@@ -92,7 +92,7 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
 
 ### With accent color
 
-<Preview>
+<Preview client:load>
   <label class='toggle toggle-green'>
     <input type='checkbox' />
     <div class='toggle-label'></div>

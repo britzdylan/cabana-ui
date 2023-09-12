@@ -5,7 +5,7 @@ layout: '../../../layouts/Docs.astro'
 
 import { IconCircleCheck } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 
 # Lists
@@ -36,7 +36,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <ul class='list'>
     <li>
       <IconCircleCheck />
@@ -73,7 +73,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Featured list item
 
-<Preview>
+<Preview client:load>
   <ul class='list'>
     <li class='featured'>
       <IconCircleCheck />
@@ -110,7 +110,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Custom color
 
-<Preview>
+<Preview client:load>
   <ul class='list list-red'>
     <li>
       <IconCircleCheck />

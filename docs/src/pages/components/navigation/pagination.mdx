@@ -10,7 +10,7 @@ import {
   IconPointFilled,
 } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 import Alert from '../../../components/content/Alert.astro';
 
@@ -57,7 +57,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <nav class='pagination'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -132,7 +132,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Large
 
-<Preview>
+<Preview client:load>
   <nav class='pagination pagination-large'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -207,7 +207,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Contained
 
-<Preview>
+<Preview client:load>
   <nav class='pagination pagination-contained'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -282,7 +282,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### With custom color
 
-<Preview>
+<Preview client:load>
   <nav class='pagination pagination-red'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -357,7 +357,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Contained with custom color
 
-<Preview>
+<Preview client:load>
   <nav class='pagination pagination-red pagination-contained pagination-contained-red'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -432,7 +432,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### With disabled items
 
-<Preview>
+<Preview client:load>
   <nav class='pagination'>
     <IconChevronLeft />
     <ol class='pagination-list'>

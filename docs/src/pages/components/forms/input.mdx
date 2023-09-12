@@ -9,7 +9,7 @@ import {
   IconMail,
   IconCreditCard,
 } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 import Alert from '../../../components/content/Alert.astro';
 
@@ -51,7 +51,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default input
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <input type='text' name='fname' placeholder='John'></input>
@@ -74,7 +74,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Input with Label
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <label class='label'>First Name</label>
     <span>
@@ -94,7 +94,7 @@ Please refer to the class names and their types listed above to apply the desire
 </Code>
 ### Input with Help text
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <label class='label'>Password</label>
     <span>
@@ -122,7 +122,7 @@ Please refer to the class names and their types listed above to apply the desire
 </Code>
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <input disabled='true' type='text' placeholder='Disabled'></input>
@@ -141,7 +141,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Success state
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span class='success'>
       <input type='text' placeholder='Success'></input>
@@ -160,7 +160,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Error state
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span class='error'>
       <input type='text' placeholder='Error'></input>
@@ -179,7 +179,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon Left
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <IconMail />
@@ -200,7 +200,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon Right
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <input type='search' placeholder='Search'></input>
@@ -259,7 +259,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Icon both sides
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <svg
@@ -353,7 +353,7 @@ Please refer to the class names and their types listed above to apply the desire
 </Code>
 ### Input with Dropdown
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <span>
       <input type='text' placeholder='Credit card number'></input>
@@ -382,7 +382,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Input with Prefix
 
-<Preview>
+<Preview client:load>
 <div class='input max-w-xs mx-auto'>
   <label class='label'>Prefix</label>
   <span>
@@ -407,7 +407,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Input with Suffix
 
-<Preview>
+<Preview client:load>
   <div class='input max-w-xs mx-auto'>
     <label class='label'>Suffix</label>
     <span>
@@ -430,7 +430,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Input with custom accent color
 
-<Preview>
+<Preview client:load>
   <div class='input input-orange max-w-xs mx-auto'>
     <label class='label'>Suffix</label>
     <span>

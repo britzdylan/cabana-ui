@@ -4,7 +4,7 @@ layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck, IconChevronRight } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
+import Preview from '../../../components/content/Preview.vue';
 import Code from '../../../components/content/code.astro';
 import Alert from '../../../components/content/Alert.astro';
 
@@ -44,7 +44,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <ol class='breadcrumb'>
     <li>
       <a href='#'>Home</a> <IconChevronRight />
@@ -84,7 +84,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Disabled
 
-<Preview>
+<Preview client:load>
   <ol class='breadcrumb'>
     <li>
       <a href='#'>Home</a> <IconChevronRight />
@@ -115,7 +115,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Breadcrumbs with custom color
 
-<Preview>
+<Preview client:load>
   <ol class='breadcrumb breadcrumb-emerald'>
     <li>
       <a href='#'>Home</a> <IconChevronRight />
