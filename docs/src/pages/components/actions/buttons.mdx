@@ -12,7 +12,7 @@ import {
 } from '@tabler/icons-vue';
 
 import Preview from '../../../components/content/Preview.vue';
-import Code from '../../../components/content/code.astro';
+import Code from '../../../components/content/code.vue';
 import Alert from '../../../components/content/Alert.astro';
 
 # Button Component
@@ -80,12 +80,12 @@ Please refer to the class names and their types listed above to apply the desire
 
 <Preview client:load>
   <button class='btn'>Default</button>
+  <Code slot='html'>
+    ```html
+    <button class='btn'>Default</button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```html
-  <button class='btn'>Default</button>
-  ```
-</Code>
 
 ### Variants
 
