@@ -19,14 +19,13 @@ const currentPage = new URL(Astro.request.url).pathname;
       class='w-full max-w-[280px] border-r dark:border-neutral-700 sticky top-0 h-screen overflow-y-scroll hide-scrollbar'>
       <LeftSidebar client:load currentPage={currentPage} />
     </div>
-    <main class='flex-grow h-screen overflow-y-scroll py-12'>
-      <article
-        class='prose prose-sm prose-slate dark:prose-invert prose-p:font-normal prose-headings:font-sans prose-headings:font-normal prose-a:no-underline prose-a:text-primary-600 dark:prose-a:text-primary-300 max-w-screen-sm mx-auto'>
+    <main class='flex-grow h-screen overflow-y-scroll py-12 px-4'>
+      <article class='mdx'>
         <slot />
       </article>
     </main>
     <aside
-      class='w-full max-w-[250px] py-12 h-screen overflow-y-scroll hide-scrollbar'>
+      class='w-full max-w-[250px] py-12 h-screen overflow-y-scroll hide-scrollbar hidden lg:block'>
       <RightSidebar headers={headings} />
     </aside>
   </div>

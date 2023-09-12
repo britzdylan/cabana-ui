@@ -111,5 +111,15 @@ pre.astro-code {
   -ms-overflow-style: none !important;
 }
 
-@layer utilities {
+@layer components {
+  .mdx {
+    @apply max-w-screen-sm mx-auto;
+    @apply prose prose-sm prose-neutral;
+    @apply prose-p:font-normal prose-p:text-neutral-800 dark:prose-p:text-neutral-200;
+    @apply prose-headings:font-sans prose-headings:font-normal dark:prose-headings:text-neutral-50 prose-headings:text-neutral-950;
+    @apply prose-a:no-underline prose-a:text-primary-600 dark:prose-a:text-primary-300 hover:prose-a:text-primary-700 dark:hover:prose-a:text-primary-200;
+    @apply prose-code:font-mono prose-code:bg-neutral-50 prose-code:bg-opacity-20 prose-code:rounded prose-code:dark:bg-neutral-900 prose-code:dark:bg-opacity-20 prose-code:dark:rounded prose-code:dark:text-neutral-50 prose-code:text-neutral-950;
+    /* @apply ; */
+  
+  }
 }
