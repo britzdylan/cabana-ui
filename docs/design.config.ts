@@ -88,7 +88,7 @@ export const TYPOGRAPHY = {
     { name: 'headline-lg', size: '2.25rem' },
     { name: 'headline', size: '1.75rem' },
     { name: 'headline-sm', size: '1.5rem' },
-    { name: 'title-lg', size: '2.5rem' },
+    { name: 'title-lg', size: '1.5rem' },
     { name: 'title', size: '1rem' },
     { name: 'title-sm', size: '0.75rem' },
     { name: 'body-xl', size: '1.25rem' },
