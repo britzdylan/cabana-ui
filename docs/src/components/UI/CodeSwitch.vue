@@ -45,7 +45,7 @@
 
   .activeIndicator {
     transition: all 0.2s ease-in-out;
-    @apply absolute top-0.5 left-0.5 bottom-0.5 w-20 rounded bg-neutral-50 dark:bg-neutral-950 z-0;
+    @apply absolute top-0.5 left-0.5 bottom-0.5 w-20 rounded bg-white dark:bg-neutral-950 z-0;
   }
 
   .active {
