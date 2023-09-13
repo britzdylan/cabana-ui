@@ -34,7 +34,7 @@ p {
 }
 
 .component-preview {
-  padding: 4rem 2rem;
+  /* padding: 4rem 2rem; */
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -44,11 +44,11 @@ p {
   background-repeat: repeat;
   background-size: 0.5rem;
   resize: both;
-  @apply bg-neutral-50 dark:bg-neutral-950 w-full mb-4 rounded border dark:border-neutral-700 border-neutral-300;
+  @apply bg-neutral-50 dark:bg-neutral-950 w-full mb-4 rounded border dark:border-neutral-700 border-neutral-300 min-h-[220px];
 }
 
 pre.astro-code {
-  @apply mx-2 my-4 p-2 rounded-md font-mono text-sm;
+  @apply m-0 p-2  font-mono text-sm min-h-[220px];
 }
 
 code {
@@ -58,10 +58,6 @@ code {
 
 .copy-code-button {
   @apply btn btn-outline border p-2 border-zinc-300 hover:bg-zinc-200 hover:bg-opacity-20  font-sans top-4 right-4 absolute;
-}
-
-pre.astro-code {
-  @apply relative !m-0 !rounded-none min-h-[80px];
 }
 
 /* For Webkit browsers like Chrome, Safari */
@@ -115,7 +111,7 @@ pre.astro-code {
     & > tr {
       @apply !border-none !p-8 !rounded !overflow-hidden;
       & > th {
-        @apply !border-none !p-2 ;
+        @apply !border-none !p-2;
       }
     }
   }

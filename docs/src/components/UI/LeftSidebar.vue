@@ -1,8 +1,8 @@
 <template>
   <aside class="sticky top-0" title="Site Navigation">
     <div
-      class="flex items-center gap-4 p-4 justify-start text-neutral-500 sticky top-0 dark:bg-neutral-950 bg-neutral-50">
-      <a class="font-medium flex items-center gap-4 text-white" href="/">
+      class="flex items-center gap-4 p-4 justify-start text-neutral-600 dark:text-neutral-400 sticky top-0 dark:bg-neutral-950 bg-neutral-50">
+      <a class="font-medium flex items-center gap-4" href="/">
         <img src="/logo.svg" class="w-24" alt="Cabana Design System Logo" />
       </a>
       <p
@@ -13,7 +13,7 @@
     </div>
     <nav aria-labelledby="grid-left" class="p-4">
       <ul
-        class="flex flex-col justify-start gap-1 text-neutral-500 dark:text-neutral-400 text-body-sm w-full">
+        class="flex flex-col justify-start gap-1 text-neutral-600 dark:text-neutral-400 text-body-sm w-full">
         <li v-for="item in SIDEBAR" :key="item.name" class="flex flex-col">
           <a
             v-if="!item.children"
@@ -25,7 +25,7 @@
           ><a
             v-if="item.children"
             @click="showChildren(item)"
-            class="hover:bg-neutral-800/40 dark:hover:bg-neutral-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full">
+            :class="getLinkClasses(item)">
             <p>{{ item.name }}</p>
             <ChevronRightIcon
               :class="[
@@ -66,6 +66,9 @@
     },
   });
 
+  const baseClass =
+    '!text-neutral-600 dark:!text-neutral-400 hover:bg-neutral-800/20 dark:hover:bg-neutral-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full';
+
   const currentPageMatch = props.currentPage.slice(1);
 
   const isCurrentPage = (item: sidebar) => {
@@ -76,20 +79,18 @@
   };
 
   const getLinkClasses = (link: sidebar) => {
-    const baseClasses =
-      'hover:bg-neutral-800/40 dark:hover:bg-neutral-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full';
     return isCurrentPage(link)
-      ? baseClasses +
-          ' !text-neutral-400 bg-neutral-800/40 dark:bg-neutral-800/40'
-      : baseClasses;
+      ? baseClass +
+          ' !text-neutral-600 dark:!text-neutral-400 bg-neutral-800/20 dark:bg-neutral-800/40'
+      : baseClass;
   };
 
   const getchildLinkClasses = (link: sidebar) => {
     const baseClasses =
-      'text-label-sm block hover:bg-neutral-800/40 dark:hover:bg-neutral-800/40 cursor-pointer text-neutral-500 px-2 py-1 rounded';
+      '!text-neutral-600 dark:!text-neutral-400 text-label-sm block hover:bg-neutral-800/20 dark:hover:bg-neutral-800/40 cursor-pointer  px-2 py-1 rounded ml-4';
     return isCurrentPage(link)
       ? baseClasses +
-          ' !text-neutral-400 bg-neutral-800/40 dark:bg-neutral-800/40'
+          ' !text-neutral-600 dark:!text-neutral-400 bg-neutral-800/20 dark:bg-neutral-800/40'
       : baseClasses;
   };
 

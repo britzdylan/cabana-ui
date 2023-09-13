@@ -86,7 +86,7 @@ export const SIDEBAR: Array<sidebar> = [
     children: [
       { name: 'Accordion', link: `${componentsPath}/content/accordion` },
       { name: 'Lists', link: `${componentsPath}/content/lists` },
-      { name: 'Content Blocks', link: `${componentsPath}/content/blocks` },
+      // { name: 'Content Blocks', link: `${componentsPath}/content/blocks` },
       // { name: 'Lists', link: `${componentsPath}/content/lists` },
       // { name: 'Lists', link: `${componentsPath}/content/lists` },
       // { name: 'Lists', link: `${componentsPath}/content/lists` },
