@@ -106,14 +106,37 @@ pre.astro-code {
   -ms-overflow-style: none !important;
 }
 
+@layer base {
+  table {
+    @apply w-full rounded overflow-hidden;
+  }
+  thead {
+    @apply bg-neutral-200 dark:bg-neutral-800 border dark:!border-neutral-800 !border-neutral-200  !rounded !overflow-hidden text-label;
+    & > tr {
+      @apply !border-none !p-8 !rounded !overflow-hidden;
+      & > th {
+        @apply !border-none !p-2 ;
+      }
+    }
+  }
+  tbody {
+    @apply bg-transparent !rounded !overflow-hidden text-label-sm dark:text-neutral-400 text-neutral-600;
+    & > tr {
+      @apply !p-8 !rounded !overflow-hidden dark:!border-neutral-800 !border-neutral-200 !border;
+      & > td {
+        @apply !border-none !p-4;
+      }
+    }
+  }
+}
 @layer components {
   .mdx {
-    @apply max-w-screen-sm mx-auto;
     @apply prose prose-sm prose-neutral;
-    @apply prose-p:font-normal prose-p:text-neutral-800 dark:prose-p:text-neutral-200;
+    @apply prose-p:font-normal prose-p:text-neutral-800 dark:prose-p:text-neutral-300;
     @apply prose-headings:font-sans prose-headings:font-normal dark:prose-headings:text-neutral-50 prose-headings:text-neutral-950;
     @apply prose-a:no-underline prose-a:text-primary-600 dark:prose-a:text-primary-300 hover:prose-a:text-primary-700 dark:hover:prose-a:text-primary-200;
     @apply prose-code:font-mono prose-code:bg-neutral-50 prose-code:bg-opacity-20 prose-code:rounded prose-code:dark:bg-neutral-900 prose-code:dark:bg-opacity-20 prose-code:dark:rounded prose-code:dark:text-neutral-50 prose-code:text-neutral-950;
-    /* @apply ; */
+    @apply prose-li:font-normal prose-li:text-neutral-800 dark:prose-li:text-neutral-300;
+    @apply max-w-screen-sm mx-auto w-full;
   }
 }
