@@ -1,7 +1,7 @@
 <template>
   <div
-    class="bg-neutral-900 border-neutral-100 dark:border-neutral-900 border rounded overflow-hidden not-prose">
-    <div class="relative">
+    class="bg-neutral-900 border-neutral-100 dark:border-neutral-900 border rounded overflow-hidden not-prose ">
+    <div class="relative min-h-[220px]">
       <slot />
     </div>
   </div>
