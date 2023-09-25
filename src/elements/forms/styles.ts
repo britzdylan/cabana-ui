@@ -48,7 +48,7 @@ const styles = {
   }),
 
   helper: (theme: (arg0: string) => string | number) => ({
-    width: 'max-content',
+    width: '100%',
     marginBottom: theme('spacing.1'),
     display: 'flex',
     alignItems: 'center',
