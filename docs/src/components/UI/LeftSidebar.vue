@@ -67,7 +67,7 @@
   });
 
   const baseClass =
-    '!text-neutral-600 dark:!text-neutral-400 hover:bg-neutral-800/20 dark:hover:bg-neutral-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full';
+    '!text-neutral-600 dark:!text-neutral-400 hover:bg-neutral-200/40 dark:hover:bg-neutral-800/40 cursor-pointer px-3 py-2 rounded flex items-center justify-between w-full';
 
   const currentPageMatch = props.currentPage.slice(1);
 
@@ -81,16 +81,16 @@
   const getLinkClasses = (link: sidebar) => {
     return isCurrentPage(link)
       ? baseClass +
-          ' !text-neutral-600 dark:!text-neutral-400 bg-neutral-800/20 dark:bg-neutral-800/40'
+          ' hover:!bg-primary-200/20 !text-primary-600 dark:!text-neutral-400 bg-primary-200/20 dark:bg-neutral-800/40'
       : baseClass;
   };
 
   const getchildLinkClasses = (link: sidebar) => {
     const baseClasses =
-      '!text-neutral-600 dark:!text-neutral-400 text-label-sm block hover:bg-neutral-800/20 dark:hover:bg-neutral-800/40 cursor-pointer  px-2 py-1 rounded ml-4';
+      '!text-neutral-600 dark:!text-neutral-400 text-label-sm block hover:bg-neutral-200/40 dark:hover:bg-neutral-800/40 cursor-pointer  px-2 py-1 rounded ml-4';
     return isCurrentPage(link)
       ? baseClasses +
-          ' !text-neutral-600 dark:!text-neutral-400 bg-neutral-800/20 dark:bg-neutral-800/40'
+          ' hover:!bg-primary-200/20 !text-primary-600 dark:!text-neutral-400 bg-primary-200/20 dark:bg-neutral-800/40'
       : baseClasses;
   };
 

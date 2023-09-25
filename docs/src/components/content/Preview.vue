@@ -42,6 +42,7 @@
   import CodeSwitch from '../UI/CodeSwitch.vue';
   import codeTypeSelect from '../UI/codeTypeSelect.vue';
   import { ref } from 'vue';
+  type currentTabT = 'preview' | 'code';
 
   const options = ref([
     { label: 'html', value: 'html' },
@@ -50,8 +51,8 @@
 
   const codeType = ref('html');
   const activeTab = ref(0);
-  const toggleTab = () => {
-    if (activeTab.value === 0) {
+  const toggleTab = (v: currentTabT) => {
+    if (v === 'code') {
       activeTab.value = 1;
     } else {
       activeTab.value = 0;

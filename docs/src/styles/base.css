@@ -44,7 +44,8 @@ p {
   background-repeat: repeat;
   background-size: 0.5rem;
   resize: both;
-  @apply bg-neutral-50 dark:bg-neutral-950 w-full mb-4 rounded border dark:border-neutral-700 border-neutral-300 min-h-[220px];
+  @apply bg-neutral-50 dark:bg-neutral-950 w-full mb-4 rounded border dark:border-neutral-700 border-neutral-300 min-h-[220px] p-2;
+  
 }
 
 pre.astro-code {
