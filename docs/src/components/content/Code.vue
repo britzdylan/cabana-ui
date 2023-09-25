@@ -1,22 +1,13 @@
-<div class='bg-zinc-100 border-zinc-200 border rounded-md overflow-hidden not-prose mt-4'>
-  <!-- <nav class='tabs bg-inherit'>
-      <button data-tab={id + '-1'} class='!w-24 !h-12 active'> HTML</button>
-      <button data-tab={id + '-2'} class='!w-24 !h-12'> JSX</button>
-      <button data-tab={id + '-3'} class='!w-24 !h-12'> Vue</button>
-    </nav> -->
-  <div class='relative'>
-    <slot />
-  </div>
-  <!-- <div class='relative' style='display:none;' data-tabItem={id + '-2'}>
-      <slot name='jsx' />
+<template>
+  <div
+    class="bg-neutral-900 border-neutral-100 dark:border-neutral-900 border rounded overflow-hidden not-prose ">
+    <div class="relative min-h-[220px]">
+      <slot />
     </div>
-    <div class='relative' style='display:none;' data-tabItem={id + '-3'}>
-      <slot name='vue' />
-    </div> -->
-</div>
-
-<script>
-  let blocks = document.querySelectorAll('pre');
+  </div>
+</template>
+<!-- <script>
+  // let blocks = document.querySelectorAll('pre');
 
   blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
@@ -42,4 +33,4 @@
 
     await navigator.clipboard.writeText(text ?? '');
   }
-</script>
+</script> -->

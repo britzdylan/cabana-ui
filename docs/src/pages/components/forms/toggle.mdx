@@ -1,11 +1,11 @@
 ---
 title: 'Toggle Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/code.vue';
 
 # Toggle Component
 
@@ -30,7 +30,7 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
 
 ### Default Toggle
 
-<Preview>
+<Preview client:load>
   <label class='toggle'>
     <input type='checkbox' />
     <div class='toggle-label'></div>
@@ -42,8 +42,7 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
     <div class='toggle-label-narrow'></div>
     <span class='text-label'>Toggle Me</span>
   </label>
-</Preview>
-<Code>
+  <Code slot="html">
   ```js
   <label class='toggle'>
     <input type='checkbox' />
@@ -58,10 +57,11 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
   </label>
   ```
 </Code>
+</Preview>
 
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <label class='toggle disabled'>
     <input disabled type='checkbox' />
     <div class='toggle-label'></div>
@@ -73,8 +73,7 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
     <div class='toggle-label-narrow'></div>
     <span class='text-label'>Toggle Me</span>
   </label>
-</Preview>
-<Code>
+  <Code slot="html">
   ```js
   <label class='toggle disabled'>
     <input disabled type='checkbox' />
@@ -89,10 +88,11 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
   </label>
   ```
 </Code>
+</Preview>
 
 ### With accent color
 
-<Preview>
+<Preview client:load>
   <label class='toggle toggle-green'>
     <input type='checkbox' />
     <div class='toggle-label'></div>
@@ -104,8 +104,7 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
     <div class='toggle-label-narrow'></div>
     <span class='text-label'>Toggle Me</span>
   </label>
-</Preview>
-<Code>
+  <Code slot="html">
   ```js
   <label class='toggle toggle-green'>
     <input type='checkbox' />
@@ -120,3 +119,4 @@ The Toggle Component is a flexible, customizable component that has been pre-sty
   </label>
   ```
 </Code>
+</Preview>

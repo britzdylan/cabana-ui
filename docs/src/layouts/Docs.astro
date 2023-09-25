@@ -1,0 +1,32 @@
+---
+import type { Heading } from '../interfaces';
+export interface Props {
+  title: string;
+  headings?: Array<Heading>;
+}
+
+import Base from './Base.astro';
+import LeftSidebar from '../components/UI/LeftSidebar.vue';
+import RightSidebar from '../components/UI/RightSidebar.astro';
+
+const { title, headings = [] } = Astro.props;
+const currentPage = new URL(Astro.request.url).pathname;
+---
+
+<Base title={title}>
+  <div class='flex h-screen w-full overflow-hidden'>
+    <div
+      class='w-full max-w-[280px] border-r dark:border-neutral-700 sticky top-0 h-screen overflow-y-scroll hide-scrollbar'>
+      <LeftSidebar client:load currentPage={currentPage} />
+    </div>
+    <main class='flex-grow h-screen overflow-y-scroll py-12 px-4'>
+      <article class='mdx'>
+        <slot />
+      </article>
+    </main>
+    <aside
+      class='w-full max-w-[250px] py-12 h-screen overflow-y-scroll hide-scrollbar hidden lg:block'>
+      <RightSidebar headers={headings} />
+    </aside>
+  </div>
+</Base>

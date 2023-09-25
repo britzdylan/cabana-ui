@@ -1,11 +1,11 @@
 ---
 title: 'Chip Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconX } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/code.vue';
 
 # Chip Component
 
@@ -30,81 +30,82 @@ The Chip Component is a flexible and customizable component pre-styled for your 
 
 ### Default Chip
 
-<Preview>
+<Preview client:load>
   <div class='chip'>
     <span>Chip</span>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='chip'>
+      <span>Chip</span>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='chip'>
-    <span>Chip</span>
-  </div>
-  ```
-</Code>
 
 ### Rounded chip
 
-<Preview>
+<Preview client:load>
   <div class='chip chip-rounded'>
     <span>Chip</span>
   </div>
-</Preview>
-<Code>
+  <Code slot="html">
   ```js
   <div class='chip chip-rounded'>
     <span>Chip</span>
   </div>
   ```
 </Code>
+
+</Preview>
 
 ### Chip with icons
 
-<Preview>
+<Preview client:load>
   <div class='chip'>
     <img src='/avatar.jpg' />
     <span>Chip</span>
     <IconX />
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='chip'>
+      <img src='/avatar.jpg' />
+      <span>Chip</span>
+      <IconX />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='chip'>
-    <img src='/avatar.jpg' />
-    <span>Chip</span>
-    <IconX />
-  </div>
-  ```
-</Code>
 
 ### With border
 
-<Preview>
+<Preview client:load>
   <div class='chip  chip-bordered'>
     <span>Chip</span>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='chip  chip-bordered'>
+      <span>Chip</span>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='chip  chip-bordered'>
-    <span>Chip</span>
-  </div>
-  ```
-</Code>
 
 ### With custom color
 
-<Preview>
+<Preview client:load>
   <div class='chip chip-primary'>
     <span>Chip</span>
     <IconX />
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='chip chip-primary'>
+      <span>Chip</span>
+      <IconX />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='chip chip-primary'>
-    <span>Chip</span>
-    <IconX />
-  </div>
-  ```
-</Code>

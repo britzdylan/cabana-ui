@@ -1,11 +1,11 @@
 ---
 title: 'Dot Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconX } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/code.vue';
 
 # Dot Component
 
@@ -25,17 +25,17 @@ The Dot Component is a flexible and customizable component pre-styled for your c
 
 ### Default Dot
 
-<Preview>
+<Preview client:load>
   <span class='dot dot-green'></span>
   <span class='dot dot-yellow'></span>
   <span class='dot dot-red'></span>
   <span class='dot '></span>
+  <Code slot="html">
+    ```js
+    <span class='dot dot-green'></span>
+    <span class='dot dot-yellow'></span>
+    <span class='dot dot-red'></span>
+    <span class='dot '></span>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <span class='dot dot-green'></span>
-  <span class='dot dot-yellow'></span>
-  <span class='dot dot-red'></span>
-  <span class='dot '></span>
-  ```
-</Code>

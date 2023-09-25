@@ -1,6 +1,6 @@
 ---
 title: 'Pagination Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import {
@@ -10,8 +10,8 @@ import {
   IconPointFilled,
 } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/code.vue';
 import Alert from '../../../components/content/Alert.astro';
 
 # Pagination Component
@@ -57,7 +57,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <nav class='pagination'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -91,48 +91,48 @@ Please refer to the class names and their types listed above to apply the desire
     </ol>
     <IconChevronRight />
   </nav>
+  <Code slot='html'>
+    ```js
+    <nav class='pagination'>
+      <IconChevronLeft />
+      <ol class='pagination-list'>
+        <li class='active'>
+          <a href='#'>1</a>
+        </li>
+        <li>
+          <a href='#'>2</a>
+        </li>
+        <li>
+          <a href='#'>3</a>
+        </li>
+        <li>
+          <a href='#'>4</a>
+        </li>
+        <li>
+          <a href='#'>5</a>
+        </li>
+        <li>
+          <a href='#'>6</a>
+        </li>
+        <li>
+          <a href='#'>8</a>
+        </li>
+        <li>
+          <a href='#'>9</a>
+        </li>
+        <li>
+          <a href='#'>10</a>
+        </li>
+      </ol>
+      <IconChevronRight />
+    </nav>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <nav class='pagination'>
-    <IconChevronLeft />
-    <ol class='pagination-list'>
-      <li class='active'>
-        <a href='#'>1</a>
-      </li>
-      <li>
-        <a href='#'>2</a>
-      </li>
-      <li>
-        <a href='#'>3</a>
-      </li>
-      <li>
-        <a href='#'>4</a>
-      </li>
-      <li>
-        <a href='#'>5</a>
-      </li>
-      <li>
-        <a href='#'>6</a>
-      </li>
-      <li>
-        <a href='#'>8</a>
-      </li>
-      <li>
-        <a href='#'>9</a>
-      </li>
-      <li>
-        <a href='#'>10</a>
-      </li>
-    </ol>
-    <IconChevronRight />
-  </nav>
-  ```
-</Code>
 
 ### Large
 
-<Preview>
+<Preview client:load>
   <nav class='pagination pagination-large'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -166,48 +166,48 @@ Please refer to the class names and their types listed above to apply the desire
     </ol>
     <IconChevronRight />
   </nav>
+  <Code slot='html'>
+    ```js
+    <nav class='pagination pagination-large'>
+      <IconChevronLeft />
+      <ol class='pagination-list'>
+        <li class='active'>
+          <a href='#'>1</a>
+        </li>
+        <li>
+          <a href='#'>2</a>
+        </li>
+        <li>
+          <a href='#'>3</a>
+        </li>
+        <li>
+          <a href='#'>4</a>
+        </li>
+        <li>
+          <a href='#'>5</a>
+        </li>
+        <li>
+          <a href='#'>6</a>
+        </li>
+        <li>
+          <a href='#'>8</a>
+        </li>
+        <li>
+          <a href='#'>9</a>
+        </li>
+        <li>
+          <a href='#'>10</a>
+        </li>
+      </ol>
+      <IconChevronRight />
+    </nav>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <nav class='pagination pagination-large'>
-    <IconChevronLeft />
-    <ol class='pagination-list'>
-      <li class='active'>
-        <a href='#'>1</a>
-      </li>
-      <li>
-        <a href='#'>2</a>
-      </li>
-      <li>
-        <a href='#'>3</a>
-      </li>
-      <li>
-        <a href='#'>4</a>
-      </li>
-      <li>
-        <a href='#'>5</a>
-      </li>
-      <li>
-        <a href='#'>6</a>
-      </li>
-      <li>
-        <a href='#'>8</a>
-      </li>
-      <li>
-        <a href='#'>9</a>
-      </li>
-      <li>
-        <a href='#'>10</a>
-      </li>
-    </ol>
-    <IconChevronRight />
-  </nav>
-  ```
-</Code>
 
 ### Contained
 
-<Preview>
+<Preview client:load>
   <nav class='pagination pagination-contained'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -241,48 +241,48 @@ Please refer to the class names and their types listed above to apply the desire
     </ol>
     <IconChevronRight />
   </nav>
+  <Code slot='html'>
+    ```js
+    <nav class='pagination pagination-contained'>
+      <IconChevronLeft />
+      <ol class='pagination-list'>
+        <li class='active'>
+          <a href='#'>1</a>
+        </li>
+        <li>
+          <a href='#'>2</a>
+        </li>
+        <li>
+          <a href='#'>3</a>
+        </li>
+        <li>
+          <a href='#'>4</a>
+        </li>
+        <li>
+          <a href='#'>5</a>
+        </li>
+        <li>
+          <a href='#'>6</a>
+        </li>
+        <li>
+          <a href='#'>8</a>
+        </li>
+        <li>
+          <a href='#'>9</a>
+        </li>
+        <li>
+          <a href='#'>10</a>
+        </li>
+      </ol>
+      <IconChevronRight />
+    </nav>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <nav class='pagination pagination-contained'>
-    <IconChevronLeft />
-    <ol class='pagination-list'>
-      <li class='active'>
-        <a href='#'>1</a>
-      </li>
-      <li>
-        <a href='#'>2</a>
-      </li>
-      <li>
-        <a href='#'>3</a>
-      </li>
-      <li>
-        <a href='#'>4</a>
-      </li>
-      <li>
-        <a href='#'>5</a>
-      </li>
-      <li>
-        <a href='#'>6</a>
-      </li>
-      <li>
-        <a href='#'>8</a>
-      </li>
-      <li>
-        <a href='#'>9</a>
-      </li>
-      <li>
-        <a href='#'>10</a>
-      </li>
-    </ol>
-    <IconChevronRight />
-  </nav>
-  ```
-</Code>
 
 ### With custom color
 
-<Preview>
+<Preview client:load>
   <nav class='pagination pagination-red'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -316,48 +316,48 @@ Please refer to the class names and their types listed above to apply the desire
     </ol>
     <IconChevronRight />
   </nav>
+  <Code slot='html'>
+    ```js
+    <nav class='pagination pagination-contained'>
+      <IconChevronLeft />
+      <ol class='pagination-list'>
+        <li class='active'>
+          <a href='#'>1</a>
+        </li>
+        <li>
+          <a href='#'>2</a>
+        </li>
+        <li>
+          <a href='#'>3</a>
+        </li>
+        <li>
+          <a href='#'>4</a>
+        </li>
+        <li>
+          <a href='#'>5</a>
+        </li>
+        <li>
+          <a href='#'>6</a>
+        </li>
+        <li>
+          <a href='#'>8</a>
+        </li>
+        <li>
+          <a href='#'>9</a>
+        </li>
+        <li>
+          <a href='#'>10</a>
+        </li>
+      </ol>
+      <IconChevronRight />
+    </nav>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <nav class='pagination pagination-contained'>
-    <IconChevronLeft />
-    <ol class='pagination-list'>
-      <li class='active'>
-        <a href='#'>1</a>
-      </li>
-      <li>
-        <a href='#'>2</a>
-      </li>
-      <li>
-        <a href='#'>3</a>
-      </li>
-      <li>
-        <a href='#'>4</a>
-      </li>
-      <li>
-        <a href='#'>5</a>
-      </li>
-      <li>
-        <a href='#'>6</a>
-      </li>
-      <li>
-        <a href='#'>8</a>
-      </li>
-      <li>
-        <a href='#'>9</a>
-      </li>
-      <li>
-        <a href='#'>10</a>
-      </li>
-    </ol>
-    <IconChevronRight />
-  </nav>
-  ```
-</Code>
 
 ### Contained with custom color
 
-<Preview>
+<Preview client:load>
   <nav class='pagination pagination-red pagination-contained pagination-contained-red'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -391,48 +391,48 @@ Please refer to the class names and their types listed above to apply the desire
     </ol>
     <IconChevronRight />
   </nav>
+  <Code slot='html'>
+    ```js
+    <nav class='pagination pagination-red pagination-contained pagination-contained-red'>
+      <IconChevronLeft />
+      <ol class='pagination-list'>
+        <li class='active'>
+          <a href='#'>1</a>
+        </li>
+        <li>
+          <a href='#'>2</a>
+        </li>
+        <li>
+          <a href='#'>3</a>
+        </li>
+        <li>
+          <a href='#'>4</a>
+        </li>
+        <li>
+          <a href='#'>5</a>
+        </li>
+        <li>
+          <a href='#'>6</a>
+        </li>
+        <li>
+          <a href='#'>8</a>
+        </li>
+        <li>
+          <a href='#'>9</a>
+        </li>
+        <li>
+          <a href='#'>10</a>
+        </li>
+      </ol>
+      <IconChevronRight />
+    </nav>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <nav class='pagination pagination-red pagination-contained pagination-contained-red'>
-    <IconChevronLeft />
-    <ol class='pagination-list'>
-      <li class='active'>
-        <a href='#'>1</a>
-      </li>
-      <li>
-        <a href='#'>2</a>
-      </li>
-      <li>
-        <a href='#'>3</a>
-      </li>
-      <li>
-        <a href='#'>4</a>
-      </li>
-      <li>
-        <a href='#'>5</a>
-      </li>
-      <li>
-        <a href='#'>6</a>
-      </li>
-      <li>
-        <a href='#'>8</a>
-      </li>
-      <li>
-        <a href='#'>9</a>
-      </li>
-      <li>
-        <a href='#'>10</a>
-      </li>
-    </ol>
-    <IconChevronRight />
-  </nav>
-  ```
-</Code>
 
 ### With disabled items
 
-<Preview>
+<Preview client:load>
   <nav class='pagination'>
     <IconChevronLeft />
     <ol class='pagination-list'>
@@ -466,41 +466,41 @@ Please refer to the class names and their types listed above to apply the desire
     </ol>
     <IconChevronRight />
   </nav>
+  <Code slot='html'>
+    ```js
+    <nav class='pagination'>
+      <IconChevronLeft />
+      <ol class='pagination-list'>
+        <li class='active'>
+          <a href='#'>1</a>
+        </li>
+        <li class='disabled'>
+          <a href='#'>2</a>
+        </li>
+        <li>
+          <a href='#'>3</a>
+        </li>
+        <li>
+          <a href='#'>4</a>
+        </li>
+        <li>
+          <a href='#'>5</a>
+        </li>
+        <li>
+          <a href='#'>6</a>
+        </li>
+        <li>
+          <a href='#'>8</a>
+        </li>
+        <li>
+          <a href='#'>9</a>
+        </li>
+        <li>
+          <a href='#'>10</a>
+        </li>
+      </ol>
+      <IconChevronRight />
+    </nav>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <nav class='pagination'>
-    <IconChevronLeft />
-    <ol class='pagination-list'>
-      <li class='active'>
-        <a href='#'>1</a>
-      </li>
-      <li class='disabled'>
-        <a href='#'>2</a>
-      </li>
-      <li>
-        <a href='#'>3</a>
-      </li>
-      <li>
-        <a href='#'>4</a>
-      </li>
-      <li>
-        <a href='#'>5</a>
-      </li>
-      <li>
-        <a href='#'>6</a>
-      </li>
-      <li>
-        <a href='#'>8</a>
-      </li>
-      <li>
-        <a href='#'>9</a>
-      </li>
-      <li>
-        <a href='#'>10</a>
-      </li>
-    </ol>
-    <IconChevronRight />
-  </nav>
-  ```
-</Code>

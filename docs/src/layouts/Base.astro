@@ -8,14 +8,14 @@ import { SITE, OPEN_GRAPH } from '../../config';
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang='en'>
+<!doctype html>
+<html lang='en' class=''>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <link rel='alternate icon' type='image/x-icon' href='/favicon.ico' />
-	<link rel="sitemap" href="/sitemap-index.xml">
+    <link rel='sitemap' href='/sitemap-index.xml' />
     <title>{title}</title>
 
     <!-- Preload Fonts -->
@@ -44,22 +44,8 @@ const { title } = Astro.props;
     <meta name='twitter:image' content={OPEN_GRAPH.twitter.image.src} />
     <meta name='twitter:creator' content={OPEN_GRAPH.twitter.creator} />
     <meta name='theme-color' content='#3b28cc' />
-
-    <!-- This is intentionally inlined to avoid FOUC -->
-    <script is:inline>
-      const root = document.documentElement;
-      const theme = localStorage.getItem('theme');
-      if (
-        theme === 'dark' ||
-        (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        root.classList.add('dark');
-      } else {
-        root.classList.remove('dark');
-      }
-    </script>
   </head>
-  <body class='bg-zinc-50'>
+  <body class='bg-neutral-50 dark:bg-neutral-950 h-screen overflow-hidden'>
     <slot />
   </body>
 </html>

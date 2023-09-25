@@ -1,12 +1,12 @@
 ---
 title: 'Link'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconHome2, IconGridDots, IconHelpCircle } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/code.vue';
 import Alert from '../../../components/content/Alert.astro';
 
 # Tab Component
@@ -58,7 +58,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-navigation'>
     <button class='active'>Home</button>
     <button>Start</button>
@@ -77,7 +77,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### With border color
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-navigation tabs-bordered'>
     <button class='active active-bordered'>Home</button>
     <button>Start</button>
@@ -96,7 +96,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### With background color
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-navigation tabs-background'>
     <button class='active active-background'>Home</button>
     <button>Start</button>
@@ -115,7 +115,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Combined with border and background color
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-navigation tabs-background tabs-bordered'>
     <button class='active active-background active-bordered'>Home</button>
     <button>Start</button>
@@ -134,7 +134,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Larger size
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-navigation tabs-navigation-large tabs-background tabs-bordered'>
     <button class='active'>Home</button>
     <button>Start</button>
@@ -153,7 +153,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Alternate border color
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-navigation tabs-emerald-bordered  tabs-background tabs-bordered'>
     <button class='active active-bordered active-background'>Home</button>
     <button>Start</button>
@@ -172,7 +172,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Alternate background color
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-navigation tabs-emerald-background tabs-background tabs-bordered'>
     <button class='active active-bordered active-background'>Home</button>
     <button>Start</button>
@@ -191,7 +191,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Tabbed navigation with icons
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-navigation tabs-navigation-large'>
     <button class='active'>
       <IconHome2 />
@@ -228,7 +228,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Mobile tabbed navigation
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-mobile'>
     <button class='active'>
       <IconHome2 />
@@ -265,7 +265,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Mobile tabbed navigation with border
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-mobile tabs-bordered'>
     <button class='active active-bordered'>
       <IconHome2 />
@@ -302,7 +302,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Mobile tabbed navigation with background
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-mobile tabs-background'>
     <button class='active'>
       <IconHome2 />
@@ -339,7 +339,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Mobile tabbed navigation active background with border
 
-<Preview>
+<Preview client:load>
   <nav class='tabs tabs-mobile tabs-bordered tabs-background'>
     <button class='active active-background active-bordered'>
       <IconHome2 />

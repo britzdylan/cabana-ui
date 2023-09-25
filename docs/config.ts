@@ -55,24 +55,22 @@ const corePath = `${base}core`;
 const componentsPath = `${base}components`;
 
 export const SIDEBAR: Array<sidebar> = [
-  { name: 'Getting Started', header: true },
   { name: 'Install', link: `${gs}/install` },
   { name: 'How to use', link: `${gs}/use` },
-  // { name: 'Config', link: `${base}/config` },
 
-  { name: 'Utilities', header: true },
   { name: 'Colors', link: `${corePath}/colors` },
   { name: 'Typography', link: `${corePath}/typography` },
   { name: 'Shadows', link: `${corePath}/shadows` },
   { name: 'Blur', link: `${corePath}/blur` },
 
-  { name: 'Components', header: true },
   {
     name: 'Actions',
+    header: true,
     children: [{ name: 'Buttons', link: `${componentsPath}/actions/buttons` }],
   },
   {
     name: 'Navigation',
+    header: true,
     children: [
       { name: 'Link', link: `${componentsPath}/navigation/link` },
       { name: 'Menu', link: `${componentsPath}/navigation/menu` },
@@ -84,10 +82,11 @@ export const SIDEBAR: Array<sidebar> = [
   },
   {
     name: 'Content',
+    header: true,
     children: [
       { name: 'Accordion', link: `${componentsPath}/content/accordion` },
       { name: 'Lists', link: `${componentsPath}/content/lists` },
-      { name: 'Content Blocks', link: `${componentsPath}/content/blocks` },
+      // { name: 'Content Blocks', link: `${componentsPath}/content/blocks` },
       // { name: 'Lists', link: `${componentsPath}/content/lists` },
       // { name: 'Lists', link: `${componentsPath}/content/lists` },
       // { name: 'Lists', link: `${componentsPath}/content/lists` },
@@ -99,6 +98,7 @@ export const SIDEBAR: Array<sidebar> = [
   },
   {
     name: 'Forms',
+    header: true,
     children: [
       { name: 'Input', link: `${componentsPath}/forms/input` },
       { name: 'Select', link: `${componentsPath}/forms/select` },
@@ -111,6 +111,7 @@ export const SIDEBAR: Array<sidebar> = [
   },
   {
     name: 'Overlays',
+    header: true,
     children: [
       {
         name: 'Toast',
@@ -120,6 +121,7 @@ export const SIDEBAR: Array<sidebar> = [
   },
   {
     name: 'Design Patterns',
+    header: true,
     children: [
       {
         name: 'Avatar',

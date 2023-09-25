@@ -1,10 +1,10 @@
 ---
 title: 'Textarea Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/code.vue';
 
 # Textarea Component
 
@@ -35,7 +35,7 @@ The Textarea Component is a flexible and customizable component pre-styled for y
 
 ### Default Textarea
 
-<Preview>
+<Preview client:load>
   <div class='textarea max-w-xs mx-auto'>
     <label class='label'>Enter a message</label>
     <textarea placeholder='Your message'></textarea>
@@ -43,8 +43,7 @@ The Textarea Component is a flexible and customizable component pre-styled for y
       <span>No more than 300 chracters</span>
     </label>
   </div>
-</Preview>
-<Code>
+  <Code slot="html">
 ```js
 <div class='input max-w-xs mx-auto'>
   <span>
@@ -54,124 +53,125 @@ The Textarea Component is a flexible and customizable component pre-styled for y
 </div>
 ```
 </Code>
+</Preview>
 
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <div class='textarea max-w-xs mx-auto'>
     <textarea disabled='true' placeholder='Your message'></textarea>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='textarea'>
+      <textarea disabled='true' placeholder='Your message'></textarea>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='textarea'>
-    <textarea disabled='true' placeholder='Your message'></textarea>
-  </div>
-  ```
-</Code>
 
 ### Success state
 
-<Preview>
+<Preview client:load>
   <div class='textarea max-w-xs mx-auto'>
     <textarea class='success' placeholder='Your message'></textarea>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='textarea'>
+      <textarea class='success' placeholder='Your message'></textarea>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='textarea'>
-    <textarea class='success' placeholder='Your message'></textarea>
-  </div>
-  ```
-</Code>
 
 ### Error state
 
-<Preview>
+<Preview client:load>
   <div class='textarea max-w-xs mx-auto'>
     <textarea class='error' placeholder='Your message'></textarea>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='textarea'>
+      <textarea class='error' placeholder='Your message'></textarea>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='textarea'>
-    <textarea class='error' placeholder='Your message'></textarea>
-  </div>
-  ```
-</Code>
 
 ### Large Textarea
 
-<Preview>
+<Preview client:load>
   <div class='textarea textarea-large max-w-xs mx-auto'>
     <textarea placeholder='Your message'></textarea>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='textarea textarea-large'>
+      <textarea placeholder='Your message'></textarea>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='textarea textarea-large'>
-    <textarea placeholder='Your message'></textarea>
-  </div>
-  ```
-</Code>
 
 ### Textarea with label
 
-<Preview>
+<Preview client:load>
   <div class='textarea max-w-xs mx-auto'>
     <label class='label'>Enter a message</label>
     <textarea placeholder='Your message'></textarea>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='textarea'>
+      <label class='label'>Enter a message</label>
+      <textarea placeholder='Your message'></textarea>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='textarea'>
-    <label class='label'>Enter a message</label>
-    <textarea placeholder='Your message'></textarea>
-  </div>
-  ```
-</Code>
 
 ### Textarea with helper text
 
-<Preview>
+<Preview client:load>
   <div class='textarea max-w-xs mx-auto'>
     <textarea placeholder='Your message'></textarea>
     <label class='helper'>
       <span>No more than 300 chracters</span>
     </label>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='textarea'>
+      <label class='label'>Enter a message</label>
+      <textarea placeholder='Your message'></textarea>
+      <label class='helper'>
+        <span>No more than 300 chracters</span>
+      </label>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='textarea'>
-    <label class='label'>Enter a message</label>
-    <textarea placeholder='Your message'></textarea>
-    <label class='helper'>
-      <span>No more than 300 chracters</span>
-    </label>
-  </div>
-  ```
-</Code>
 
 ### With accent color
 
-<Preview>
+<Preview client:load>
   <div class='textarea textarea-orange max-w-xs mx-auto'>
     <textarea placeholder='Your message'></textarea>
     <label class='helper'>
       <span>No more than 300 chracters</span>
     </label>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='textarea'>
+      <label class='label'>Enter a message</label>
+      <textarea placeholder='Your message'></textarea>
+      <label class='helper'>
+        <span>No more than 300 chracters</span>
+      </label>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='textarea'>
-    <label class='label'>Enter a message</label>
-    <textarea placeholder='Your message'></textarea>
-    <label class='helper'>
-      <span>No more than 300 chracters</span>
-    </label>
-  </div>
-  ```
-</Code>
