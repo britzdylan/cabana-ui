@@ -17,7 +17,6 @@
       <div
         class="h-6 border-l-2 dark:border-neutral-700 border-neutral-300 w-1"></div>
       <codeTypeSelect v-model="codeType" :options="options" />
-      <ClipboardDocumentIcon class="w-5 h-5 text-neutral-400 cursor-pointer" />
     </div>
     <div v-show="activeTab === 0" class="component-preview">
       <slot />
