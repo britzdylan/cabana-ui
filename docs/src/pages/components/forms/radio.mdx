@@ -1,11 +1,11 @@
 ---
 title: 'Radio Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 
 # Radio Component
 
@@ -30,7 +30,7 @@ The Radio Component is a flexible, customizable component that has been pre-styl
 
 ### Default Radio
 
-<Preview>
+<Preview client:load>
   <fieldset>
     <label for='1' class='radio'>
       <input id='1' name='name' type='radio' />
@@ -43,27 +43,27 @@ The Radio Component is a flexible, customizable component that has been pre-styl
       <span class='text-label'>Vue</span>
     </label>
   </fieldset>
+  <Code slot='html'>
+    ```js
+    <fieldset>
+      <label for='1' class='radio'>
+        <input id='1' name='name' type='radio' />
+        <span class='radio-input'></span>
+        <span class='text-label'>1</span>
+      </label>
+      <label for='2' class='radio'>
+        <input id='2' name='name' type='radio' />
+        <span class='radio-input'></span>
+        <span class='text-label'>2</span>
+      </label>
+    </fieldset>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <fieldset>
-    <label for='1' class='radio'>
-      <input id='1' name='name' type='radio' />
-      <span class='radio-input'></span>
-      <span class='text-label'>1</span>
-    </label>
-    <label for='2' class='radio'>
-      <input id='2' name='name' type='radio' />
-      <span class='radio-input'></span>
-      <span class='text-label'>2</span>
-    </label>
-  </fieldset>
-  ```
-</Code>
 
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <fieldset>
     <label for='3' class='radio disabled'>
       <input id='3' name='name' type='radio' disabled />
@@ -76,27 +76,27 @@ The Radio Component is a flexible, customizable component that has been pre-styl
       <span class='text-label'>Vue</span>
     </label>
   </fieldset>
+  <Code slot='html'>
+    ```js
+    <fieldset>
+      <label for='3' class='radio disabled'>
+        <input id='3' name='name' type='radio' disabled />
+        <span class='radio-input'></span>
+        <span class='text-label'>React</span>
+      </label>
+      <label for='4' class='radio'>
+        <input id='4' name='name' type='radio' />
+        <span class='radio-input'></span>
+        <span class='text-label'>Vue</span>
+      </label>
+    </fieldset>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <fieldset>
-    <label for='3' class='radio disabled'>
-      <input id='3' name='name' type='radio' disabled />
-      <span class='radio-input'></span>
-      <span class='text-label'>React</span>
-    </label>
-    <label for='4' class='radio'>
-      <input id='4' name='name' type='radio' />
-      <span class='radio-input'></span>
-      <span class='text-label'>Vue</span>
-    </label>
-  </fieldset>
-  ```
-</Code>
 
 ### With accent color
 
-<Preview>
+<Preview client:load>
   <fieldset>
     <label for='7' class='radio radio-blue'>
       <input id='7' name='name' type='radio' />
@@ -109,20 +109,20 @@ The Radio Component is a flexible, customizable component that has been pre-styl
       <span class='text-label'>Vue</span>
     </label>
   </fieldset>
+  <Code slot='html'>
+    ```js
+    <fieldset>
+      <label for='7' class='radio radio-blue'>
+        <input id='7' name='name' type='radio' />
+        <span class='radio-input'></span>
+        <span class='text-label'>React</span>
+      </label>
+      <label for='8' class='radio radio-green'>
+        <input id='8' name='name' type='radio' />
+        <span class='radio-input'></span>
+        <span class='text-label'>Vue</span>
+      </label>
+    </fieldset>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <fieldset>
-    <label for='7' class='radio radio-blue'>
-      <input id='7' name='name' type='radio' />
-      <span class='radio-input'></span>
-      <span class='text-label'>React</span>
-    </label>
-    <label for='8' class='radio radio-green'>
-      <input id='8' name='name' type='radio' />
-      <span class='radio-input'></span>
-      <span class='text-label'>Vue</span>
-    </label>
-  </fieldset>
-  ```
-</Code>

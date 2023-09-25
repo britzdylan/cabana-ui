@@ -1,11 +1,11 @@
 ---
 title: 'Tooltip Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconX } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 
 # Tooltip Component
 
@@ -29,7 +29,7 @@ The Tooltip Component is a flexible and customizable component pre-styled for yo
 
 ### Tooltip
 
-<Preview>
+<Preview client:load>
   <button
     data-tooltip='I am a tooltip'
     data-position='top'
@@ -37,113 +37,117 @@ The Tooltip Component is a flexible and customizable component pre-styled for yo
     class='btn tooltip'>
     open
   </button>
+  <Code slot='html'>
+    ```js
+    <button
+      data-tooltip='I am a tooltip'
+      data-position='top'
+      data-open='true'
+      class='btn tooltip'>
+      open
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button
-    data-tooltip='I am a tooltip'
-    data-position='top'
-    data-open='true'
-    class='btn tooltip'>
-    open
-  </button>
-  ```
-</Code>
 
 ### Tooltip on hover
 
-<Preview>
+<Preview client:load>
   <button data-tooltip='I am a tooltip' data-position='top' class='btn tooltip'>
     Hover me
   </button>
+  <Code slot='html'>
+    ```js
+    <button
+      data-tooltip='I am a tooltip'
+      data-position='top'
+      class='btn tooltip'>
+      Hover Me
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button data-tooltip='I am a tooltip' data-position='top' class='btn tooltip'>
-    Hover Me
-  </button>
-  ```
-</Code>
 
 ### Tooltip left
 
-<Preview>
+<Preview client:load>
   <button
     data-tooltip='I am a tooltip'
     data-position='left'
     class='btn tooltip'>
     Hover me
   </button>
+  <Code slot='html'>
+    ```js
+    <button
+      data-tooltip='I am a tooltip'
+      data-position='left'
+      class='btn tooltip'>
+      Hover me
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button
-    data-tooltip='I am a tooltip'
-    data-position='left'
-    class='btn tooltip'>
-    Hover me
-  </button>
-  ```
-</Code>
 
 ### Tooltip Right
 
-<Preview>
+<Preview client:load>
   <button
     data-tooltip='I am a tooltip'
     data-position='right'
     class='btn tooltip'>
     Hover me
   </button>
+  <Code slot='html'>
+    ```js
+    <button
+      data-tooltip='I am a tooltip'
+      data-position='right'
+      class='btn tooltip'>
+      Hover me
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button
-    data-tooltip='I am a tooltip'
-    data-position='right'
-    class='btn tooltip'>
-    Hover me
-  </button>
-  ```
-</Code>
+
 ### Tooltip Bottom
 
-<Preview>
+<Preview client:load>
   <button
     data-tooltip='I am a tooltip'
     data-position='bottom'
     class='btn tooltip'>
     Hover me
   </button>
+  <Code slot='html'>
+    ```js
+    <button
+      data-tooltip='I am a tooltip'
+      data-position='bottom'
+      class='btn tooltip'>
+      Hover me
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button
-    data-tooltip='I am a tooltip'
-    data-position='bottom'
-    class='btn tooltip'>
-    Hover me
-  </button>
-  ```
-</Code>
 
 ### With custom color
 
-<Preview>
+<Preview client:load>
   <button
     data-tooltip='I am a tooltip'
     data-position='bottom'
     class='btn tooltip tooltip-orange'>
     Hover me
   </button>
+  <Code slot='html'>
+    ```js
+    <button
+      data-tooltip='I am a tooltip'
+      data-position='bottom'
+      class='btn tooltip tooltip-orange'>
+      Hover me
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button
-    data-tooltip='I am a tooltip'
-    data-position='bottom'
-    class='btn tooltip tooltip-orange'>
-    Hover me
-  </button>
-  ```
-</Code>

@@ -1,5 +1,4 @@
 ---
-import { IconChevronRight } from '@tabler/icons-vue';
 import type { Heading } from '../../interfaces';
 
 export interface Props {
@@ -7,31 +6,16 @@ export interface Props {
 }
 
 const { headers } = Astro.props;
-const menuDepth = (d: number) => {
-  const style = ' text-zinc-400 hover:text-zinc-800 hover:text-zinc-900';
-
-  switch (d) {
-    case 1:
-      return '!text-label-sm' + style;
-    case 2:
-      return '!text-label-sm' + style;
-    case 3:
-      return '!text-label-sm ml-2  !gap-1' + style;
-    default:
-      return '!text-label-sm ml-4  !gap-1' + style;
-  }
-};
 ---
 
-<ul class='list flex flex-col gap-2 !mt-24'>
+<ul class='list flex flex-col gap-1 py-2'>
   {
     headers.map(({ slug, text, depth }) => {
       return depth > 1 ? (
-        <li class={menuDepth(depth)}>
-          {depth > 2 ? (
-            <IconChevronRight class='!w-4 !h-4 !opacity-70' />
-          ) : null}
-          <a href={`#${slug}`}>{text}</a>
+        <li id={slug} class='!text-body-sm pl-2  dark:text-slate-400'>
+          <a class=' text-neutral-500 hover:text-neutral-300' href={`#${slug}`}>
+            #{text}
+          </a>
         </li>
       ) : null;
     })

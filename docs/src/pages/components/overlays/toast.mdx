@@ -1,11 +1,11 @@
 ---
 title: 'Toast Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconX } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 
 # Toast Component
 
@@ -32,39 +32,39 @@ The Toast Component is a flexible and customizable component pre-styled for your
 
 ### Default Toast
 
-<Preview>
+<Preview client:load>
   <div class='toast z-0'>
     <span>Notification</span>
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='toast z-0'>
+      <span>Notification</span>
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='toast z-0'>
-    <span>Notification</span>
-  </div>
-  ```
-</Code>
 
 ### With Icons
 
-<Preview>
+<Preview client:load>
   <div class='toast z-0'>
     <span>Notification</span>
     <IconX />
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='toast z-0'>
+      <span>Notification</span>
+      <IconX />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='toast z-0'>
-    <span>Notification</span>
-    <IconX />
-  </div>
-  ```
-</Code>
 
 ### With visibility toggle
 
-<Preview>
+<Preview client:load>
   <div data-show='true' class='toast'>
     <span>I am visible</span>
     <IconX />
@@ -73,33 +73,33 @@ The Toast Component is a flexible and customizable component pre-styled for your
     <span>I am visible</span>
     <IconX />
   </div>
+  <Code slot='html'>
+    ```js
+    <div data-show='true' class='toast'>
+      <span>I am visible</span>
+      <IconX />
+    </div>
+    <div data-show='false' class='toast'>
+      <span>I am visible</span>
+      <IconX />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div data-show='true' class='toast'>
-    <span>I am visible</span>
-    <IconX />
-  </div>
-  <div data-show='false' class='toast'>
-    <span>I am visible</span>
-    <IconX />
-  </div>
-  ```
-</Code>
 
 ### With custom color
 
-<Preview>
+<Preview client:load>
   <div data-show='true' class='toast toast-green'>
     <span>I am visible</span>
     <IconX />
   </div>
+  <Code slot='html'>
+    ```js
+    <div data-show='true' class='toast toast-green'>
+      <span>I am visible</span>
+      <IconX />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div data-show='true' class='toast toast-green'>
-    <span>I am visible</span>
-    <IconX />
-  </div>
-  ```
-</Code>

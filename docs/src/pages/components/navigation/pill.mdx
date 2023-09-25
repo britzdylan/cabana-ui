@@ -1,12 +1,12 @@
 ---
 title: 'Pill Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 import Alert from '../../../components/content/Alert.astro';
 
 # Pill Component
@@ -44,63 +44,63 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <span class='pill'>Default</span>
+  <Code slot='html'>
+    ```js
+    <span class='pill'>Default</span>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <span class='pill'>Default</span>
-  ```
-</Code>
 
 ### Active
 
-<Preview>
+<Preview client:load>
   <span class='pill pill-active'>Active</span>
+  <Code slot='html'>
+    ```js
+    <span class='pill pill-active'>Active</span>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <span class='pill pill-active'>Active</span>
-  ```
-</Code>
 
 ### Disabled
 
-<Preview>
+<Preview client:load>
   <span class='pill pill-disabled'>Default</span>
+  <Code slot='html'>
+    ```js
+    <span class='pill pill-disabled'>Default</span>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <span class='pill pill-disabled'>Default</span>
-  ```
-</Code>
 
 ### Pill with custom color
 
-<Preview>
+<Preview client:load>
   <span class='pill pill-purple'>Default</span>
   <span class='pill pill-active pill-active-purple'>Active</span>
+  <Code slot='html'>
+    ```js
+    <span class='pill pill-purple'>Default</span>
+    <span class='pill pill-active pill-active-purple'>Active</span>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <span class='pill pill-purple'>Default</span>
-  <span class='pill pill-active pill-active-purple'>Active</span>
-  ```
-</Code>
 
 ### Pill with icon
 
-<Preview>
+<Preview client:load>
   <span class='pill'>
     <IconCheck />
     Default
   </span>
+  <Code slot='html'>
+    ```js
+    <span class='pill'>
+      <IconCheck />
+      Default
+    </span>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <span class='pill'>
-    <IconCheck />
-    Default
-  </span>
-  ```
-</Code>

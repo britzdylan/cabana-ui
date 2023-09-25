@@ -1,10 +1,10 @@
 ---
 title: 'Use Cabana UI for Tailwind CSS'
-layout: '../../layouts/Default.astro'
+layout: '../../layouts/Docs.astro'
 ---
 
-import Code from '../../components/content/code.astro';
-import Preview from '../../components/content/Preview.astro';
+import Code from '../../components/content/Code.vue';
+import Preview from '../../components/content/Preview.vue';
 import Alert from '../../components/content/Alert.astro';
 
 # Using Cabana for the first time
@@ -17,47 +17,42 @@ Some of these components are interactive, such as the buttons, inputs, checkboxe
 
 let's create a button, simply add the `btn` class to the html button element.
 
-<Preview>
-
+<Preview client:load>
   <button class='btn'>Button</button>
-  
+  <Code slot='html'>
+    ```html
+    <button class='btn'>Button</button>
+    ```
+  </Code>
 </Preview>
-
-<Code>
-  ```html
-  <button class='btn'>button</button>
-  ```
-</Code>
 
 ## Customizing your component
 
 Let's say you want to change the color of the button, you can use the `bg-green-500` class to change the background color of the button.
 
-<Preview>
+<Preview client:load>
   <button class='btn bg-green-500'>Button</button>
+  <Code slot='html'>
+    ```html
+    <button class='btn bg-green-500'>button</button>
+    ```
+  </Code>
 </Preview>
-
-<Code>
-  ```html
-  <button class='btn bg-green-500'>button</button>
-  ```
-</Code>
 
 As you have noticed the button is now green. However the hover and active states are still the same. To change the hover and active states you can use the `hover:bg-green-600` and `active:bg-green-700` classes. But this causes a lot of manual overrides and can be a bit tedious. To make this easier we provide a `btn-{color}`, where color is any of tailwind's default color names including primary, secondary and tertiary, class that will automatically apply the correct hover and active states.
 
-<Preview>
+<Preview client:load>
   <button class='btn btn-green'>Button</button>
   <button class='btn btn-primary'>Button</button>
   <button class='btn btn-fuchsia'>Button</button>
+  <Code slot='html'>
+    ```html
+    <button class='btn btn-green'>Button</button>
+    <button class='btn btn-primary'>Button</button>
+    <button class='btn btn-fuchsia'>Button</button>
+    ```
+  </Code>
 </Preview>
-
-<Code>
-  ```html
-  <button class='btn btn-green'>Button</button>
-  <button class='btn btn-primary'>Button</button>
-  <button class='btn btn-fuchsia'>Button</button>
-  ```
-</Code>
 
 Cabana includes a few more modifier classes per component similar to above that you can use to change the appearance of your components. Please refer to the [components](/components/buttons) section for more information.
 
@@ -65,37 +60,35 @@ Cabana includes a few more modifier classes per component similar to above that 
 
 You can use the classes provided by Tailwind to add specifc styles or overides to components that Cabana does not provide modifier classes for. For example, you can use the `rounded-full` class to style your own button.
 
-<Preview>
+<Preview client:load>
   <button class='btn btn-green rounded-full uppercase text-sm px-3 py-2 focus:outline-none'>
     Sign In
   </button>
+  <Code slot='html'>
+    ```html
+    <button class='btn btn-green rounded-full uppercase text-sm px-3 py-2 focus:outline-none'>
+      Sign In
+    </button>
+    ```
+  </Code>
 </Preview>
-
-<Code>
-  ```html
-  <button class='btn btn-green rounded-full uppercase text-sm px-3 py-2 focus:outline-none'>
-    Sign In
-  </button>
-  ```
-</Code>
 
 ## Styling your own components with Tailwind's @apply directive
 
 You can also use the `@apply` directive to apply custom CSS to your components. For example, you can use the `@apply` directive to style your own button.
 
-<Preview>
+<Preview client:load>
   <button class='btn btn-red rounded-full uppercase text-sm px-3 py-2 focus:outline-none'>
     Sign In
   </button>
-</Preview>
-
-<Code>
+  <Code slot="html">
   ```css
   .btn {
     @apply btn-red rounded-full uppercase text-sm px-3 py-2 focus:outline-none;
   }
   ```
 </Code>
+</Preview>
 
 <Alert>
   Some components CSS specificity is higher than others. Using Tailwind's

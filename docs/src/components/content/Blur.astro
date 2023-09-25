@@ -9,11 +9,11 @@ import { BLUR } from '../../../design.config';
         data-ctc={name}
         data-tooltip='Copy class'
         data-position='top'
-        class='relative ctc w-72 h-72 tooltip cursor-pointer'>
-        <div class="bg-[url('/blur.jpg')] bg-center bg-no-repeat rounded-md absolute top-0 left-0 right-0 bottom-0 z-0" />
+        class='relative ctc w-48 h-48 tooltip cursor-pointer'>
+        <div class="bg-[url('/blur.jpg')] bg-center bg-no-repeat rounded absolute top-0 left-0 right-0 bottom-0 z-0" />
         <div
           style={`backdrop-filter: blur(${value})`}
-          class=' text-slate-50 text-right absolute rounded-md top-0 left-0 right-0 bottom-0 z-10 flex items-center justify-center'>
+          class=' text-neutral-50 text-right absolute rounded top-0 left-0 right-0 bottom-0 z-10 flex items-center justify-center'>
           <p class='!text-white'>{'blur-' + name}</p>
         </div>
       </div>

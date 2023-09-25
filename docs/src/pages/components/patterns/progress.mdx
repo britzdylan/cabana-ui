@@ -1,10 +1,10 @@
 ---
 title: 'Progress Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 
 # Progress Component
 
@@ -24,22 +24,23 @@ The Progress Component is a flexible and customizable component pre-styled for y
 
 ### Default Progress
 
-<Preview>
+<Preview client:load>
   <progress class='progress' value='25' max='100'></progress>
-</Preview>
-<Code>
+
+  <Code slot="html">
   ```js
   <progress class='progress' value='25' max='100'></progress>
   ```
 </Code>
+</Preview>
 
 ### With custom color
 
-<Preview>
+<Preview client:load>
   <progress class='progress progress-orange' value='25' max='100'></progress>
+  <Code slot='html'>
+    ```js
+    <progress class='progress progress-orange' value='25' max='100'></progress>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <progress class='progress progress-orange' value='25' max='100'></progress>
-  ```
-</Code>

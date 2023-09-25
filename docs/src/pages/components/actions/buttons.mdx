@@ -1,6 +1,6 @@
 ---
 title: 'Buttons'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import {
@@ -11,8 +11,8 @@ import {
   IconBrandApple,
 } from '@tabler/icons-vue';
 
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 import Alert from '../../../components/content/Alert.astro';
 
 # Button Component
@@ -78,46 +78,46 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <button class='btn'>Default</button>
+  <Code slot='html'>
+    ```html
+    <button class='btn'>Default</button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```html
-  <button class='btn'>Default</button>
-  ```
-</Code>
 
 ### Variants
 
-<Preview>
+<Preview client:load>
   <button class='btn'>Default</button>
   <button class='btn btn-outline'>Outline</button>
   <button class='btn btn-min'>Minimal</button>
   <button class='btn btn-text'>Text</button>
+  <Code slot='html'>
+    ```html
+    <button class='btn'>Default</button>
+    <button class='btn btn-outline'>Outline</button>
+    <button class='btn btn-min'>Minimal</button>
+    <button class='btn btn-text'>Text</button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```html
-  <button class='btn'>Default</button>
-  <button class='btn btn-outline'>Outline</button>
-  <button class='btn btn-min'>Minimal</button>
-  <button class='btn btn-text'>Text</button>
-  ```
-</Code>
 
 ### Sizes
 
-<Preview>
+<Preview client:load>
   <button class='btn btn-sm'>Small</button>
   <button class='btn'>Default</button>
   <button class='btn btn-lg'>Large</button>
+  <Code slot='html'>
+    ```html
+    <button class='btn btn-sm'>Small</button>
+    <button class='btn'>Default</button>
+    <button class='btn btn-lg'>Large</button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```html
-  <button class='btn btn-sm'>Small</button>
-  <button class='btn'>Default</button>
-  <button class='btn btn-lg'>Large</button>
-  ```
-</Code>
 
 ### With Icons
 
@@ -127,7 +127,7 @@ Please refer to the class names and their types listed above to apply the desire
   elements other than a svg.
 </Alert>
 
-<Preview>
+<Preview client:load>
   <button class='btn'>
     <IconPlus />
     Left
@@ -136,100 +136,101 @@ Please refer to the class names and their types listed above to apply the desire
     Right
     <IconPlus />
   </button>
+  <Code slot='html'>
+    ```js
+    <button class='btn'>
+      <IconPlus />
+      Left
+    </button>
+    <button class='btn'>
+      Right
+      <IconPlus />
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button class='btn'>
-    <IconPlus />
-    Left
-  </button>
-  <button class='btn'>
-    Right
-    <IconPlus />
-  </button>
-  ```
-</Code>
 
 ### Disabled
 
-<Preview>
+<Preview client:load>
   <button disabled class='btn'>
     Default
   </button>
-</Preview>
-<Code>
+  <Code slot="html">
   ```html
   <button disabled class='btn'>
     Default
   </button>
   ```
 </Code>
+
+</Preview>
 
 ### Button colors
 
-<Preview>
+<Preview client:load>
   <button class='btn btn-secondary'>Default</button>
   <button class='btn btn-outline-red btn-outline'>Outline</button>
   <button class='btn btn-min-emerald btn-min'>Minimal</button>
   <button class='btn btn-text-fuchsia btn-text'>Text</button>
+  <Code slot='html'>
+    ```html
+    <button class='btn btn-secondary'>Default</button>
+    <button class='btn btn-outline-red btn-outline'>Outline</button>
+    <button class='btn btn-min-emerald btn-min'>Minimal</button>
+    <button class='btn btn-text-fuchsia btn-text'>Text</button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```html
-  <button class='btn btn-secondary'>Default</button>
-  <button class='btn btn-outline-red btn-outline'>Outline</button>
-  <button class='btn btn-min-emerald btn-min'>Minimal</button>
-  <button class='btn btn-text-fuchsia btn-text'>Text</button>
-  ```
-</Code>
 
 ### Icon button
 
-<Preview>
+<Preview client:load>
   <button class='fab'>
     <IconPlus />
   </button>
+  <Code slot='html'>
+    ```js
+    <button class='fab'>
+      <IconPlus />
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button class='fab'>
-    <IconPlus />
-  </button>
-  ```
-</Code>
 
 ### Icon button outline
 
-<Preview>
+<Preview client:load>
   <button class='fab fab-outline'>
     <IconPlus />
   </button>
+  <Code slot='html'>
+    ```js
+    <button class='fab fab-outline'>
+      <IconPlus />
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button class='fab fab-outline'>
-    <IconPlus />
-  </button>
-  ```
-</Code>
 
 ### Rounded icon button
 
-<Preview>
+<Preview client:load>
   <button class='fab fab-rounded'>
     <IconPlus />
   </button>
+  <Code slot='html'>
+    ```js
+    <button class='fab fab-rounded'>
+      <IconPlus />
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button class='fab fab-rounded'>
-    <IconPlus />
-  </button>
-  ```
-</Code>
 
 ### Icon button sizes
 
-<Preview>
+<Preview client:load>
   <button class='fab fab-sm fab-rounded'>
     <IconPlus />
   </button>
@@ -242,48 +243,48 @@ Please refer to the class names and their types listed above to apply the desire
   <button class='fab fab-xl fab-rounded'>
     <IconPlus />
   </button>
+  <Code slot='html'>
+    ```js
+    <button class='fab fab-sm fab-rounded'>
+      <IconPlus />
+    </button>
+    <button class='fab fab-rounded'>
+      <IconPlus />
+    </button>
+    <button class='fab fab-lg fab-rounded'>
+      <IconPlus />
+    </button>
+    <button class='fab fab-xl fab-rounded'>
+      <IconPlus />
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button class='fab fab-sm fab-rounded'>
-    <IconPlus />
-  </button>
-  <button class='fab fab-rounded'>
-    <IconPlus />
-  </button>
-  <button class='fab fab-lg fab-rounded'>
-    <IconPlus />
-  </button>
-  <button class='fab fab-xl fab-rounded'>
-    <IconPlus />
-  </button>
-  ```
-</Code>
 
 ### Icon button colors
 
-<Preview>
+<Preview client:load>
   <button class='fab fab-secondary'>
     <IconPlus />
   </button>
   <button class='fab fab-outline-red fab-outline'>
     <IconPlus />
   </button>
+  <Code slot='html'>
+    ```js
+    <button class='fab fab-secondary'>
+      <IconPlus />
+    </button>
+    <button class='fab fab-outline-red fab-outline'>
+      <IconPlus />
+    </button>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <button class='fab fab-secondary'>
-    <IconPlus />
-  </button>
-  <button class='fab fab-outline-red fab-outline'>
-    <IconPlus />
-  </button>
-  ```
-</Code>
 
 ## Button Group
 
-<Preview>
+<Preview client:load>
 <div class='btn-group'>
   <button>One</button>
   <button>Two</button>
@@ -295,8 +296,7 @@ Please refer to the class names and their types listed above to apply the desire
   <button>Two</button>
   <button>Three</button>
 </div>
-</Preview>
-<Code >
+<Code slot="html">
 ```js
 <div class='btn-group'>
   <button>One</button>
@@ -311,17 +311,12 @@ Please refer to the class names and their types listed above to apply the desire
 </div>
 ```
 </Code>
+</Preview>
 
 ### Button Group Sizes
 
-<Preview>
+<Preview client:load>
 <div class='btn-group btn-group-sm'>
-  <button>One</button>
-  <button>Two</button>
-  <button>Three</button>
-</div>
-
-<div class='btn-group'>
   <button>One</button>
   <button>Two</button>
   <button>Three</button>
@@ -332,16 +327,9 @@ Please refer to the class names and their types listed above to apply the desire
   <button>Two</button>
   <button>Three</button>
 </div>
-</Preview>
-<Code >
+<Code slot="html">
 ```js
 <div class='btn-group btn-group-sm'>
-  <button>One</button>
-  <button>Two</button>
-  <button>Three</button>
-</div>
-
-<div class='btn-group'>
   <button>One</button>
   <button>Two</button>
   <button>Three</button>
@@ -354,53 +342,31 @@ Please refer to the class names and their types listed above to apply the desire
 </div>
 ```
 </Code>
+</Preview>
 
 ### Button Group colors
 
-<Preview>
+<Preview client:load>
 <div class='btn-group btn-group-tertiary'>
   <button>One</button>
   <button>Two</button>
   <button>Three</button>
 </div>
 
-<div class='btn-group btn-group-neutral'>
-  <button>One</button>
-  <button>Two</button>
-  <button>Three</button>
-</div>
-
-<div class='btn-group btn-group-outline btn-group-outline-emerald'>
-  <button>One</button>
-  <button>Two</button>
-  <button>Three</button>
-</div>
-</Preview>
-<Code >
+<Code slot="html">
 ```js
 <div class='btn-group btn-group-tertiary'>
   <button>One</button>
   <button>Two</button>
   <button>Three</button>
 </div>
-
-<div class='btn-group btn-group-neutral'>
-  <button>One</button>
-  <button>Two</button>
-  <button>Three</button>
-</div>
-
-<div class='btn-group btn-group-outline btn-group-outline-emerald'>
-  <button>One</button>
-  <button>Two</button>
-  <button>Three</button>
-</div>
 ```
 </Code>
+</Preview>
 
 ### Button Group with Icons
 
-<Preview>
+<Preview client:load>
   <div class='btn-group'>
     <button><IconPlus /></button>
     <button><IconPlus /></button>
@@ -412,8 +378,7 @@ Please refer to the class names and their types listed above to apply the desire
     <button><IconPlus /></button>
     <button><IconPlus /></button>
 </div>
-</Preview>
-<Code >
+<Code slot="html">
 ```js
 <div class='btn-group'>
   <button><IconPlus /></button>
@@ -428,3 +393,5 @@ Please refer to the class names and their types listed above to apply the desire
 </div>
 ```
 </Code>
+
+</Preview>

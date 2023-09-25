@@ -1,11 +1,11 @@
 ---
 title: 'Avatar Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconUser } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 
 # Avatar Component
 
@@ -35,37 +35,37 @@ The Avatar Component is a customizable component pre-styled for your convenience
 
 ### Default Avatar
 
-<Preview>
+<Preview client:load>
   <div class='avatar'>
     <img src='/avatar.jpg' />
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='avatar'>
+      <img src='/avatar.jpg' />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='avatar'>
-    <img src='/avatar.jpg' />
-  </div>
-  ```
-</Code>
 
 ### Rounded avatar
 
-<Preview>
+<Preview client:load>
   <div class='avatar avatar-rounded'>
     <img src='/avatar.jpg' />
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='avatar avatar-rounded'>
+      <img src='/avatar.jpg' />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='avatar avatar-rounded'>
-    <img src='/avatar.jpg' />
-  </div>
-  ```
-</Code>
 
 ### With placeholder
 
-<Preview>
+<Preview client:load>
 <div class='avatar avatar-placeholder'>
     <span>D</span>
 </div>
@@ -73,8 +73,7 @@ The Avatar Component is a customizable component pre-styled for your convenience
 <div class='avatar avatar-placeholder avatar-placeholder-red'>
     <IconUser/>
 </div>
-</Preview>
-<Code>
+<Code slot="html">
   ```js
 <div class='avatar avatar-placeholder'>
     <span>D</span>
@@ -85,35 +84,36 @@ The Avatar Component is a customizable component pre-styled for your convenience
 </div>
   ```
 </Code>
+</Preview>
 
 ### With border
 
-<Preview>
+<Preview client:load>
   <div class='avatar avatar-bordered'>
     <img src='/avatar.jpg' />
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='avatar avatar-bordered'>
+      <img src='/avatar.jpg' />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='avatar avatar-bordered'>
-    <img src='/avatar.jpg' />
-  </div>
-  ```
-</Code>
 
 ### With status indicator
 
-<Preview>
+<Preview client:load>
   <div class='avatar'>
     <span class='status status-green'></span>
     <img src='/avatar.jpg' />
   </div>
+  <Code slot='html'>
+    ```js
+    <div class='avatar'>
+      <span class='status status-green'></span>
+      <img src='/avatar.jpg' />
+    </div>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <div class='avatar'>
-    <span class='status status-green'></span>
-    <img src='/avatar.jpg' />
-  </div>
-  ```
-</Code>

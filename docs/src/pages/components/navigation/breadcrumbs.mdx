@@ -1,11 +1,11 @@
 ---
 title: 'Breadcrumbs Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck, IconChevronRight } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 import Alert from '../../../components/content/Alert.astro';
 
 # Breadcrumb Component
@@ -44,7 +44,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Default
 
-<Preview>
+<Preview client:load>
   <ol class='breadcrumb'>
     <li>
       <a href='#'>Home</a> <IconChevronRight />
@@ -56,22 +56,23 @@ Please refer to the class names and their types listed above to apply the desire
       <a href='#'>Data</a> <IconChevronRight />
     </li>
   </ol>
+  <Code slot='html'>
+    ```js
+    <ol class='breadcrumb'>
+      <li>
+        <a href='#'>Home</a> <IconChevronRight />
+      </li>
+      <li>
+        <a href='#'>Library</a> <IconChevronRight />
+      </li>
+      <li class='active'>
+        <a href='#'>Data</a> <IconChevronRight />
+      </li>
+    </ol>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <ol class='breadcrumb'>
-    <li>
-      <a href='#'>Home</a> <IconChevronRight />
-    </li>
-    <li>
-      <a href='#'>Library</a> <IconChevronRight />
-    </li>
-    <li class='active'>
-      <a href='#'>Data</a> <IconChevronRight />
-    </li>
-  </ol>
-  ```
-</Code>
+
 <Alert>
   <p>
     The <code>.breadcrumb</code> class is used to apply the default breadcrumb
@@ -84,7 +85,7 @@ Please refer to the class names and their types listed above to apply the desire
 
 ### Disabled
 
-<Preview>
+<Preview client:load>
   <ol class='breadcrumb'>
     <li>
       <a href='#'>Home</a> <IconChevronRight />
@@ -96,26 +97,26 @@ Please refer to the class names and their types listed above to apply the desire
       <a href='#'>Data</a> <IconChevronRight />
     </li>
   </ol>
+  <Code slot='html'>
+    ```js
+    <ol class='breadcrumb'>
+      <li>
+        <a href='#'>Home</a> <IconChevronRight />
+      </li>
+      <li class='disabled'>
+        <a href='#'>Library</a> <IconChevronRight />
+      </li>
+      <li class='active'>
+        <a href='#'>Data</a> <IconChevronRight />
+      </li>
+    </ol>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <ol class='breadcrumb'>
-    <li>
-      <a href='#'>Home</a> <IconChevronRight />
-    </li>
-    <li class='disabled'>
-      <a href='#'>Library</a> <IconChevronRight />
-    </li>
-    <li class='active'>
-      <a href='#'>Data</a> <IconChevronRight />
-    </li>
-  </ol>
-  ```
-</Code>
 
 ### Breadcrumbs with custom color
 
-<Preview>
+<Preview client:load>
   <ol class='breadcrumb breadcrumb-emerald'>
     <li>
       <a href='#'>Home</a> <IconChevronRight />
@@ -127,19 +128,19 @@ Please refer to the class names and their types listed above to apply the desire
       <a href='#'>Data</a> <IconChevronRight />
     </li>
   </ol>
+  <Code slot='html'>
+    ```js
+    <ol class='breadcrumb breadcrumb-emerald'>
+      <li>
+        <a href='#'>Home</a> <IconChevronRight />
+      </li>
+      <li class='disabled'>
+        <a href='#'>Library</a> <IconChevronRight />
+      </li>
+      <li class='active'>
+        <a href='#'>Data</a> <IconChevronRight />
+      </li>
+    </ol>
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <ol class='breadcrumb breadcrumb-emerald'>
-    <li>
-      <a href='#'>Home</a> <IconChevronRight />
-    </li>
-    <li class='disabled'>
-      <a href='#'>Library</a> <IconChevronRight />
-    </li>
-    <li class='active'>
-      <a href='#'>Data</a> <IconChevronRight />
-    </li>
-  </ol>
-  ```
-</Code>

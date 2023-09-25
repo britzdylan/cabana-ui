@@ -1,11 +1,11 @@
 ---
 title: 'Range Component'
-layout: '../../../layouts/Default.astro'
+layout: '../../../layouts/Docs.astro'
 ---
 
 import { IconCheck } from '@tabler/icons-vue';
-import Preview from '../../../components/content/Preview.astro';
-import Code from '../../../components/content/code.astro';
+import Preview from '../../../components/content/Preview.vue';
+import Code from '../../../components/content/Code.vue';
 
 # Range Component
 
@@ -29,18 +29,18 @@ The Range Component is a flexible, customizable component that has been pre-styl
 
 ### Default Range
 
-<Preview>
+<Preview client:load>
   <input class='range' min='0' max='100' value='90' step='10' type='range' />
+  <Code slot='html'>
+    ```js
+    <input class='range' min='0' max='100' value='90' step='10' type='range' />
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <input class='range' min='0' max='100' value='90' step='10' type='range' />
-  ```
-</Code>
 
 ### Disabled state
 
-<Preview>
+<Preview client:load>
   <input
     class='range'
     disabled
@@ -50,24 +50,24 @@ The Range Component is a flexible, customizable component that has been pre-styl
     step='10'
     type='range'
   />
+  <Code slot='html'>
+    ```js
+    <input
+      class='range'
+      disabled
+      min='0'
+      max='100'
+      value='90'
+      step='10'
+      type='range'
+    />
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <input
-    class='range'
-    disabled
-    min='0'
-    max='100'
-    value='90'
-    step='10'
-    type='range'
-  />
-  ```
-</Code>
 
 ### With accent color
 
-<Preview>
+<Preview client:load>
   <input
     class='range range-green'
     min='0'
@@ -76,16 +76,16 @@ The Range Component is a flexible, customizable component that has been pre-styl
     step='10'
     type='range'
   />
+  <Code slot='html'>
+    ```js
+    <input
+      class='range range-green'
+      min='0'
+      max='100'
+      value='90'
+      step='10'
+      type='range'
+    />
+    ```
+  </Code>
 </Preview>
-<Code>
-  ```js
-  <input
-    class='range range-green'
-    min='0'
-    max='100'
-    value='90'
-    step='10'
-    type='range'
-  />
-  ```
-</Code>
