@@ -2,8 +2,13 @@
   <aside class="sticky top-0" title="Site Navigation">
     <div
       class="flex items-center gap-4 p-4 justify-start text-neutral-600 dark:text-neutral-400 sticky top-0 dark:bg-neutral-950 bg-neutral-50">
-      <a class="font-medium flex items-center gap-4" href="/">
-        <img src="/logo.svg" class="w-24" alt="Cabana Design System Logo" />
+      <a
+        class="font-medium flex items-center gap-4"
+        href="/getting-started/install">
+        <img
+          src="/logo.svg"
+          class="w-24 invert"
+          alt="Cabana Design System Logo" />
       </a>
       <p
         class="text-body-lg pl-2 border-l leading-4 border-neutral-500 mr-auto">
