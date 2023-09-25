@@ -68,7 +68,7 @@ const menu = (theme: (arg0: string) => string | number) => {
 
   const containedItem = {
     '&:hover': {
-      color: theme(`colors.${defaultColor}.500`),
+      color: theme(`colors.${defaultColor}.600`),
       backgroundColor: theme(`colors.${defaultColor}.100`),
     },
     '&.active': {
